@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+#container{
+    background-image: url(../images/light.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.forms h1,form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+ 
+   
+
+
+}
+.forms{
+    position: relative;
+    top: 29%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 30%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 60%;
+   
+}
+#email{
+    width: 80%;
+    height: 45px;
+    
+}
+input[type="email"]::placeholder{
+    padding-left: 5%;
+ 
+} 
+input[type="password"]::placeholder{
+    padding-left: 5%;
+ 
+} 
+input[type="button"]::placeholder{
+ 
+ 
+} 
+
+
+
+
+#password{
+    width: 80%;
+    height: 45px;
+    
+}
+#login{
+    width: 80%;
+    height: 45px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgb(27, 190, 27);
+    color: white;
+    
+}
+.sign{
+    color: white;
+}
+.fp{
+    color: white;
+}
+.newsign{
+    color: white;
+}
+#newlogin{
+    padding: 0px 50px;
+    height: 45px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgb(22, 199, 110);
+    color: white;
+    
+    
+}

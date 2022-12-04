@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+#container{
+    background-image: url(../images/light.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.forms h1,form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 8%;
+    
+    margin-top: 2%;
+ 
+   
+
+
+}
+.forms{
+    position: relative;
+    top: 20%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 30%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 70%;
+   
+}
+#email{
+    width: 80%;
+    height: 45px;
+    
+}
+#password{
+    width: 80%;
+    height: 45px;
+    
+}
+#newlogin{
+    padding: 0px 50px;
+    height: 45px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgb(7, 86, 46);
+    color: white;
+    position: relative;
+    left: 23%;
+    
+    
+}
+.alert{
+    color:white;
+    position: relative;
+    left: 2%;
+}
+label{
+    color: white;
+    
+}
+h1.sign{
+    color: white;
+    position: relative;
+    left: 20%;
+    
+}
