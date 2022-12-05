@@ -104,7 +104,7 @@ ul li a{
   
   }
   .main2{
-    height: 95vh;
+    height: 87vh;
     border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
     
@@ -121,7 +121,8 @@ ul li a{
         background-color:rgba(243, 233, 233, 0.2);
         color: white;
         margin:10px 10px;
-        border-radius: 9%;  
+        border-radius: 9%; 
+        height: 85vh; 
 
     }
     .sidebar2{
@@ -138,34 +139,36 @@ ul li a{
             background-color: rgb(2, 2, 45);
             border: 5px solid rgb(25, 11, 82);
             border-radius: 10%;
-            width: 35%;
-            height: 250px;
+            width: 65%;
+            height: 490px;
             box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
             display: flex;
             flex-direction: column;
              align-items: center;
-             margin-left: 9%;
-             margin-top: 9%;
+             margin-left: 2%;
+          
            position: relative;
+           top: 20px;
            
         
             
        
     }
     .fa-regular.fa-user{
-        font-size: 65px;
+        font-size: 265px;
         padding: 10px 10px;
-        
+        border-radius: 5%;
         color: rgb(12, 11, 11);
         background-color: rgb(202, 200, 200);
       
       position: relative;
+      top:20px;
      
        
     }  
     .profile{
         font-size: medium;
-        padding: 0px 20px;
+        padding: 9px 20px;
         color: rgb(20, 14, 14);
         font-weight: bold;
         cursor: pointer;
@@ -174,18 +177,15 @@ ul li a{
         
       
       }
-      .playerinfo{
-        margin-top: 20px;
-        background-color: rgb(199, 174, 174);
-        height: 50vh;
-      }
+    
     .container{
         background-color: rgb(36, 17, 139);
         width: 390px;
-        height: 50vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         box-shadow: rgba(11, 7, 7, 0.2);
+        margin-bottom: 20%;
     }
     .top{
         color:brown;
@@ -227,6 +227,39 @@ ul li a{
         border: none;
         outline: none;
     }
+    .fa-table-tennis-paddle-ball{
+        color: rgb(234, 234, 234);
+    font-size:180%;
+    }
     .noti{
         
     }
+    .ratings{
+        display: flex;
+        position: relative;
+        left: 38%;
+        bottom: 7%;
+    }
+    .sports{
+        position: relative;
+        right: 30%;
+     
+    }
+    .cont{
+        color: black;
+        font-size: x-large;
+    }
+    .connect{
+        font-size: medium;
+        padding: 9px 20px;
+        color: rgb(20, 24, 21);
+        background-color: green;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+      position: relative;
+      bottom: 50px;
+      
+        
+      
+      }

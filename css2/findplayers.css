@@ -139,7 +139,7 @@ input[type="search"]::placeholder{
   
   }
   .main2{
-    height: 185vh;
+    height: 195vh;
     border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
     
@@ -151,6 +151,7 @@ input[type="search"]::placeholder{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
        grid-row-gap: 20px;
+       
 
 
     }
@@ -215,4 +216,26 @@ input[type="search"]::placeholder{
     .fa-linkedin{
      color: #0A66C2;
     
+    }
+    /* footer */
+    .visit{
+        font-size: medium;
+        padding: 2px 7px;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(5, 120, 105);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+    
+    .group{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        display:grid;
+        grid-row-gap: 15px;
+        
     }

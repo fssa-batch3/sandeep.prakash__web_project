@@ -53,62 +53,41 @@ ul li a{
         font-weight:bolder;
         
     }
-    #mainrow{
-        height: 1000px;
+    .main2{
+        height: 120vh;
         border:20px solid transparent;
         border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-       
+        
        
         
-     }
-     .asidebox{
-        height: 1300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        position: relative;
-        top: 38%;
-       
-        
-        
-     }
+        }
+        .bar{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 92vh;
+            grid-column-gap: 20px;
+        }
+        .sidebar1{ 
+            background-color:rgba(25, 205, 151, 0.2);
+            color: white;
+            margin:10px 10px;
+            border-radius:; 
+            height: 115vh; 
     
-     .section1{
-
-        width: 30%;
-        height: 200px;
-        border-radius: 2%;
-        background: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%);
-        box-shadow: 0 10px 10px rgba(16, 3, 3, 0.23);
-   
-     
-
-     }
-     .sidebox{
-        height: 1300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-end;
-        position: relative;
-        bottom: 50%;
-       
-        
-     }
-     .section2{
-
-        width: 30%;
-        height: 200px;
-        border-radius: 2%;
-        background: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%);
-        box-shadow: 0 10px 10px rgba(16, 3, 3, 0.23);
-   
-     
-
-     }
+        }
+        .sidebar2{
+            background-color: rgba(214, 31, 218, 0.2);
+            color: white;  
+            margin:10px 10px;  
+            border-radius: 0%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 115vh;
+        }
+    
+ 
+  
      /* footer */
      footer{
         height: 30vh;
