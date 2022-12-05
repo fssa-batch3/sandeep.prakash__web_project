@@ -71,7 +71,7 @@ ul li a{
             background-color:rgba(25, 205, 151, 0.2);
             color: white;
             margin:10px 10px;
-            border-radius:; 
+           
             height: 115vh; 
     
         }
@@ -85,8 +85,63 @@ ul li a{
             align-items: center;
             height: 115vh;
         }
+    .box1{
+        color: black;
+    }
+    .slider{
+       
+        width: 100%;
+        overflow: hidden;
+    }
+    .gg1{
+      width: 490%;
+      
+      flex: 1;
+    }
+    .gg2,.gg3{
+        width: 530%;
+        position: relative;
+        right: 110px;
+    }
     
- 
+    .images3{
+        display: flex;
+        width: 20%;
+    }
+    .images3,.gg1,.gg1,.gg1{
+        box-sizing: border-box;
+        transition: all 0.26sec ease;
+    }
+    .images3 input{
+        display: none;
+    }
+    .dotsymbol{
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+    .dotsymbol label{
+        height: 15px ;
+        width: 15px;
+        border: 2px solid white;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.26sec ease;
+        margin: 7px;
+
+    }
+    .dotsymbol label:hover{
+        background-color: black;
+    }
+    #slidedot1:checked~ .gg1{
+        margin-left: 30%;
+    }
+    #slidedot2:checked~ .gg2{
+        margin-left:-470% ;
+    }
+    #slidedot3:checked~ .gg3{
+        margin-left:-950%  ;
+    }  
   
      /* footer */
      footer{
