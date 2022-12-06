@@ -68,7 +68,7 @@ ul li a{
             grid-column-gap: 20px;
         }
         .sidebar1{ 
-            background-color:rgba(25, 205, 151, 0.2);
+            background-color:rgba(41, 38, 196, 0.2);
             color: white;
             margin:10px 10px;
            
@@ -86,63 +86,76 @@ ul li a{
             height: 115vh;
         }
     .box1{
-        color: black;
+        color: rgb(21, 130, 67);
     }
-    .slider{
-       
-        width: 100%;
-        overflow: hidden;
-    }
-    .gg1{
-      width: 490%;
-      
-      flex: 1;
-    }
-    .gg2,.gg3{
-        width: 530%;
-        position: relative;
-        right: 110px;
-    }
-    
-    .images3{
-        display: flex;
-        width: 20%;
-    }
-    .images3,.gg1,.gg1,.gg1{
-        box-sizing: border-box;
-        transition: all 0.26sec ease;
-    }
-    .images3 input{
-        display: none;
-    }
-    .dotsymbol{
-        display: flex;
-        justify-content: center;
-        margin: 20px;
-    }
-    .dotsymbol label{
-        height: 15px ;
-        width: 15px;
-        border: 2px solid white;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 0.26sec ease;
-        margin: 7px;
-
-    }
-    .dotsymbol label:hover{
+    .boximages{
+        width: 450px;
+        height: 450px;
         background-color: black;
     }
-    #slidedot1:checked~ .gg1{
-        margin-left: 30%;
+    .booking1{
+        width: 450px;
+        height: 550px;
+        background-color: rgb(36, 164, 48);
+        box-shadow: 0 10px 10px rgba(85, 6, 138, 0.23);
     }
-    #slidedot2:checked~ .gg2{
-        margin-left:-470% ;
+    .timings{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
     }
-    #slidedot3:checked~ .gg3{
-        margin-left:-950%  ;
-    }  
-  
+    .sportss{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+    }
+    .durations{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+    }
+     input[type="date"]{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+     }
+     .bokl{
+        text-align: center;
+     }
+     .bok2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+     }
+     .pay{
+        width: 60%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+        
+     }
+     .paycash{
+        width: 60%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+
+     }
+
+       
+
+     
      /* footer */
      footer{
         height: 30vh;
@@ -197,4 +210,7 @@ ul li a{
     .fa-linkedin{
      color: #0A66C2;
     
+    }
+    a{
+        text-decoration: none;
     }
