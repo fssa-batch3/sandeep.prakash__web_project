@@ -54,7 +54,7 @@ ul li a{
         
     }
     .main2{
-        height: 120vh;
+        height: 105vh;
         border:20px solid transparent;
         border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
         
@@ -68,36 +68,95 @@ ul li a{
             grid-column-gap: 20px;
         }
         .sidebar1{ 
-            background-color:rgba(41, 38, 196, 0.2);
-            color: white;
+            background-color:rgba(212, 212, 222, 0.2);
+            color: rgb(23, 17, 17);
             margin:10px 10px;
            
-            height: 115vh; 
+            height: 95vh; 
     
         }
         .sidebar2{
-            background-color: rgba(214, 31, 218, 0.2);
+            background-color: rgba(232, 224, 232, 0.2);
             color: white;  
             margin:10px 10px;  
             border-radius: 0%; 
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 115vh;
+            height: 95vh;
         }
     .box1{
         color: rgb(21, 130, 67);
     }
-    .boximages{
-        width: 450px;
-        height: 450px;
+    /* slider */
+ 
+    .containerslider{
+        width: 530px;
+       overflow: hidden;
+       margin-left: 10%;
+    }
+    .images{
+        display: flex;
+        height: 350px;
+        border: 5px solid rgb(229, 222, 222);
+        border-radius: 2px;
+
+    }
+    .images img{
+        height: 350px;
+        width: 103%;
+        transition: all 0.5s ease;
+    }
+    .images input{
+        display: none;
+    }
+    .labeldots{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    .labeldots label{
+        height: 5px;
+        width: 5px;
+        margin: 7px;
+        border-radius: 50%;
+        padding: 10px 10px;
+        border: 1px solid rgb(24, 23, 23);
+        cursor: pointer;
+        transition: all 0.55s ease;
+
+    }
+    .labeldots label:hover{
         background-color: black;
+    }
+    #images1:checked~.gg1{
+        margin-left: 0%;
+
+    }
+    #images2:checked~.gg2{
+
+    margin-left: -100%;
+        
+    }
+    #images3:checked~.gg3{
+        margin-left: -200%;
+        
+    }
+     /* slider */
+     .box2{
+        
+        
+     }
+     .fa-table-tennis-paddle-ball,.material-symbols-outlined{
+        color: rgb(17, 16, 16);
+    font-size:190%;
     }
     .booking1{
         width: 450px;
-        height: 550px;
+        height: 650px;
         background-color: rgb(36, 164, 48);
         box-shadow: 0 10px 10px rgba(85, 6, 138, 0.23);
+        margin-bottom: 13%;
     }
     .timings{
         width: 50%;
