@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin:0px;
+    padding:0px;
+}
+header{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%);
+    height: 8vh;
+    background-position: center;
+    background-size: cover;
+ 
+}
+ul{
+    display: flex;
+    justify-content:end;
+    margin-right: 2%;
+}
+ul li{
+    list-style-type: none;
+    padding: 2%;
+ 
+}
+ul li a{
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
+
+.login{
+  font-size: medium;
+  padding: 5px 15px;
+  height: 113%;
+  width: 102%;
+  background-color: rgb(5, 34, 120);
+  color: white;
+  position: relative;
+  bottom: 15%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  
+
+}
+.logo{
+    width:14%;
+    position: relative;
+    bottom: 80px;
+}
+
+    .cont1{
+        text-align: center;
+        font-size: xx-large;
+        font-weight:bolder;
+        
+    }
+    .main2{
+        height: 125vh;
+        border:20px solid transparent;
+        border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
+        
+       
+        
+        }
+        .bar{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 92vh;
+            grid-column-gap: 20px;
+        }
+        .sidebar1{ 
+            background-color:rgba(255, 255, 255, 0.2);
+            color: white;
+            margin:10px 10px;
+           
+            height: 120vh; 
+    
+        }
+        .sidebar2{
+            background-color: rgba(237, 234, 237, 0.2);
+            color: white;  
+            margin:10px 10px;  
+            border-radius: 0%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 115vh;
+        }
+    .box1{
+        color: rgb(4, 10, 15);
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       font-size: larger;
+       line-height: 1.5;
+    }
+    .place{
+        font-size: larger;
+    }
+   
+    .box2{
+        color: rgb(4, 10, 15);
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       font-size: larger;
+    }
+   
+    .time{
+        position: relative;
+        left: 50px;
+    }
+    .box3{
+        color: rgb(4, 10, 15);
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       font-size: larger;
+    }
+    .price{
+        display: flex;
+        justify-content: center;
+    }
+    .pl{
+        background-color: black;
+        width: 102px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        padding: 7px 5px;
+        position: relative;
+        left: 7px;
+    
+    }
+    .box4{
+        color: rgb(4, 10, 15);
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       font-size: larger;
+    }
+    .fa-location-dot{
+        color:rgb(19, 197, 16);
+        font-size: larger;
+    }
+    .prc{
+        color: rgb(4, 10, 15);
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       font-size: larger;
+    }
+    /* slider */
+
+    .containerslider{
+        width: 520px;
+       overflow: hidden;
+       position: relative;
+       left: 90px;
+       top: 30px;
+    }
+    .images{
+        display: flex;
+     
+        height: 350px;
+        /* position: relative; */
+      
+
+    }
+    .images img{
+        height: 350px;
+        width: 100%;
+        /* transition: all 0.5s ease; */
+    }
+    .images input{
+        display: none;
+    }
+    .labeldots{
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    .labeldots label{
+        height: 5px;
+        width: 5px;
+        margin: 7px;
+        border-radius: 50%;
+        padding: 5px 5px;
+        border: 1px double rgb(24, 23, 23);
+        cursor: pointer;
+        transition: all 0.55s ease;
+
+    }
+    .labeldots label:hover{
+        background-color: black;
+    }
+    #images1:checked~.gg1{
+        margin-left: 0%;
+
+    }
+    #images2:checked~.gg2{
+
+    margin-left: -100%;
+        
+    }
+    #images3:checked~.gg3{
+        margin-left: -200%;
+        
+    }
+     /* slider */
+  
+     .fa-table-tennis-paddle-ball,.material-symbols-outlined{
+    color: rgb(16, 17, 17);
+font-size:190%;
+}
+    .booking1{
+        width: 450px;
+        height: 730px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        bottom: 70px;
+    }
+    .bokslot{
+        color: black;
+        font-weight: bolder;
+    }
+    .timings{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+        text-align: center;
+    }
+    .sportss{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+        text-align: center;
+    }
+    .durations{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+        text-align: center;
+    }
+     input[type="date"]{
+        width: 50%;
+        height: 44px;
+        background-color: aqua;
+        font-size: 17px;
+        text-align: center;
+     }
+     .bok1{
+        text-align: center;
+        color: black;
+     }
+     .bok2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+     }
+     .pay{
+        width: 90;
+        height: 44px;
+        background-color: rgb(7, 228, 129);
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+        border: none;
+        cursor: pointer;
+        
+        
+     }
+     .paycash{
+        width: 30%;
+        height: 44px;
+        background-color: rgb(11, 220, 137);
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+        border: none;
+
+     }
+     .addplayers{
+        width: 30%;
+        height: 44px;
+        background-color: rgb(14, 225, 81);
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+     }
+  
+
+     
+     /* footer */
+     footer{
+        height: 30vh;
+      
+        border:20px solid transparent;
+        border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)50;
+        
+        background-position: center;
+        background-size: cover;
+        
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    .footh{
+        color: black;
+        font-size: larger;
+        font-weight: bold;
+       
+    }
+    .column1{
+        margin-top: 2%;
+    }
+    ol p{
+        list-style-type: none;
+        
+     
+    }
+    ol p a{
+        text-decoration: none;
+        font-size:medium;
+        color: rgb(18, 5, 5);
+        line-height: 1.6;
+    }
+    .fa-brands{
+        font-size:x-large;
+        padding: 1.5%;
+    }
+    .fa-facebook{
+        color: #3b5998  ;
+    }
+    .fa-twitter{
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+    
+    }
+    .fa-linkedin{
+     color: #0A66C2;
+    
+    }
+    a{
+        text-decoration: none;
+    }
