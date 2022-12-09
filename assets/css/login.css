@@ -4,7 +4,7 @@
     padding:0px;
 }
 #container{
-    background-image: url(/assets/images/light.jpg);
+    background-image: url(../../assets/images/light.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
