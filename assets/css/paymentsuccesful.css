@@ -4,7 +4,7 @@
     padding:0px;
 }
 #container{
-    background-image: url(/assets/images/light.jpg);
+    background-image: url(/assets/images/onlinepayback.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -23,36 +23,20 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
+    background-color: rgba(0,0,0,0.5);
+
    
 }
 .fa-check{
     color: green;
     font-size:520%;
 }
-#findplayers{
-    padding: 0px 50px;
-    height: 45px;
-    font-size: large;
-    font-weight: bolder;
-    cursor: pointer;
-    background-color: rgb(22, 199, 110);
-    color: white;
-    
-    
-}
+
 .h0{
     color: green;
     font-size: xx-large;
     text-align: center;
 }
-#bookground{
-    padding: 0px 42px;
-    height: 45px;
-    font-size: large;
-    font-weight: bolder;
-    cursor: pointer;
-    background-color: rgb(22, 199, 110);
+.code{
     color: white;
-    
-    
 }
