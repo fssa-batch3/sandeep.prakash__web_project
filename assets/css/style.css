@@ -154,7 +154,7 @@ bottom: 12%;
     color: white;
 font-size:200%;
 }
-#main3{
+.main3{
     height: 55vh;
     display: flex;
     justify-content: space-evenly;
@@ -257,7 +257,7 @@ a{
     scale: 1.9;
 
 }
-.game1{
+/* .game1{
     width: 23%;
     height: 60%;
     margin-top: 3%;   
@@ -273,12 +273,13 @@ a{
 
 
 
-}
+} */
 .sportsheading{
     font-size:30px;
     text-align: center;
     position: relative;
-    left: 500px;
+    left: 410px;
+    color: white;
 }
 .sportlist{
     width: 320px;
@@ -298,3 +299,54 @@ a{
 .fa-star-half-stroke{
     color: goldenrod;
 }
+/* animation */
+.roationimage{
+    width:320px;
+    height:200px;
+    position: absolute;
+    border-radius: 5%;
+}
+.rotationcont{
+    width:390px;
+    height: 300px;
+    /* position: relative; */
+    margin-right:470px ;
+    margin-top: 90px;
+    perspective: 1050px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg)rotateZ(-7deg);
+}
+.imagerot{
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 50s linear infinite;
+}
+@keyframes rotate{
+    from{
+
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+.roationimage:nth-child(1){
+    transform: rotateY(60deg) translateZ(350px);
+}
+.roationimage:nth-child(2){
+    transform: rotateY(120deg) translateZ(350px);
+}
+.roationimage:nth-child(3){
+    transform: rotateY(180deg) translateZ(350px);
+}
+.roationimage:nth-child(4){
+    transform: rotateY(240deg) translateZ(350px);
+}
+.roationimage:nth-child(5){
+    transform: rotateY(300deg) translateZ(350px);
+}
+.roationimage:nth-child(6){
+    transform: rotateY(360deg) translateZ(350px);
+}
+/* animation */

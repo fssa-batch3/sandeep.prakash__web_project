@@ -54,7 +54,7 @@ ul li a{
         
     }
     .main2{
-        height: 125vh;
+        height: 155vh;
         /* border:20px solid transparent;
         border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
          */
@@ -105,39 +105,23 @@ ul li a{
        font-size: larger;
     }
    
-    .time{
-        position: relative;
-        left: 50px;
-    }
-    .box3{
-        color: rgb(4, 10, 15);
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-       font-size: larger;
-    }
-    .price{
-        display: flex;
-        justify-content: center;
-    }
+    
+   
+ 
     .pl{
         background-color: black;
         width: 102px;
+        height: 30px;
         display: flex;
         justify-content: center;
         font-size: 20px;
         padding: 7px 5px;
         position: relative;
         left: 7px;
+        top: 7px;
     
     }
-    .box4{
-        color: rgb(4, 10, 15);
-        display: flex;
-        flex-direction: column;
-       align-items: center;
-       font-size: larger;
-    }
+    
     .fa-location-dot{
         color:rgb(19, 197, 16);
         font-size: larger;
@@ -148,6 +132,9 @@ ul li a{
         flex-direction: column;
        align-items: center;
        font-size: larger;
+       position: relative;
+       right: 7px;
+       top: 12px;
     }
     /* slider */
 
@@ -296,8 +283,76 @@ font-size:190%;
         padding: 10px 10px;
         cursor: pointer;
      }
-  
+  .locationinfo{
+    width: 290px;
+    height: 120px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    right: 150px;
+    top: 20px;
+    
+  }
+  .sportsavail{
+    width: 290px;
+    height: 120px;
+    border: 2px solid black;
+    display: flex;
+    
+    align-items: center;
+    position: relative;
+    left: 150px; 
+    bottom: 127px;
 
+  }
+.timinginfo{
+    width: 200px;
+    height: 70px;
+    border: 2px solid black;
+    text-align: center;
+    position: relative;
+    bottom: 120px;
+}
+ 
+.rules{
+    width: 590px;
+    height: 130px;
+    border: 2px solid black;
+    color: rgb(4, 10, 15);
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   font-size: larger;
+   position: relative;
+   bottom: 120px;
+   left: 65px;
+}
+.price{
+    width: 190px;
+    height: 60px;
+    border: 2px solid black;
+  
+    display: flex;
+    justify-content: center;
+    position: relative;
+   bottom: 120px;
+   left: 265px;
+}
+.addplayer{
+    width: 590px;
+    height: 120px;
+    border: 2px solid black;
+    color: rgb(4, 10, 15);
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   font-size: larger;
+   position: relative;
+   bottom: 60px;
+   left: 70px;
+}
      
      /* footer */
 footer{
