@@ -28,6 +28,7 @@
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
     height: 60%;
+    background-color: rgba(0,0,0,0.3);
    
 }
 #email{
@@ -59,10 +60,10 @@ input[type="button"]::placeholder{
 #login{
     width: 100%;
     height: 45px;
-    font-size: large;
+    font-size: larger;
     font-weight: bolder;
     cursor: pointer;
-    background-color: rgb(27, 190, 27);
+    background-color: rgb(14, 163, 24);
     color: white;
     padding: 10px 70px;
     
@@ -72,17 +73,20 @@ input[type="button"]::placeholder{
 }
 .fp{
     color: white;
+    font-size: large;
 }
 .newsign{
     color: white;
+    font-weight: bold;
+    font-size: large;
 }
 #newlogin{
     padding: 0px 50px;
     height: 45px;
-    font-size: large;
+    font-size: larger;
     font-weight: bolder;
     cursor: pointer;
-    background-color: rgb(22, 199, 110);
+    background-color:rgb(27, 190, 27);
     color: white;
     
     

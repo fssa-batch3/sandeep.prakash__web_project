@@ -204,12 +204,12 @@ footer{
 .column1{
     margin-top: 2%;
 }
-ol p{
+ p{
     list-style-type: none;
     
  
 }
-ol p a{
+ p a{
     text-decoration: none;
     font-size:medium;
     color: rgb(219, 213, 213);

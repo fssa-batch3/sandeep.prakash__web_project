@@ -126,7 +126,7 @@ input[type="search"]::placeholder{
     color: white;
    
 }
-.search3{
+.searchbtn{
     background: transparent;
    cursor: pointer;
     border: none;
@@ -320,12 +320,12 @@ footer{
 .column1{
     margin-top: 2%;
 }
-ol p{
+ p{
     list-style-type: none;
     
  
 }
-ol p a{
+ p a{
     text-decoration: none;
     font-size:medium;
     color: rgb(219, 213, 213);
