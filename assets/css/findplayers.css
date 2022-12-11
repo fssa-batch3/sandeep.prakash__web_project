@@ -3,6 +3,7 @@
     margin:0px;
     padding:0px;
 }
+/* header */
 header{
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    
@@ -47,7 +48,9 @@ ul li a{
     position: relative;
     bottom: 80px;
 }
+/* header */
 
+/* main1 */
 #main1{
     height: 15vh;
     /* border:20px solid transparent;
@@ -58,14 +61,14 @@ ul li a{
    
     
     }
-    .cont1{
+    .content1{
         text-align: center;
         font-size: xx-large;
         font-weight:bolder;
         color: white;
         
     }
-    .cont2{
+    .content2{
         display: flex;
         justify-content: center;
         color: white;
@@ -96,6 +99,7 @@ ul li a{
         border-radius: 2%;
         position: relative;
         top:20px;
+        border: 2px solid white;
         
     }
   
@@ -147,6 +151,8 @@ input[type="search"]::placeholder{
     
   
   }
+  /* main1 */
+  /* main2 */
   .main2{
     height: 300vh;
     /* border:20px solid transparent;
@@ -198,6 +204,7 @@ input[type="search"]::placeholder{
         color: goldenrod;
         font-size: 20px;
     }
+    /* main2 */
     /* footer */
 footer{
     height: 30vh;

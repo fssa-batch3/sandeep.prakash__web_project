@@ -36,6 +36,7 @@
     height: 45px;
     
 }
+
 input[type="email"]::placeholder{
     padding-left: 5%;
  

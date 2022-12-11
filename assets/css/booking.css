@@ -12,8 +12,8 @@ header{
     
  
 }
-
-
+/* 
+main */
 .main{
     position: relative;
     top: 150px;
@@ -36,19 +36,13 @@ header{
     /* display: grid;
     grid-template-columns: 1.5fr 3fr; */
 }
-.side{
-    /* background-color: rgba(0,0,0,0.5); */
-     
-         
-   
 
-}
 .payment{
     width: 335px;
     height: 633px;
   
 }
-.side2{
+.content1{
    
     background-color: rgba(0,0,0,0.5);
     color: rgb(239, 239, 239);
@@ -110,3 +104,4 @@ input{
 a{
     text-decoration: none;
 }
+/* main */

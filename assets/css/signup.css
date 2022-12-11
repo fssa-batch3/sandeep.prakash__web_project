@@ -37,6 +37,15 @@
     height: 45px;
     
 }
+#name1{
+    width: 80%;
+ height: 45px;
+  
+}
+#phoneno1{
+    width: 80%;
+ height: 45px
+}
 #password{
     width: 80%;
     height: 45px;

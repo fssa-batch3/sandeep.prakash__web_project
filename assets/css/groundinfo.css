@@ -3,6 +3,9 @@
     margin:0px;
     padding:0px;
 }
+body{
+    background-color: rgba(0,0,0,0.5);
+}
 header{
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
     height: 8vh;
@@ -51,6 +54,7 @@ ul li a{
         text-align: center;
         font-size: xx-large;
         font-weight:bolder;
+        background-color: rgba(0,0,0,0.5);
         
     }
     .main2{
@@ -58,32 +62,36 @@ ul li a{
         /* border:20px solid transparent;
         border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
          */
-       
+       background-color:rgba(0,0,0,0.5) ;
         
         }
         .bar{
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 92vh;
-            grid-column-gap: 20px;
+            /* grid-column-gap: 0px; */
         }
         .sidebar1{ 
-            background-color:rgba(255, 255, 255, 0.2);
+            /* background-color:rgba(255, 255, 255, 0.2); */
+           /* background-color:  rgb(222, 232, 241); */
             color: white;
             margin:10px 10px;
            
-            height: 120vh; 
+            height: 150vh; 
+            background-color: rgb(12, 192, 243);
+        
     
         }
         .sidebar2{
-            background-color: rgba(237, 234, 237, 0.2);
+            background-color: rgba(243, 239, 239, 0.5);
             color: white;  
             margin:10px 10px;  
             border-radius: 0%; 
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 115vh;
+            height: 150vh;
+            
         }
     .box1{
         color: rgb(4, 10, 15);
@@ -92,6 +100,7 @@ ul li a{
        align-items: center;
        font-size: larger;
        line-height: 1.5;
+ 
     }
     .place{
         font-size: larger;
@@ -108,8 +117,8 @@ ul li a{
     
    
  
-    .pl{
-        background-color: black;
+    .pricelast{
+        background-color: rgb(12, 215, 73);
         width: 102px;
         height: 30px;
         display: flex;
@@ -119,6 +128,8 @@ ul li a{
         position: relative;
         left: 7px;
         top: 7px;
+        border-radius: 20px;
+        color: black;
     
     }
     
@@ -144,6 +155,8 @@ ul li a{
        position: relative;
        left: 90px;
        top: 30px;
+       border: 5px solid black;
+      
     }
     .images{
         display: flex;
@@ -197,46 +210,57 @@ ul li a{
   
      .fa-table-tennis-paddle-ball,.material-symbols-outlined{
     color: rgb(16, 17, 17);
-font-size:190%;
+     font-size:190%;
 }
     .booking1{
-        width: 450px;
-        height: 730px;
-        background-color: rgb(255, 255, 255);
+        width: 730px;
+        height: 120vh;
+             background-color: rgba(0,0,0,0.5);
         position: relative;
-        bottom: 70px;
+      top:130px;
     }
-    .bokslot{
+    .headingbook{
         color: black;
         font-weight: bolder;
+        font-size: larger;
+        width: 90px;
+        height: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        text-align: center;
     }
     .timings{
         width: 50%;
-        height: 44px;
-        background-color: aqua;
-        font-size: 17px;
+        height: 64px;
+        background-color: rgb(2, 255, 179);
+        font-size: 20px;
         text-align: center;
+        border-radius: 20px;
     }
     .sportss{
         width: 50%;
-        height: 44px;
-        background-color: aqua;
-        font-size: 17px;
+        height: 64px;
+     background-color: rgb(2, 255, 179);
+        font-size: 20px;
         text-align: center;
+        border-radius: 20px;
     }
     .durations{
         width: 50%;
-        height: 44px;
-        background-color: aqua;
-        font-size: 17px;
+        height: 64px;
+background-color: rgb(2, 255, 179);
+        font-size: 20px;
         text-align: center;
+        border-radius: 20px;
     }
      input[type="date"]{
         width: 50%;
-        height: 44px;
-        background-color: aqua;
-        font-size: 17px;
+        height: 64px;
+   background-color: rgb(2, 255, 179);
+        font-size: 20px;
         text-align: center;
+        border: 1px solid black;
+        border-radius: 20px;
      }
      .bok1{
         text-align: center;
@@ -253,24 +277,27 @@ font-size:190%;
         height: 44px;
         background-color: rgb(7, 228, 129);
         font-size: 17px;
+        font-weight: bold;
         display: flex;
         justify-content: center;
         padding: 0px 0px;
-        border: none;
+        border:2px solid black;
         cursor: pointer;
+        
         
         
      }
      .paycash{
-        width: 100%;
+        width: 90%;
         height: 44px;
         background-color: rgb(11, 220, 137);
         font-size: 17px;
         display: flex;
         justify-content: center;
-        padding: 10px 0px;
-        border: none;
+        padding: 0px 35px;
+    border:2px solid black;
         cursor: pointer;
+         font-weight: bold;
 
      }
      .addplayers{
@@ -295,6 +322,14 @@ font-size:190%;
     top: 20px;
     
   }
+  .locationinfo:hover{
+     background-color: rgb(222, 232, 241);
+    transition: 0.95s;
+    transform:scale(1);
+	border:3px solid rgb(39, 10, 228);
+    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    /* z-index: 6; */
+  }
   .sportsavail{
     width: 290px;
     height: 120px;
@@ -307,6 +342,14 @@ font-size:190%;
     bottom: 127px;
 
   }
+   .sportsavail:hover{
+       background-color: rgb(222, 232, 241);
+    transition: 0.95s;
+    transform:scale(1);
+	border:3px solid rgb(39, 10, 228);
+    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+
+   }
 .timinginfo{
     width: 200px;
     height: 70px;
@@ -314,7 +357,14 @@ font-size:190%;
     text-align: center;
     position: relative;
     bottom: 120px;
+}.timinginfo:hover{
+       background-color: rgb(222, 232, 241);
+    transition: 0.95s;
+    transform:scale(1);
+	border:3px solid rgb(39, 10, 228);
+    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
 }
+
  
 .rules{
     width: 590px;
@@ -329,6 +379,13 @@ font-size:190%;
    bottom: 120px;
    left: 65px;
 }
+.rules:hover{
+       background-color: rgb(222, 232, 241);
+    transition: 0.95s;
+    transform:scale(1);
+	border:3px solid rgb(39, 10, 228);
+    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+}
 .price{
     width: 190px;
     height: 60px;
@@ -339,6 +396,13 @@ font-size:190%;
     position: relative;
    bottom: 120px;
    left: 265px;
+}
+.price:hover{
+       background-color: rgb(222, 232, 241);
+    transition: 0.95s;
+    transform:scale(1);
+	border:3px solid rgb(39, 10, 228);
+    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
 }
 .addplayer{
     width: 590px;
@@ -352,6 +416,13 @@ font-size:190%;
    position: relative;
    bottom: 60px;
    left: 70px;
+}
+.addplayer:hover{
+       background-color: rgb(222, 232, 241);
+    transition: 0.95s;
+    transform:scale(1);
+	border:3px solid rgb(39, 10, 228);
+    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
 }
      
      /* footer */

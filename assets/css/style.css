@@ -5,6 +5,7 @@
     font-family: 'Noto Serif Khojki', serif;
 
 }
+/* header */
 header{
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
     height: 10vh;
@@ -52,6 +53,9 @@ ul li a{
     position: relative;
     bottom: 80px;
 }
+/* header */
+
+/* main1 */
 
 #main1{
     height: 86vh;
@@ -60,7 +64,7 @@ ul li a{
     align-items: center;
     
 }
-.con1{
+.word1{
     font-size: 350%;
     color: white; 
     margin-left: 3.5%;
@@ -71,6 +75,8 @@ ul li a{
     border-radius: 15%;
     margin-right: 3%;
 }
+/* main1 */
+/* main2 */
 #main2{
     height: 70vh;
     display: flex;
@@ -87,7 +93,7 @@ ul li a{
     margin-top: 3%;   
     border-radius: 2%;
     background: linear-gradient(90deg, rgb(13, 142, 202) 4%, rgb(18, 188, 231) 100%);
-    box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+    box-shadow: 0 10px 10px rgba(126, 126, 126, 0.57);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +102,7 @@ ul li a{
     
 } 
 
-.boxcont1{
+.boxcontent1{
     color:white;
     font-size:130%;
     position: relative;
@@ -105,32 +111,16 @@ ul li a{
 
  
 }
-.boxcont2{
+.boxcontent2{
     color:white;
     font-size:130%;
     position: relative;
     left: 0%;
-   
-
-
  
 }
 
-.fa-people-roof{
-color: white;
-font-size:500%;
-position: relative;
-bottom: 12%;
 
-}
-.fa-user{
-    color: white;
-    font-size:500%;
-    position: relative;
-    bottom: 12%;
-    
-    }
-    .groundicon{
+.groundicon{
         color: white;
         width: 42%;
         position: relative;
@@ -138,13 +128,13 @@ bottom: 12%;
         
         }
       
-        .h0{
+ .heading0{
             font-size: 190%;
             font-weight:bolder;
             position: relative;
             bottom: 10%;
         }    
-.h1{
+.heading1{
     font-size: 190%;
     font-weight:bolder;
     position: relative;
@@ -154,6 +144,23 @@ bottom: 12%;
     color: white;
 font-size:200%;
 }
+.fa-user{
+    color: white;
+    font-size:500%;
+    position: relative;
+    bottom: 12%;
+    
+    }
+    
+.fa-people-roof{
+color: white;
+font-size:500%;
+position: relative;
+bottom: 12%;
+
+}
+/* main2 */
+/* main3 */
 .main3{
     height: 55vh;
     display: flex;
@@ -164,6 +171,65 @@ font-size:200%;
      background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    
 }
+.sportsheading{
+    font-size:30px;
+    text-align: center;
+    position: relative;
+    left: 410px;
+    color: white;
+}
+/* animation */
+.roationimage{
+    width:320px;
+    height:200px;
+    position: absolute;
+    border-radius: 5%;
+}
+.rotationcont{
+    width:390px;
+    height: 300px;
+    /* position: relative; */
+    margin-right:470px ;
+    margin-top: 90px;
+    perspective: 1050px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg)rotateZ(-7deg);
+}
+.imagerot{
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 50s linear infinite;
+}
+@keyframes rotate{
+    from{
+
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+.roationimage:nth-child(1){
+    transform: rotateY(60deg) translateZ(350px);
+}
+.roationimage:nth-child(2){
+    transform: rotateY(120deg) translateZ(350px);
+}
+.roationimage:nth-child(3){
+    transform: rotateY(180deg) translateZ(350px);
+}
+.roationimage:nth-child(4){
+    transform: rotateY(240deg) translateZ(350px);
+}
+.roationimage:nth-child(5){
+    transform: rotateY(300deg) translateZ(350px);
+}
+.roationimage:nth-child(6){
+    transform: rotateY(360deg) translateZ(350px);
+}
+/* animation */
+/* review */
 #review{
     height: 60vh;
     display: flex;
@@ -176,6 +242,47 @@ font-size:200%;
    
    
 }
+.person1{
+    width: 23%;
+    height: 80%;
+    margin-top: 3%;   
+    border-radius: 2%;
+    background: linear-gradient(90deg, rgb(129, 200, 231) 4%, rgb(180, 191, 194) 100%);
+    box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding: 10px 15px;
+}
+
+.person{
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    scale: 1.9;
+
+}
+/* .sportlist{
+    width: 320px;
+    height: 200px;
+    scale: 1;
+    position: relative;
+    top: 35px;
+} */
+
+.star{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fa-star{
+    color: goldenrod;
+}
+.fa-star-half-stroke{
+    color: goldenrod;
+}
+/* review */
+/* footer */
 footer{
     height: 30vh;
   
@@ -236,27 +343,8 @@ footer{
 a{
     text-decoration: none;
 }
-.person1{
-    width: 23%;
-    height: 80%;
-    margin-top: 3%;   
-    border-radius: 2%;
-    background: linear-gradient(90deg, rgb(129, 200, 231) 4%, rgb(180, 191, 194) 100%);
-    box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    padding: 10px 15px;
-}
+/* footer */
 
-.person{
-    border-radius: 50%;
-    height: 42px;
-    width: 42px;
-    scale: 1.9;
-
-}
 /* .game1{
     width: 23%;
     height: 60%;
@@ -274,79 +362,5 @@ a{
 
 
 } */
-.sportsheading{
-    font-size:30px;
-    text-align: center;
-    position: relative;
-    left: 410px;
-    color: white;
-}
-.sportlist{
-    width: 320px;
-    height: 200px;
-    scale: 1;
-    position: relative;
-    top: 35px;
-}
 
-.star{
-    display: flex;
-    justify-content: space-evenly;
-}
-.fa-star{
-    color: goldenrod;
-}
-.fa-star-half-stroke{
-    color: goldenrod;
-}
-/* animation */
-.roationimage{
-    width:320px;
-    height:200px;
-    position: absolute;
-    border-radius: 5%;
-}
-.rotationcont{
-    width:390px;
-    height: 300px;
-    /* position: relative; */
-    margin-right:470px ;
-    margin-top: 90px;
-    perspective: 1050px;
-    transform-style: preserve-3d;
-    transform: rotateX(-10deg)rotateZ(-7deg);
-}
-.imagerot{
-    width: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    animation: rotate 50s linear infinite;
-}
-@keyframes rotate{
-    from{
 
-    }
-    to{
-        transform: rotateY(360deg);
-    }
-}
-
-.roationimage:nth-child(1){
-    transform: rotateY(60deg) translateZ(350px);
-}
-.roationimage:nth-child(2){
-    transform: rotateY(120deg) translateZ(350px);
-}
-.roationimage:nth-child(3){
-    transform: rotateY(180deg) translateZ(350px);
-}
-.roationimage:nth-child(4){
-    transform: rotateY(240deg) translateZ(350px);
-}
-.roationimage:nth-child(5){
-    transform: rotateY(300deg) translateZ(350px);
-}
-.roationimage:nth-child(6){
-    transform: rotateY(360deg) translateZ(350px);
-}
-/* animation */
