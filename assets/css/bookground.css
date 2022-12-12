@@ -5,8 +5,8 @@
 }
 /* header */
 header{
-    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-   
+    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    */
     height: 10vh;
     background-position: center;
     background-size: cover;
@@ -14,6 +14,8 @@ header{
    top:0%;
    z-index: 2;
   */
+  background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ 
 }
 ul{
     display: flex;
@@ -61,15 +63,21 @@ ul li a:hover{
 /* header */
 /* main1 */
 #main1{
-    height: 20vh;
+    overflow: hidden;
+    height: 50vh;
     /* border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
      */
-     background: linear-gradient(90deg, rgb(6, 8, 8) 4%, rgb(0, 0, 0) 100%);
-   
-     position: sticky;
+     /* background: linear-gradient(90deg, rgb(6, 8, 8) 4%, rgb(0, 0, 0) 100%);
+    */
+     /* position: sticky;
      top:0%;
-     z-index: 2;
+     z-index: 2; */
+     /* background-image: linear-gradient(to right top, #020d10, #030a0e, #0a1a2a, #030d17, #060212);
+  */
+  background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ 
+    
     }
     .content1{
         text-align: center;
@@ -165,9 +173,9 @@ input[type="search"]::placeholder{
   /* main1 */
   /* city */
   .city{
-    height: 10vh;
-    background: linear-gradient(90deg, rgb(9, 14, 15) 4%, rgb(0, 0, 0) 100%);
-   
+  
+    /* background: linear-gradient(90deg, rgb(9, 14, 15) 4%, rgb(0, 0, 0) 100%);
+    */
     /* border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60; */
 
@@ -176,6 +184,10 @@ input[type="search"]::placeholder{
     color: rgb(224, 219, 219);
     text-align: center;
     font-weight: bolder;
+position: relative;
+bottom: 50px;
+
+    
 }
 /* city */
 /* main2 */
@@ -193,9 +205,13 @@ input[type="search"]::placeholder{
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
  grid-column-gap: 110px;
- background: linear-gradient(90deg, rgb(13, 18, 19) 4%, rgb(0, 0, 0) 100%);
-     
+ /* background: linear-gradient(90deg, rgb(13, 18, 19) 4%, rgb(0, 0, 0) 100%);
+      */
 
+      /* background-image: linear-gradient(to right top, #020426, #041f2c, #041d36, #07172c, #04020b);
+  */
+  background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ 
     
 
 }
@@ -208,30 +224,80 @@ input[type="search"]::placeholder{
 
 } */
 .box1{
-    width: 75%;
+    width: 100%;
+    height: 50px;
     
-    border-radius: 2%;
-    background: linear-gradient(90deg, rgb(3, 3, 6) 4%, rgb(17, 4, 20) 100%);
-    box-shadow: 0 10px 10px rgba(16, 3, 3, 0.23);
+    border-radius: 0%;
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+
   position: relative;
   top: 10px;
-  padding: 10px 1px;
-  margin-left:13%;
+  /* padding: 10px 1px;
+  margin-left:13%; */
+  display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    /* grid-column-gap: 70px; */
+/* display: flex; */
+padding-left: 50px;
+
   
    
  
 }
 
-.locate{
+
+.locate1{
+    border-radius: 10%;
+
+    width: 100px;
     font-size: 170%;
-    color: white;
+    color: rgb(6, 16, 9);
+   
+    background-color: #17f538;
+padding-right: 30px;
+
+ text-align: center;
+ margin-left: 160px;
+
+
+
+}
+
+.locate2{
+    border-radius: 10%;
+    width: 100px;
+    font-size: 170%;
+    color: rgb(12, 2, 2);
     text-align: center;
+    background-color:  #17f538;
+    padding-right: 30px;
+    position: relative;
+    left:130px ;
+    
+
+}
+.locate3{
+    border-radius: 10%;
+    width: 100px;
+    font-size: 170%;
+    color: rgb(15, 4, 4);
+    text-align: center;
+    background-color:  #17f538;
+    padding-right: 30px;
+    position: relative;
+    left:120px ;
+
 }
 /* main2 */
 /* main3 */
 .main3{
     
-    height: 280vh;
+    height: 290vh;
+    /* background-image: linear-gradient(to right top, #020426, #041f2c, #041d36, #07172c, #04020b);
+  */
+  background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ 
+    
 
     /* border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60; */
@@ -255,45 +321,49 @@ input[type="search"]::placeholder{
     width: 75%;
     height: 420px;
     border-radius: 4%;
-    background: linear-gradient(90deg, rgb(1, 1, 12) 4%, rgb(1, 10, 12) 100%);
+    /* background: linear-gradient(90deg, rgb(1, 1, 12) 4%, rgb(1, 10, 12) 100%); */
     box-shadow: 0 10px 10px rgba(16, 3, 3, 0.23);
     margin-left: 13%;
     display: flex;
     flex-direction:column;
     align-items: center;
     cursor: pointer;
+    background-color: white;
+    color: black;
     
 }
 .child1:hover{
-    background-color: black;
-    transition: 2s;
+    background-color: rgb(201, 225, 229);
+    transition: 1s;
     transform:scale(1);
-	border:3px solid rgb(18, 174, 109);
+	border:3px solid rgb(18, 31, 174);
 }
 .groimg{
     width: 90%;
     border-radius: 2%;
     border:2px solid transparent;
     border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
-    color: white;
+    color: rgb(8, 5, 5);
 
     
 }
 .groundn{
   /* color:rgb(27, 25, 25); */
-  color: white;
+  color: rgb(14, 8, 8);
+  font-size:23px;
+  font-weight:bolder;
 
 }
 .locationn{
     /* color:rgb(23, 21, 21); */
-    color: white;
-    font-size: larger;
-    font-weight: 900;
+    color: rgb(8, 5, 5);
+    font-size:23px;
+    font-weight:bolder;
 }
-.fa-table-tennis-paddle-ball,.material-symbols-outlined{
+.fa-table-tennis-paddle-ball{
     /* color: rgb(17, 16, 16); */
 font-size:190%;
-color: white;
+color: rgb(0, 0, 0);
 }
 
 .symbol{
@@ -302,7 +372,7 @@ flex-direction: column;
 flex-direction: row;
 position: relative;
 right: 35%;
-bottom: 10%;
+bottom: 2%;
 align-content: space-around;
 align-items: flex-end;
 
@@ -311,7 +381,7 @@ align-items: flex-end;
     display: flex;
     position: relative;
     left: 38%;
-    bottom: 17%;
+    bottom: 8%;
 }
 .book{
     font-size: medium;
@@ -325,6 +395,7 @@ align-items: flex-end;
     border: none;
   position: relative;
   top:90%;
+  border-radius: 10%;
     
 }
 .fa-star{
@@ -334,6 +405,7 @@ align-items: flex-end;
 /* main3 */
 /* footer */
 footer{
+
     height: 30vh;
   
     /* border:50px solid transparent;
