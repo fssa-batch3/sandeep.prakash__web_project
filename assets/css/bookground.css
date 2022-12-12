@@ -10,7 +10,10 @@ header{
     height: 10vh;
     background-position: center;
     background-size: cover;
- 
+    /* position: sticky;
+   top:0%;
+   z-index: 2;
+  */
 }
 ul{
     display: flex;
@@ -27,6 +30,10 @@ ul li a{
     font-size: larger;
     color: white;
 }
+ul li a:hover{
+    color: rgb(130, 217, 235);
+  
+}
 
 .login{
   font-size: medium;
@@ -40,7 +47,7 @@ ul li a{
   font-weight: bold;
   cursor: pointer;
   border: none;
-  
+  border-radius: 10px;
 
 }
 .logo{
@@ -58,9 +65,11 @@ ul li a{
     /* border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
      */
-     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+     background: linear-gradient(90deg, rgb(6, 8, 8) 4%, rgb(0, 0, 0) 100%);
    
-    
+     position: sticky;
+     top:0%;
+     z-index: 2;
     }
     .content1{
         text-align: center;
@@ -157,8 +166,8 @@ input[type="search"]::placeholder{
   /* city */
   .city{
     height: 10vh;
-    background: linear-gradient(90deg, rgb(0, 212, 255) 4%, rgba(0,212,255,1) 100%);
-    
+    background: linear-gradient(90deg, rgb(9, 14, 15) 4%, rgb(0, 0, 0) 100%);
+   
     /* border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60; */
 
@@ -184,7 +193,8 @@ input[type="search"]::placeholder{
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
  grid-column-gap: 110px;
- background-color: rgba(11, 194, 215, 0.943);
+ background: linear-gradient(90deg, rgb(13, 18, 19) 4%, rgb(0, 0, 0) 100%);
+     
 
     
 
@@ -225,8 +235,10 @@ input[type="search"]::placeholder{
 
     /* border:20px solid transparent;
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60; */
-    background: linear-gradient(90deg, rgb(0, 212, 255) 4%, rgba(0,212,255,1) 100%);
-overflow: hidden;
+   overflow: hidden;
+   /* background: linear-gradient(90deg, rgb(102, 223, 247) 4%, rgb(109, 226, 249) 100%); */
+   color: white;
+   
     
 }
 
@@ -241,9 +253,9 @@ overflow: hidden;
 .child1{
   
     width: 75%;
-    height: 390px;
-    border-radius: 9%;
-    background: linear-gradient(90deg, rgb(240, 240, 250) 4%, rgb(224, 231, 233) 100%);
+    height: 420px;
+    border-radius: 4%;
+    background: linear-gradient(90deg, rgb(1, 1, 12) 4%, rgb(1, 10, 12) 100%);
     box-shadow: 0 10px 10px rgba(16, 3, 3, 0.23);
     margin-left: 13%;
     display: flex;
@@ -263,22 +275,25 @@ overflow: hidden;
     border-radius: 2%;
     border:2px solid transparent;
     border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
-   
+    color: white;
 
     
 }
 .groundn{
-  color:rgb(27, 25, 25);
+  /* color:rgb(27, 25, 25); */
+  color: white;
 
 }
 .locationn{
-    color:rgb(23, 21, 21);
+    /* color:rgb(23, 21, 21); */
+    color: white;
     font-size: larger;
     font-weight: 900;
 }
 .fa-table-tennis-paddle-ball,.material-symbols-outlined{
-    color: rgb(17, 16, 16);
+    /* color: rgb(17, 16, 16); */
 font-size:190%;
+color: white;
 }
 
 .symbol{

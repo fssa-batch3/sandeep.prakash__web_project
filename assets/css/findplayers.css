@@ -27,6 +27,10 @@ ul li a{
     font-size: larger;
     color: white;
 }
+ul li a:hover{
+    color: rgb(130, 217, 235);
+  
+}
 
 .login{
   font-size: medium;
@@ -159,6 +163,8 @@ input[type="search"]::placeholder{
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
     border-radius: 0px;
     */
+    background-color: black;
+    overflow: hidden;
     
     }
     .parent{
@@ -171,8 +177,8 @@ input[type="search"]::placeholder{
 
     }
     .child1{
-        background-color: rgb(105, 158, 208);
-        background-image: linear-gradient(to right top, #3dcaed, #4391b6, #3c5c7b, #282e40, #020009);
+        /* background-color: rgb(105, 158, 208); */
+        background-image: linear-gradient(to right top, #27869e, #4391b6, #3986d4, #20409e, #5026e7);
         height: 150px;
         width: 48%;
         color: white;

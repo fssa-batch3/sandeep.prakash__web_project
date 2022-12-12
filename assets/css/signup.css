@@ -35,22 +35,48 @@
 #email{
     width: 80%;
     height: 45px;
+    border-radius: 5px;
+    border: none;
     
 }
 #name1{
     width: 80%;
  height: 45px;
+ border-radius: 5px;
+ border: none;
   
 }
 #phoneno1{
     width: 80%;
- height: 45px
+ height: 45px;
+ border-radius: 5px;
+ border: none;
 }
 #password{
     width: 80%;
     height: 45px;
+    border-radius: 5px;
+    border: none;
     
 }
+input[type="name"]::placeholder{
+    padding-left: 5%;
+    
+ 
+} 
+input[type="password"]::placeholder{
+    padding-left: 5%;
+ 
+} 
+input[type="email"]::placeholder{
+    padding-left: 5%;
+    
+ 
+} 
+input[type="text"]::placeholder{
+    padding-left: 5%;
+ 
+} 
 #newlogin{
     padding: 0px 50px;
     height: 45px;
@@ -61,6 +87,8 @@
     color: white;
     position: relative;
     left: 23%;
+    border-radius: 10px;
+    border: none;
     
     
 }

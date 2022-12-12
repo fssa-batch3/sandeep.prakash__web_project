@@ -34,11 +34,14 @@
 #email{
     width: 80%;
     height: 45px;
+       border-radius: 5px;
+       border: none;
     
 }
 
 input[type="email"]::placeholder{
     padding-left: 5%;
+    
  
 } 
 input[type="password"]::placeholder{
@@ -56,6 +59,8 @@ input[type="button"]::placeholder{
 #password{
     width: 80%;
     height: 45px;
+     border-radius: 5px;
+       border: none;
     
 }
 #login{
@@ -66,7 +71,8 @@ input[type="button"]::placeholder{
     cursor: pointer;
     background-color: rgb(14, 163, 24);
     color: white;
-    padding: 10px 70px;
+    padding: 10px 90px;
+    border-radius: 10px;
     
 }
 .sign{
@@ -89,6 +95,7 @@ input[type="button"]::placeholder{
     cursor: pointer;
     background-color:rgb(27, 190, 27);
     color: white;
+       border-radius: 10px;
     
     
 }

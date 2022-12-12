@@ -28,6 +28,10 @@ ul li a{
     font-size: larger;
     color: white;
 }
+ul li a:hover{
+    color: rgb(130, 217, 235);
+  
+}
 
 .login{
   font-size: medium;
