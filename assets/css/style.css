@@ -68,7 +68,7 @@ ul li a:hover{
        /* background: linear-gradient(90deg, rgb(44, 209, 242) 4%, rgb(81, 208, 234) 100%); */
  display: flex;
     align-items: center;
-    background-image: linear-gradient(to right top, #13c0ec, #36a7dc, #2c8cec, #2e8de7, #5026e7);
+    background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
   
 /* background-color: #bec7d8eb; */
   
@@ -93,6 +93,7 @@ animation: change 5s;
 .player1{
     width:45%;
     border-radius: 10%;
+    /* box-shadow: 0px 0px 10px 4px rgb(0,0,0,0.1); */
     margin-right: 3%;
 }
 /* main1 */
@@ -109,8 +110,9 @@ animation: change 5s;
   */
   /* background-image: linear-gradient(to right top, #020426, #041f2c, #041d36, #07172c, #04020b);
   */
-  background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
+  /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+  */
+  background-color: white;
 }
 .mainchild{
     margin: 0px 43px;
@@ -121,7 +123,7 @@ animation: change 5s;
     
 }
 .box1{
-    width: 100%;
+    width: 102%;
     height: 130%;
     margin-top: 3%;   
     border-radius: 2%;
@@ -131,78 +133,70 @@ animation: change 5s;
     flex-direction: column;
     align-items: center;
     justify-content: center;
- color: white;
- background-image: linear-gradient(to right top, #dce5e7, #36a7dc, #2c8cec, #2e8de7, #5026e7);
+ color: rgb(255, 255, 255);
+ background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
  
     
 } 
 
 .boxcontent1{
-    color:rgb(7, 7, 7);
+    color:rgb(243, 234, 234);
     font-size:130%;
-    font-weight: bold;
+  
     position: relative;
   
     left: 3%;
- 
+ /* padding: 10px 10px; */
+ line-height: 2;
+ word-spacing: 1px;
 
  
 }
-.boxcontent2{
-    color:rgb(7, 7, 7);
-    font-size:130%;
-    position: relative;
-    top: 3%;
-    font-weight: bold;
-    padding: 0px 10px;
- 
-}
-.boxcontent3{
-    color:rgb(7, 7, 7);
-    font-size:130%;
-    position: relative;
-    top:1%;
-    font-weight: bold;
-    padding: 0px 10px;
- 
-}
+
 
 
 .groundicon{
-        color: white;
+        color: rgb(0, 0, 0);
         width: 42%;
         position: relative;
         bottom:10%;
         
         }
+        .usericon{
+            color: rgb(0, 0, 0);
+            width: 32%;
+            position: relative;
+            bottom:14%;
+            
+            }
       
  .heading0{
             font-size: 190%;
-            font-weight:bolder;
+        
             position: relative;
-            bottom: 10%;
-            color:rgb(7, 7, 7);
+            bottom: 13%;
+            color:rgb(255, 255, 255);
         }    
 .heading1{
     font-size: 190%;
-    font-weight:bolder;
+  
     position: relative;
-    bottom: 25%;
-    color:rgb(7, 7, 7);
+    bottom: 21%;
+    color:rgb(255, 255, 255);
 }
 .heading2{
     font-size: 190%;
-    font-weight:bolder;
+  
     position: relative;
-    bottom: 22%;
-    color:rgb(7, 7, 7);
+    bottom: 21%;
+    color:rgb(255, 255, 255);
 }
 .fa-volleyball,.fa-basketball,.fa-table-tennis-paddle-ball,.material-symbols-outlined{
-    color: rgb(12, 9, 9);
+    color:rgb(255, 255, 255);
 font-size:200%;
 }
 .fa-user{
-    color: rgb(11, 9, 9);
+    color:rgb(255, 255, 255);
     font-size:500%;
     position: relative;
     bottom: 12%;
@@ -210,7 +204,7 @@ font-size:200%;
     }
     
 .fa-people-roof{
-color: rgb(11, 9, 9);
+    color:rgb(255, 255, 255);
 font-size:500%;
 position: relative;
 bottom: 12%;
@@ -222,8 +216,7 @@ bottom: 12%;
     height: 55vh;
     display: flex;
     justify-content: space-evenly;
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
+   background-color: white;
     /* border:50px solid transparent;
     border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16);
      */
@@ -237,17 +230,17 @@ bottom: 12%;
     text-align: center;
     position: relative;
     left: 410px;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 /* animation */
 .roationimage{
-    width:320px;
-    height:200px;
+    width:220px;
+    height:220px;
     position: absolute;
-    border-radius: 5%;
+    border-radius: 50%;
 }
 .rotationcont{
-    width:390px;
+    width:220px;
     height: 300px;
     /* position: relative; */
     margin-right:470px ;
@@ -300,8 +293,9 @@ bottom: 12%;
      */
      /* background-image: linear-gradient(to right top, #00021a, #041f2c, #041d36, #07172c, #04020b);
   */
-  background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
+  /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+  */
+  background-color: white;
    
 }
 .person1{
@@ -316,7 +310,9 @@ bottom: 12%;
     align-items: center;
     
     padding: 10px 15px;
-    background-image: linear-gradient(to right top, #13c0ec, #36a7dc, #2c8cec, #2e8de7, #5026e7);
+    /* background-image: linear-gradient(to right top, #13c0ec, #36a7dc, #2c8cec, #2e8de7, #5026e7);
+   */
+   background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
   
 }
 
@@ -340,10 +336,10 @@ bottom: 12%;
     justify-content: space-evenly;
 }
 .fa-star{
-    color: goldenrod;
+    color: rgb(255, 183, 0);
 }
 .fa-star-half-stroke{
-    color: goldenrod;
+    color: rgb(255, 183, 0);
 }
 /* review */
 /* footer */

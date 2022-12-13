@@ -64,7 +64,8 @@ ul li a:hover{
         text-align: center;
         font-size: xx-large;
         font-weight:bolder;
-        background-color: rgba(0,0,0,0.5);
+        /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white; */
         
     }
     /* main1 */
@@ -72,15 +73,13 @@ ul li a:hover{
     /* main2 */
     .main2{
         height: 155vh;
-        /* border:20px solid transparent;
-        border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
-         */
-       background-color:rgba(0,0,0,0.5) ;
-        
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ 
+      
         }
         .bar{
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 6fr 4fr;
             grid-template-rows: 92vh;
             /* grid-column-gap: 0px; */
         }
@@ -91,12 +90,16 @@ ul li a:hover{
             margin:10px 10px;
            
             height: 150vh; 
-            background-color:rgba(0,0,0,0.5);
+          background-color:rgb(218, 222, 241) ;
+          border-radius: 2%;
+          background-image: linear-gradient(to right top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833);
+
         
     
         }
         .sidebar2{
-            background-color: rgba(243, 239, 239, 0.5);
+            border-radius: 2%;
+            background-color:rgb(218, 222, 241) ;
             color: white;  
             margin:10px 10px;  
             border-radius: 0%; 
@@ -106,10 +109,12 @@ ul li a:hover{
             height: 150vh;
             /* position: relative;
             bottom: 70px; */
+            background-image: linear-gradient(to right top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833);
+
             
         }
     .box1{
-        color: rgb(4, 10, 15);
+        color: rgb(0, 0, 0);
         display: flex;
         flex-direction: column;
        align-items: center;
@@ -154,7 +159,7 @@ ul li a:hover{
         font-size: larger;
     }
     .pricen{
-        color: rgb(4, 10, 15);
+        color: rgb(245, 246, 247);
         display: flex;
         flex-direction: column;
        align-items: center;
@@ -172,6 +177,8 @@ ul li a:hover{
        left: 90px;
        top: 30px;
        border: 5px solid black;
+       background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+       color: white;
       
     }
     .images{
@@ -201,13 +208,13 @@ ul li a:hover{
         margin: 7px;
         border-radius: 50%;
         padding: 5px 5px;
-        border: 1px double rgb(24, 23, 23);
+        border: 1px double rgb(234, 229, 229);
         cursor: pointer;
         transition: all 0.55s ease;
 
     }
     .labeldots label:hover{
-        background-color: black;
+        background-color: rgb(228, 226, 226);
     }
     #images1:checked~.groundg1{
         margin-left: 0%;
@@ -225,18 +232,22 @@ ul li a:hover{
      /* slider */
   
      .fa-table-tennis-paddle-ball,.material-symbols-outlined{
-    color: rgb(16, 17, 17);
+    color: rgb(236, 243, 243);
      font-size:190%;
 }
     .booking1{
         width: 730px;
         height: 120vh;
-             background-color: rgba(0,0,0,0.5);
+
+    
         position: relative;
          bottom:130px;
+         background-image: linear-gradient(to right top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833);
+
     }
     .headingbook{
-        color: black;
+        color: rgb(0, 0, 0);
+ 
         font-weight: bolder;
         font-size: larger;
         width: 90px;
@@ -246,33 +257,45 @@ ul li a:hover{
         text-align: center;
     }
     .timings{
-        width: 50%;
+        width: 30%;
         height: 64px;
-        background-color: rgb(2, 255, 179);
+        
         font-size: 20px;
         text-align: center;
         border-radius: 20px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: rgb(18, 192, 134);
+ 
     }
     .sportss{
-        width: 50%;
+        width: 30%;
         height: 64px;
-        background-color: rgb(2, 255, 179);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: rgb(18, 192, 134);
+ 
+ 
         font-size: 20px;
         text-align: center;
         border-radius: 20px;
     }
     .durations{
-        width: 50%;
+        width: 30%;
         height: 64px;
-        background-color: rgb(2, 255, 179);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: rgb(18, 192, 134);
+ 
+ 
         font-size: 20px;
         text-align: center;
         border-radius: 20px;
     }
      input[type="date"]{
-        width: 50%;
+        width: 30%;
         height: 64px;
-        background-color: rgb(2, 255, 179);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ 
+        color: rgb(18, 192, 134);
+ 
         font-size: 20px;
         text-align: center;
         border: 1px solid black;
@@ -291,7 +314,7 @@ ul li a:hover{
      .pay{
         width: 90%;
         height: 44px;
-        background-color: rgb(7, 228, 129);
+        background-color: rgb(14, 225, 81);
         font-size: 17px;
         font-weight: bold;
         display: flex;
@@ -299,14 +322,16 @@ ul li a:hover{
         padding: 0px 0px;
         border:2px solid black;
         cursor: pointer;
-        
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
         
         
      }
      .paycash{
         width: 90%;
         height: 44px;
-        background-color: rgb(11, 220, 137);
+        background-color: rgb(14, 225, 81);
         font-size: 17px;
         display: flex;
         justify-content: center;
@@ -314,7 +339,9 @@ ul li a:hover{
     border:2px solid black;
         cursor: pointer;
          font-weight: bold;
-
+         border-radius: 10px;
+         border: none;
+         box-shadow: 0 3px 10px rgb(0, 0, 0);
      }
      .addplayers{
         width: 100%;
@@ -325,10 +352,12 @@ ul li a:hover{
         justify-content: center;
         padding: 10px 10px;
         cursor: pointer;
+        border-radius: 25px;
+        box-shadow: 0 3px 10px rgb(110, 107, 124);
      }
   .locationinfo{
     width: 290px;
-    height: 120px;
+    height: 125px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -336,36 +365,51 @@ ul li a:hover{
     position: relative;
     right: 150px;
     top: 20px;
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ color: white;
+ padding: 5px 10px;
+ border-radius: 4%;
+ box-shadow: 0 3px 10px rgb(0, 0, 0);
     
   }
   .locationinfo:hover{
-     background-color: rgb(222, 232, 241);
+     background-color: rgb(255, 255, 255);
     transition: 0.95s;
     transform:scale(1);
-	border:3px solid rgb(39, 10, 228);
+	border:3px solid rgb(255, 255, 255);
     box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
     /* z-index: 6; */
   }
   .sportsavail{
     width: 290px;
-    height: 120px;
+    height: 125px;
     border: 2px solid black;
     display: flex;
     
     align-items: center;
     position: relative;
-    left: 150px; 
-    bottom: 127px;
+    left: 175px; 
+    bottom: 141px;
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ color: white;
+
+  padding: 5px 10px;
+  border-radius: 4%;
+  box-shadow: 0 3px 10px rgb(0, 0, 0);
+
 
   }
    .sportsavail:hover{
        background-color: rgb(222, 232, 241);
     transition: 0.95s;
-    transform:scale(1);
+    transform:scale(.99);
 	border:3px solid rgb(39, 10, 228);
-    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
 
    }
+   .cricketicon{
+    width: 35px;
+}
 .timinginfo{
     width: 200px;
     height: 70px;
@@ -373,12 +417,17 @@ ul li a:hover{
     text-align: center;
     position: relative;
     bottom: 120px;
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ color: white;
+ padding: 5px 10px;
+ border-radius: 4%;
+ box-shadow: 0 3px 10px rgb(0, 0, 0);
 }.timinginfo:hover{
        background-color: rgb(222, 232, 241);
     transition: 0.95s;
-    transform:scale(1);
+    transform:scale(.99);
 	border:3px solid rgb(39, 10, 228);
-    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
 }
 
  
@@ -394,13 +443,19 @@ ul li a:hover{
    position: relative;
    bottom: 120px;
    left: 65px;
+   background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ color: white;
+ padding: 5px 10px;
+ border-radius: 4%;
+ box-shadow: 0 3px 10px rgb(0, 0, 0);
+
 }
 .rules:hover{
        background-color: rgb(222, 232, 241);
     transition: 0.95s;
-    transform:scale(1);
+    transform:scale(.99);
 	border:3px solid rgb(39, 10, 228);
-    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
 }
 .price{
     width: 190px;
@@ -412,13 +467,18 @@ ul li a:hover{
     position: relative;
    bottom: 120px;
    left: 265px;
+   background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ color: white;
+ padding: 5px 10px;
+ border-radius: 4%;
+ box-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 .price:hover{
        background-color: rgb(222, 232, 241);
     transition: 0.95s;
-    transform:scale(1);
+    transform:scale(.99);
 	border:3px solid rgb(39, 10, 228);
-    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
 }
 .addplayer{
     width: 590px;
@@ -432,13 +492,18 @@ ul li a:hover{
    position: relative;
    bottom: 60px;
    left: 70px;
+   background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+ color: white;
+ padding: 5px 10px;
+ border-radius: 4%;
+ box-shadow: 0 3px 10px rgb(0, 0, 0);
 }
 .addplayer:hover{
        background-color: rgb(222, 232, 241);
     transition: 0.95s;
-    transform:scale(1);
+    transform:scale(.99);
 	border:3px solid rgb(39, 10, 228);
-    box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
 }
 /* main2 */
      
