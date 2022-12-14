@@ -2,22 +2,23 @@
 *{
     margin:0px;
     padding:0px;
-    font-family: 'Noto Serif Khojki', serif;
 }
 
 /* header */
 header{
-     height: 8vh;
+     height: 10vh;
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
- 
+    font-family: 'Noto Serif Khojki', serif;
 }
+ 
+
 ul{
     display: flex;
     justify-content:end;
     margin-right: 2%;
+
 }
 ul li{
     list-style-type: none;
