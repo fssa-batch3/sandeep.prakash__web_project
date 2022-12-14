@@ -174,25 +174,8 @@ animation: change 5s;
     bottom: 21%;
     color:rgb(255, 255, 255);
 }
-.fa-volleyball,.fa-basketball,.fa-table-tennis-paddle-ball,.material-symbols-outlined{
-    color:rgb(255, 255, 255);
-font-size:200%;
-}
-.fa-user{
-    color:rgb(255, 255, 255);
-    font-size:500%;
-    position: relative;
-    bottom: 12%;
-    
-    }
-    
-.fa-people-roof{
-    color:rgb(255, 255, 255);
-font-size:500%;
-position: relative;
-bottom: 12%;
 
-}
+
 /* main2 */
 /* main3 */
 .main3{

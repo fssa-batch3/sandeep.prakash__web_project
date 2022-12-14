@@ -98,6 +98,11 @@ ul li a:hover{
     
         
     }
+       .userlogo{
+        width: 45px;
+        position: relative;
+        bottom: 10px;
+    }
     #searchnav{
         width: 80%;
         height: 6vh;
@@ -131,12 +136,7 @@ input[type="search"]::placeholder{
     font-size:150%;
     color: rgb(0, 0, 0);
 }
-.fa-user{
-    font-size: xx-large;
-    margin-top: 5px;
-    color: white;
-   
-}  
+ 
 .searchbtn{
     background: transparent;
    cursor: pointer;
@@ -157,7 +157,7 @@ input[type="search"]::placeholder{
    
     border-radius: 3px;
     position: relative;
-    /* bottom: 50px; */
+  
   }
   /* main1 */
   /* main2 */
@@ -232,14 +232,7 @@ input[type="search"]::placeholder{
        right: 5px;
         color: rgb(255, 255, 255);
     }
-    /* main2 */
-    /* footer */
-    .userlogo{
-        width: 45px;
-        position: relative;
-        bottom: 10px;
-    }
-    .nameplayer{
+      .nameplayer{
         position: relative;
         bottom: 10px;
        
@@ -261,6 +254,10 @@ input[type="search"]::placeholder{
         left: 10px;
         bottom: 70px;
     }
+    /* main2 */
+    /* footer */
+ 
+  
 footer{
     height: 30vh;
     background-position: center;
