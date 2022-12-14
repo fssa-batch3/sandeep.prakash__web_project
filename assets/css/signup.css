@@ -30,6 +30,8 @@
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
     height: 70%;
+    background-color: rgba(0,0,0,0.3);
+   
    
 }
 #email{
@@ -101,7 +103,7 @@ label{
     color: white;
     
 }
-h1.sign{
+h1.signuphead{
     color: white;
     position: relative;
     left: 20%;

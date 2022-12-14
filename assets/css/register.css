@@ -23,14 +23,16 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
+    background-color: rgba(0,0,0,0.3);
+   
    
 }
 .fa-check{
     color: green;
     font-size:520%;
 }
-#findplayers{
-    padding: 0px 50px;
+#joinasplayers{
+    padding: 0px 32px;
     height: 45px;
     font-size: large;
     font-weight: bolder;

@@ -39,9 +39,9 @@ ul li a:hover{
 
 .login{
   font-size: medium;
-  padding: 1px 20px;
+  padding: 2px 18px;
   height: 100%;
-  width: 105%;
+  width: 100%;
   background-color: rgb(5, 34, 120);
   color: white;
   position: relative;
