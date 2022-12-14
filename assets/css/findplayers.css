@@ -97,7 +97,7 @@ ul li a:hover{
          align-items: center;
         margin-left: 92%;
        position: relative;
-       bottom: 60%;
+       bottom: 150px;
        right: 2%;
     
         
@@ -161,6 +161,7 @@ input[type="search"]::placeholder{
     cursor: pointer;
     border: none;
    margin-bottom: 5px;
+   border-radius: 10px;
     
   
   }
@@ -234,7 +235,7 @@ input[type="search"]::placeholder{
         justify-content: space-around;
         position: relative;
         right: 2px;
-        bottom: 48px;
+        bottom: 53px;
     
     }
     .ratingno{
@@ -248,9 +249,30 @@ input[type="search"]::placeholder{
     /* footer */
     .userlogo{
         width: 45px;
+        position: relative;
+        bottom: 10px;
     }
     .nameplayer{
+        position: relative;
+        bottom: 10px;
        
+    }
+    .sportss{
+        width: 10%;
+        height: 38px;
+        
+        font-size: 15px;
+       
+        border-radius: 5px;
+        position: relative;
+        left: 10px;
+        bottom: 55px;
+    }
+    .selectsportsword{
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        bottom: 70px;
     }
 footer{
     height: 30vh;
