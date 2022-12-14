@@ -64,8 +64,13 @@ ul li a:hover{
      */
      /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
     */
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
+    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+    position: sticky;
+    top:0%;
+    z-index: 2;
+    border: 20px solid;
+    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+   
    
     
     }
@@ -73,13 +78,13 @@ ul li a:hover{
         text-align: center;
         font-size: xx-large;
         font-weight:bolder;
-        color: white;
+        color: rgb(0, 0, 0);
         
     }
     .content2{
         display: flex;
         justify-content: center;
-        color: white;
+        color: rgb(0, 0, 0);
     }
     .cont3{
         background-color: rgb(2, 2, 45);
@@ -107,13 +112,13 @@ ul li a:hover{
         border-radius: 2%;
         position: relative;
         top:20px;
-        border: 2px solid white;
+        border: 2px solid rgb(0, 0, 0);
         
     }
   
 input[type="search"]::placeholder{
     font-size: 130%;
-    color: white;
+    color: rgb(0, 0, 0);
  
 } 
 #search2{
@@ -122,13 +127,13 @@ input[type="search"]::placeholder{
     border: none;
     outline: none;
     padding: 20px 20px;
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
 
 .fa-magnifying-glass{
     font-size:150%;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .fa-user{
     font-size: xx-large;
@@ -167,9 +172,11 @@ input[type="search"]::placeholder{
     border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
     border-radius: 0px;
     */
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
+   background-color:white;
     overflow: hidden;
+    border: 20px solid;
+    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+   
     
     }
     .parent{
@@ -182,26 +189,31 @@ input[type="search"]::placeholder{
 
     }
     .child1{
-        background-image: linear-gradient(to right top, #dce5e7, #36a7dc, #2c8cec, #2e8de7, #5026e7);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
  
         /* background-color: rgb(105, 158, 208); */
         /* background-image: linear-gradient(to right top, #27869e, #4391b6, #3986d4, #20409e, #5026e7); */
-        height: 150px;
-        width: 48%;
+        height: 177px;
+        width: 53%;
         color: white;
         margin-left: 22%;
         border-radius: 10%;
+        display: flex;
+        justify-content: center;
     }
     .visit{
         font-size: medium;
         padding: 2px 7px;
         height: 100%;
         width: 100%;
-        background-color: rgb(11, 2, 31);
-        color: white;
+        background-color: rgb(241, 235, 249);
+        color: rgb(0, 0, 0);
         font-weight: bold;
         cursor: pointer;
         border: none;
+        position: relative;
+        top: 10px;
+        border-radius: 5%;
     }
     
     .group{
@@ -215,10 +227,31 @@ input[type="search"]::placeholder{
     }
     .fa-star{
         color: goldenrod;
-        font-size: 20px;
+        font-size: 14px;
+    }
+    .ratings{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        right: 2px;
+        bottom: 48px;
+    
+    }
+    .ratingno{
+        position: relative;
+        font-size:90%;
+        font-weight: bold;
+       right: 5px;
+        color: rgb(255, 255, 255);
     }
     /* main2 */
     /* footer */
+    .userlogo{
+        width: 45px;
+    }
+    .nameplayer{
+       
+    }
 footer{
     height: 30vh;
   
