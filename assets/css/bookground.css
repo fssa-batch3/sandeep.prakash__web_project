@@ -255,10 +255,9 @@ bottom: 130px;
 
 /* main2 */
 /* main3 */
-.main3{
+.main2{
     
     height: 290vh;
-   /* background-color: rgb(191, 236, 255); */
    overflow: hidden;
      color: white;
     border: 20px solid;
@@ -279,7 +278,6 @@ bottom: 130px;
     width: 75%;
     height: 420px;
     border-radius: 4%;
-    /* background: linear-gradient(90deg, rgb(1, 1, 12) 4%, rgb(1, 10, 12) 100%); */
     box-shadow: 0 3px 10px rgb(3, 10, 87);
     margin-left: 13%;
     display: flex;
@@ -307,14 +305,12 @@ bottom: 130px;
     
 }
 .groundn{
-  /* color:rgb(27, 25, 25); */
   color: rgb(6, 4, 4);
   font-size:23px;
   font-weight:bolder;
 
 }
 .locationn{
-    /* color:rgb(23, 21, 21); */
     color: rgb(0, 0, 0);
     font-size:23px;
     font-weight:bolder;
@@ -377,10 +373,6 @@ align-items: flex-end;
 footer{
 
     height: 30vh;
-  
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16) ;
-     */
     background-position: center;
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    

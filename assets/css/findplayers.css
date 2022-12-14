@@ -5,8 +5,6 @@
 }
 /* header */
 header{
-    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
-   
     height: 10vh;
     background-position: center;
     background-size: cover;
@@ -59,11 +57,6 @@ ul li a:hover{
 /* main1 */
 #main1{
     height: 15vh;
-    /* border:20px solid transparent;
-    border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
-     */
-     /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-    */
     background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
     position: sticky;
     top:0%;
@@ -168,10 +161,6 @@ input[type="search"]::placeholder{
   /* main2 */
   .main2{
     height: 300vh;
-    /* border:20px solid transparent;
-    border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
-    border-radius: 0px;
-    */
    background-color:white;
     overflow: hidden;
     border: 20px solid;
@@ -190,10 +179,7 @@ input[type="search"]::placeholder{
     }
     .child1{
         background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
- 
-        /* background-color: rgb(105, 158, 208); */
-        /* background-image: linear-gradient(to right top, #27869e, #4391b6, #3986d4, #20409e, #5026e7); */
-        height: 177px;
+   height: 177px;
         width: 53%;
         color: white;
         margin-left: 22%;
@@ -275,10 +261,6 @@ input[type="search"]::placeholder{
     }
 footer{
     height: 30vh;
-  
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16) ;
-     */
     background-position: center;
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    

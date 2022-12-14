@@ -4,13 +4,10 @@
     padding:0px;
     font-family: 'Noto Serif Khojki', serif;
 }
-/* body{
-    background-color: rgba(0,0,0,0.5);
-} */
+
 /* header */
 header{
-    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
-    height: 8vh;
+     height: 8vh;
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
@@ -64,8 +61,6 @@ ul li a:hover{
         text-align: center;
         font-size: xx-large;
         font-weight:bolder;
-        /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-        color: white; */
         
     }
     /* main1 */
@@ -81,11 +76,9 @@ ul li a:hover{
             display: grid;
             grid-template-columns: 6fr 4fr;
             grid-template-rows: 92vh;
-            /* grid-column-gap: 0px; */
+           
         }
         .sidebar1{ 
-            /* background-color:rgba(255, 255, 255, 0.2); */
-           /* background-color:  rgb(222, 232, 241); */
             color: white;
             margin:10px 10px;
            
@@ -107,10 +100,7 @@ ul li a:hover{
             justify-content: center;
             align-items: center;
             height: 170vh;
-            /* position: relative;
-            bottom: 70px; */
-            /* background-image: linear-gradient(to top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833); */
-
+          
         
         }
     .box1{
@@ -185,14 +175,13 @@ ul li a:hover{
         display: flex;
      
         height: 350px;
-        /* position: relative; */
-      
+     
 
     }
     .images img{
         height: 350px;
         width: 100%;
-        /* transition: all 0.5s ease; */
+    
     }
     .images input{
         display: none;
@@ -253,7 +242,7 @@ ul li a:hover{
         font-size: larger;
         width: 50%;
         height: 30px;
-        /* border: 2px solid black; */
+     
         border-radius: 5px;
         text-align: center;
         background-color: #92919136;
@@ -361,7 +350,7 @@ ul li a:hover{
     top: 20px;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
  color: white;
- /* padding: 10px 10px; */
+
  border-radius: 4%;
  box-shadow: 0 3px 10px rgb(0, 0, 0);
  line-height: 1.6;
@@ -373,7 +362,7 @@ ul li a:hover{
     transform:scale(1);
 	border:3px solid rgb(255, 255, 255);
     box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
-    /* z-index: 6; */
+
   }
   .sportsavail{
     width: 290px;
@@ -388,8 +377,6 @@ ul li a:hover{
     bottom: 195px;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
  color: white;
-
-  /* padding: 5px 10px; */
   border-radius: 4%;
   box-shadow: 0 3px 10px rgb(0, 0, 0);
   line-height: 1.6;
@@ -401,7 +388,7 @@ ul li a:hover{
     transition: 0.95s;
     transform:scale(.99);
 	border:3px solid rgb(255, 255, 255);
-    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
+
 
    }
    .cricketicon{
@@ -425,7 +412,7 @@ ul li a:hover{
     transition: 0.95s;
     transform:scale(.99);
 	border:3px solid rgb(255, 255, 255);
-    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
+  
 }
 
  
@@ -454,7 +441,7 @@ ul li a:hover{
     transition: 0.95s;
     transform:scale(.99);
 	border:3px solid rgb(255, 255, 255);
-    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
+
 }
 .price{
     width: 190px;
@@ -477,7 +464,7 @@ ul li a:hover{
     transition: 0.95s;
     transform:scale(.99);
 	border:3px solid rgb(255, 255, 255);
-    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
+ 
 }
 .addplayer{
     width: 590px;
@@ -502,17 +489,13 @@ ul li a:hover{
     transition: 0.95s;
     transform:scale(.99);
 	border:3px solid rgb(255, 255, 255);
-    /* box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73); */
+ 
 }
 /* main2 */
      
      /* footer */
 footer{
     height: 30vh;
-  
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16) ;
-     */
     background-position: center;
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    

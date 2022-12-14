@@ -7,8 +7,7 @@
 }
 /* header */
 header{
-    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
-    height: 10vh;
+     height: 10vh;
     background-position: center;
     background-size: cover;
    position: sticky;
@@ -65,12 +64,11 @@ ul li a:hover{
 
 #main1{
     height: 86vh;
-       /* background: linear-gradient(90deg, rgb(44, 209, 242) 4%, rgb(81, 208, 234) 100%); */
- display: flex;
+     display: flex;
     align-items: center;
     background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
   
-/* background-color: #bec7d8eb; */
+
   
     
 }
@@ -93,25 +91,12 @@ animation: change 5s;
 .player1{
     width:45%;
     border-radius: 10%;
-    /* box-shadow: 0px 0px 10px 4px rgb(0,0,0,0.1); */
     margin-right: 3%;
 }
 /* main1 */
 /* main2 */
 #main2{
     height: 70vh;
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 190px; */
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16);
-      */
-      /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-  */
-  /* background-image: linear-gradient(to right top, #020426, #041f2c, #041d36, #07172c, #04020b);
-  */
-  /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-  */
   background-color: white;
 }
 .mainchild{
@@ -127,9 +112,7 @@ animation: change 5s;
     height: 130%;
     margin-top: 3%;   
     border-radius: 2%;
-    /* background: linear-gradient(90deg, rgb(102, 223, 247) 4%, rgb(102, 223, 247) 100%);
-    box-shadow: 0 10px 10px rgba(13, 7, 7, 0.57); */
-    display: flex;
+       display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -145,11 +128,8 @@ animation: change 5s;
 .boxcontent1{
     color:rgb(243, 234, 234);
     font-size:130%;
-  
     position: relative;
-  
     left: 3%;
- /* padding: 10px 10px; */
  line-height: 2;
  word-spacing: 1px;
 
@@ -220,13 +200,7 @@ bottom: 12%;
     display: flex;
     justify-content: space-evenly;
    background-color: white;
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16);
-     */
-     /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-    */
-    /* background-image: linear-gradient(to right top, #020426, #041f2c, #041d36, #07172c, #04020b); */
- z-index: -2;
+   z-index: -2;
 }
 .sportsheading{
     font-size:30px;
@@ -245,7 +219,6 @@ bottom: 12%;
 .rotationcont{
     width:220px;
     height: 300px;
-    /* position: relative; */
     margin-right:470px ;
     margin-top: 90px;
     perspective: 1050px;
@@ -291,13 +264,6 @@ bottom: 12%;
     height: 60vh;
     display: flex;
     justify-content: space-evenly;
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16);
-     */
-     /* background-image: linear-gradient(to right top, #00021a, #041f2c, #041d36, #07172c, #04020b);
-  */
-  /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-  */
   background-color: white;
    
 }
@@ -306,16 +272,13 @@ bottom: 12%;
     height: 80%;
     margin-top: 3%;   
     border-radius: 2%;
-    /* background: linear-gradient(90deg, rgb(123, 208, 244) 4%, rgb(98, 207, 237) 100%); */
-    box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+        box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
     display: flex;
     flex-direction: column;
     align-items: center;
     
     padding: 10px 15px;
-    /* background-image: linear-gradient(to right top, #13c0ec, #36a7dc, #2c8cec, #2e8de7, #5026e7);
-   */
-   background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+     background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
   
 }
 
@@ -326,13 +289,7 @@ bottom: 12%;
     scale: 1.9;
 
 }
-/* .sportlist{
-    width: 320px;
-    height: 200px;
-    scale: 1;
-    position: relative;
-    top: 35px;
-} */
+
 
 .star{
     display: flex;
@@ -348,10 +305,6 @@ bottom: 12%;
 /* footer */
 footer{
     height: 30vh;
-  
-    /* border:50px solid transparent;
-    border-image: linear-gradient(90deg, rgb(226, 233, 234) 4rgb(219, 221, 222)16) ;
-     */
     background-position: center;
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    
@@ -408,22 +361,6 @@ a{
 }
 /* footer */
 
-/* .game1{
-    width: 23%;
-    height: 60%;
-    margin-top: 3%;   
-    border-radius: 2%;
-    background: linear-gradient(90deg, rgb(58, 163, 192) 4%, rgb(240, 232, 232) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 15px;
-    position: relative;
-    right: 160px;
-    top:39px;
 
-
-
-} */
 
 
