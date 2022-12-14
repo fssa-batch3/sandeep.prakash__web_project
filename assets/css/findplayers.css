@@ -99,6 +99,7 @@ ul li a:hover{
        position: relative;
        bottom: 150px;
        right: 2%;
+       height: 102px;
     
         
     }
@@ -151,19 +152,17 @@ input[type="search"]::placeholder{
 
 }  
 .login2{
-    font-size: medium;
-    padding: 5px 15px;
-    height: 20%;
-    width: 100%;
-    background-color: rgb(5, 120, 105);
+    font-size: 13px;
+    padding: 2px 5px;
+    background-color: rgb(5, 120, 47);
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
     border: none;
-   margin-bottom: 5px;
-   border-radius: 10px;
-    
-  
+   
+    border-radius: 3px;
+    position: relative;
+    /* bottom: 50px; */
   }
   /* main1 */
   /* main2 */

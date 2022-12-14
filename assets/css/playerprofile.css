@@ -71,15 +71,16 @@ ul li a:hover{
         font-size: xx-large;
         font-weight:bolder;
         position: relative;
-        bottom: 150px;
+        bottom: 220px;
         color: white;
     }
    
     .cont2{
-        background-color: rgb(206, 206, 227);
+        background-color: rgb(2, 2, 45);
         border: 5px solid rgb(25, 11, 82);
         border-radius: 10%;
         width: 6%;
+        height: 102px;
         box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
         display: flex;
         flex-direction: column;
@@ -89,6 +90,11 @@ ul li a:hover{
        bottom: 54px;
      
     
+        
+    }
+    .userlogo{
+        width: 35px;
+        position: relative;
         
     }
 
@@ -104,16 +110,17 @@ ul li a:hover{
 }  
 
 .login2{
-    font-size: medium;
-    padding: 0px 0px;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(5, 120, 105);
+    font-size: 13px;
+    padding: 2px 5px;
+    background-color: rgb(5, 120, 47);
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
     border: none;
-   margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    border-radius: 3px;
+  
     
   
   }
