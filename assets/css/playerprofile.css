@@ -10,7 +10,7 @@ body{
 header{
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
  
-    height: 20vh;
+    height: 14vh;
     background-position: center;
     background-size: cover;
     
@@ -21,7 +21,8 @@ ul{
     justify-content:end;
     margin-right: 20%;
     position: relative;
-    top: 72px;
+    top: 38px;
+    left: 70px;
     
 }
 ul li{
@@ -59,7 +60,7 @@ ul li a:hover{
 .logo{
     width:14%;
     position: relative;
-    bottom: 112px;
+    bottom: 162px;
 }
 #main1{
     height: 5vh;
@@ -74,7 +75,7 @@ ul li a:hover{
         font-size: xx-large;
         font-weight:bolder;
         position: relative;
-        bottom: 190px;
+        bottom: 230px;
         color: white;
     }
    
@@ -90,7 +91,7 @@ ul li a:hover{
          align-items: center;
         margin-left: 90%;
        position: relative;
-       bottom: 28px;
+       bottom: 78px;
      
     
         
