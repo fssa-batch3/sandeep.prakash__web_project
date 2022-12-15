@@ -96,7 +96,6 @@ ul li a:hover{
             background-color:rgb(218, 222, 241) ;
             color: white;  
             margin:10px 10px;  
-            border-radius: 0%; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -317,7 +316,7 @@ ul li a:hover{
     width: 590px;
 
     border: 2px solid black;
-    color: rgb(4, 10, 15);
+
     display: flex;
     flex-direction: column;
    align-items: center;
@@ -367,7 +366,7 @@ ul li a:hover{
     width: 590px;
    
     border: 2px solid black;
-    color: rgb(4, 10, 15);
+
     display: flex;
     flex-direction: column;
    align-items: center;
@@ -466,7 +465,7 @@ ul li a:hover{
         font-weight: bolder;
         
         padding: 10px 142px;
-        border:2px solid black;
+       
         cursor: pointer;
         border-radius: 10px;
         border: none;
@@ -483,7 +482,7 @@ ul li a:hover{
         font-weight: bolder;
         
         padding: 10px 139px;
-        border:2px solid black;
+ 
         cursor: pointer;
         border-radius: 10px;
         border: none;
@@ -495,7 +494,7 @@ ul li a:hover{
      /* footer */
 footer{
     height: 30vh;
-    background-position: center;
+    
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    
     background-size: cover;

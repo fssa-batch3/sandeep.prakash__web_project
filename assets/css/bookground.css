@@ -299,7 +299,7 @@ align-items: flex-end;
 footer{
 
     height: 30vh;
-    background-position: center;
+   
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
    
     background-size: cover;
@@ -343,9 +343,7 @@ footer{
     color: #00acee;
 
 }
-.fa-instagram{
 
-}
 .fa-linkedin{
  color: #0A66C2;
 
