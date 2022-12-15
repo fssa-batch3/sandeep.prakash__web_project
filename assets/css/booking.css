@@ -117,4 +117,9 @@ input[type="text"]::placeholder{
 .or{
     font-size: 17px;
 }
+.goback{
+    color:white;
+    position: relative;
+    bottom: 20px;
+}
 /* main */
