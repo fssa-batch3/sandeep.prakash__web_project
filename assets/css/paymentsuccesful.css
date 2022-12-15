@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-*{
-    margin:0px;
-    padding:0px;
+
+* {
+    margin: 0px;
+    padding: 0px;
 }
-#container{
+
+#container {
     background-image: url(../../assets/images/onlinepayback.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
 }
-.tick{
+
+.tick {
     position: relative;
     top: 30%;
     border: 2px solid rgb(180, 176, 176);
@@ -23,20 +26,22 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 
-   
+
 }
-.fa-check{
+
+.fa-check {
     color: green;
-    font-size:520%;
+    font-size: 520%;
 }
 
-.h0{
+.h0 {
     color: green;
     font-size: xx-large;
     text-align: center;
 }
-.code{
+
+.code {
     color: white;
 }
