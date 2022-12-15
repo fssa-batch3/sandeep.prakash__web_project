@@ -16,7 +16,7 @@ header{
 main */
 .main{
     position: relative;
-    top: 150px;
+    top: 120px;
     left: 0px;
     padding-left: 310px;
   
@@ -28,7 +28,7 @@ main */
 }
 .form1{
     width: 70%;
-    height: 680px;
+    height: 700px;
     border: 5px solid black;
     position: relative;
     left: 2%;
@@ -46,13 +46,14 @@ main */
    
     background-color: rgba(0,0,0,0.5);
     color: rgb(239, 239, 239);
-   height: 680px;
+   height: 700px;
   
 }
 .pay1{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: larger;
 }
 .pay2{
     display: flex;
@@ -98,10 +99,22 @@ input{
     cursor: pointer;
     position:relative;
     right: 30px;
-    
+    font-weight: bold;
+    border-radius: 10px;
 
 }
 a{
     text-decoration: none;
+}
+input[type="name"]::placeholder{
+    padding-left: 5%;
+    
+ 
+} 
+input[type="text"]::placeholder{
+    padding-left: 5%;
+}
+.or{
+    font-size: 17px;
 }
 /* main */
