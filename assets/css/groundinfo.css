@@ -225,7 +225,7 @@ ul li a:hover{
    
      .addplayers{
         width: 100%;
-       
+       border: 1px solid black;
         background-color: rgba(91, 173, 37, 0.906);
         font-size: 17px;
         display: flex;
