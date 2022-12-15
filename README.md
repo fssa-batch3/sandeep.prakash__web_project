@@ -1,4 +1,5 @@
 # Book and play
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_sandeep.prakash__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_sandeep.prakash__web_project)
  100 project
 About my project: 4 lines about your project
 To help people to find grounds and connect to player.
