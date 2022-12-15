@@ -225,19 +225,21 @@ input[type="search"]::placeholder{
     border:2px solid transparent;
     border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
     color: rgb(12, 10, 10);
-
+  margin-left: 15px;
     
 }
 .groundn{
   color: rgb(6, 4, 4);
   font-size:23px;
   font-weight:bolder;
+  text-align: center;
 
 }
 .locationn{
     color: rgb(0, 0, 0);
     font-size:23px;
     font-weight:bolder;
+    text-align: center;
 }
 .cricketicon{
     width: 35px;
