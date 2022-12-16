@@ -63,11 +63,12 @@ ul li a:hover {
     width: 14%;
     position: relative;
     bottom: 80px;
+    left: 46px;
 }
 
 /* header */
 
-/* main1 */
+/* main1 About webpage */
 
 #main1 {
     height: 86vh;
@@ -84,7 +85,7 @@ ul li a:hover {
     font-size: 350%;
     color: rgb(8, 8, 8);
     margin-left: 3.5%;
-    animation: change 5s;
+    animation: change 5s infinite;
 
 }
 
@@ -104,8 +105,8 @@ ul li a:hover {
     margin-right: 3%;
 }
 
-/* main1 */
-/* main2 */
+/* main1 About webpage*/
+/* main2 what we do */
 #main2 {
     height: 70vh;
     background-color: white;
@@ -139,7 +140,7 @@ ul li a:hover {
     width: 35px;
 }
 
-.boxcontent1 {
+.box-content{
     color: rgb(243, 234, 234);
     font-size: 130%;
     position: relative;
@@ -168,7 +169,7 @@ ul li a:hover {
 
 }
 
-.heading0 {
+.box-heading1 {
     font-size: 190%;
 
     position: relative;
@@ -176,7 +177,7 @@ ul li a:hover {
     color: rgb(255, 255, 255);
 }
 
-.heading1 {
+.box-heading2 {
     font-size: 190%;
 
     position: relative;
@@ -184,7 +185,7 @@ ul li a:hover {
     color: rgb(255, 255, 255);
 }
 
-.heading2 {
+.box-heading3 {
     font-size: 190%;
 
     position: relative;
@@ -219,7 +220,7 @@ ul li a:hover {
     border-radius: 50%;
 }
 
-.rotationcont {
+.rotation-content {
     width: 220px;
     height: 300px;
     margin-right: 470px;
@@ -229,7 +230,7 @@ ul li a:hover {
     transform: rotateX(-10deg)rotateZ(-7deg);
 }
 
-.imagerot {
+.image-rotation{
     width: 100%;
     position: absolute;
     transform-style: preserve-3d;
@@ -268,7 +269,7 @@ ul li a:hover {
 }
 
 /* animation */
-/* review */
+/* review section */
 #review {
     height: 60vh;
     display: flex;
@@ -313,8 +314,8 @@ ul li a:hover {
     color: rgb(255, 183, 0);
 }
 
-/* review */
-/* footer */
+/* review sectioin*/
+/* footer section */
 footer {
     height: 30vh;
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
@@ -331,7 +332,7 @@ footer {
 
 }
 
-.footh {
+.foot-heading {
     color: rgb(219, 213, 213);
     font-size: larger;
     font-weight: bold;
@@ -378,4 +379,4 @@ a {
     text-decoration: none;
 }
 
-/* footer */
+/* footer section */

@@ -60,10 +60,13 @@ ul li a:hover {
     width: 14%;
     position: relative;
     bottom: 80px;
+    left: 46px;
+    
+
 }
 
 /* header */
-/* main1 */
+/* main1 search */
 .main1 {
     overflow: hidden;
     height: 16vh;
@@ -188,14 +191,14 @@ input[type="search"]::placeholder {
 
 }
 
-/* main1 */
+/* main1 search */
 
 
 
 
 
 
-/* main2 */
+/* main2 groundlist1 */
 
 .main2 {
 
@@ -323,7 +326,7 @@ input[type="search"]::placeholder {
     color: rgb(0, 0, 0);
 }
 
-/* main2 */
+/* main2  groundslist*/
 /* footer */
 footer {
 
@@ -343,7 +346,7 @@ footer {
 
 }
 
-.footh {
+.foot-heading {
     color: rgb(219, 213, 213);
     font-size: larger;
     font-weight: bold;

@@ -60,6 +60,7 @@ ul li a:hover {
     width: 14%;
     position: relative;
     bottom: 80px;
+    left: 46px;
 }
 
 /* header */
@@ -557,7 +558,7 @@ footer {
 
 }
 
-.footh {
+.foot-heading{
     color: rgb(219, 213, 213);
     font-size: larger;
     font-weight: bold;
