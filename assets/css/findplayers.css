@@ -1,142 +1,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-* {
-    margin: 0px;
-    padding: 0px;
-
+*{
+    margin:0px;
+    padding:0px;
+   
 
 }
-
 /* header */
-header {
+header{
     height: 10vh;
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
     font-family: 'Noto Serif Khojki', serif;
-
+ 
 }
-
-ul {
+ul{
     display: flex;
-    justify-content: end;
+    justify-content:end;
     margin-right: 2%;
 }
-
-ul li {
+ul li{
     list-style-type: none;
     padding: 2%;
-
+ 
 }
-
-ul li a {
+ul li a{
     text-decoration: none;
     font-size: larger;
     color: white;
 }
-
-ul li a:hover {
+ul li a:hover{
     color: rgb(130, 217, 235);
-
+  
 }
 
-.login {
-    font-size: medium;
-    padding: 5px 15px;
-    height: 113%;
-    width: 102%;
-    background-color: rgb(5, 34, 120);
-    color: white;
-    position: relative;
-    bottom: 15%;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-
+.login{
+  font-size: medium;
+  padding: 5px 15px;
+  height: 113%;
+  width: 102%;
+  background-color: rgb(5, 34, 120);
+  color: white;
+  position: relative;
+  bottom: 15%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  
 
 }
-
-.logo {
-    width: 14%;
+.logo{
+    width:14%;
     position: relative;
     bottom: 80px;
 }
-
 /* header */
 
 /* main1 */
-#main1 {
+#main1{
     height: 15vh;
     background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
     position: sticky;
-    top: 0%;
+    top:0%;
     z-index: 2;
     border: 20px solid;
     border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
-
-
-
-}
-
-.content1 {
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
-
-}
-
-.content2 {
-    display: flex;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-}
-
-.cont3 {
-    background-color: rgb(2, 2, 45);
-    border: 5px solid rgb(25, 11, 82);
-    border-radius: 10%;
-    width: 6%;
-    box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 92%;
-    position: relative;
-    bottom: 150px;
-    right: 2%;
-    height: 102px;
-
-
-}
-
-.userlogo {
-    width: 45px;
-    position: relative;
-    bottom: 10px;
-}
-
-#searchnav {
-    width: 80%;
-    height: 6vh;
-    max-width: 35%;
-    background: rgba(67, 67, 57, 0.1);
-    display: flex;
-    justify-content: center;
-    border-radius: 2%;
-    position: relative;
-    top: 20px;
-    border: 2px solid rgb(0, 0, 0);
-
-}
-
-input[type="search"]::placeholder {
+   
+   
+    
+    }
+    .content1{
+        text-align: center;
+        font-size: xx-large;
+        font-weight:bolder;
+        color: rgb(0, 0, 0);
+        
+    }
+    .content2{
+        display: flex;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+    }
+    .cont3{
+        background-color: rgb(2, 2, 45);
+        border: 5px solid rgb(25, 11, 82);
+        border-radius: 10%;
+        width: 6%;
+        box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+        display: flex;
+        flex-direction: column;
+         align-items: center;
+        margin-left: 92%;
+       position: relative;
+       bottom: 150px;
+       right: 2%;
+       height: 102px;
+    
+        
+    }
+       .userlogo{
+        width: 45px;
+        position: relative;
+        bottom: 10px;
+    }
+    #searchnav{
+        width: 80%;
+        height: 6vh;
+        max-width: 35%;
+        background:rgba(67, 67, 57, 0.1);
+        display: flex;
+        justify-content: center;
+        border-radius: 2%;
+        position: relative;
+        top:20px;
+        border: 2px solid rgb(0, 0, 0);
+        
+    }
+  
+input[type="search"]::placeholder{
     font-size: 130%;
     color: rgb(0, 0, 0);
-
-}
-
-#search2 {
+ 
+} 
+#search2{
     background: transparent;
     flex: 1;
     border: none;
@@ -146,22 +132,21 @@ input[type="search"]::placeholder {
 
 }
 
-.fa-magnifying-glass {
-    font-size: 150%;
+.fa-magnifying-glass{
+    font-size:150%;
     color: rgb(0, 0, 0);
 }
-
-.searchbtn {
+ 
+.searchbtn{
     background: transparent;
-    cursor: pointer;
+   cursor: pointer;
     border: none;
     outline: none;
     padding: 0px 20px;
     color: white;
 
-}
-
-.login2 {
+}  
+.login2{
     font-size: 13px;
     padding: 2px 5px;
     background-color: rgb(5, 120, 47);
@@ -169,183 +154,163 @@ input[type="search"]::placeholder {
     font-weight: 500;
     cursor: pointer;
     border: none;
-
+   
     border-radius: 3px;
     position: relative;
-
-}
-
-/* main1 */
-/* main2 */
-.main2 {
+  
+  }
+  /* main1 */
+  /* main2 */
+  .main2{
     height: 300vh;
-    background-color: white;
+   background-color:white;
     overflow: hidden;
     border: 20px solid;
     border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+   
+    
+    }
+    .parent{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+       grid-row-gap: 60px;
+       
 
 
-}
-
-.parent {
-    margin: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-row-gap: 60px;
-
-
-
-}
-
-.child1 {
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-    height: 177px;
-    width: 53%;
-    color: white;
-    margin-left: 22%;
-    border-radius: 10%;
-    display: flex;
-    justify-content: center;
-}
-
-.visit {
-    font-size: medium;
-    padding: 2px 7px;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(241, 235, 249);
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    top: 10px;
-    border-radius: 5%;
-}
-
-.group {
-
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    display: grid;
-    grid-row-gap: 15px;
-
-}
-
-.fa-star {
-    color: goldenrod;
-    font-size: 14px;
-}
-
-.ratings {
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    right: 2px;
-    bottom: 53px;
-
-}
-
-.ratingno {
-    position: relative;
-    font-size: 90%;
-    font-weight: bold;
-    right: 5px;
-    color: rgb(255, 255, 255);
-}
-
-.nameplayer {
-    position: relative;
-    bottom: 10px;
-
-}
-
-.sportss {
-    width: 10%;
-    height: 38px;
-
-    font-size: 15px;
-
-    border-radius: 5px;
-    position: relative;
-    left: 10px;
-    bottom: 55px;
-}
-
-.selectsportsword {
-    font-size: 20px;
-    position: relative;
-    left: 10px;
-    bottom: 70px;
-}
-
-/* main2 */
-/* footer */
-
-
-footer {
+    }
+    .child1{
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+   height: 177px;
+        width: 53%;
+        color: white;
+        margin-left: 22%;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+    }
+    .visit{
+        font-size: medium;
+        padding: 2px 7px;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(241, 235, 249);
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        top: 10px;
+        border-radius: 5%;
+    }
+    
+    .group{
+    
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        display:grid;
+        grid-row-gap: 15px;
+        
+    }
+    .fa-star{
+        color: goldenrod;
+        font-size: 14px;
+    }
+    .ratings{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        right: 2px;
+        bottom: 53px;
+    
+    }
+    .ratingno{
+        position: relative;
+        font-size:90%;
+        font-weight: bold;
+       right: 5px;
+        color: rgb(255, 255, 255);
+    }
+      .nameplayer{
+        position: relative;
+        bottom: 10px;
+       
+    }
+    .sportss{
+        width: 10%;
+        height: 38px;
+        
+        font-size: 15px;
+       
+        border-radius: 5px;
+        position: relative;
+        left: 10px;
+        bottom: 55px;
+    }
+    .selectsportsword{
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        bottom: 70px;
+    }
+    /* main2 */
+    /* footer */
+ 
+  
+footer{
     height: 30vh;
 
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-
+   
     background-size: cover;
     color: white;
-
+    
 }
-
-.row {
+.row{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 
 }
-
-.footh {
+.footh{
     color: rgb(219, 213, 213);
     font-size: larger;
     font-weight: bold;
-
+   
 }
-
-.column1 {
+.column1{
     margin-top: 2%;
 }
-
-p {
+p{
     list-style-type: none;
-
-
+    
+ 
 }
-
-p a {
+p a{
     text-decoration: none;
-    font-size: medium;
+    font-size:medium;
     color: rgb(219, 213, 213);
     line-height: 1.6;
 }
-
-.fa-brands {
-    font-size: x-large;
+.fa-brands{
+    font-size:x-large;
     padding: 1.5%;
 }
-
-.fa-facebook {
-    color: #3b5998;
+.fa-facebook{
+    color: #3b5998  ;
 }
-
-.fa-twitter {
+.fa-twitter{
     color: #00acee;
 
 }
 
-.fa-linkedin {
-    color: #0A66C2;
+.fa-linkedin{
+ color: #0A66C2;
 
 }
-
-a {
+a{
     text-decoration: none;
 }
-
 /* footer */
+ 

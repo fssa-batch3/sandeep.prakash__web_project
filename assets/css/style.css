@@ -120,7 +120,7 @@ ul li a:hover {
 
 }
 
-.box1 {
+.box {
     width: 102%;
     height: 130%;
     margin-top: 3%;
@@ -277,7 +277,7 @@ ul li a:hover {
 
 }
 
-.person1 {
+.person {
     width: 23%;
     height: 80%;
     margin-top: 3%;
@@ -286,13 +286,12 @@ ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding: 10px 15px;
     background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
 
 }
 
-.person {
+.personimg {
     border-radius: 50%;
     height: 42px;
     width: 42px;
