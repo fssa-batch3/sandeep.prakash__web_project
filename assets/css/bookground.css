@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     margin: 0px;
@@ -237,7 +236,7 @@ input[type="search"]::placeholder {
 
 }
 
-.child1:hover {
+.child:hover {
     background-color: rgb(201, 225, 229);
     transform: scale(1);
     border: 3px solid rgb(2, 3, 14);

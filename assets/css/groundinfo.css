@@ -429,8 +429,6 @@ ul li a:hover {
 .booking1 {
     width: 730px;
     height: 120vh;
-
-
     position: relative;
     bottom: 220px;
     background-image: linear-gradient(to top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833);
