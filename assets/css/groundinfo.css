@@ -25,6 +25,8 @@ ul {
 ul li {
     list-style-type: none;
     padding: 2%;
+    position: relative;
+    bottom: 5px;
 
 }
 
@@ -46,8 +48,6 @@ ul li a:hover {
     width: 102%;
     background-color: rgb(5, 34, 120);
     color: white;
-    position: relative;
-    bottom: 15%;
     font-weight: bold;
     cursor: pointer;
     border: none;
@@ -262,7 +262,7 @@ ul li a:hover {
 
 .locationinfo {
     width: 290px;
-    height: 190px;
+    height: 188px;
     border: 2px solid black;
     display: flex;
     flex-direction: column;
@@ -272,7 +272,7 @@ ul li a:hover {
     top: 20px;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
     color: white;
-
+    padding: 0px 15px;
     border-radius: 4%;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     line-height: 1.6;
@@ -592,6 +592,9 @@ p a {
 .fa-twitter {
     color: #00acee;
 
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
 }
 
 .fa-linkedin {

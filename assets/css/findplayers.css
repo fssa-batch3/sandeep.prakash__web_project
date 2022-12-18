@@ -18,6 +18,8 @@ ul{
     display: flex;
     justify-content:end;
     margin-right: 2%;
+    position: relative;
+    bottom: 5px;
 }
 ul li{
     list-style-type: none;
@@ -103,6 +105,7 @@ ul li a:hover{
         width: 45px;
         position: relative;
         bottom: 10px;
+      
     }
     #searchnav{
         width: 80%;
@@ -147,15 +150,14 @@ input[type="search"]::placeholder{
     color: white;
 
 }  
-.login2{
-    font-size: 13px;
-    padding: 2px 5px;
+.userprofile{
+    font-size: 12px;
+    padding: 5px 5px;
     background-color: rgb(5, 120, 47);
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     border: none;
-   
     border-radius: 3px;
     position: relative;
   
@@ -189,6 +191,8 @@ input[type="search"]::placeholder{
         border-radius: 10%;
         display: flex;
         justify-content: center;
+        text-align: center;
+
     }
     .visit{
         font-size: medium;
@@ -204,15 +208,22 @@ input[type="search"]::placeholder{
         top: 10px;
         border-radius: 5%;
     }
+    .visit:hover{
+        background-color: rgb(50, 178, 50);
+        color: white;
+    }
     
     .group{
-    
+    display: flex;
         justify-content: space-around;
         flex-direction: column;
         align-items: center;
         display:grid;
         grid-row-gap: 15px;
         
+    }
+    .nameplayer{
+        text-align: center;
     }
     .fa-star{
         color: goldenrod;
@@ -241,9 +252,11 @@ input[type="search"]::placeholder{
     .sportss{
         width: 10%;
         height: 38px;
-        
+        background-color: rgb(255, 255, 255);
+        text-align: center;
         font-size: 15px;
-       
+        color: #000000;
+        border: 2px solid rgb(35, 156, 211);
         border-radius: 5px;
         position: relative;
         left: 10px;
@@ -300,6 +313,9 @@ p a{
 }
 .fa-facebook{
     color: #3b5998  ;
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
 }
 .fa-twitter{
     color: #00acee;

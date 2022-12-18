@@ -61,7 +61,7 @@ form {
 
 }
 
-.timings {
+#timingsfrom,#timingsto{
     width: 50%;
     height: 35px;
 
@@ -72,6 +72,7 @@ form {
 
 
 }
+
 
 .sportss {
     width: 50%;

@@ -14,9 +14,9 @@
             <h1 class="sign">Join As A Player</h1><br>
             <form>
            <label class="labelname"> Display Name:</label><br>
-           <input type="name" placeholder="Your Name " id="name1"><br> 
+           <input type="name" placeholder="Your Name " id="name1" aria-label="name"><br> 
            <label class="labelname">Age :</label><br>
-           <input type="number" placeholder="Age " id="age"><br> 
+           <input type="number" placeholder="Age " id="age" aria-label="age"><br> 
         
             </form>
             
@@ -30,27 +30,13 @@
                
             </select><br>
             <p class="labelname">Timing Available</p><br>
-            <select class="timings">
-                <option>8:00AM-9:00AM</option>
-                <option >9:00AM-10:00AM</option>
-                <option >10:00AM-11:00AM</option>
-                <option>11:00AM-12:00PM</option>
-                <option>12:00PM-1:00PM</option>
-                <option>1:00PM-2:00PM</option>
-                <option>2:00PM-3:00PM</option>
-                <option>3:00PM-4:00PM</option>
-                <option>4:00PM-5:00PM</option>
-                <option>5:00PM-6:00PM</option>
-                <option>6:00PM-7:00PM</option>
-                <option>7:00PM-8:00PM</option>
-                <option>8:00PM-9:00PM</option>
-                <option>9:00PM-10:00PM</option>
-                
-               </select>
+            <input type="time"  id="timingsfrom" aria-label="timingsfrom">
+            <p>To</p>
+            <input type="time"  id="timingsto" aria-label="timingsto">
             </div>
                <br>
                <div class="checkboxcolumn">
-               <input type="checkbox" id="checkbox">
+               <input type="checkbox" id="checkbox" aria-label="checkbox">
                <span class="checkboxsentence">You accept to the terms and condition of joining as a player</span><br>
             </div>
              <a href="../../pages/player/registeredplayer.html"><button class="profile">Join</button></a>  

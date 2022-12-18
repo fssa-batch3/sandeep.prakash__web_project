@@ -6,9 +6,7 @@
     /* overflow: hidden; */
 }
 
-body {
-  
-}
+
 
 header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
@@ -26,7 +24,7 @@ ul {
     margin-right: 20%;
     position: relative;
     top: 38px;
-    left: 70px;
+    left: 260px;
 
 }
 
@@ -52,15 +50,15 @@ ul li a:hover {
 .login {
     font-size: medium;
     padding: 5px 15px;
-    height: 113%;
+    height: 103%;
     width: 102%;
     background-color: rgb(5, 34, 120);
     color: white;
     position: relative;
-    bottom: 95px;
     font-weight: bold;
     cursor: pointer;
     border: none;
+    border-radius: 10px;
 
 
 }
@@ -72,14 +70,7 @@ ul li a:hover {
     left: 46px;
 }
 
-#main1 {
-    height: 5vh;
-    /* border:20px solid transparent;
-    border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
-    
-    */
 
-}
 
 .cont1 {
     text-align: center;
@@ -104,10 +95,7 @@ ul li a:hover {
 
 
 .main {
-    height: 87vh;
-
-
-
+    height: 90vh;
 }
 
 .bar {
@@ -161,11 +149,12 @@ ul li a:hover {
     height: 50vh;
     display: flex;
     flex-direction: column;
-
     margin-bottom: 20%;
     border-radius: px;
     border: 1px solid black;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
+    position: relative;
+    top:50px;
 }
 
 .top {
@@ -243,20 +232,6 @@ form button {
     font-size: x-large;
 }
 
-.connect {
-    font-size: medium;
-    padding: 9px 20px;
-    color: rgb(20, 24, 21);
-    background-color: green;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    bottom: 50px;
-
-
-
-}
 
 .rightarrow {
     width: 90px;
@@ -274,17 +249,11 @@ form button {
 left: 90px;
 }
 .faq-ques1{
-    position: relative;
-    top: 0px;
-    left: 0px;
   width: 500px;
-
-  
-
 }
 .faq{
     position: relative;
-    top: 150px;
+    top: 110px;
     left: 50px;
     
 }
@@ -383,3 +352,68 @@ left: 90px;
     transform:rotateY('90deg')
  
 }
+/* footer section */
+footer {
+    height: 30vh;
+    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+
+    background-size: cover;
+    color: white;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.foot-heading {
+    color: rgb(219, 213, 213);
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.column1 {
+    margin-top: 2%;
+}
+
+p {
+    list-style-type: none;
+
+
+}
+
+p a {
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(219, 213, 213);
+    line-height: 1.6;
+}
+
+.fa-brands {
+    font-size: x-large;
+    padding: 1.5%;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00acee;
+
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* footer section */

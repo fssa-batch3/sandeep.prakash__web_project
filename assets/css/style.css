@@ -22,6 +22,8 @@ ul {
     display: flex;
     justify-content: end;
     margin-right: 2%;
+    position: relative;
+    bottom: 5px;
 }
 
 ul li {
@@ -43,19 +45,18 @@ ul li a:hover {
 
 .login {
     font-size: medium;
-    padding: 2px 20px;
-    height: 105%;
+    padding: 2px 17px;
+    height: 102%;
     width: 100%;
     background-color: rgb(5, 34, 120);
     color: white;
-    position: relative;
-    bottom: 5%;
-    font-weight: 600;
+    font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
-
+ letter-spacing: 1px;
+ /* font-family: ; */
 }
 
 .logo {
@@ -367,6 +368,9 @@ p a {
 .fa-twitter {
     color: #00acee;
 
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
 }
 
 .fa-linkedin {

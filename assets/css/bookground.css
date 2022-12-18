@@ -9,7 +9,7 @@
 /* header */
 header {
 
-    height: 10vh;
+    height: 12vh;
     background-position: center;
     background-size: cover;
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
@@ -41,17 +41,20 @@ ul li a:hover {
 
 .login {
     font-size: medium;
-    padding: 5px 15px;
-    height: 100%;
-    width: 105%;
+    padding: 2px 17px;
+    height: 102%;
+    width: 100%;
     background-color: rgb(5, 34, 120);
     color: white;
-    position: relative;
-    bottom: 15%;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    font-family: 'Noto Serif Khojki', serif;
+
+    
+    
+
 
 }
 
@@ -90,7 +93,7 @@ ul li a:hover {
 }
 
 .locationselect {
-    width: 7%;
+    width: 10%;
     height: 44px;
     background-color: rgb(255, 255, 255);
 
@@ -202,10 +205,10 @@ input[type="search"]::placeholder {
 .main2 {
 
     height: 290vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: white;
     border: 20px solid;
-    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+    border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60;
 
 }
 
@@ -231,25 +234,24 @@ input[type="search"]::placeholder {
     cursor: pointer;
     background-color: white;
     color: black;
-    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+
 
 
 }
 
 .child:hover {
-    background-color: rgb(201, 225, 229);
-    transform: scale(1);
+   
     border: 3px solid rgb(2, 3, 14);
+        
 }
 
 .groimg {
     width: 90%;
-    border-radius: 2%;
     border: 2px solid transparent;
     border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
     color: rgb(12, 10, 10);
     margin-left: 15px;
-
+ 
 }
 
 .groundn {
@@ -382,6 +384,9 @@ p a {
     color: #00acee;
 
 }
+.fa-instagram{
+    color: rgb(167, 8, 95);
+}
 
 .fa-linkedin {
     color: #0A66C2;
@@ -390,6 +395,7 @@ p a {
 
 a {
     text-decoration: none;
+  
 }
 
 /* footer */

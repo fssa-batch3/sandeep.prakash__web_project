@@ -68,16 +68,12 @@ ul li a:hover {
 .logo {
     width: 14%;
     position: relative;
-    bottom: 162px;
+    bottom: 39px;
     left: 46px;
 }
 
 #main1 {
     height: 5vh;
-    /* border:20px solid transparent;
-    border-image: linear-gradient(90deg, rgba(2,0,36,1) 4%, rgba(0,212,255,1) 100%)60;
-    
-    */
 
 }
 
@@ -86,7 +82,7 @@ ul li a:hover {
     font-size: xx-large;
     font-weight: bolder;
     position: relative;
-    bottom: 230px;
+    bottom: 250px;
     color: white;
 }
 
@@ -102,7 +98,7 @@ ul li a:hover {
     align-items: center;
     margin-left: 90%;
     position: relative;
-    bottom: 78px;
+    bottom: 143px;
 
 
 
@@ -125,12 +121,12 @@ ul li a:hover {
 
 }
 
-.login2 {
+.userprofile {
     font-size: 13px;
-    padding: 2px 5px;
+    padding: 5px 5px;
     background-color: rgb(5, 120, 47);
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     border: none;
     position: relative;
