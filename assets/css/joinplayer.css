@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
 }
-
+/* container */
 #container {
     background-image: url(../../assets/images/joinplayerbackground.jpg);
     height: 100vh;
@@ -19,29 +17,29 @@
 
 }
 
-.forms h1,
-form {
+.forms h1,form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     color: white;
 
-
-
-
 }
+/* forms content */
 
 .forms {
     position: relative;
-    top: 20%;
+    top: 15%;
     border: 2px solid rgb(180, 176, 176);
     width: 35%;
-    left: 35%;
+    left: 33%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 70%;
-
+    height: 75%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.labelname {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #name1 {
@@ -60,11 +58,26 @@ form {
     border: 1px solid black;
 
 }
+.sportss {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
 
 #timingsfrom,#timingsto{
     width: 50%;
     height: 35px;
-
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
@@ -74,15 +87,29 @@ form {
 }
 
 
-.sportss {
-    width: 50%;
-    height: 35px;
+.checkboxsentence {
+    color: white;
 
-    font-size: 20px;
-    text-align: center;
-    border-radius: 5px;
 }
 
+.checkboxcolumn {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+input[type="name"]::placeholder {
+    padding-left: 5%;
+}
+
+input[type="number"]::placeholder {
+    padding-left: 5%;
+}
+/* forms content */
+
+/* button */
 .profile {
     font-size: medium;
     padding: 9px 38px;
@@ -98,38 +125,9 @@ form {
     background-color: rgb(16, 161, 16);
     border-radius: 10px;
 }
-
-.select {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
-
-.checkboxsentence {
-    color: white;
+.profile:hover{
+    background-color: rgb(18, 230, 18);
 
 }
-
-.checkboxcolumn {
-    display: flex;
-    justify-content: center;
-
-}
-
-.labelname {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-input[type="name"]::placeholder {
-    padding-left: 5%;
-
-
-}
-
-input[type="number"]::placeholder {
-    padding-left: 5%;
-
-
-}
+/* button */
+/* container */

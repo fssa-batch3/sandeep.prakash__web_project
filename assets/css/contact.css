@@ -93,10 +93,10 @@ ul li a:hover {
 
 
 
-
+/* 
 .main {
     height: 90vh;
-}
+} */
 
 .bar {
     display: grid;
@@ -162,7 +162,7 @@ ul li a:hover {
     padding: 2%;
 }
 
-.main {
+.messagebox{
     flex: 1;
     color: rgb(0, 0, 0);
     background-color: white;

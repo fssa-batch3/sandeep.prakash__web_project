@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
 }
-
+/* form container */
 #container {
     background-image: url(../../assets/images/light.jpg);
     height: 100vh;
@@ -12,15 +10,11 @@
     background-size: cover;
 }
 
-.forms h1,
-form {
+.forms h1,form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 7%;
-
-
-
 
 }
 
@@ -37,6 +31,9 @@ form {
 
 }
 
+/* form container */
+
+/* sign in */
 #email {
     width: 80%;
     height: 45px;
@@ -57,8 +54,6 @@ input[type="password"]::placeholder {
 }
 
 
-
-
 #password {
     width: 80%;
     height: 45px;
@@ -73,21 +68,34 @@ input[type="password"]::placeholder {
     font-size: larger;
     font-weight: bolder;
     cursor: pointer;
-    background-color: rgb(14, 163, 24);
+ background-color: rgba(14, 163, 24, 0.783);
     color: white;
     padding: 10px 90px;
     border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(35, 34, 34);
+    border: none;
+
+}
+#login:hover{
+    background-color: rgb(15, 190, 15);
 
 }
 
 .sign {
     color: white;
+
 }
+ /* signin */
+
+/* forgetpassword */
 
 .fp {
     color: white;
     font-size: large;
 }
+/* forgetpassword */
+
+/* new signup */
 
 .newsign {
     color: white;
@@ -101,9 +109,16 @@ input[type="password"]::placeholder {
     font-size: larger;
     font-weight: bolder;
     cursor: pointer;
-    background-color: rgb(27, 190, 27);
+    background-color: rgba(14, 163, 24, 0.783);
     color: white;
     border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(35, 34, 34);
+    border: none;
 
 
 }
+#newlogin:hover{
+    background-color: rgb(15, 190, 15);
+
+}
+/* new signup */

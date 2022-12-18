@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
 }
-
+/* form container */
 #container {
     background-image: url(../../assets/images/light.jpg);
     height: 100vh;
@@ -12,18 +10,12 @@
     background-size: cover;
 }
 
-.forms h1,
-form {
+.forms h1,form {
     display: flex;
     flex-direction: column;
     position: relative;
     left: 8%;
-
     margin-top: 2%;
-
-
-
-
 }
 
 .forms {
@@ -36,15 +28,15 @@ form {
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
     height: 70%;
     background-color: rgba(0, 0, 0, 0.3);
-
-
 }
+/* form container */
 
-#email {
-    width: 80%;
-    height: 45px;
-    border-radius: 5px;
-    border: none;
+
+/* forms signin */
+h1.signuphead {
+    color: white;
+    position: relative;
+    left: 20%;
 
 }
 
@@ -55,6 +47,14 @@ form {
     border: none;
 
 }
+#email {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+
+}
+
 
 #phoneno1 {
     width: 80%;
@@ -92,6 +92,7 @@ input[type="text"]::placeholder {
     padding-left: 5%;
 
 }
+/* register button */
 
 #newlogin {
     padding: 0px 50px;
@@ -105,24 +106,29 @@ input[type="text"]::placeholder {
     left: 23%;
     border-radius: 10px;
     border: none;
+    box-shadow: 0 3px 10px rgb(35, 34, 34);
+    border: none;
 
 
 }
+#newlogin:hover{
+    background-color: rgba(15, 190, 15, 0.763);
+
+}
+/* register button */
 
 .alert {
     color: white;
     position: relative;
     left: 2%;
 }
+/* label color */
 
 label {
     color: white;
 
 }
+/* label color */
 
-h1.signuphead {
-    color: white;
-    position: relative;
-    left: 20%;
 
-}
+/* forms signin */
