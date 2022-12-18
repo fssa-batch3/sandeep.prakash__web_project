@@ -7,6 +7,6 @@ To help people to find grounds and connect to player.
  In my website you can book your ground from your home and connect with players.
 Problem statement: Google Drive link(https://docs.google.com/document/d/18aAV5Ef3yPXUkzdbHZK-H9tf9KAuVi0ZLhSZone1M6Q/edit?usp=sharing)
 Market Research: Google Drive link(https://docs.google.com/document/d/11vh1bqQm5panRBV-MRlC9okc15jt6nhJO8hIUx2JLMo/edit?usp=sharing)
-User flow: Google Drive link(https://drive.google.com/file/d/1_f0mXFmipp_Tya75GEdwPI67fELqORL4/view?usp=sharing)
-Wireframe: Google Drive link(https://drive.google.com/file/d/1A_lsvNQ80Cajqcux2PFspVUHKbqmzHIQ/view?usp=sharing)
+User flow: Google Drive link(https://drive.google.com/file/d/152ejdWxX0GEu6wRjsrmVxrBmCv24CScc/view?usp=sharing)
+Wireframe: Google Drive link(https://drive.google.com/file/d/12gku_ec54PN5gMPqHr8yZH4_dgFEp1dS/view?usp=sharing)
 Live Server Link:https://sandeepsan97.github.io/Book-and-play/
