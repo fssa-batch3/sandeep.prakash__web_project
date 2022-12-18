@@ -169,8 +169,8 @@ ul li a:hover {
 
     border: 1px solid rgb(25, 11, 82);
     border-radius: 10%;
-    width: 55%;
-    height: 450px;
+    width: 45%;
+    height: 350px;
     box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
     display: flex;
     flex-direction: column;
@@ -179,8 +179,8 @@ ul li a:hover {
 
     position: relative;
 
-    left: 90px;
-    top: 30px;
+
+    top: 90px;
 
 
 
@@ -188,7 +188,7 @@ ul li a:hover {
 }
 
 .profilepic {
-    width: 170px;
+    width: 100px;
     position: relative;
     top: 30px;
 }
@@ -198,7 +198,7 @@ ul li a:hover {
 
 .profile {
     font-size: medium;
-    padding: 9px 20px;
+    padding: 5px 10px;
     color: rgb(20, 14, 14);
     font-weight: bold;
     cursor: pointer;
@@ -281,10 +281,7 @@ form button {
     border-radius: 0px;
 }
 
-.fa-table-tennis-paddle-ball {
-    color: rgb(234, 234, 234);
-    font-size: 180%;
-}
+
 
 .ratings {
     display: flex;
@@ -329,8 +326,9 @@ form button {
 
 .dropdownstatistics {
     position: relative;
-    left: 250px;
-    bottom: 20px;
+    left: 420px;
+    bottom: 205px;
+  
 }
 
 .statisticsbtn {
@@ -339,6 +337,11 @@ form button {
     color: white;
     cursor: pointer;
     border: none;
+    border-radius: 5%;
+ 
+
+
+
 }
 
 .dropdownlist {
@@ -347,6 +350,53 @@ form button {
     background-color: rgb(189, 195, 208);
     width: 210px;
     height: 170px;
+    position: absolute;
+    right: 570px;
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 5px;
+   
+    
+}
+
+.dropdownlist p:hover {
+    background-color: rgb(240, 252, 255);
+    width: 160px;
+}
+
+.dropdownstatistics:hover .dropdownlist {
+    display: block;
+}
+.friendslist {
+    color: black;
+    position: relative;
+    left: 17px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.friendsdropdown{
+    position: relative;
+    left: 590px;
+    bottom: 257px;
+   
+}
+.friendsbtn{
+        padding: 10px 20px;
+    background-color: #07172c;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5%;
+}
+
+.friendslistdropdown{
+
+    color: black;
+    background-color: rgb(189, 195, 208);
+    width: 210px;
+    height: 370px;
     position: relative;
     right: 50px;
     display: none;
@@ -355,15 +405,19 @@ form button {
     text-align: left;
     border-radius: 5px;
 }
-
-.dropdownlist p:hover {
+.friendslistdropdown p:hover {
     background-color: rgb(240, 252, 255);
+    width: 190px;
 }
 
-.dropdownstatistics:hover .dropdownlist {
+.friendsdropdown:hover .friendslistdropdown{
     display: block;
 }
 
+.ratingsfriends{
+    position: relative;
+    right: 3px;
+}
 #container {
 
     position: relative;
@@ -490,11 +544,11 @@ h2 {
 
 textarea {
     resize: none;
-    height: 70px;
+   
 }
 
 .iconplay {
     width: 70px;
     position: relative;
-    bottom: 600px;
+    bottom: 300px;
 }
