@@ -53,9 +53,9 @@ ul li a:hover {
     cursor: pointer;
     border: none;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(0, 0, 0);
- letter-spacing: 1px;
- /* font-family: ; */
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
 }
 
 .logo {
@@ -105,6 +105,7 @@ ul li a:hover {
 }
 
 /* main1 About webpage*/
+
 /* main2 what we do */
 #main2 {
     height: 70vh;
@@ -194,6 +195,7 @@ ul li a:hover {
 
 
 /* main2 */
+
 /* main3 */
 .main3 {
     height: 55vh;
@@ -268,6 +270,7 @@ ul li a:hover {
 }
 
 /* animation */
+
 /* review section */
 #review {
     height: 60vh;
@@ -314,6 +317,7 @@ ul li a:hover {
 }
 
 /* review sectioin*/
+
 /* footer section */
 footer {
     height: 30vh;
@@ -344,8 +348,6 @@ footer {
 
 p {
     list-style-type: none;
-
-
 }
 
 p a {

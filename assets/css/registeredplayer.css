@@ -9,7 +9,7 @@ body {
     overflow-y: hidden;
 
 }
-
+/* header */
 header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
     height: 15vh;
@@ -27,14 +27,11 @@ ul {
     top:38px;
     left: 290px;
 
-
 }
 
 ul li {
     list-style-type: none;
     padding: 2%;
-    
-
 }
 
 ul li a {
@@ -67,35 +64,13 @@ ul li a:hover {
     color: white;
 }
 
-
-
-
-
-
-
-.fa-user {
-    font-size: xx-large;
-    margin-top: 5px;
-    color: white;
-
-}
-
-.cricketicon {
-    width: 30px;
-}
-
-.fa-star {
-    color: rgb(255, 183, 0);
-    font-size: 17px;
-    position: relative;
-    right: 10px;
-
-}
-
+/* header */
+/* maincontainer */
 .maincontainer{
     height: 87vh;
 }
 
+/* bar */
 .bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -122,7 +97,7 @@ ul li a:hover {
     align-items: center;
 
 }
-
+/* sidebar1 */
 .box1 {
 
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
@@ -136,14 +111,8 @@ ul li a:hover {
     flex-direction: column;
     align-items: center;
     margin-left: 2%;
-
     position: relative;
-
-
     top: 90px;
-
-
-
 
 }
 
@@ -152,10 +121,6 @@ ul li a:hover {
     position: relative;
     top: 30px;
 }
-
-
-
-
 .profile {
     font-size: medium;
     padding: 5px 10px;
@@ -170,79 +135,14 @@ ul li a:hover {
 
 }
 
-.container {
-    background-color: rgba(15, 67, 209, 0.82);
-    width: 390px;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-
-    margin-bottom: 20%;
-    border-radius: px;
-    border: 1px solid black;
-    box-shadow: 0 3px 10px rgb(0, 0, 0);
-}
-
-.top {
-    color: rgb(0, 0, 0);
-    padding: 2%;
-}
-
-.main {
-    flex: 1;
-    color: rgb(0, 0, 0);
-    background-color: rgba(229, 233, 236, 0.952);
-    padding: 20px 10px;
+.sports {
+    position: relative;
+    right: 30%;
 
 }
-
-.messageto {
-    background-color: rgb(248, 248, 248);
-    color: black;
-    width: 10%;
-    padding: 7px 15px;
-    margin-left: 13px;
-    border-radius: 35%;
-    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+.cricketicon {
+    width: 30px;
 }
-
-.messagefrom {
-    background-color: rgb(126, 126, 126);
-    color: rgb(255, 255, 255);
-    width: 10%;
-    padding: 7px 15px;
-    margin-left: 78%;
-    border-radius: 35%;
-    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
-}
-
-.bottom form {
-    display: flex;
-    background-color: rgba(229, 233, 236, 0.952);
-
-}
-
-form input {
-    width: 320px;
-    height: 27px;
-    border: 1px solid black;
-    padding-left: 7px;
-    outline: none;
-    border-radius: 0px;
-
-}
-
-form button {
-    width: 16%;
-    background-color: rgb(27, 238, 146);
-    font-size: medium;
-    border: none;
-    outline: none;
-    border-radius: 0px;
-}
-
-
-
 .ratings {
     display: flex;
     position: relative;
@@ -250,34 +150,18 @@ form button {
     bottom: 7%;
 }
 
-.sports {
+.fa-star {
+    color: rgb(255, 183, 0);
+    font-size: 17px;
     position: relative;
-    right: 30%;
+    right: 10px;
 
 }
-
-.cont {
-    color: black;
-    font-size: x-large;
+textarea {
+    resize: none;
+   
 }
-
-.connect {
-    font-size: medium;
-    padding: 9px 20px;
-    color: rgb(20, 24, 21);
-    background-color: green;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    bottom: 50px;
-
-
-
-}
-
-
-/* dropdown */
+/* dropdown statistics */
 .staticsreport {
     color: black;
     position: relative;
@@ -300,8 +184,6 @@ form button {
     border-radius: 5%;
  
 
-
-
 }
 
 .dropdownlist {
@@ -318,7 +200,6 @@ form button {
     text-align: left;
     border-radius: 5px;
    
-    
 }
 
 .dropdownlist p:hover {
@@ -329,6 +210,9 @@ form button {
 .dropdownstatistics:hover .dropdownlist {
     display: block;
 }
+/* dropdown statistics */
+
+/* dropdown friends */
 .friendslist {
     color: black;
     position: relative;
@@ -374,11 +258,16 @@ form button {
     display: block;
 }
 
-.ratingsfriends{
-    position: relative;
-    right: 3px;
-}
-#container {
+/* dropdown friends */
+
+/* sidebar1 */
+
+
+
+/* sidebar2 */
+
+
+.container {
 
     position: relative;
     right: 120px;
@@ -387,22 +276,23 @@ form button {
 
 }
 
-.sign {
-    text-align: center;
-    color: white;
+form input {
+    width: 320px;
+    height: 27px;
+    border: 1px solid black;
+    padding-left: 7px;
+    outline: none;
+    border-radius: 0px;
 
 }
 
-.forms h1,
-form {
+
+
+.forms h1,form {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     color: black;
-
-
-
 
 }
 
@@ -434,19 +324,18 @@ form {
     border: 1px solid black;
 
 }
-
-.timings {
-    width: 50%;
-    height: 35px;
-
-    font-size: 20px;
-    text-align: center;
-    border-radius: 5px;
-
-
-
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
 }
 
+
+.labelname {
+    font-size: 20px;
+    font-weight: 500;
+}
 .sportss {
     width: 50%;
     height: 35px;
@@ -455,6 +344,16 @@ form {
     text-align: center;
     border-radius: 5px;
 }
+.timings {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+/* button */
 
 .profile2 {
     font-size: medium;
@@ -471,41 +370,9 @@ form {
     box-shadow: 0 3px 10px rgb(3, 10, 87);
 
 }
+/* button */
+/* sidebar2 */
 
-.select {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-}
-
-.checkboxsentence {
-    color: black;
-
-}
-
-.checkboxcolumn {
-    display: flex;
-    justify-content: center;
-
-}
-
-.labelname {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-h2 {
-    color: black;
-    position: relative;
-    left: 85px;
-
-}
-
-textarea {
-    resize: none;
-   
-}
 
 .iconplay {
     width: 70px;
