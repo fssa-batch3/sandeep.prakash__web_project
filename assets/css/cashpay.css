@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 * {
     margin: 0px;
@@ -11,7 +10,7 @@
     background-position: center;
     background-size: cover;
 }
-
+/* tick symbol box */
 .tick {
     position: relative;
     top: 30%;
@@ -30,12 +29,13 @@
 
 
 }
+/* icon */
 
 .fa-check {
     color: green;
     font-size: 520%;
 }
-
+/* words */
 .h0 {
     color: rgb(239, 249, 239);
     font-size: xx-large;

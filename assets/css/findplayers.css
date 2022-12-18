@@ -107,6 +107,7 @@ ul li a:hover{
         bottom: 10px;
       
     }
+    /* search bar */
     #searchnav{
         width: 80%;
         height: 6vh;
@@ -149,7 +150,9 @@ input[type="search"]::placeholder{
     padding: 0px 20px;
     color: white;
 
-}  
+} 
+ /*search bar  */
+
 .userprofile{
     font-size: 12px;
     padding: 5px 5px;
@@ -163,9 +166,10 @@ input[type="search"]::placeholder{
   
   }
   /* main1 */
+
   /* main2 */
   .main2{
-    height: 300vh;
+    height: 280vh;
    background-color:white;
     overflow: hidden;
     border: 20px solid;
@@ -182,9 +186,9 @@ input[type="search"]::placeholder{
 
 
     }
-    .child1{
+    .child{
         background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-   height: 177px;
+        height: 177px;
         width: 53%;
         color: white;
         margin-left: 22%;

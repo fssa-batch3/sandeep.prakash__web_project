@@ -1,30 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
    
 }
+body{
+    overflow-x: hidden;
+}
 
-
-
+/* header */
 header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-
-    height: 14vh;
+    height: 15vh;
     background-position: center;
     background-size: cover;
-
+    font-family: 'Noto Serif Khojki', serif;
 
 }
 
 ul {
     display: flex;
     justify-content: end;
-    margin-right: 20%;
     position: relative;
     top: 38px;
-    left: 260px;
+  
 
 }
 
@@ -38,7 +36,7 @@ ul li a {
     text-decoration: none;
     font-size: larger;
     color: white;
-    font-family: 'Noto Serif Khojki', serif;
+    
 
 }
 
@@ -49,54 +47,56 @@ ul li a:hover {
 
 .login {
     font-size: medium;
-    padding: 5px 15px;
-    height: 103%;
-    width: 102%;
-    background-color: rgb(5, 34, 120);
-    color: white;
+    padding: 2px 17px;
+    height: 102%;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     position: relative;
     font-weight: bold;
     cursor: pointer;
     border: none;
     border-radius: 10px;
+    font-family: 'Noto Serif Khojki', serif;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
 
-
+}
+.login:hover{
+    background-color: #61bdff;
 }
 
 .logo {
     width: 14%;
     position: relative;
-    bottom: 50px;
+    bottom: 70px;
     left: 46px;
 }
 
 
 
 .cont1 {
-    text-align: center;
     font-size: xx-large;
     font-weight: bolder;
     position: relative;
-    bottom: 110px;
+    bottom: 166px;
+    left: 590px;
     color: white;
 }
 
 
+/* header */
 
 
 
 
 
 
-
-
-
-
-
-/* 
+/* main */
 .main {
-    height: 90vh;
-} */
+    height: 97vh;
+} 
+/* bar */
 
 .bar {
     display: grid;
@@ -104,16 +104,15 @@ ul li a:hover {
     grid-template-rows: 92vh;
     grid-column-gap: 20px;
 }
-
+/* sidebar1 */
 .sidebar1 {
     background-color:rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     margin: 10px 10px;
-  
     height: 80vh;
 
 }
-
+/* sidebar2 */
 .sidebar2 {
     background-color:white;
     color: white;
@@ -124,6 +123,8 @@ ul li a:hover {
     align-items: center;
 
 }
+
+/* sidebar1 */
 .contact-info{
     color: black;
     font-size: large;
@@ -132,114 +133,8 @@ ul li a:hover {
 .contact{
     position: relative;
     left: 50px;
-    top: 70px;
+   
 }
-
-
-
-
-
-
-
-
-
-.container {
-    background-color: rgba(15, 67, 209, 0.82);
-    width: 390px;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20%;
-    border-radius: px;
-    border: 1px solid black;
-    box-shadow: 0 3px 10px rgb(0, 0, 0);
-    position: relative;
-    top:50px;
-}
-
-.top {
-    color: rgb(0, 0, 0);
-    padding: 2%;
-}
-
-.messagebox{
-    flex: 1;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    padding: 20px 10px;
-
-}
-.assistant{
-    width: 90px;
-    position: relative;
-    left: 136px;
-}
-
-.messageto {
-    background-color: rgb(209, 215, 219);
-    color: black;
-    width: 60%;
-    padding: 7px 15px;
-    margin-left: 63px;
-    border-radius: 35%;
-    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
-}
-
-.messagefrom {
-    background-color: rgb(126, 126, 126);
-    color: rgb(255, 255, 255);
-    width: 10%;
-    padding: 7px 15px;
-    margin-left: 78%;
-    margin-top: 10px;
-    border-radius: 35%;
-    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
-}
-
-.bottom form {
-    display: flex;
-    background-color: rgba(229, 233, 236, 0.952);
-
-}
-
-form input {
-    width: 320px;
-    height: 27px;
-    border: 1px solid black;
-    padding-left: 7px;
-    outline: none;
-    border-radius: 0px;
-
-}
-
-form button {
-    width: 16%;
-    background-color: rgb(27, 238, 146);
-    font-size: medium;
-    border: none;
-    outline: none;
-    border-radius: 0px;
-}
-
-
-
-
-
-
-
-.cont {
-    color: black;
-    font-size: x-large;
-}
-
-
-.rightarrow {
-    width: 90px;
-    position: relative;
-    left: 700px;
-    bottom: 500px;
-}
-
 .fa-phone,.fa-envelope{
     color: #041d36;
     font-size: large;
@@ -352,6 +247,97 @@ left: 90px;
     transform:rotateY('90deg')
  
 }
+/* sidebar1 */
+
+/* sidebar2 */
+.container {
+    background-color: rgba(15, 67, 209, 0.82);
+    width: 390px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20%;
+    border-radius: px;
+    border: 1px solid black;
+    box-shadow: 0 3px 10px rgb(0, 0, 0);
+    position: relative;
+    bottom: 50px;
+}
+
+.top {
+    color: rgb(0, 0, 0);
+    padding: 2%;
+}
+
+.messagebox{
+    flex: 1;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 20px 10px;
+
+}
+.assistant{
+    width: 90px;
+    position: relative;
+    left: 136px;
+}
+
+.messageto {
+    background-color: rgb(209, 215, 219);
+    color: black;
+    width: 60%;
+    padding: 7px 15px;
+    margin-left: 63px;
+    border-radius: 35%;
+    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+}
+
+.messagefrom {
+    background-color: rgb(126, 126, 126);
+    color: rgb(0, 0, 0);
+    width: 10%;
+    padding: 7px 15px;
+    margin-left: 78%;
+    margin-top: 10px;
+    border-radius: 35%;
+    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+}
+
+.bottom form {
+    display: flex;
+    background-color: rgba(229, 233, 236, 0.952);
+
+}
+
+form input {
+    width: 320px;
+    height: 27px;
+    border: 1px solid black;
+    padding-left: 7px;
+    outline: none;
+    border-radius: 0px;
+
+}
+
+form button {
+    width: 16%;
+    background-color: rgb(27, 238, 146);
+    font-size: medium;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+}
+
+
+
+.rightarrow {
+    width: 90px;
+    position: relative;
+    left: 700px;
+    bottom: 500px;
+}
+/* sidebar2 */
+
 /* footer section */
 footer {
     height: 30vh;
@@ -382,8 +368,6 @@ footer {
 
 p {
     list-style-type: none;
-
-
 }
 
 p a {

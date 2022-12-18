@@ -42,8 +42,8 @@ ul li a:hover {
     padding: 2px 17px;
     height: 102%;
     width: 100%;
-    background-color: rgb(5, 34, 120);
-    color: white;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     cursor: pointer;
     border: none;
@@ -52,6 +52,9 @@ ul li a:hover {
     box-shadow: 0 3px 10px rgb(10, 9, 46);
     letter-spacing: 1px;
 
+}
+.login:hover{
+    background-color: #61bdff;
 }
 
 .logo {

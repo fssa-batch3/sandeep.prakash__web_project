@@ -236,7 +236,39 @@ ul li a:hover {
     box-shadow: 0 3px 10px rgb(3, 10, 87);
 
 }
+.ratings {
+    display: flex;
+    position: relative;
+    left: 38%;
+    bottom: 7%;
+}
 
+.sports {
+    position: relative;
+    right: 30%;
+
+}
+
+.cont {
+    color: black;
+    font-size: x-large;
+}
+
+.connect {
+    font-size: medium;
+    padding: 9px 20px;
+    color: rgb(20, 24, 21);
+    background-color: green;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    bottom: 50px;
+
+
+
+}
+/* sidebar2 */
 .container {
     background-color: rgba(15, 67, 209, 0.82);
     width: 390px;
@@ -308,43 +340,8 @@ form button {
     border-radius: 0px;
 }
 
-.fa-table-tennis-paddle-ball {
-    color: rgb(234, 234, 234);
-    font-size: 180%;
-}
-
-.ratings {
-    display: flex;
-    position: relative;
-    left: 38%;
-    bottom: 7%;
-}
-
-.sports {
-    position: relative;
-    right: 30%;
-
-}
-
-.cont {
-    color: black;
-    font-size: x-large;
-}
-
-.connect {
-    font-size: medium;
-    padding: 9px 20px;
-    color: rgb(20, 24, 21);
-    background-color: green;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    position: relative;
-    bottom: 50px;
 
 
-
-}
 
 .rightarrow {
     width: 90px;
