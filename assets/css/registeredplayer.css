@@ -19,10 +19,10 @@ header {
 ul {
     display: flex;
     justify-content: end;
-    margin-right: 20%;
+    margin-right: 2%;
     position: relative;
-    top:38px;
-    left: 290px;
+    top: 35px;
+
 
 }
 
@@ -46,7 +46,7 @@ ul li a:hover {
 .logo {
     width: 14%;
     position: relative;
-    bottom: 35px;
+    bottom: 85px;
     left: 46px;
 }
 
@@ -57,7 +57,7 @@ ul li a:hover {
     font-size: xx-large;
     font-weight: bolder;
     position: relative;
-    bottom: 130px;
+    bottom: 170px;
     color: white;
 }
 
@@ -374,7 +374,7 @@ form input {
 .iconplay {
     width: 70px;
     position: relative;
-    bottom: 300px;
+    bottom: 500px;
     left: 530px;
    
 }
