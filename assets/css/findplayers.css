@@ -95,7 +95,7 @@ ul li a:hover{
          align-items: center;
         margin-left: 92%;
        position: relative;
-       bottom: 150px;
+       bottom: 270px;
        right: 2%;
        height: 102px;
     
@@ -151,6 +151,31 @@ input[type="search"]::placeholder{
     color: white;
 
 } 
+.locationselect {
+    width: 10%;
+    height: 44px;
+    background-color: rgb(255, 255, 255);
+
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5%;
+    color: #000000;
+    border: 2px solid rgb(35, 156, 211);
+    position: relative;
+    left: 230px;
+    bottom: 183px;
+
+}
+.locationicon {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    left: 170px;
+    bottom: 132px;
+}
  /*search bar  */
 
 .userprofile{
@@ -196,7 +221,7 @@ input[type="search"]::placeholder{
         display: flex;
         justify-content: center;
         text-align: center;
-
+       
     }
     .visit{
         font-size: medium;
@@ -266,6 +291,13 @@ input[type="search"]::placeholder{
         left: 10px;
         bottom: 70px;
     }
+    .selectslocationword{
+        font-size: 20px;
+        position: relative;
+        left: 230px;
+        bottom: 130px;
+    }
+
     /* main2 */
     /* footer */
  
