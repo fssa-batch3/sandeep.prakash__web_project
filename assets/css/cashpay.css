@@ -41,3 +41,23 @@
     font-size: xx-large;
     text-align: center;
 }
+.code{
+    color: rgb(239, 249, 239);
+    font-size: large;
+    text-align: center;
+}
+.goback{
+    font-size: medium;
+    padding: 2px 17px;
+    height: 102%;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
+}
