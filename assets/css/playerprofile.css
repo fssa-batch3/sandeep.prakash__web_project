@@ -6,9 +6,7 @@
     /* overflow: hidden; */
 }
 
-body {
-    overflow-y: hidden;
-}
+
 
 header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
@@ -159,7 +157,7 @@ ul li a:hover {
 .bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 92vh;
+    grid-template-rows: 87vh;
     grid-column-gap: 20px;
 }
 
@@ -168,7 +166,7 @@ ul li a:hover {
     color: white;
     margin: 10px 10px;
     border-radius: 9%;
-    height: 80vh;
+    height: 75vh;
 
 }
 
@@ -180,6 +178,7 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 
 }
 
@@ -275,11 +274,12 @@ ul li a:hover {
     height: 70vh;
     display: flex;
     flex-direction: column;
-
     margin-bottom: 20%;
     border-radius: px;
     border: 1px solid black;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
+    position: relative;
+    top: 30px;
 }
 
 .top {
@@ -393,3 +393,70 @@ form button {
 .dropdownstatistics:hover .dropdownlist {
     display: block;
 }
+
+/* footer section */
+footer {
+    height: 30vh;
+    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+
+    background-size: cover;
+    color: white;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.foot-heading {
+    color: rgb(219, 213, 213);
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.column1 {
+    margin-top: 2%;
+}
+
+p {
+    list-style-type: none;
+}
+
+p a {
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(219, 213, 213);
+    line-height: 1.6;
+}
+
+.fa-brands {
+    font-size: x-large;
+    padding: 1.5%;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00acee;
+
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+/* footer section */
