@@ -550,6 +550,13 @@ input[type="date"] {
     box-shadow: 0 3px 10px rgb(0, 0, 0);
 
 }
+.pay:hover{
+    background-color: rgb(69, 164, 69);
+
+}
+.paycash:hover{
+      background-color: rgb(69, 164, 69);  
+}
 
 /* sidebar2 */
 
