@@ -237,8 +237,8 @@ textarea {
     background-color: rgb(189, 195, 208);
     width: 210px;
     height: 370px;
-    position: relative;
-    right: 50px;
+    position: absolute;
+    right: 560px;
     display: none;
     font-size: 18px;
     font-weight: 500;
@@ -294,13 +294,13 @@ form input {
 
 .forms {
     position: relative;
-    top: 90px;
+  bottom: 10px;
     border: 2px solid rgb(180, 176, 176);
     width: 450px;
     left: 35%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 530px;
+    height: 690px;
 
 
 }
@@ -349,7 +349,24 @@ form input {
     border-radius: 5px;
 
 }
+.locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
 
+}
+#timingsfrom,#timingsto{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+
+
+}
 /* button */
 
 .profile2 {
@@ -362,7 +379,6 @@ form input {
     margin-bottom: 5px;
     position: relative;
     background-color: rgba(12, 175, 23, 0.783);
-    top: 30px;
     left: 163px;
     box-shadow: 0 3px 10px rgb(3, 10, 87);
 
@@ -374,7 +390,7 @@ form input {
 .iconplay {
     width: 70px;
     position: relative;
-    bottom: 500px;
+    bottom: 630px;
     left: 530px;
    
 }
@@ -497,6 +513,7 @@ a{
 .bookhistory{
     position: relative;
     left: 75px;
+
 }
 .bookdate{
     position: relative;
@@ -563,6 +580,18 @@ p a {
     color: #0A66C2;
 
 }
+.booking-history{
+    font-size: larger;
+    color: #00021a;
+    position: relative;
+    left: 60px;
+}
+.fa-arrow-down{
+    color: #00021a;
+    font-size: larger;
+    position: relative;
+    left: 10px;
 
+}
 
 /* footer section */

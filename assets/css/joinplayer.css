@@ -28,13 +28,13 @@
 
 .forms {
     position: relative;
-    top: 15%;
+    top: 10%;
     border: 2px solid rgb(180, 176, 176);
     width: 35%;
     left: 33%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 75%;
+    height: 87%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 .labelname {
@@ -83,6 +83,14 @@
     border-radius: 5px;
 
 
+
+}
+.locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
 
 }
 
