@@ -25,6 +25,9 @@ header {
     display: none;
 
 }
+#check{
+    display: none;
+}
 ul {
     display: flex;
     justify-content: end;
@@ -461,7 +464,7 @@ a {
     
     }
     #check:checked ~ul{
-left: 0;
+    left: 0;
     }
     .login {
         font-size: small;
