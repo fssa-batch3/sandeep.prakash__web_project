@@ -405,7 +405,9 @@ a {
         font-family: 'Noto Serif Khojki', serif;
     
     }
-    
+    body{
+        overflow-x: hidden;
+    }
     /* header */
     header {
         height: 7vh;
@@ -438,7 +440,7 @@ a {
         left: -100%;
         display: block;
         transition: all 0.5s;
-        
+        z-index: 10;
     }
     
     ul li {
@@ -448,6 +450,7 @@ a {
        position: relative;
        top: 50px;
        text-align: center;
+     
       
 
     
@@ -548,7 +551,7 @@ a {
     
     .box {
         width: 112%;
-        height: 118%;
+        height: 150%;
         margin-top: 3%;
         border-radius: 2%;
         display: flex;
@@ -637,7 +640,7 @@ a {
         font-size: 17px;
         text-align: center;
         position: relative;
-        left: 480px;
+        left: 420px;
         color: rgb(0, 0, 0);
         bottom: 330px;
         white-space: nowrap;
@@ -645,8 +648,8 @@ a {
     
     /* animation */
     .roationimage {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
         position: absolute;
         border-radius: 50%;
     }
@@ -654,7 +657,7 @@ a {
     .rotation-content {
         width: 20px;
         height: 30px;
-        margin-left: 500px;
+        margin-left: 350px;
         margin-bottom: 320px;
         perspective: 1050px;
         transform-style: preserve-3d;
