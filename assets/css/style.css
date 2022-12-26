@@ -16,7 +16,15 @@ header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
 
 }
+.checkbtn{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
 
+}
 ul {
     display: flex;
     justify-content: end;
@@ -387,7 +395,7 @@ a {
 }
 
 /* footer section */
-@media screen and (max-width:860px) {
+@media screen and (max-width:900px) {
     * {
         margin: 0px;
         padding: 0px;
@@ -406,37 +414,60 @@ a {
         background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
     
     }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    }
+    #check{
+        display: none;
+    }
     
     ul {
         display: flex;
         justify-content: end;
         margin-right: 2%;
         position: relative;
-        bottom: 5px;
+        left: -100%;
+        display: block;
+        transition: all 0.5s;
+        
     }
     
     ul li {
         list-style-type: none;
         padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+       text-align: center;
+      
+
     
     }
     
     ul li a {
         text-decoration: none;
-        font-size: 7px;
-        color: white;
+        font-size: 10px;
+        color: #00021a;
     }
     
     ul li a:hover {
         color: rgb(130, 217, 235);
     
     }
-    
+    #check:checked ~ul{
+left: 0;
+    }
     .login {
         font-size: small;
         padding: 2px 15px;
-        height: 92%;
-        width: 100%;
+        height: 87%;
+        width: 20%;
         background-color: #ffffff;
         color: rgb(0, 0, 0);
         font-weight: bold;
@@ -452,9 +483,9 @@ a {
     }
     
     .logo {
-        width: 14%;
+        width: 18%;
         position: relative;
-        bottom: 42px;
+        bottom: 217px;
         left: 16px;
     }
     
@@ -463,13 +494,11 @@ a {
     /* main1 About webpage */
     
     #main1 {
-        height: 56vh;
+        height: 50vh;
         display: flex;
         align-items: center;
         background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
-    
-    
-    
+  
     
     }
     
@@ -515,8 +544,8 @@ a {
     }
     
     .box {
-        width: 102%;
-        height: 158%;
+        width: 112%;
+        height: 118%;
         margin-top: 3%;
         border-radius: 2%;
         display: flex;
@@ -569,7 +598,7 @@ a {
         font-size: 6px;
         font-weight: 500;
         position: relative;
-        bottom: 25px;
+        bottom: 10px;
         color: rgb(255, 255, 255);
     }
     
@@ -577,7 +606,7 @@ a {
         font-size: 6px;
         font-weight: 500;
         position: relative;
-        bottom: 39px;
+        bottom: 26px;
         color: rgb(255, 255, 255);
     }
     
@@ -585,7 +614,7 @@ a {
         font-size: 6px;
         font-weight: 500;
         position: relative;
-        bottom: 39px;
+        bottom: 26px;
         color: rgb(255, 255, 255);
     }
     
@@ -605,9 +634,10 @@ a {
         font-size: 17px;
         text-align: center;
         position: relative;
-        left: 150px;
+        left: 480px;
         color: rgb(0, 0, 0);
-        bottom: 420px;
+        bottom: 330px;
+        white-space: nowrap;
     }
     
     /* animation */
@@ -634,6 +664,7 @@ a {
         transform-style: preserve-3d;
         animation: rotate 10s linear infinite;
         bottom: 390px;
+        right: 30px;
     }
     
     @keyframes rotate {
@@ -683,7 +714,7 @@ a {
     
     .person {
         width: 23%;
-        height: 78%;
+        height: 80%;
         margin-top: 3%;
         border-radius: 2%;
         box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
@@ -708,9 +739,9 @@ a {
         font-size: 5px;
     }
     .reviewword{
-        font-size: 4px;
+        font-size: 3px;
         position: relative;
-        bottom: 30px;
+        bottom: 42px;
     }
     
     
@@ -718,17 +749,17 @@ a {
         display: flex;
         justify-content: space-evenly;
         position: relative;
-        bottom: 56px;
+        bottom: 70px;
     }
     
     .fa-star {
         color: rgb(255, 183, 0);
-        font-size: 7px;
+        font-size: 5px;
     }
     
     .fa-star-half-stroke {
         color: rgb(255, 183, 0);
-        font-size: 7px;
+        font-size: 5px;
     }
     
     /* review sectioin*/
