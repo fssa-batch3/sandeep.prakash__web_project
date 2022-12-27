@@ -485,7 +485,7 @@ a {
 
 header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-width: 785px;
+width: 425px;
     height: 20vh;
     background-position: center;
     background-size: cover;
@@ -505,7 +505,7 @@ ul {
     z-index: 5;
 }
 .checkbtn{
-    font-size: 30px;
+    font-size: 20px;
     color: rgb(255, 255, 255);
     float: right;
     margin-right: 15px;
@@ -559,8 +559,8 @@ ul li a:hover {
 .logo {
     width: 30%;
     position: relative;
-    top:10px;
-    left: 156px;
+    bottom: 10px;
+    left: 56px;
 }
 
 
@@ -571,7 +571,7 @@ ul li a:hover {
 
 .cont1 {
     text-align: center;
-    font-size: 22px;
+    font-size: 13px;
     font-weight: bolder;
     position: relative;
     bottom: 90px;
@@ -583,7 +583,7 @@ ul li a:hover {
     background-color: rgb(2, 2, 45);
     border: 5px solid rgb(25, 11, 82);
     border-radius: 10%;
-    width: 90px;
+    width: 70px;
     height:90px ;
     max-height: 90px;
     box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
@@ -621,7 +621,7 @@ ul li a:hover {
 }
 
 .userprofile {
-    font-size: 13px;
+    font-size: 8px;
     padding: 2px 2px;
     background-color: rgb(5, 120, 47);
     color: white;
@@ -693,13 +693,13 @@ ul li a:hover {
 
     border: 1px solid rgb(25, 11, 82);
     border-radius: 10%;
-    width: 100%;
+    width: 90%;
     height: 490px;
     box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 42%;
+    margin-left: 2%;
 
     position: relative;
     top: 20px;
@@ -778,7 +778,7 @@ ul li a:hover {
 .container {
     background-color: rgba(15, 67, 209, 0.82);
     width: 390px;
-    height: 70vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
@@ -787,7 +787,7 @@ ul li a:hover {
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;
     bottom: 90px;
-    left: 160px;
+    left: 0px;
     margin-bottom: 20px;
 }
 
@@ -869,7 +869,7 @@ form button {
 
 .dropdownstatistics {
     position: relative;
-    left: 320px;
+    left: 150px;
 }
 
 .statisticsbtn {
@@ -908,7 +908,7 @@ form button {
 footer {
     height: 30vh;
     background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-    width: 785px;
+    width: 425px;
     background-size: cover;
     color: white;
 
@@ -923,7 +923,7 @@ footer {
 
 .foot-heading {
     color: rgb(219, 213, 213);
-    font-size: larger;
+    font-size: large;
     font-weight: bold;
 
 }
@@ -939,14 +939,14 @@ p {
 
 p a {
     text-decoration: none;
-    font-size: medium;
-    color: rgb(219, 213, 213);
-    line-height: 1.6;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
 }
 
 .fa-brands {
-    font-size: x-large;
-    padding: 1.5%;
+    font-size: smaller;
+        padding: 1.5%;
 }
 
 .fa-facebook {
