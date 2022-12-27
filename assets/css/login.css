@@ -122,3 +122,130 @@ input[type="password"]::placeholder {
 
 }
 /* new signup */
+@media screen and (max-width:900px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    /* form container */
+    #container {
+        background-image: url(../../assets/images/light.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .forms h1,form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7%;
+    
+    }
+    
+    .forms {
+        position: relative;
+        top: 29%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 70%;
+        left: 13%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 53%;
+        background-color: rgba(0, 0, 0, 0.3);
+    
+    }
+    
+    /* form container */
+    
+    /* sign in */
+    #email {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+    
+    }
+    
+    input[type="email"]::placeholder {
+        padding-left: 5%;
+    
+    
+    }
+    
+    input[type="password"]::placeholder {
+        padding-left: 5%;
+    
+    }
+    
+    
+    #password {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+    
+    }
+    
+    #login {
+        width: 100%;
+        height: 45px;
+        font-size: 17px;
+        font-weight: bolder;
+        cursor: pointer;
+     background-color: rgba(14, 163, 24, 0.783);
+        color: white;
+        padding: 6px 60px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+        border: none;
+    
+    }
+    #login:hover{
+        background-color: rgb(15, 190, 15);
+    
+    }
+    
+    .sign {
+        color: white;
+    
+    }
+     /* signin */
+    
+    /* forgetpassword */
+    
+    .fp {
+        color: white;
+        font-size: large;
+    }
+    /* forgetpassword */
+    
+    /* new signup */
+    
+    .newsign {
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    
+    #newlogin {
+        padding: 0px 10px;
+        height: 45px;
+        font-size:17px;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgba(14, 163, 24, 0.783);
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+        border: none;
+    
+    
+    }
+    #newlogin:hover{
+        background-color: rgb(15, 190, 15);
+    
+    }
+    /* new signup */
+   
+}
