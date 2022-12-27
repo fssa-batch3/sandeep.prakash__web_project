@@ -478,14 +478,18 @@ a {
 * {
     margin: 0px;
     padding: 0px;
-    /* overflow: hidden; */
+
+}
+
+body, html{
+    overflow-x: hidden;
 }
 
 
 
 header {
     background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-width: 425px;
+     width: 425px;
     height: 20vh;
     background-position: center;
     background-size: cover;
