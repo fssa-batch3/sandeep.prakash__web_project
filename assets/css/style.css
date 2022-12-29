@@ -13,7 +13,7 @@ header {
     position: sticky;
     top: 0%;
     z-index: 2;
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
 
 }
 .checkbtn{
@@ -45,7 +45,7 @@ ul li {
 ul li a {
     text-decoration: none;
     font-size: larger;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 ul li a:hover {
