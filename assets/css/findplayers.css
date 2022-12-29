@@ -416,8 +416,6 @@ header{
     display: none;
 }
 ul{
-    display: flex;
-    justify-content: end;
     margin-right: 2%;
     position: relative;
     left: -100%;
@@ -505,7 +503,6 @@ ul li a:hover{
         border: 5px solid rgb(25, 11, 82);
         border-radius: 10%;
         width: 55px;
-        height:20px ;
         max-height: 80px;
         box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
         display: flex;

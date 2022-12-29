@@ -642,8 +642,6 @@ a {
 /* footer */
 @media screen and (max-width:900px){
 
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
     * {
         margin: 0px;
         padding: 0px;
@@ -673,8 +671,6 @@ a {
         display: none;
     }
     ul {
-        display: flex;
-        justify-content: end;
         margin-right: 2%;
         position: relative;
         left: -100%;

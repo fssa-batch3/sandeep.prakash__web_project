@@ -46,8 +46,6 @@
     color: white;
 }
 @media screen and (max-width:900px){
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;

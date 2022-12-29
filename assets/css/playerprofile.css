@@ -473,8 +473,6 @@ a {
 
 /* footer section */
 @media screen and (max-width:900px){
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 * {
     margin: 0px;
     padding: 0px;
@@ -498,8 +496,6 @@ header {
 }
 
 ul {
-    display: flex;
-    justify-content: end;
     margin-right: 2%;
     position: relative;
     left: -100%;
@@ -528,7 +524,6 @@ ul li {
 }
 
 ul li a {
-    text-decoration: none;
     text-decoration: none;
     font-size: 10px;
     color: #00021a;
@@ -785,8 +780,6 @@ ul li a:hover {
     height: 60vh;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20%;
-    border-radius: px;
     border: 1px solid black;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;

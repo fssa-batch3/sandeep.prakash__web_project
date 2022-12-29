@@ -435,8 +435,6 @@ a {
     }
     
     ul {
-        display: flex;
-        justify-content: end;
         margin-right: 2%;
         position: relative;
         left: -100%;
@@ -472,7 +470,6 @@ a {
     }
     
     ul li a {
-        text-decoration: none;
         text-decoration: none;
         font-size: 17px;
         color: #00021a;

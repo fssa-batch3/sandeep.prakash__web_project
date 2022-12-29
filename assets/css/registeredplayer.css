@@ -626,8 +626,6 @@ p a {
     }
     
     ul {
-        display: flex;
-        justify-content: end;
         margin-right: 2%;
         position: relative;
         left: -100%;

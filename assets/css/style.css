@@ -398,7 +398,7 @@ a {
 }
 
 /* footer section */
-@media screen and (max-width:900px) {
+@media screen and (max-width:900px)  {
     * {
         margin: 0px;
         padding: 0px;
@@ -433,8 +433,6 @@ a {
     }
     
     ul {
-        display: flex;
-        justify-content: end;
         margin-right: 2%;
         position: relative;
         left: -100%;
