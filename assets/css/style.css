@@ -75,7 +75,7 @@ ul li a:hover {
 .logo {
     width: 14%;
     position: relative;
-    bottom: 90px;
+    bottom: 85px;
     left: 46px;
 }
 
@@ -398,14 +398,15 @@ a {
 }
 
 /* footer section */
-@media screen and (max-width:900px)  {
+
+@media screen and (max-width:450px) {
     * {
         margin: 0px;
         padding: 0px;
         font-family: 'Noto Serif Khojki', serif;
     
     }
-    body{
+    body,html{
         overflow-x: hidden;
     }
     /* header */
@@ -487,10 +488,11 @@ a {
     }
     
     .logo {
-        width: 18%;
+        width: 25%;
         position: relative;
-        bottom: 217px;
+        bottom: 220px;
         left: 16px;
+        
     }
     
     /* header */
@@ -640,7 +642,7 @@ a {
         position: relative;
         left: 420px;
         color: rgb(0, 0, 0);
-        bottom: 330px;
+        bottom: 300px;
         white-space: nowrap;
     }
     
@@ -667,7 +669,7 @@ a {
         position: absolute;
         transform-style: preserve-3d;
         animation: rotate 10s linear infinite;
-        bottom: 390px;
+        bottom: 320px;
         right: 30px;
     }
     
@@ -834,3 +836,882 @@ a {
     }
     
 }
+
+@media all and (min-width:750px) and (max-width:1024px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header {
+        height: 7vh;
+        background-position: center;
+        background-size: cover;
+        position: sticky;
+        top: 0%;
+        z-index: 2;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    }
+    #check{
+        display: none;
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        display: block;
+        transition: all 0.5s;
+        z-index: 10;
+    }
+    
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+       text-align: center;
+     
+      
+
+    
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+    left: 0;
+    }
+    .login {
+        font-size: small;
+        padding: 2px 15px;
+        height: 87%;
+        width: 20%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(10, 9, 46);
+        letter-spacing: 1px;
+    
+    }
+    .login:hover{
+        background-color: #61bdff;
+    }
+    
+    .logo {
+        width: 22%;
+        position: relative;
+        bottom: 310px;
+        left: 16px;
+        
+    }
+    
+    /* header */
+    
+    /* main1 About webpage */
+    
+    #main1 {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+  
+    
+    }
+    
+    .word1 {
+        font-size: 170%;
+        color: rgb(8, 8, 8);
+        margin-left: 3.5%;
+        animation: change 7s infinite;
+    
+    }
+    
+    @keyframes change {
+        from {
+            color: black;
+        }
+    
+        to {
+            color: white;
+        }
+    }
+    
+    .player1 {
+        width: 50%;
+        border-radius: 10%;
+        margin-right: 3%;
+    }
+    
+    /* main1 About webpage*/
+    
+    /* main2 what we do */
+    #main2 {
+        height: 110vh;
+        background-color: white;
+    }
+    
+    .mainchild {
+        margin: 0px 43px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 33px;
+        padding-top: 50px;
+    
+    }
+    
+    .box {
+        width: 112%;
+        height: 150%;
+        margin-top: 3%;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    
+    }
+    
+    .cricketicon {
+        width: 22px;
+        position: relative;
+        top: 17px;
+    }
+    
+    .box-content{
+        color: rgb(243, 234, 234);
+        font-size: 13px;
+        position: relative;
+        top:7px;
+        left: 3%;
+        line-height: 2;
+        word-spacing: 1px;
+    
+    
+    }
+    
+    
+    
+    .groundicon {
+        color: rgb(0, 0, 0);
+        width: 33%;
+        position: relative;
+        bottom: 10px;
+    
+    }
+    
+    .usericon {
+        color: rgb(0, 0, 0);
+        width: 30%;
+        position: relative;
+        bottom: 24px;
+    
+    }
+    
+    .box-heading1 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading2 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading3 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    /* main2 */
+    
+    /* main3 */
+    .main3 {
+        height: 15vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        z-index: -2;
+    }
+    
+    .sportsheading {
+        font-size: 23px;
+        text-align: center;
+        position: relative;
+        left: 420px;
+        color: rgb(0, 0, 0);
+        bottom: 300px;
+        white-space: nowrap;
+    }
+    
+    /* animation */
+    .roationimage {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .rotation-content {
+        width: 20px;
+        height: 30px;
+        margin-left: 350px;
+        margin-bottom: 320px;
+        perspective: 1050px;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg)rotateZ(-7deg);
+    }
+    
+    .image-rotation{
+        width: 20%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: rotate 10s linear infinite;
+        bottom: 320px;
+        right: 30px;
+    }
+    
+    @keyframes rotate {
+    
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    
+    .roationimage:nth-child(1) {
+        transform: rotateY(60deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(2) {
+        transform: rotateY(120deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(3) {
+        transform: rotateY(180deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(4) {
+        transform: rotateY(240deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(5) {
+        transform: rotateY(300deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(6) {
+        transform: rotateY(360deg) translateZ(230px);
+    }
+    
+    /* animation */
+    
+    /* review section */
+    #review {
+        height: 45vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        position: relative;
+        bottom: 20px;
+        
+    
+    }
+    
+    .person {
+        width: 25%;
+        height: 80%;
+        margin-top: 3%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+    
+    }
+    
+    .personimg {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        scale: 1.9;
+        position: relative;
+        bottom: 20px;
+    
+    }
+    .person p{
+        font-size: 12px;
+    }
+    .reviewword{
+        font-size: 25px;
+        position: relative;
+        bottom: 42px;
+    }
+    
+    
+    .star {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 70px;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    .fa-star-half-stroke {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    /* review sectioin*/
+    
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: 10px;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+@media all and (min-width:1024px) and (max-width:1200px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header {
+        height: 7vh;
+        background-position: center;
+        background-size: cover;
+        position: sticky;
+        top: 0%;
+        z-index: 2;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        /* display: block; */
+    
+    }
+    #check{
+        display: none;
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        display: block;
+        transition: all 0.5s;
+        z-index: 10;
+    }
+    
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+       text-align: center;
+     
+      
+
+    
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+    left: 0;
+    }
+    .login {
+        font-size: small;
+        padding: 2px 15px;
+        height: 87%;
+        width: 20%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(10, 9, 46);
+        letter-spacing: 1px;
+    
+    }
+    .login:hover{
+        background-color: #61bdff;
+    }
+    
+    .logo {
+        width: 20%;
+        position: relative;
+        bottom: 365px;
+        left: 16px;
+        
+    }
+    
+    /* header */
+    
+    /* main1 About webpage */
+    
+    #main1 {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+  
+    
+    }
+    
+    .word1 {
+        font-size: 170%;
+        color: rgb(8, 8, 8);
+        margin-left: 3.5%;
+        animation: change 7s infinite;
+    
+    }
+    
+    @keyframes change {
+        from {
+            color: black;
+        }
+    
+        to {
+            color: white;
+        }
+    }
+    
+    .player1 {
+        width: 50%;
+        border-radius: 10%;
+        margin-right: 3%;
+    }
+    
+    /* main1 About webpage*/
+    
+    /* main2 what we do */
+    #main2 {
+        height: 110vh;
+        background-color: white;
+    }
+    
+    .mainchild {
+        margin: 0px 43px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 33px;
+        padding-top: 50px;
+    
+    }
+    
+    .box {
+        width: 102%;
+        height: 150%;
+        margin-top: 3%;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    
+    }
+    
+    .cricketicon {
+        width: 22px;
+        position: relative;
+        top: 17px;
+    }
+    
+    .box-content{
+        color: rgb(243, 234, 234);
+        font-size: 13px;
+        position: relative;
+        top:7px;
+        left: 3%;
+        line-height: 2;
+        word-spacing: 1px;
+    
+    
+    }
+    
+    
+    
+    .groundicon {
+        color: rgb(0, 0, 0);
+        width: 33%;
+        position: relative;
+        bottom: 10px;
+    
+    }
+    
+    .usericon {
+        color: rgb(0, 0, 0);
+        width: 30%;
+        position: relative;
+        bottom: 24px;
+    
+    }
+    
+    .box-heading1 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading2 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading3 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    /* main2 */
+    
+    /* main3 */
+    .main3 {
+        height: 15vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        z-index: -2;
+    }
+    
+    .sportsheading {
+        font-size: 23px;
+        text-align: center;
+        position: relative;
+        left: 420px;
+        color: rgb(0, 0, 0);
+        bottom: 300px;
+        white-space: nowrap;
+    }
+    
+    /* animation */
+    .roationimage {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .rotation-content {
+        width: 20px;
+        height: 30px;
+        margin-left: 350px;
+        margin-bottom: 320px;
+        perspective: 1050px;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg)rotateZ(-7deg);
+    }
+    
+    .image-rotation{
+        width: 20%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: rotate 10s linear infinite;
+        bottom: 320px;
+        right: 30px;
+    }
+    
+    @keyframes rotate {
+    
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    
+    .roationimage:nth-child(1) {
+        transform: rotateY(60deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(2) {
+        transform: rotateY(120deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(3) {
+        transform: rotateY(180deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(4) {
+        transform: rotateY(240deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(5) {
+        transform: rotateY(300deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(6) {
+        transform: rotateY(360deg) translateZ(230px);
+    }
+    
+    /* animation */
+    
+    /* review section */
+    #review {
+        height: 45vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        position: relative;
+        bottom: 20px;
+        
+    
+    }
+    
+    .person {
+        width: 25%;
+        height: 80%;
+        margin-top: 3%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+    
+    }
+    
+    .personimg {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        scale: 1.9;
+        position: relative;
+        bottom: 20px;
+    
+    }
+    .person p{
+        font-size: 12px;
+    }
+    .reviewword{
+        font-size: 25px;
+        position: relative;
+        bottom: 42px;
+    }
+    
+    
+    .star {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 70px;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    .fa-star-half-stroke {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    /* review sectioin*/
+    
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: 10px;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+     
+}
+   
+
+

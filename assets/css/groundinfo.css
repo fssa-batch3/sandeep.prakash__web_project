@@ -640,17 +640,18 @@ a {
 }
 
 /* footer */
-@media screen and (max-width:900px){
+@media screen and (max-width:450px){
 
     * {
         margin: 0px;
         padding: 0px;
     }
+ 
     
     /* header */
     header {
         height: 10vh;
-        width: 427px;
+    
         background-position: center;
         background-size: cover;
         background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
@@ -748,7 +749,7 @@ a {
     .main2 {
         height: 385vh;
         background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
-        width: 427px;
+    
     
     }
     
@@ -762,7 +763,7 @@ a {
     .sidebar1 {
         color: white;
         margin: 20px 0px;
-        width: 427px;
+    
         height: 220vh;
         background-color: rgb(218, 222, 241);
         border-radius: 2%;
@@ -1230,7 +1231,662 @@ a {
     /* footer */
     footer {
         height: 30vh;
-        width: 427px;
+    
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading{
+        color: rgb(219, 213, 213);
+        font-size: large;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    
+    
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    /* footer */
+
+
+}
+@media all and (min-width:750px) and (max-width:1024px){
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+ 
+    
+    /* header */
+    header {
+        height: 10vh;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        font-family: 'Noto Serif Khojki', serif;
+    }
+    
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    
+    }
+    #check{
+        display: none;
+    }
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        width: 70px;
+        display: inline-block;
+        transition: all 0.5s;
+        z-index: 5;
+    
+    }
+    
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        position: relative;
+        background-color: #d0dae3;
+        top: 50px;
+        width: 90px;
+    
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+      color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+        position: relative;
+        left: 75%;
+       }
+    
+    .login {
+        font-size: medium;
+        padding: 2px 17px;
+        height: 102%;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+    
+    
+    }
+    .login:hover{
+        background-color: #61bdff;
+    }
+    
+    .logo {
+        width: 27%;
+        position: relative;
+        bottom: 99px;
+        left: 156px;
+    }
+    
+    /* header */
+    /* main1 */
+    .content1 {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder;
+        position: relative;
+        left: 0px;
+    
+    }
+    
+    /* main1 */
+    
+    /* main2 */
+    .main2 {
+        height: 385vh;
+        background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+
+    
+    }
+    
+    .bar {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 92vh;
+    
+    }
+    
+    .sidebar1 {
+        color: white;
+        margin: 20px 0px;
+    
+        height: 220vh;
+        background-color: rgb(218, 222, 241);
+        border-radius: 2%;
+        background-image: linear-gradient(to top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833);
+    
+    
+    
+    }
+    
+    .sidebar2 {
+        border-radius: 2%;
+        background-color: rgb(218, 222, 241);
+        color: white;
+        margin: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0vh;
+    
+    
+    }
+    
+    .box1 {
+        color: rgb(253, 251, 251);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: larger;
+        line-height: 1.5;
+    
+    }
+    
+    .place {
+        font-size: larger;
+        font-weight: bold;
+    }
+    
+    
+    /* slider */
+    
+    .containerslider {
+        width: 510px;
+        height: 410px;
+        overflow: hidden;
+        position: relative;
+        left: 120px;
+        top: 30px;
+        border: 5px solid black;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+    
+    }
+    
+    .images {
+        display: flex;
+        height: 350px;
+    
+    
+    }
+    
+    .images img {
+        height: 350px;
+        width: 100%;
+    
+    }
+    
+    .images input {
+        display: none;
+    }
+    
+    .labeldots {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+    }
+    
+    .labeldots label {
+        height: 5px;
+        width: 5px;
+        margin: 7px;
+        border-radius: 50%;
+        padding: 5px 5px;
+        border: 1px double rgb(234, 229, 229);
+        cursor: pointer;
+        transition: all 0.55s ease;
+    
+    }
+    
+    .labeldots label:hover {
+        background-color: rgb(228, 226, 226);
+    }
+    
+    #images1:checked~.groundg1 {
+        margin-left: 0%;
+    
+    }
+    
+    #images2:checked~.groundg2 {
+    
+        margin-left: -100%;
+    
+    }
+    
+    #images3:checked~.groundg3 {
+        margin-left: -200%;
+    
+    }
+    
+    /* slider */
+    /* box2 */
+    
+    .box2 {
+        color: rgb(4, 10, 15);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+    }
+    /* location */
+    .locationinfo {
+        font-size: 14px;
+        width: 150px;
+        height: 178px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        right: 90px;
+        top: 20px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 0px 15px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+        line-height: 1.6;
+    
+    }
+    
+    .locationinfo:hover {
+        background-color: rgb(255, 255, 255);
+        transition: 0.95s;
+        transform: scale(1);
+        border: 3px solid rgb(255, 255, 255);
+        box-shadow: 0 10px 10px rgba(6, 6, 6, 0.73);
+    
+    }
+    .fa-location-dot {
+        color: rgb(19, 197, 16);
+        font-size: larger;
+    }
+    
+    
+    .sportsavail {
+        font-size: 15px;
+        width: 160px;
+        height: 175px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 98px;
+        bottom: 180px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+        line-height: 1.6;
+    
+    
+    }
+    
+    .sportsavail:hover {
+        background-color: rgb(222, 232, 241);
+        transition: 0.95s;
+        transform: scale(.99);
+        border: 3px solid rgb(255, 255, 255);
+    
+    
+    }
+    
+    .sportsicon {
+        width: 35px;
+    
+    }
+    .timinginfo {
+        width: 200px;
+    
+        border: 2px solid black;
+        text-align: center;
+        position: relative;
+        bottom: 160px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 25px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    }
+    
+    .timinginfo:hover {
+        background-color: rgb(222, 232, 241);
+        transition: 0.95s;
+        transform: scale(.99);
+        border: 3px solid rgb(255, 255, 255);
+    
+    }
+    
+    
+    
+    .rules {
+        width: 320px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        position: relative;
+        bottom: 150px;
+        left: 195px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 25px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+        line-height: 1.6;
+    
+    }
+    
+    .rules:hover {
+        background-color: rgb(222, 232, 241);
+        transition: 0.95s;
+        transform: scale(.99);
+        border: 3px solid rgb(255, 255, 255);
+    
+    }
+    
+    .pricelast {
+        background-color: rgba(255, 255, 255, 0.906);
+        width: 102px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        padding: 7px 5px;
+        position: relative;
+        left: 7px;
+        top: 7px;
+        border-radius: 10px;
+        color: black;
+    
+    }
+    
+    
+    .price {
+        width: 190px;
+        height: 60px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 120px;
+        left: 255px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    }
+    
+    .price:hover {
+        background-color: rgb(222, 232, 241);
+        transition: 0.95s;
+        transform: scale(.99);
+        border: 3px solid rgb(255, 255, 255);
+    
+    }
+    
+    .pricen {
+        color: rgb(245, 246, 247);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: larger;
+        position: relative;
+        right: 7px;
+        top: 15px;
+    }
+    
+    
+    .addplayers {
+        width: 100%;
+        border: 1px solid black;
+        background-color: rgba(91, 173, 37, 0.906);
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 30px;
+        cursor: pointer;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(110, 107, 124);
+    }
+    
+    
+    
+    
+    
+    
+    
+    .addplayer {
+        width: 290px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        position: relative;
+        bottom: 90px;
+        left: 210px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 20px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    }
+    
+    .addplayer:hover {
+        background-color: rgb(222, 232, 241);
+        transition: 0.95s;
+        transform: scale(.99);
+        border: 3px solid rgb(255, 255, 255);
+    
+    }
+    
+    /* sidebar 2 */
+    .booking1 {
+     
+        height: 150vh;
+        position: relative;
+        top: 1690px;
+        background-image: linear-gradient(to top, #d5d7ea, #ffffff, #ffffff, #ffffff, #000833);
+    right: 10px;
+    }
+    
+    .headingbook {
+        color: rgb(0, 0, 0);
+    
+        font-weight: bolder;
+        font-size: larger;
+        width: 50%;
+        height: 30px;
+    
+        border-radius: 5px;
+        text-align: center;
+        background-color: #92919136;
+        padding: 10px 0px;
+    }
+    
+    .timings {
+        width: 50%;
+        height: 64px;
+    
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    
+    }
+    
+    .sportss {
+        width: 50%;
+        height: 64px;
+    
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    .durations {
+        width: 50%;
+        height: 64px;
+    
+    
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .players {
+        width: 50%;
+        height: 64px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    input[type="date"] {
+        width: 50%;
+        height: 64px;
+    
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 5px;
+    }
+    
+    .book1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    .book2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .pay {
+        width: 100%;
+        height: 44px;
+        background-color: rgba(91, 173, 37, 0.906);
+        font-size: 15px;
+        font-weight: bold;
+    
+        padding: 5px 14px;
+    
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    
+    
+    
+    }
+    
+    .paycash {
+        width: 100%;
+        height: 44px;
+        background-color: rgba(91, 173, 37, 0.906);
+        font-size: 15px;
+        font-weight: bold;
+    
+        padding: 5px 14px;
+    
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    
+    }
+    .pay:hover{
+        background-color: rgb(69, 164, 69);
+    
+    }
+    .paycash:hover{
+          background-color: rgb(69, 164, 69);  
+    }
+    
+    /* sidebar2 */
+    
+    /* footer */
+    footer {
+        height: 30vh;
+    
         background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
     
         background-size: cover;
@@ -1299,5 +1955,77 @@ a {
 
 
 
-
+}
+@media all and (min-width:1024px) and (max-width:1200px){
+    .containerslider {
+        width: 510px;
+        height: 410px;
+        overflow: hidden;
+        position: relative;
+        left: 250px;
+        top: 30px;
+        border: 5px solid black;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+    
+    }
+    .rules {
+        width: 320px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        position: relative;
+        bottom: 150px;
+        left: 335px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 25px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+        line-height: 1.6;
+    
+    }
+      
+    .price {
+        width: 190px;
+        height: 60px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 120px;
+        left: 395px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    }
+        
+    
+    .addplayer {
+        width: 290px;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+        position: relative;
+        bottom: 90px;
+        left: 360px;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        color: white;
+        padding: 20px 10px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(0, 0, 0);
+    }
+       
+    .logo {
+        width: 24%;
+        position: relative;
+        bottom: 99px;
+        left: 256px;
+    }
 }

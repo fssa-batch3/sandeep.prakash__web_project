@@ -131,7 +131,7 @@ label {
 
 
 /* forms signin */
-@media screen and (max-width:900px) {
+@media screen and (max-width:450px) {
     * {
         margin: 0px;
         padding: 0px;
@@ -173,7 +173,7 @@ label {
     h1.signuphead {
         color: white;
         position: relative;
-        left: 10%;
+        left: 6%;
     
     }
     
@@ -257,6 +257,7 @@ label {
         color: white;
         position: relative;
         left: 2%;
+        font-size: 12px;
     }
     /* label color */
     
@@ -270,3 +271,34 @@ label {
     /* forms signin */
    
 }
+@media all and (min-width:750px) and (max-width:1024px) {
+    #newlogin {
+        padding: 0px 50px;
+        height: 45px;
+        font-size: large;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgb(7, 86, 46);
+        color: white;
+        position: relative;
+        left: 25%;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+    
+    
+    }
+    .forms {
+        position: relative;
+        top: 13%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 80%;
+        left: 10%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 78%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+     
