@@ -13,8 +13,10 @@ header {
     position: sticky;
     top: 0%;
     z-index: 2;
-    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
-
+    /* background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #f5f5f5);
+    background-image: linear-gradient(to right top, #449342, #3f9b8b, #023c18, #2EAF7D, #3FD0C9); */
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); 
+  
 }
 .checkbtn{
     font-size: 22px;
@@ -45,7 +47,7 @@ ul li {
 ul li a {
     text-decoration: none;
     font-size: larger;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
 ul li a:hover {
@@ -89,7 +91,7 @@ ul li a:hover {
     align-items: center;
     background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
 
-
+ 
 
 
 }
@@ -145,7 +147,8 @@ ul li a:hover {
     align-items: center;
     justify-content: center;
     color: rgb(255, 255, 255);
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); 
+    /* /* background-image: linear-gradient(to right top, #449342, #C1F6ED, #02353C, #2EAF7D, #3FD0C9); */
 
 
 }
@@ -398,6 +401,9 @@ a {
 }
 
 /* footer section */
+
+
+/* Responsive mediaqueries */
 
 @media screen and (max-width:450px) {
     * {
