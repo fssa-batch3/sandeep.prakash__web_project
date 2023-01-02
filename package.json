@@ -1,0 +1,22 @@
+{
+  "name": "book_and_play",
+  "version": "1.0.0",
+  "description": "[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_sandeep.prakash__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_sandeep.prakash__web_project)\r  100 project\r About my project: 4 lines about your project\r To help people to find grounds and connect to player.\r  It help to If you are new to some place you cant find ground and friends to play \r  In my website you can book your ground from your home and connect with players.\r Problem statement: Google Drive link(https://docs.google.com/document/d/18aAV5Ef3yPXUkzdbHZK-H9tf9KAuVi0ZLhSZone1M6Q/edit?usp=sharing)\r Market Research: Google Drive link(https://docs.google.com/document/d/11vh1bqQm5panRBV-MRlC9okc15jt6nhJO8hIUx2JLMo/edit?usp=sharing)\r User flow: Google Drive link(https://drive.google.com/file/d/152ejdWxX0GEu6wRjsrmVxrBmCv24CScc/view?usp=sharing)\r Wireframe: Google Drive link(https://drive.google.com/file/d/12gku_ec54PN5gMPqHr8yZH4_dgFEp1dS/view?usp=sharing)\r Live Server Link:https://sandeepsan97.github.io/Book-and-play/",
+  "main": "main.js",
+  "scripts": {
+    "div": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/sandeep.prakash__web_project.git"
+  },
+  "author": "Sandeepsan97",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/sandeep.prakash__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/sandeep.prakash__web_project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}

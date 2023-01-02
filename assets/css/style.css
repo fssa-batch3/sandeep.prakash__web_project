@@ -443,8 +443,9 @@ a {
         margin-right: 2%;
         position: relative;
         left: -100%;
+        width: 120px;
         display: block;
-        transition: all 0.5s;
+        transition: all 1s;
         z-index: 10;
     }
     
@@ -472,13 +473,14 @@ a {
     
     }
     #check:checked ~ul{
-    left: 0;
+   position: relative;
+   left: 60%;
     }
     .login {
         font-size: small;
-        padding: 2px 15px;
+        padding: 1px 12px;
         height: 87%;
-        width: 20%;
+        width: 100%;
         background-color: #ffffff;
         color: rgb(0, 0, 0);
         font-weight: bold;
@@ -496,7 +498,7 @@ a {
     .logo {
         width: 25%;
         position: relative;
-        bottom: 220px;
+        bottom: 170px;
         left: 16px;
         
     }
