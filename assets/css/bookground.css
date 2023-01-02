@@ -432,7 +432,7 @@ a {
         margin-right: 2%;
         position: relative;
         left: -100%;
-        width: 70px;
+        width: 87px;
         display: inline-block;
         transition: all 0.5s;
         z-index: 5;
@@ -465,10 +465,10 @@ a {
       left: 75%;
      }
     .login {
-        font-size: 10px;
-        padding: 2px 17px;
-        height: 77%;
-        width: 100%;
+        font-size:12px;
+        padding: 0px 7px;
+        height: 87%;
+        width: 90%;
         background-color: #ffffff;
         color: rgb(0, 0, 0);
         font-weight: bold;
@@ -653,7 +653,7 @@ a {
         border: 2px solid transparent;
         border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
         color: rgb(12, 10, 10);
-        margin-left: 15px;
+        margin-left: 12px;
      
     }
     /* groundname */

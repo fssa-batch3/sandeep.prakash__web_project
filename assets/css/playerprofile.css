@@ -499,7 +499,7 @@ ul {
     margin-right: 2%;
     position: relative;
     left: -100%;
-    width: 70px;
+    width: 80px;
     display: inline-block;
     transition: all 0.5s;
     z-index: 5;
@@ -519,8 +519,9 @@ ul {
 }
 ul li {
     list-style-type: none;
-    padding: 2%;
+    padding: 5%;
     background-color: #d0dae3;
+    text-align: center;
 }
 
 ul li a {
@@ -536,7 +537,7 @@ ul li a:hover {
 }
 #check:checked ~ul{
     position: relative;
-    left: 90%;
+    left: 80%;
    }
 
 .login {

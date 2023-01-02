@@ -419,7 +419,7 @@ ul{
     margin-right: 2%;
     position: relative;
     left: -100%;
-    width: 70px;
+    width: 90px;
     display: inline-block;
     transition: all 0.5s;
     z-index: 5;
@@ -430,7 +430,6 @@ ul li{
     background-color: #d0dae3;
    position: relative;
    top: 50px;
-
    text-align: center;
  
 }
@@ -445,7 +444,7 @@ ul li a:hover{
 }
 #check:checked ~ul{
     position: relative;
-    left: 75%;
+    left: 70%;
    }
 
 .login{
@@ -466,7 +465,7 @@ ul li a:hover{
 .logo{
     width:30%;
     position: relative;
-    bottom: 80px;
+    bottom: 45px;
     left: 46px;
 }
 /* header */
