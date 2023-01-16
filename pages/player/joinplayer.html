@@ -17,9 +17,9 @@
         <h1 class="sign">Join As A Player</h1><br>
         <form>
         <label class="labelname"> Display Name:</label><br>
-        <input type="name" placeholder="Your Name " id="name1" aria-label="name"><br> 
+        <input type="name" placeholder="Your Name " id="name1" aria-label="name" value="jack"><br> 
         <label class="labelname">Age :</label><br>
-        <input type="number" placeholder="Age " id="age" aria-label="age"><br> 
+        <input type="number" placeholder="Age " id="age" aria-label="age" value="22"><br> 
         
         </form>
             
@@ -46,14 +46,14 @@
 
     </select><br>
         <p class="labelname">Timing Available</p><br>
-        <input type="time"  id="timingsfrom" aria-label="timingsfrom"><br>
+        <input type="time"  id="timingsfrom" aria-label="timingsfrom" value="4:00"><br>
         
         <p>To</p><br>
-        <input type="time"  id="timingsto" aria-label="timingsto">
+        <input type="time"  id="timingsto" aria-label="timingsto" value="6:00">
         </div>
         <br>
         <div class="checkboxcolumn">
-        <input type="checkbox" id="checkbox" aria-label="checkbox">
+        <input type="checkbox" id="checkbox" aria-label="checkbox" value="tick">
         <span class="checkboxsentence">You accept to the terms and condition of joining as a player</span><br>
         </div>
         <!-- button -->
@@ -66,5 +66,19 @@
 
     </div>
       <!-- container -->
+      <script>
+        const name1 =(document.getElementById("name1").value )
+       
+       const age = (document.getElementById("age").value )
+      
+       const  timingsfrom = (document.getElementById("timingsfrom").value )
+     
+       const timingsto =(document.getElementById("timingsto").value )
+     
+       console.log(name1)
+   console.log(age)
+   console.log(timingsfrom)
+   console.log(timingsto)
+      </script>
 </body>
 </html>

@@ -107,8 +107,15 @@
      <form>
     <label class="labelname"> Display Name:</label><br>
     <input type="name" placeholder="Ramesh " id="name1"><br> 
+    
     <label class="labelname">Age :</label><br>
     <input type="number" placeholder="Age " id="age"><br> 
+    <label class="labelname">Email:</label><br>
+    <input type="email" id="userEmail" aria-label="email" ><br>
+    <label class="labelname">Phone Number:</label><br>
+    <input type="text" placeholder="Phone Number" id="phoneno1" aria-label="phone number" ><br>
+    <label class="labelname">Password:</label><br>
+    <input type="password" placeholder="Password" id="password" aria-label="password" ><br>
                 
     </form>
     <div class="select">
@@ -134,10 +141,10 @@
 
   </select><br>
       <p class="labelname">Timing Available</p><br>
-      <input type="time"  id="timingsfrom" aria-label="timingsfrom"><br>
+      <input type="time"  id="timingsfrom" aria-label="timingsfrom" value="4:00"><br>
       
       <p>To</p><br>
-      <input type="time"  id="timingsto" aria-label="timingsto">
+      <input type="time"  id="timingsto" aria-label="timingsto" value="5:00">
       </div>
    <br>
  <a href="../../pages/player/findplayers.html"><button class="profile2">Save</button></a>  
@@ -242,7 +249,34 @@
       </div>
   </footer>
        <!-- footer -->
+       <script>
+        function getData(){
+        const name1 =(document.getElementById("name1").value )
+       
+       const age = (document.getElementById("age").value )
+      
+       const  timingsfrom = (document.getElementById("timingsfrom").value )
+     
+       const timingsto =(document.getElementById("timingsto").value )
+     
+       console.log(name1)
+        console.log(age)
+         console.log(timingsfrom)
+         console.log(timingsto)
 
+
+        //  const userEmail=localStorage.getItem("userEmail");
+        //  console.log("userEmail")
+        //  document.getElementById("userEmail").innervalue = userEmail
+
+        // const userEmail = localStorage.getItem("userEmail");
+        // console.log("userEmail")
+        // document.getElementById("userEmail") .innerText = userEmail
+        }
+        const userEmail = localStorage.getItem("userEmail");
+        console.log("userEmail")
+        document.getElementById("userEmail") .innerHTML = userEmail
+      </script>
 
 
 

@@ -63,7 +63,7 @@ input[type="password"]::placeholder {
 }
 
 #login {
-    width: 100%;
+    width: 63%;
     height: 45px;
     font-size: larger;
     font-weight: bolder;
@@ -188,7 +188,7 @@ input[type="password"]::placeholder {
     }
     
     #login {
-        width: 100%;
+        width: 63%;
         height: 45px;
         font-size: 17px;
         font-weight: bolder;

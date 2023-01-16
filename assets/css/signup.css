@@ -96,6 +96,7 @@ input[type="text"]::placeholder {
 
 #newlogin {
     padding: 0px 50px;
+    width: 43%;
     height: 45px;
     font-size: large;
     font-weight: bolder;
@@ -103,7 +104,7 @@ input[type="text"]::placeholder {
     background-color: rgb(7, 86, 46);
     color: white;
     position: relative;
-    left: 23%;
+    left: 20%;
     border-radius: 10px;
     border: none;
     box-shadow: 0 3px 10px rgb(35, 34, 34);

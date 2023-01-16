@@ -58,7 +58,7 @@ ul li a:hover {
     width: 14%;
     position: relative;
     bottom: 85px;
-    left: 46px;
+    left: 66px;
 }
 
 
@@ -311,7 +311,7 @@ form input {
     left: 35%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 690px;
+    height: 990px;
 
 
 }
@@ -331,6 +331,24 @@ form input {
     border-radius: 5px;
     border: 1px solid black;
 
+}
+#userEmail{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#phoneno1{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#password{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 .select {
     display: flex;
