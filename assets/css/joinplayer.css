@@ -28,13 +28,13 @@
 
 .forms {
     position: relative;
-    top: 10%;
+    top: 2%;
     border: 2px solid rgb(180, 176, 176);
     width: 35%;
     left: 33%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 87%;
+    height: 96%;
     background-color: rgba(0, 0, 0, 0.3);
 }
 .labelname {
@@ -58,7 +58,14 @@
     border: 1px solid black;
 
 }
-.sportss {
+#sportss {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+#gender{
     width: 50%;
     height: 35px;
     font-size: 20px;
@@ -85,7 +92,7 @@
 
 
 }
-.locationselect{
+#locationselect{
     width: 50%;
     height: 35px;
     font-size: 20px;

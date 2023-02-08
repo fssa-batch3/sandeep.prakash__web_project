@@ -362,7 +362,7 @@ form input {
     font-size: 20px;
     font-weight: 500;
 }
-.sportss {
+#sportss {
     width: 50%;
     height: 35px;
 
@@ -378,7 +378,7 @@ form input {
     border-radius: 5px;
 
 }
-.locationselect{
+#locationselect{
     width: 50%;
     height: 35px;
     font-size: 20px;

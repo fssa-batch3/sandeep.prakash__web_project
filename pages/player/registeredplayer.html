@@ -106,21 +106,21 @@
                   
      <form>
     <label class="labelname"> Display Name:</label><br>
-    <input type="name" placeholder="Ramesh " id="name1"><br> 
+    <input type="name"  id="name1"><br> 
     
     <label class="labelname">Age :</label><br>
-    <input type="number" placeholder="Age " id="age"><br> 
+    <input type="number"  id="age"><br> 
     <label class="labelname">Email:</label><br>
     <input type="email" id="userEmail" aria-label="email" ><br>
     <label class="labelname">Phone Number:</label><br>
-    <input type="text" placeholder="Phone Number" id="phoneno1" aria-label="phone number" ><br>
+    <input type="text" id="phoneno1" aria-label="phone number" ><br>
     <label class="labelname">Password:</label><br>
-    <input type="password" placeholder="Password" id="password" aria-label="password" ><br>
+    <input type="password" id="password" aria-label="password" ><br>
                 
     </form>
     <div class="select">
       <p class="labelname">Known Sports:</p><br>
-      <select class="sportss">
+      <select id="sportss">
              
       <option>Cricket</option>
       <option>Football</option>
@@ -128,7 +128,7 @@
              
       </select><br>
       <p class="labelname">Location</p><br>
-      <select class="locationselect">
+      <select id="locationselect">
           <option>Chennai</option>
           <option>Coimbatore</option>
           <option>Salem</option>
@@ -250,32 +250,66 @@
   </footer>
        <!-- footer -->
        <script>
-        function getData(){
-        const name1 =(document.getElementById("name1").value )
+//             const currentData=JSON.parse(localStorage.getItem("user_details"));
+
+//             if (currentData) {
+//   document.getElementById("name1").value = currentData.name1;
+//   document.getElementById("age").value = currentData.age;
+//   document.getElementById("email").value = currentData.email;
+//   document.getElementById("phoneno1").value = currentData.phoneno1;
+//   document.getElementById("password").value = currentData.password;
+//   document.getElementById("sports").value =currentData.sportss;
+//   document.getElementById("locationselect").value = currentData.locationselect;
+//   document.getElementById("timingsfrom").value = currentData.timingsfrom
+//   document.getElementById("timingsto").value = currentData.timingsto;
+  
+// }
+        // function getData(){
+      //   const name1 =(document.getElementById("name1").value )
        
-       const age = (document.getElementById("age").value )
+      //  const age = (document.getElementById("age").value )
       
-       const  timingsfrom = (document.getElementById("timingsfrom").value )
+      //  const  timingsfrom = (document.getElementById("timingsfrom").value )
      
-       const timingsto =(document.getElementById("timingsto").value )
+      //  const timingsto =(document.getElementById("timingsto").value )
      
-       console.log(name1)
-        console.log(age)
-         console.log(timingsfrom)
-         console.log(timingsto)
+      //  console.log(name1)
+      //   console.log(age)
+      //    console.log(timingsfrom)
+      //    console.log(timingsto)
 
 
-        //  const userEmail=localStorage.getItem("userEmail");
-        //  console.log("userEmail")
-        //  document.getElementById("userEmail").innervalue = userEmail
+      //   //  const userEmail=localStorage.getItem("userEmail");
+      //   //  console.log("userEmail")
+      //   //  document.getElementById("userEmail").innervalue = userEmail
 
-        // const userEmail = localStorage.getItem("userEmail");
-        // console.log("userEmail")
-        // document.getElementById("userEmail") .innerText = userEmail
-        }
-        const userEmail = localStorage.getItem("userEmail");
-        console.log("userEmail")
-        document.getElementById("userEmail") .innerHTML = userEmail
+      //   // const userEmail = localStorage.getItem("userEmail");
+      //   // console.log("userEmail")
+      //   // document.getElementById("userEmail") .innerText = userEmail
+      //   }
+      //   const userEmail = localStorage.getItem("userEmail");
+      //   console.log("userEmail")
+      //   document.getElementById("userEmail") .innerHTML = userEmail
+
+let user_record = JSON.parse(localStorage.getItem("user_details"));
+// document.getElementById("name1").innerHTML = user_record[0]["user_name"]
+document.getElementById("name1").value=user_record[0]["user_name"];
+document.getElementById("userEmail").value=user_record[0]["user_email"];
+document.getElementById("phoneno1").value=user_record[0]["user_phoneno"];
+document.getElementById("password").value=user_record[0]["user_password"];
+// document.getElementById("name1").value=user_record[0]["user_name"];
+// document.getElementById("name1").value=user_record[0]["user_name"];
+let players_details = JSON.parse(localStorage.getItem("players_details"));
+document.getElementById("age").value=user_record[0]["user_age"];
+document.getElementById("locationselect").value=user_record[0]["user_gender"];
+document.getElementById("sportss").value=user_record[0]["sport_Choosed"];
+document.getElementById("timingsfrom").value=user_record[0]["timingsfrom"];
+document.getElementById("timingsto").value=user_record[0]["timingsto"];
+
+
+
+
+
       </script>
 
 

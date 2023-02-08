@@ -33,7 +33,7 @@
 // }
 function getUserData(){
   
-    window.location.href="../../index.html";
+    window.location.href="./accountcreated.html";
     const name1 =(document.getElementById("name1").value )
     const email = (document.getElementById("email").value )
     const user_phoneno =(document.getElementById("user_phoneno").value )
@@ -51,9 +51,7 @@ function getUserData(){
         "user_name":name1,
         "user_email":email,
         "user_phoneno":user_phoneno,
-        "user_password":user_password
-
-        
+        "user_password":user_password        
     }
  )
 

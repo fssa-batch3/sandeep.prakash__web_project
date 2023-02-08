@@ -42,7 +42,7 @@
           let userCollect;
           arrayConvert.find(element =>{
           if (element ["user_email"]==email && element ["user_password"]==user_password   ){
-            return  userCollect=1;
+            return  userCollect==1;
           }
           else{
             return userCollect=0
@@ -52,13 +52,14 @@
         if(userCollect==1){
           window.location.href="../../index.html"
           alert("login success");
+          
            
         }
         else{
           alert("login failure");
         }
-    console.log(email);
-console.log(user_password);  
+//     console.log(email);
+// console.log(user_password);  
 }
 
 
