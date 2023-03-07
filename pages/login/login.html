@@ -20,7 +20,7 @@
         <input type="email" placeholder="Email address " id="email" aria-label="email"><br>
         <input type="password" placeholder="Password" id="password" aria-label="password"><br>
         <!-- <a href="../../index.html"><input type="button" value="Login" id="login" aria-label="button" ></a> -->
-        <button id="login" type="submit"  onclick="getData()">Login</button><br>
+        <button id="login" type="submit" onclick="getData()">Login</button><br>
         <a class="fp" href="#">Forget password</a><br>
         <p class="newsign">New user</p><br>
         <!-- <button id="newlogin" type="button" onclick="getData()">Create New Account</button><br> -->
@@ -34,33 +34,38 @@
 
   </div>
   <script>
-    function getData(){
+    function getData() {
       const email = (document.getElementById("email").value)
-          const user_password = (document.getElementById("password").value)
-          const arrayConvert =JSON.parse(localStorage.getItem("user_details"));
-          
-          let userCollect;
-          arrayConvert.find(element =>{
-          if (element ["user_email"]==email && element ["user_password"]==user_password   ){
-            return  userCollect==1;
-          }
-          else{
-            return userCollect=0
-          }
-        });
+      const user_password = (document.getElementById("password").value)
+      const arrayConvert = JSON.parse(localStorage.getItem("user_details"));
 
-        if(userCollect==1){
-          window.location.href="../../index.html"
-          alert("login success");
-          
-           
+      let userCollect;
+      arrayConvert.find(element => {
+        if (element["user_as_ground"]["user_email"] == email && element["user_as_ground"]["user_password"] == user_password) {
+          return userCollect = 1;
         }
-        else{
-          alert("login failure");
+        else {
+          return userCollect = 0
         }
-//     console.log(email);
-// console.log(user_password);  
-}
+      });
+
+      if (userCollect == 1) {
+
+        localStorage.setItem("logged_in", email);
+        // localStorage.setItem("user_name",name1)
+
+
+        window.location.href = "./accountcreated.html";
+        alert("login success");
+
+
+      }
+      else {
+        alert("login failure");
+      }
+      //     console.log(email);
+      // console.log(user_password);  
+    }
 
 
   </script>

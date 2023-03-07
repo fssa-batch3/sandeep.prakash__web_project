@@ -90,8 +90,8 @@ ul li a:hover {
     display: flex;
     align-items: center;
     background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
-
- 
+/* 
+    background-image: linear-gradient(to right top, #e1edf0, #29d090, #468b31, #3fdc27, #26e733); */
 
 
 }

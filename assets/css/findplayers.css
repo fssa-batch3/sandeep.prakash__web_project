@@ -247,9 +247,9 @@ input[type="search"]::placeholder{
     }
     .visit{
         font-size: medium;
-        padding: 2px 7px;
-        height: 100%;
-        width: 100%;
+        padding: 3px 10px;
+        height: 97%;
+        width: 120%;
         background-color: rgb(241, 235, 249);
         color: rgb(0, 0, 0);
         font-weight: bold;
@@ -257,6 +257,7 @@ input[type="search"]::placeholder{
         border: none;
         position: relative;
         top: 10px;
+        right: 10%;
         border-radius: 5%;
     }
     .visit:hover{
@@ -276,10 +277,10 @@ input[type="search"]::placeholder{
     }
     .ratings{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         position: relative;
         right: 2px;
-        bottom: 53px;
+        bottom: 59px;
     
     }
     .ratingno{

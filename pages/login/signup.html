@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../assets/css/signup.css">
 </head>
 <body>
@@ -14,25 +15,50 @@
         <!-- signup form -->
     <div class="forms">
     <h1 class="signuphead">Create New Account</h1><br>
-    <form id="singupform">
-    <label >Name:</label><br>
-    <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="name"><br>
+    <form id="signupform"  >
+
+    <label >First Name:</label><br>
+    <div class="boxform">
+    <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="name" pattern="[a-zA-Z0-9]+" required><br>
+    <i class="fa-regular fa-circle-check"></i>
+    <i class="fa-solid fa-circle-exclamation"></i>
+</div><br>
+    <label >Last Name:</label><br>
+    <div class="boxform">
+    <input type="name" placeholder="Your Name " id="name2" aria-label="name" name="name"  pattern="[a-zA-Z0-9]+" required><br>
+    <i class="fa-regular fa-circle-check"></i>
+    <i class="fa-solid fa-circle-exclamation"></i>
+</div><br>
     <label >Email:</label><br>
-    <input type="email" placeholder="Email address " id="email" aria-label="email" name="email-id" ><br>
+    <div class="boxform">
+    <input type="email" placeholder="Email address " id="email" aria-label="email" name="email-id" required><br>
+    <i class="fa-regular fa-circle-check"></i>
+    <i class="fa-solid fa-circle-exclamation"></i>
+</div><br>
     <label >Phone Number:</label><br>
-    <input type="text" placeholder="Phone Number" id="user_phoneno" aria-label="phone number" name="mobile-number"><br>
+      <div class="boxform">
+    <input type="text" placeholder="Phone Number" id="user_phoneno" aria-label="phone number" name="mobile-number" required><br>
+    <i class="fa-regular fa-circle-check"></i>
+    <i class="fa-solid fa-circle-exclamation"></i>
+</div><br>
     <label >Password:</label><br>
-    <input type="password" placeholder="Password" id="password" aria-label="password" name="password"><br>
+    <div class="boxform">
+    <input type="password" placeholder="Password" id="password" aria-label="Password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"title="PLease fill the password with one symbols and Upper case" required><br>
+    <i class="fa-regular fa-circle-check"></i>
+    <i class="fa-solid fa-circle-exclamation"></i>
+</div><br>
     <p class="alert">By Entering the information you are expected receive <br>email or sms OTP when you are sign again</p><br>
     <!-- <a href="../../pages/login/accountcreated.html" ><input type="button" value="Register" id="newlogin"></a> -->
     <!-- <button  id="newlogin" type="button" onclick="getUserData()" >Register</button><br> -->
-    <button  id="newlogin" type="button" onclick="getUserData()" >Register</button><br>
+    <button type="submit" id="newlogin"  >Register</button><br>
     </form>
        
     </div>
        <!-- signup form -->
     </div>
 
-    <script src="../signup.js"></script>
+    <script src="../../assets/js/signup.js"></script>
+
+   
 </body>
 </html>

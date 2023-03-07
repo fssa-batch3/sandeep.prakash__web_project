@@ -144,10 +144,10 @@
       <input type="time"  id="timingsfrom" aria-label="timingsfrom" value="4:00"><br>
       
       <p>To</p><br>
-      <input type="time"  id="timingsto" aria-label="timingsto" value="5:00">
+      <input type="time"  id="timingsto" aria-label="timingtoo" value="5:00">
       </div>
    <br>
- <a href="../../pages/player/findplayers.html"><button class="profile2">Save</button></a>  
+ <button class="profile2" type="submit" onclick="update()">Save</button>
 
 </div>
 
@@ -158,7 +158,7 @@
  </div>
  <!-- sidebar2 -->
 
-<img class="iconplay" src="../../assets/images/cricketplaying.gif" alt="ballrolling">
+<!-- <img class="iconplay" src="../../assets/images/cricketplaying.gif" alt="ballrolling"> -->
 
                  
 </div>
@@ -218,6 +218,9 @@
   
 
   </div>
+  <div class="delete">
+    <button type="submit" class="deletebtn" onclick="onDelete()">Delete your account</button>
+  </div>
   
      <!-- footer -->
      <footer>
@@ -249,7 +252,7 @@
       </div>
   </footer>
        <!-- footer -->
-       <script>
+       <script src="../../assets/js/profile.js">
 //             const currentData=JSON.parse(localStorage.getItem("user_details"));
 
 //             if (currentData) {
@@ -291,27 +294,26 @@
       //   console.log("userEmail")
       //   document.getElementById("userEmail") .innerHTML = userEmail
 
-let user_record = JSON.parse(localStorage.getItem("user_details"));
 // document.getElementById("name1").innerHTML = user_record[0]["user_name"]
-document.getElementById("name1").value=user_record[0]["user_name"];
-document.getElementById("userEmail").value=user_record[0]["user_email"];
-document.getElementById("phoneno1").value=user_record[0]["user_phoneno"];
-document.getElementById("password").value=user_record[0]["user_password"];
 // document.getElementById("name1").value=user_record[0]["user_name"];
-// document.getElementById("name1").value=user_record[0]["user_name"];
-let players_details = JSON.parse(localStorage.getItem("players_details"));
-document.getElementById("age").value=user_record[0]["user_age"];
-document.getElementById("locationselect").value=user_record[0]["user_gender"];
-document.getElementById("sportss").value=user_record[0]["sport_Choosed"];
-document.getElementById("timingsfrom").value=user_record[0]["timingsfrom"];
-document.getElementById("timingsto").value=user_record[0]["timingsto"];
+// document.getElementById("userEmail").value=user_record[0]["user_email"];
+// document.getElementById("phoneno1").value=user_record[0]["user_phoneno"];
+// document.getElementById("password").value=user_record[0]["user_password"];
+// // document.getElementById("name1").value=user_record[0]["user_name"];
+// // document.getElementById("name1").value=user_record[0]["user_name"];
+// let players_details = JSON.parse(localStorage.getItem("players_details"));
+// document.getElementById("age").value=user_record[0]["user_age"];
+// document.getElementById("locationselect").value=user_record[0]["user_gender"];
+// document.getElementById("sportss").value=user_record[0]["sport_Choosed"];
+// document.getElementById("timingsfrom").value=user_record[0]["timingsfrom"];
+// document.getElementById("timingsto").value=user_record[0]["timingsto"];
 
 
 
 
 
       </script>
-
+<script src="../../assets/js/is_logged.js"></script>
 
 
 

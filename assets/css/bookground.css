@@ -102,7 +102,6 @@ ul li a:hover {
     width: 10%;
     height: 44px;
     background-color: rgb(255, 255, 255);
-
     font-size: 17px;
     display: flex;
     justify-content: center;
@@ -114,6 +113,12 @@ ul li a:hover {
     position: relative;
     left: 130px;
     bottom: 28px;
+
+}
+
+.locationselect option{
+text-align:left;
+
 
 }
 /* content2 */
