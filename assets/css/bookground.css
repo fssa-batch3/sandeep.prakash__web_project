@@ -209,7 +209,7 @@ input[type="search"]::placeholder {
 
 .main2 {
 
-    height: 310vh;
+    /* height: 310vh; */
     /* overflow: hidden; */
     color: white;
     border: 20px solid;

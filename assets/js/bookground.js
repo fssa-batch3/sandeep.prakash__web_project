@@ -8,11 +8,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "5.0",
     "valuename": "Chennai",
@@ -32,11 +32,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "5.0",
     //  "anchorlocataion":"../../pages/bookinground/ground2.html"
@@ -50,11 +50,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.9",
     //  "anchorlocataion":"../../pages/bookinground/ground3.html"
@@ -68,11 +68,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.6",
     //  "anchorlocataion":"../../pages/bookinground/ground4.html"
@@ -86,11 +86,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.5",
     "valuename": "Coimbatore",
@@ -105,11 +105,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.4",
     "valuename": "Coimbatore",
@@ -124,11 +124,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.4",
     "valuename": "Bangalore",
@@ -143,11 +143,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.2",
     "valuename": "Bangalore",
@@ -162,11 +162,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.2",
     "valuename": "Chennai",
@@ -181,11 +181,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.2",
     "valuename": "Coimbatore",
@@ -200,11 +200,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.0",
     "valuename": "Coimbatore",
@@ -219,11 +219,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "5.0",
     "valuename": "Salem",
@@ -238,11 +238,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.0",
     "valuename": "Madurai",
@@ -257,11 +257,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.0",
     "valuename": "Madurai",
@@ -276,11 +276,11 @@ const ground_list = [
     "sportsicon":
 
     {
-      "icon1": "../../assets/images/cricketicon.png",
+      "cricketicon": "../../assets/images/cricketicon.png",
 
-      "icon2": "../../assets/images/footballicon.png",
+      "footballicon": "../../assets/images/footballicon.png",
 
-      "icon3": "../../assets/images/tennisicon.png"
+      "tennisicon": "../../assets/images/tennisicon.png"
     },
     "ratingsnumber": "4.0",
     "valuename": "Coimbatore",
@@ -293,7 +293,6 @@ const ground_list = [
 
 ]
 // console.log(ground_list);
-
 
 // let div_parent;
 let div_child;
@@ -355,25 +354,25 @@ for (let i = 0; i < 15; i++) {
   div_child.append(div_symbol);
 
   //  <img src="" class="sportsicon" alt=""/>
-  imgicon_card = document.createElement("img");
-  imgicon_card.setAttribute("class", "sportsicon");
-  imgicon_card.setAttribute("src", ground_list[i]["sportsicon"]["icon1"]);
-  imgicon_card.setAttribute("alt", "icons");
-  div_symbol.append(imgicon_card);
+  imgicon_card1 = document.createElement("img");
+  imgicon_card1.setAttribute("class", "sportsicon");
+  imgicon_card1.setAttribute("src", ground_list[i]["sportsicon"]["cricketicon"]);
+  imgicon_card1.setAttribute("alt", "icons");
+  div_symbol.append(imgicon_card1);
 
   //  <img src="" class="sportsicon" alt=""/>
-  imgicon_card = document.createElement("img");
-  imgicon_card.setAttribute("class", "sportsicon");
-  imgicon_card.setAttribute("src", ground_list[i]["sportsicon"]["icon2"]);
-  imgicon_card.setAttribute("alt", "icons");
-  div_symbol.append(imgicon_card);
+  imgicon_card2 = document.createElement("img");
+  imgicon_card2.setAttribute("class", "sportsicon");
+  imgicon_card2.setAttribute("src", ground_list[i]["sportsicon"]["footballicon"]);
+  imgicon_card2.setAttribute("alt", "icons");
+  div_symbol.append(imgicon_card2);
 
   //  <img src="" class="sportsicon" alt=""/>
-  imgicon_card = document.createElement("img");
-  imgicon_card.setAttribute("class", "sportsicon");
-  imgicon_card.setAttribute("src", ground_list[i]["sportsicon"]["icon3"]);
-  imgicon_card.setAttribute("alt", "icons");
-  div_symbol.append(imgicon_card);
+  imgicon_card3 = document.createElement("img");
+  imgicon_card3.setAttribute("class", "sportsicon");
+  imgicon_card3.setAttribute("src", ground_list[i]["sportsicon"]["tennisicon"]);
+  imgicon_card3.setAttribute("alt", "icons");
+  div_symbol.append(imgicon_card3);
 
 
   //  <div class="ratings"> </div>
@@ -413,7 +412,127 @@ for (let i = 0; i < 15; i++) {
 // crud ground
 const groundOwnerProduct=JSON.parse(localStorage.getItem("ground_info"));
 
+
 console.log(groundOwnerProduct);
+// ground_list.push(groundOwnerProduct);
+
+
+const filtered=groundOwnerProduct.filter((item=>{
+  if(item["status"]==true){
+    return true
+
+  }
+  else{
+return false
+  }
+}))
+
+
+
+for (let i = 0; i <filtered.length; i++) {
+  //  <div class="child"> </div>
+  div_child = document.createElement("div");
+  div_child.setAttribute("class", "child");
+  div_child.setAttribute("value", filtered[i]["valuename"])
+  // console.log(div_child);
+  //<br>
+  br_tag = document.createElement("br");
+  div_child.append(br_tag);
+  //  <h3 class="card-title"> </h5>
+  h3_card_title = document.createElement("h3");
+  h3_card_title.setAttribute("class", "groundn");
+  h3_card_title.innerText = filtered[i]["ground_name"];
+  div_child.append(h3_card_title);
+
+
+  //  <img src="" class="groimg" alt=""/>
+  img_card = document.createElement("img");
+  img_card.setAttribute("src", filtered[i]["groundimg1"]);
+  img_card.setAttribute("alt", "groundimage");
+  img_card.setAttribute("class", "groimg");
+  div_child.append(img_card);
+
+  //  <p class="location_name"> </p>
+  p_location_name = document.createElement("p");
+  p_location_name.setAttribute("class", "locationn");
+  p_location_name.innerText = filtered[i]["groundlocation"];
+  div_child.append(p_location_name);
+
+
+
+  //  <div class="symbol"> </div>
+  div_symbol = document.createElement("div");
+  div_symbol.setAttribute("class", "symbol");
+  div_child.append(div_symbol);
+if(groundOwnerProduct[i]["sport_avail_1"]==true){
+    //  <img src="" class="sportsicon" alt=""/>
+    imgicon_card1 = document.createElement("img");
+    imgicon_card1.setAttribute("class", "sportsicon");
+    imgicon_card1.setAttribute("src", ground_list[i]["sportsicon"]["cricketicon"]);
+    imgicon_card1.setAttribute("alt", "icons");
+    div_symbol.append(imgicon_card1);
+
+}
+
+  if(groundOwnerProduct[i]["sport_avail_2"]==true){
+    //  <img src="" class="sportsicon" alt=""/>
+    imgicon_card2 = document.createElement("img");
+    imgicon_card2.setAttribute("class", "sportsicon");
+    imgicon_card2.setAttribute("src", ground_list[i]["sportsicon"]["footballicon"]);
+    imgicon_card2.setAttribute("alt", "icons");
+    div_symbol.append(imgicon_card2);
+
+}
+
+
+ if(groundOwnerProduct[i]["sport_avail_3"]==true){
+    //  <img src="" class="sportsicon" alt=""/>
+    imgicon_card3 = document.createElement("img");
+    imgicon_card3.setAttribute("class", "sportsicon");
+    imgicon_card3.setAttribute("src", ground_list[i]["sportsicon"]["tennisicon"]);
+    // imgicon_card.setAttribute("alt", "icons");
+    div_symbol.append(imgicon_card3);
+
+}
+
+
+
+  //  <div class="ratings"> </div>
+  div_ratings = document.createElement("div");
+  div_ratings.setAttribute("class", "ratings");
+  div_child.append(div_ratings);
+
+  //  <i class="fa-solid fa-star"> </i>
+  i_star = document.createElement("i");
+  i_star.setAttribute("class", "fa-solid fa-star");
+  // h3_card_title.innerText = names[i];
+  div_ratings.append(i_star);
+
+  //  <span class="ratingno"> </span>
+  ratings_no = document.createElement("span");
+  ratings_no.setAttribute("class", "ratingno");
+  ratings_no.innerText = ground_list[i]["ratingsnumber"];
+  div_ratings.append(ratings_no);
+
+  //anchor
+  anchor = document.createElement("a");
+  // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+  anchor.setAttribute("href", "../../pages/bookinground/ground1.html?userId=" + groundOwnerProduct[i]["ground_id"])
+  div_child.append(anchor)
+
+  // <button class="book"></button>
+  button_book = document.createElement("button");
+  button_book.setAttribute("class", "book");
+  // button_booknow =document.createTextNode("Book Now")
+  // button_book.append(button_booknow)
+  button_book.innerText = "Book Now"
+  anchor.append(button_book);
+
+  // console.log(div_child);
+  document.querySelector("div.parent").append(div_child)
+
+
+}
 
 
 
@@ -492,28 +611,28 @@ console.log(groundOwnerProduct);
 //     resultsContainer.appendChild(noResults);
 //   }
 // }
-const searchBox = document.getElementById("search2");
-searchBox.addEventListener('keydown',(e)=>{
+// const searchBox = document.getElementById("search2");
+// searchBox.addEventListener('keydown',(e)=>{
   
-  if (e.key === "Enter") {
-    e.preventDefault();
+//   if (e.key === "Enter") {
+//     e.preventDefault();
   
-  }
-const searchContainer = e.target.value.toLowerCase().trim();
-const ground=document.querySelectorAll("div.child");
- ground.forEach(element=>{
-  const content=element.children[1].textContent.toLowerCase();
-  const content2=element.children[3].textContent.toLowerCase();
-  if(content.includes(searchContainer) ||content2.includes(searchContainer)){
-    element.style.display="block";
+//   }
+// const searchContainer = e.target.value.toLowerCase().trim();
+// const ground=document.querySelectorAll("div.child");
+//  ground.forEach(element=>{
+//   const content=element.children[1].textContent.toLowerCase();
+//   const content2=element.children[3].textContent.toLowerCase();
+//   if(content.includes(searchContainer) ||content2.includes(searchContainer)){
+//     element.style.display="block";
 
-  }
-  else{
-    element.style.display="none"
-  }
- })
+//   }
+//   else{
+//     element.style.display="none"
+//   }
+//  })
 
-});
+// });
 // // filter
 
 // const selectOption = document.querySelector(".locationselect")
@@ -707,21 +826,21 @@ console.log(filteredData);
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card = document.createElement("img");
     imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.icon1);
+    imgicon_card.setAttribute("src", item.sportsicon.cricketicon);
     imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card);
 
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card = document.createElement("img");
     imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.icon2);
+    imgicon_card.setAttribute("src", item.sportsicon.footballicon);
     imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card);
 
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card = document.createElement("img");
     imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.icon3);
+    imgicon_card.setAttribute("src", item.sportsicon.tennisicon);
     imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card);
 
@@ -833,21 +952,21 @@ searchbox.addEventListener("keydown", (e) => {
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card = document.createElement("img");
     imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.icon1);
+    imgicon_card.setAttribute("src", item.sportsicon.cricketicon);
     imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card);
 
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card = document.createElement("img");
     imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.icon2);
+    imgicon_card.setAttribute("src", item.sportsicon.footballicon);
     imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card);
 
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card = document.createElement("img");
     imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.icon3);
+    imgicon_card.setAttribute("src", item.sportsicon.tennisicon);
     imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card);
 
