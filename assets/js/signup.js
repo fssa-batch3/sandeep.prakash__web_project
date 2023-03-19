@@ -46,7 +46,7 @@ alert("email id already taken")
      
      )
     
-     window.location.href="./accountcreated.html"
+     window.location.href="./login .html"
  }
 
 

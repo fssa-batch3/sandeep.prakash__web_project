@@ -74,8 +74,10 @@ top: 4px;
   margin: 30px 0px;
 }
 .profileimg{
-    width: 90px;
+    width: 130px;
+    height: 130px;
     padding: 33px 30px;
+    border-radius: 50px;
 }
 .nameperson{
         position: relative;
@@ -154,7 +156,16 @@ top: 30px;
 
 }
 
+.bxs-plus-circle{
+    position: relative;
+    right:48px;
+    bottom: 35px;
+cursor: pointer;
+}
 
+#input-file{
+    display: none;
+}
 
 
 

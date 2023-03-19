@@ -147,20 +147,10 @@ ul li a:hover {
 
 }
 
-.cricketicon {
-    width: 30px;
-}
 
-.fa-star {
-    color: rgb(255, 183, 0);
-    font-size: 17px;
-    position: relative;
-    right: 10px;
-
-}
 
 .main2 {
-    height: 87vh;
+    height: 127vh;
 
 
 
@@ -222,7 +212,9 @@ ul li a:hover {
     background-color: rgb(208, 216, 216);
     padding: 10px 10px;
     position: relative;
-    bottom: 50px;
+    bottom: 0px;
+    font-size: medium;
+    border-radius: 20px;
 }
 
 .profilepic {
@@ -237,6 +229,7 @@ ul li a:hover {
 .profile {
     font-size: medium;
     padding: 9px 20px;
+    background-color: white;
     color: rgb(20, 14, 14);
     font-weight: bold;
     cursor: pointer;
@@ -274,29 +267,29 @@ ul li a:hover {
     cursor: pointer;
     border: none;
     position: relative;
-    bottom: 50px;
+    bottom: 18px;
 
 
 
 }
 /* sidebar2 */
 .container {
-    background-color: rgba(15, 67, 209, 0.82);
+    background-color: rgba(233, 235, 241, 0.82);
     width: 390px;
     height: 70vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
-    border-radius: px;
-    border: 1px solid black;
+    border-radius: 10px;
+    border: 1px solid none;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;
     top: 30px;
 }
 
 .top {
-    color: rgb(255, 255, 255);
-    padding: 2%;
+    color: rgb(0, 0, 0);
+    padding: 1%;
 }
 
 .main {
@@ -304,6 +297,7 @@ ul li a:hover {
     color: rgb(0, 0, 0);
     background-color: rgba(229, 233, 236, 0.952);
     padding: 20px 10px;
+    
 
 }
 
@@ -316,7 +310,12 @@ ul li a:hover {
     border-radius: 35%;
     box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
 }
-
+.h2head{
+    background-color: #0A66C2;
+    padding: 10px 30px;
+    border-radius: 10px;
+    width: 320px;
+}
 .messagefrom {
     background-color: rgb(126, 126, 126);
     color: rgb(255, 255, 255);
@@ -329,27 +328,35 @@ ul li a:hover {
 
 .bottom form {
     display: flex;
-    background-color: rgba(229, 233, 236, 0.952);
-
+    background-color: rgba(147, 147, 147, 0.952);
+     height: 50px;
+     border-radius: 10px;
 }
 
 form input {
-    width: 320px;
-    height: 27px;
+    width: 330px;
+    height: 37px;
     border: 1px solid black;
     padding-left: 7px;
     outline: none;
-    border-radius: 0px;
+    border-radius: 20px;
+    position: relative;
+    top: 5px;
+    left: 5px;
 
 }
 
 form button {
-    width: 16%;
-    background-color: rgb(27, 238, 146);
+    background-color: rgba(147, 147, 147, 0.952);
+    height: 10px;
     font-size: medium;
     border: none;
     outline: none;
     border-radius: 0px;
+    font-size: 25px;
+    position: relative;
+    left: 12px;
+    top: 10px;
 }
 
 
@@ -470,6 +477,150 @@ p a {
 a {
     text-decoration: none;
 }
+
+/* side bar1 */
+
+.profilephoto{
+    width: 120px;
+    height: 130px;
+    padding: 20px;
+}
+
+.profilebox{
+    width: 500px;
+    height: 200px;
+    background-color: #00acee;
+    border-radius: 30px;
+    display: flex;
+  
+}
+
+.namerow{
+    position: relative;
+    top: 30px;
+
+}
+
+.aboutrow{
+  background-color: #40bb2f;
+    width: 230px;
+    height: 80px;
+    position: relative;
+    top: 70px;
+    padding: 15px;
+    border-radius: 17px;
+    right: 60px;
+
+
+}
+
+
+.fa-star {
+    color: rgb(255, 183, 0);
+    font-size: 13px;
+    position: relative;
+    
+
+}
+.ratingsrow{
+    position: relative;
+    top: 150px;
+    right: 10px;
+}
+
+.norating{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.sportsknown{
+     width: 200px;
+    height: 100px;
+    background-color: #00acee;
+    border-radius: 30px;
+    position: relative;
+top: 20px;    
+}
+
+
+.cricketicon {
+    width: 30px;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+.connectbtn{
+    position: relative;
+width: 90px;
+height: 30px;
+top: 160px;
+right:120px;
+}
+    
+.sportsplay{
+   text-align: center;
+font-size: 17px;
+position: relative;
+top: 17px;
+}
+
+.box2{
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+ 
+    grid-column-gap: 80px;
+}
+
+
+.scorehead{
+    text-align: center;
+}
+
+.scoreno{
+    width: 90px;
+    height: 30px;
+    background-color: #00ee6b;
+    position: relative;
+    left: 50px;
+    top: 20px;
+  
+}
+
+.box3{
+    display: grid;
+
+}
+.gamesplaybox{
+    width: 200px;
+   height: 100px;
+   background-color: #00acee;
+   border-radius: 30px;
+   position: relative;
+top: 20px;    
+}
+
+
+
+
+
+.statistics1{
+    width: 500px;
+    height: 350px;
+    background-color: #88fd5d;
+    border-radius: 30px;
+    position: relative;
+  
+top: 50px;    
+
+}
+#myChart{
+    position: relative;
+    left:70px;
+}
+
+
 
 /* footer section */
 @media screen and (min-width:400px) and (max-width:450px){
@@ -636,9 +787,7 @@ ul li a:hover {
 
 }
 
-.cricketicon {
-    width: 30px;
-}
+
 
 .fa-star {
     color: rgb(255, 183, 0);
@@ -711,12 +860,13 @@ ul li a:hover {
 
 .playerinfo {
     color: black;
-    width: 200px;
+    width:500px;
     background-color: rgb(208, 216, 216);
     padding: 10px 20px;
     position: relative;
-    bottom: 50px;
+    bottom: 20px;
     font-size: larger;
+    border-radius: 20px;
     
 }
 

@@ -2,7 +2,7 @@
 const ground_list = [
   //ground1
   {
-    "groundname": "DNS TURF",
+    "groundname": "DNS  TURF",
     "image": "../../assets/images/ground1.jpg",
     "locationname": "Vyasarpadi",
     "sportsicon":

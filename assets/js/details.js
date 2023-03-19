@@ -644,12 +644,12 @@ const groundOwnerProduct_details=JSON.parse(localStorage.getItem("ground_info"))
 
 
 
-const url2=window.location.search;
-console.log(url2)
+const url2=window.location.search;  //?userid=97;
+console.log(url2);
 const urlParameter2= new URLSearchParams(url2);
-// console.log(urlParameter)
+// console.log(urlParameter)   // "userid":"97"
 const groundSearch2=urlParameter2.get("userId");
-// console.log(groundSearch2);
+// console.log(groundSearch2); // get value of name
 
  let show2;
 groundOwnerProduct_details.find(function(e){

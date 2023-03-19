@@ -20,7 +20,7 @@ function getSellerGround() {
     const sportsAvail2 = (document.getElementById("sportsavail2").checked);
     const sportsAvail3 = (document.getElementById("sportsavail3").checked);
     const groundTimingfrom = (document.getElementById("timingsfrom").value);
-    const groundTimingTo = (document.getElementById("timingsfrom").value);
+    const groundTimingTo = (document.getElementById("timingsto").value);
     const groundRules = (document.getElementById("rules").value);
     const groundCity = (document.getElementById("sportsvalue").value);
     const groundPrice = (document.getElementById("amount").value);
@@ -69,10 +69,11 @@ function getSellerGround() {
 
 // view
 
+
 let groundRecords = JSON.parse(localStorage.getItem("ground_info"));
 
 
-const groundName = document.getElementById("groname")
+const groundName = document.getElementById("groname");
 const groundPlace = (document.getElementById("grolname"));
 const groundLocationLink = (document.getElementById("grolink"));
 const groundaddress=(document.getElementById("groaddress"));

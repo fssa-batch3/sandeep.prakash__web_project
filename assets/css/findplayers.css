@@ -123,9 +123,11 @@ ul li a:hover{
       
     }
        .userlogo{
-        width: 45px;
+        width: 65px;
+        height: 65px;
         position: relative;
         bottom: 10px;
+        border-radius: 50px;
       
     }
     /* search bar */
@@ -235,8 +237,8 @@ input[type="search"]::placeholder{
     }
     .child{
         background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
-        height: 177px;
-        width: 53%;
+        height: 192px;
+        width: 60%;
         color: white;
         margin-left: 22%;
         border-radius: 10%;
@@ -517,7 +519,8 @@ ul li a:hover{
         
     }
     .userlogo1{
-        width:35px;
+        width:55px;
+        height: 55px;
         position: relative;
         top:10px      
     }

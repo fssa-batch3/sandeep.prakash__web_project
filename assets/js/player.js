@@ -11,348 +11,9 @@ const player_list =[
         "playersName":"Ramesh",
         "ratingsnumber":"5.0",
         "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
+    }
 
 
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-       {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-       {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-       {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-       {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userglogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-    {
-        "image":"../../assets/images/userlogo.png",
-        "playersName":"Ramesh",
-        "ratingsnumber":"5.0",
-        "anchorlocataion":"../../pages/player/playerprofile.html"
-    },
-
-
-
-    
-    
     
     
     
@@ -360,6 +21,7 @@ const player_list =[
 
 
 
+    let user_record = JSON.parse(localStorage.getItem("user_details"));
 
 
 let div_child;
@@ -373,7 +35,7 @@ let div_ratings;
 let i_star;
 let span_ratingsno;
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i < user_record.length ; i++) {
 div_child = document.createElement("div");
 div_child.setAttribute("class" ,"child");
 console.log(div_child);
@@ -388,19 +50,19 @@ div_group.append(br_tag);
 
 //  <img src="" class="groimg" alt=""/>
 img_card = document.createElement("img");
-img_card.setAttribute("src", player_list[i]["image"]);
+img_card.setAttribute("src", user_record[i]["userimage"]["url"]);
 img_card.setAttribute("alt", "playerProfile");
 img_card.setAttribute("class", "userlogo");
 div_group.append(img_card);
 
 p_player= document.createElement("p");
 p_player.setAttribute("class","nameplayer");
-p_player.innerText = player_list[i]["playersName"];
+p_player.innerText = user_record[i]["user_as_player"]["user_name"];
 div_group.append(p_player);
 
 anchor = document.createElement("a");
-// anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-anchor.setAttribute("href", player_list[i]["anchorlocataion"])
+anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+user_record[i]["user_as_player"]["player_id"])
+// anchor.setAttribute("href", player_list[i]["anchorlocataion"])
 div_group.append(anchor)
 
 // <button class="book"></button>
