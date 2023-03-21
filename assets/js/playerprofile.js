@@ -149,7 +149,7 @@ canvas_chart.setAttribute("id","myChart");
 div_statistics.append(canvas_chart);
 
 
-//sidebar2
+// sidebar2
 
 
 div_sidebar_2=document.createElement("div");

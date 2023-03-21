@@ -481,9 +481,10 @@ a {
 /* side bar1 */
 
 .profilephoto{
-    width: 120px;
+    width: 130px;
     height: 130px;
     padding: 20px;
+    border-radius: 90px;
 }
 
 .profilebox{
