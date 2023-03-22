@@ -1,66 +1,66 @@
-const form = document.getElementById("signupform");
+// const form = document.getElementById("signupform");
 
-form.addEventListener('submit',e=>{
-    e.preventDefault();
-    getUserData();
+// form.addEventListener('submit',e=>{
+//     e.preventDefault();
+//     getUserData();
 
-});
+// });
 
-function getUserData(){
-    
-  
-    const name1 =(document.getElementById("name1").value.trim() )
-    const name2 =(document.getElementById("name2").value.trim() )
-    const email = (document.getElementById("email").value.trim()  )
-    const user_phoneno =(document.getElementById("user_phoneno").value.trim()  )
- const user_password= (document.getElementById("password").value.trim()  )
+// function getUserData(){
 
 
-//  console.log(name1)    
-//  console.log(email)
-//  console.log(phoneno1)
-//  console.log(user_password)
- let user_records= new Array();
+//     const name1 =(document.getElementById("name1").value.trim() )
+//     const name2 =(document.getElementById("name2").value.trim() )
+//     const email = (document.getElementById("email").value.trim()  )
+//     const user_phoneno =(document.getElementById("user_phoneno").value.trim()  )
+//  const user_password= (document.getElementById("password").value.trim()  )
 
- user_records= JSON.parse(localStorage.getItem("user_details"))?
- JSON.parse(localStorage.getItem("user_details")):[]
 
- 
+// //  console.log(name1)    
+// //  console.log(email)
+// //  console.log(phoneno1)
+// //  console.log(user_password)
+//  let user_records= new Array();
 
- if(user_records.some((v)=>{return v.user_email==email})){
-alert("email id already taken")
- }
- 
- else{
-    user_records.push({
-        "user_as_ground":
-         {
-            "user_name":name1,
-            "user_last_name":name2,
-            "user_email":email,
-            "user_phoneno":user_phoneno,
-            "user_password":user_password        
-        },
-
-    }
-     
-     )
-    
-     window.location.href="./login .html"
- }
+//  user_records= JSON.parse(localStorage.getItem("user_details"))?
+//  JSON.parse(localStorage.getItem("user_details")):[]
 
 
 
- localStorage.setItem("user_details",JSON.stringify(user_records));
-   
+//  if(user_records.some((v)=>{return v.user_email==email})){
+// alert("email id already taken")
+//  }
+
+//  else{
+//     user_records.push({
+//         "user_as_ground":
+//          {
+//             "user_name":name1,
+//             "user_last_name":name2,
+//             "user_email":email,
+//             "user_phoneno":user_phoneno,
+//             "user_password":user_password        
+//         },
+
+//     }
+
+//      )
+
+//      window.location.href="./login .html"
+//  }
 
 
- 
+
+//  localStorage.setItem("user_details",JSON.stringify(user_records));
+
+
+
+
 
 
 // if(name1===""){
 //     setError(name1,"Firstname cannot be blank")
- 
+
 // }
 // else{
 //     setSuccess(name1)
@@ -68,7 +68,7 @@ alert("email id already taken")
 // }
 // if(name2===""){
 //     setError(name2,"Lastname cannot be blank")
-   
+
 // }
 // else{
 //     setSuccess(name2)
@@ -94,7 +94,7 @@ alert("email id already taken")
 //     window.location.href="./accountcreated.html";
 // }
 // if(user_password===""){
-   
+
 //     setError(user_password,"password cannot be blank")
 // }
 // else{
@@ -114,9 +114,166 @@ alert("email id already taken")
 //     const formError = input.parentElemenet;
 //     const inputError = document.querySelector("input")
 //     inputError.className="boxform error";
-    
+
 
 // }
 
+
+
+
+
+const checkjoinPlayer = document.getElementById("checkjoinplayer");
+const joinplayerForm = document.querySelector(".joinplayercontainer");
+const forms1 = document.querySelector(".forms")
+const body = document.querySelector("body")
+
+checkjoinPlayer.addEventListener("click", (e) => {
+    joinplayerForm.style.display = "block";
+    forms1.style.position = "relative";
+    forms1.style.right = "350px"
+    joinplayerForm.style.left = "900px"
+    body.style.overflowY = "hidden"
+
+
+    const age = (document.getElementById("age"))
+
+    const gender = (document.getElementById("gender"))
+    const sportChoose = (document.getElementById("sportss"))
+    const sportLocation = (document.getElementById("locationselect"))
+
+    const timingsfrom = (document.getElementById("timingsfrom"))
+
+    const timingsto = (document.getElementById("timingsto"))
+
+
+    age.required = true;
+    gender.required = true;
+    sportChoose.required = true;
+    sportLocation.required = true;
+    timingsfrom.required = true;
+    timingsto.required = true;
+
+
+
+
+});
+
+
+
+
+
+// register 
+
+
+const form = document.getElementById("signupform");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    getUserData();
+
+});
+
+function getUserData() {
+
+    const name1 = (document.getElementById("name1").value.trim())
+    const name2 = (document.getElementById("name2").value.trim())
+    const email = (document.getElementById("email").value.trim())
+    const user_phoneno = (document.getElementById("user_phoneno").value.trim())
+    const user_password = (document.getElementById("password").value.trim())
+    //    const name1 = (document.getElementById("name1").value)
+
+    const age = (document.getElementById("age").value)
+
+    const gender = (document.getElementById("gender").value)
+    const sportChoose = (document.getElementById("sportss").value)
+    const sportLocation = (document.getElementById("locationselect").value)
+
+    const timingsfrom = (document.getElementById("timingsfrom").value)
+
+    const timingsto = (document.getElementById("timingsto").value)
+
+
+    let user_records = new Array();
+
+    user_records = JSON.parse(localStorage.getItem("user_details")) ?
+        JSON.parse(localStorage.getItem("user_details")) : []
+
+    let user_data;
+
+    if (user_records.some((v) => { return v.user_email == email })) {
+
+        alert("email id already taken")
+
+    }
+
+    else {
+
+        user_data = {
+
+
+            "user_name": name1,
+            "user_last_name": name2,
+            "user_email": email,
+            "user_phoneno": user_phoneno,
+            "user_password": user_password,
+            "player": checkjoinPlayer.checked
+
+        }
+
+if(checkjoinPlayer.checked==false){
+        window.location.href="./login.html"
+
 }
+if(checkjoinPlayer.checked==true){
+    window.location.href="./login.html"
+}
+
+
+        if (checkjoinPlayer.checked) {
+            user_data = {
+                ...user_data,
+                "user_age": age,
+                "user_gender": gender,
+                "sport_Choosed": sportChoose,
+                "sportLocationPlay": sportLocation,
+                "timingsfrom": timingsfrom,
+                "timingsto": timingsto
+
+
+            }
+
+        }
+        //  window.location.href="./login.html"
+
+        user_records.push(user_data)
+
+
+        localStorage.setItem("user_details", JSON.stringify(user_records));
+    }
+
+
+    // checkjoinPlayer.checked
+
+
+    //  if(checkjoinPlayer.checked){
+    //     user_data={
+    //         ...user_data,
+    //         "user_age": age,
+    //         "user_gender": gender,
+    //         "sport_Choosed": sportChoose,
+    //         "sportLocationPlay": sportLocation,
+    //         "timingsfrom": timingsfrom,
+    //         "timingsto": timingsto
+
+
+    //     }
+
+    //  }
+
+
+    //  form.reset();
+
+}
+
+
 

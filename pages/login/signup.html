@@ -50,12 +50,67 @@
     <p class="alert">By Entering the information you are expected receive <br>email or sms OTP when you are sign again</p><br>
     <!-- <a href="../../pages/login/accountcreated.html" ><input type="button" value="Register" id="newlogin"></a> -->
     <!-- <button  id="newlogin" type="button" onclick="getUserData()" >Register</button><br> -->
+<div class="joinplayer">
+    <input type="checkbox" id="checkjoinplayer"><label>Join as a player</label>
+</div>
+</div>
+
+
+
+
+<div class="joinplayercontainer">
+    <p class="labelname"> Display Name:</p><br>
+        <input type="name" placeholder="Your Name " id="name" aria-label="name" ><br> 
+        <p class="labelname">Age :</p><br>
+        <input type="number" placeholder="Age " id="age" aria-label="age" ><br> 
+
+     
+            
+        <div class="select">
+            <p class="labelname">Gender</p><br>
+            <input type="name" placeholder="Gender " id="gender" aria-label="gender" ><br> 
+       
+        <p class="labelname">Known Sports:</p><br>
+        <select id="sportss">
+               
+        <option>Cricket</option>
+        <option>Football</option>
+        <option>Tennis</option>
+               
+        </select><br>
+        <p class="labelname">Location</p><br>
+        <select id="locationselect">
+            <option>Chennai</option>
+            <option>Coimbatore</option>
+            <option>Salem</option>
+            <option>Erode</option>
+            <option>Madurai</option>
+            <option>Delhi</option>
+            <option>Bangalore</option>
+            <option>Pune</option>
+            <option>Kolkata</option>
+
+    </select><br>
+        <p class="labelname">Timing Available</p><br>
+        <input type="time"  id="timingsfrom" aria-label="timingsfrom" value="4:00"><br>
+        
+        <p>To</p><br>
+        <input type="time"  id="timingsto" aria-label="timingsto" value="6:00">
+        </div>
+        <br>
+
+        <!-- <button class="profile" type="button" onclick="getPlayerData()">Join</button> -->
+      
+        </div>
+      
+
+</div>
     <button type="submit" id="newlogin"  >Register</button><br>
     </form>
        
     </div>
        <!-- signup form -->
-    </div>
+    
 
     <script src="../../assets/js/signup.js"></script>
 

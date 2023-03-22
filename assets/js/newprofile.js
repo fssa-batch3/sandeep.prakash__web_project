@@ -104,64 +104,64 @@ function onDelete() {
 
 
 
-//profile image
-const imageFileUpload = document.getElementById("input-file");
-const imageShow = document.querySelector(".profileimg");
+// //profile image
+// const imageFileUpload = document.getElementById("input-file");
+// const imageShow = document.querySelector(".profileimg");
 
 
 
-imageFileUpload.addEventListener("change", (e) => {
+// imageFileUpload.addEventListener("change", (e) => {
 
-    const file = e.target.files[0];
-
-
-    // if (file != file.type.match("image.*")) {
-    //     alert("please choose the image ");
-
-    // };
-
-    const fileReader = new FileReader();
-    fileReader.onload = (e) => {
-        imageShow.src = e.target.result;
+//     const file = e.target.files[0];
 
 
+//     // if (file != file.type.match("image.*")) {
+//     //     alert("please choose the image ");
+
+//     // };
+
+//     const fileReader = new FileReader();
+//     fileReader.onload = (e) => {
+//         imageShow.src = e.target.result;
 
 
 
-        const userRecords = JSON.parse(localStorage.getItem("user_details"))
-        const user_logged = localStorage.getItem("logged_in");
 
 
-        for (let i = 0; i <= userRecords.length - 1; i++) {
+//         const userRecords = JSON.parse(localStorage.getItem("user_details"))
+//         const user_logged = localStorage.getItem("logged_in");
 
-            if (user_logged == userRecords[i]["user_as_ground"].user_email) {
 
-                userRecords[i].userimage = {
-                    imagename: file.name,
-                    url: e.target.result
-                };
-                break;
-            };
+//         for (let i = 0; i <= userRecords.length - 1; i++) {
 
-        }
-        localStorage.setItem("user_details", JSON.stringify(userRecords));
-    };
-    fileReader.readAsDataURL(file);
+//             if (user_logged == userRecords[i]["user_as_ground"].user_email) {
+
+//                 userRecords[i].userimage = {
+//                     imagename: file.name,
+//                     url: e.target.result
+//                 };
+//                 break;
+//             };
+
+//         }
+//         localStorage.setItem("user_details", JSON.stringify(userRecords));
+//     };
+//     fileReader.readAsDataURL(file);
 
 
 
    
-})
+// })
 
-const userRecords = JSON.parse(localStorage.getItem("user_details"));
-const user_logged = localStorage.getItem("logged_in");
+// const userRecords = JSON.parse(localStorage.getItem("user_details"));
+// const user_logged = localStorage.getItem("logged_in");
 
-for (let i = 0; i < userRecords.length; i++) {
-  if (user_logged == userRecords[i]["user_as_ground"]["user_email"]) {
-    const savedImage = userRecords[i]["userimage"];
-    if (savedImage) {
-      imageShow.src = savedImage.url;
-    }
-    break;
-  }
-}
+// for (let i = 0; i < userRecords.length; i++) {
+//   if (user_logged == userRecords[i]["user_as_ground"]["user_email"]) {
+//     const savedImage = userRecords[i]["userimage"];
+//     if (savedImage) {
+//       imageShow.src = savedImage.url;
+//     }
+//     break;
+//   }
+// }

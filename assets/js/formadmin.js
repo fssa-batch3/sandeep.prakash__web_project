@@ -94,11 +94,6 @@ const groundPrice = (document.getElementById("amount"));
 // view 
 
 
-
-
-// update
-
-
 const url2 = window.location.search;
 console.log(url2)
 const urlParameter2 = new URLSearchParams(url2);
