@@ -191,6 +191,7 @@ function getUserData() {
     const timingsfrom = (document.getElementById("timingsfrom").value)
 
     const timingsto = (document.getElementById("timingsto").value)
+    const id_generator = Math.floor(Math.random() * 300);
 
 
     let user_records = new Array();
@@ -210,13 +211,15 @@ function getUserData() {
 
         user_data = {
 
-
+"user_id":id_generator,
             "user_name": name1,
             "user_last_name": name2,
             "user_email": email,
             "user_phoneno": user_phoneno,
             "user_password": user_password,
-            "player": checkjoinPlayer.checked
+            "player": checkjoinPlayer.checked,
+            "imagename":"",
+            "url":""
 
         }
 

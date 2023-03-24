@@ -715,7 +715,7 @@ div_box1.append(h2_groundName);
 
 p_placeName=document.createElement("p");
 p_placeName.setAttribute("class","place");
-p_placeName.innerText=show2["groundlocation"]
+p_placeName.innerText=show2["ground_Place"]
 div_box1.append(p_placeName);
 // box1 end
 
@@ -813,7 +813,7 @@ i_location.setAttribute("class", "fa-solid fa-location-dot");
 anchor.append(i_location);
 
 p_address=document.createElement("p");
-p_address.innerText=show2["ground_locat_link"]
+p_address.innerText=show2["ground_Address"]
 div_locationinfo.append(p_address);
 
 
@@ -882,8 +882,13 @@ i_clock.setAttribute("class", "fa-solid fa-clock");
 div_timing.append(i_clock);
 
 span_time=document.createElement("span")
-span_time.innerText=show2["ground_timing_from"];
+span_time.innerText=show2["ground_timing_from"]+"-";
 div_timing.append(span_time);
+
+span_time2=document.createElement("span")
+span_time2.innerText=show2["ground_timing_to"];
+div_timing.append(span_time2);
+
 
 
 br_tag4=document.createElement("br");

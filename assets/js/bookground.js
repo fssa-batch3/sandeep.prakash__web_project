@@ -317,98 +317,105 @@ let anchor;
 // let my_div=document.getElementsByClassName("parent")
 
 
-for (let i = 0; i < 15; i++) {
-  //  <div class="child"> </div>
-  div_child = document.createElement("div");
-  div_child.setAttribute("class", "child");
-  div_child.setAttribute("value", ground_list[i]["valuename"])
-  // console.log(div_child);
-  //<br>
-  br_tag = document.createElement("br");
-  div_child.append(br_tag);
-  //  <h3 class="card-title"> </h5>
-  h3_card_title = document.createElement("h3");
-  h3_card_title.setAttribute("class", "groundn");
-  h3_card_title.innerText = ground_list[i]["groundname"];
-  div_child.append(h3_card_title);
+// for (let i = 0; i < 15; i++) {
+//   //  <div class="child"> </div>
+//   div_child = document.createElement("div");
+//   div_child.setAttribute("class", "child");
+//   div_child.setAttribute("value", ground_list[i]["valuename"])
+//   // console.log(div_child);
+//   //<br>
+//   br_tag = document.createElement("br");
+//   div_child.append(br_tag);
+//   //  <h3 class="card-title"> </h5>
+//   h3_card_title = document.createElement("h3");
+//   h3_card_title.setAttribute("class", "groundn");
+//   h3_card_title.innerText = ground_list[i]["groundname"];
+//   div_child.append(h3_card_title);
 
 
-  //  <img src="" class="groimg" alt=""/>
-  img_card = document.createElement("img");
-  img_card.setAttribute("src", ground_list[i]["image"]);
-  img_card.setAttribute("alt", "groundimage");
-  img_card.setAttribute("class", "groimg");
-  div_child.append(img_card);
+//   //  <img src="" class="groimg" alt=""/>
+//   img_card = document.createElement("img");
+//   img_card.setAttribute("src", ground_list[i]["image"]);
+//   img_card.setAttribute("alt", "groundimage");
+//   img_card.setAttribute("class", "groimg");
+//   div_child.append(img_card);
 
-  //  <p class="location_name"> </p>
-  p_location_name = document.createElement("p");
-  p_location_name.setAttribute("class", "locationn");
-  p_location_name.innerText = ground_list[i]["locationname"];
-  div_child.append(p_location_name);
-
-
-
-  //  <div class="symbol"> </div>
-  div_symbol = document.createElement("div");
-  div_symbol.setAttribute("class", "symbol");
-  div_child.append(div_symbol);
-
-  //  <img src="" class="sportsicon" alt=""/>
-  imgicon_card1 = document.createElement("img");
-  imgicon_card1.setAttribute("class", "sportsicon");
-  imgicon_card1.setAttribute("src", ground_list[i]["sportsicon"]["cricketicon"]);
-  imgicon_card1.setAttribute("alt", "icons");
-  div_symbol.append(imgicon_card1);
-
-  //  <img src="" class="sportsicon" alt=""/>
-  imgicon_card2 = document.createElement("img");
-  imgicon_card2.setAttribute("class", "sportsicon");
-  imgicon_card2.setAttribute("src", ground_list[i]["sportsicon"]["footballicon"]);
-  imgicon_card2.setAttribute("alt", "icons");
-  div_symbol.append(imgicon_card2);
-
-  //  <img src="" class="sportsicon" alt=""/>
-  imgicon_card3 = document.createElement("img");
-  imgicon_card3.setAttribute("class", "sportsicon");
-  imgicon_card3.setAttribute("src", ground_list[i]["sportsicon"]["tennisicon"]);
-  imgicon_card3.setAttribute("alt", "icons");
-  div_symbol.append(imgicon_card3);
+//   //  <p class="location_name"> </p>
+//   p_location_name = document.createElement("p");
+//   p_location_name.setAttribute("class", "locationn");
+//   p_location_name.innerText = ground_list[i]["locationname"];
+//   div_child.append(p_location_name);
 
 
-  //  <div class="ratings"> </div>
-  div_ratings = document.createElement("div");
-  div_ratings.setAttribute("class", "ratings");
-  div_child.append(div_ratings);
 
-  //  <i class="fa-solid fa-star"> </i>
-  i_star = document.createElement("i");
-  i_star.setAttribute("class", "fa-solid fa-star");
-  // h3_card_title.innerText = names[i];
-  div_ratings.append(i_star);
+//   //  <div class="symbol"> </div>
+//   div_symbol = document.createElement("div");
+//   div_symbol.setAttribute("class", "symbol");
+//   div_child.append(div_symbol);
 
-  //  <span class="ratingno"> </span>
-  ratings_no = document.createElement("span");
-  ratings_no.setAttribute("class", "ratingno");
-  ratings_no.innerText = ground_list[i]["ratingsnumber"];
-  div_ratings.append(ratings_no);
+//   //  <img src="" class="sportsicon" alt=""/>
+//   imgicon_card1 = document.createElement("img");
+//   imgicon_card1.setAttribute("class", "sportsicon");
+//   imgicon_card1.setAttribute("src", ground_list[i]["sportsicon"]["cricketicon"]);
+//   imgicon_card1.setAttribute("alt", "icons");
+//   div_symbol.append(imgicon_card1);
 
-  //anchor
-  anchor = document.createElement("a");
-  // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-  anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + ground_list[i]["groundname"])
-  div_child.append(anchor)
+//   //  <img src="" class="sportsicon" alt=""/>
+//   imgicon_card2 = document.createElement("img");
+//   imgicon_card2.setAttribute("class", "sportsicon");
+//   imgicon_card2.setAttribute("src", ground_list[i]["sportsicon"]["footballicon"]);
+//   imgicon_card2.setAttribute("alt", "icons");
+//   div_symbol.append(imgicon_card2);
 
-  // <button class="book"></button>
-  button_book = document.createElement("button");
-  button_book.setAttribute("class", "book");
-  // button_booknow =document.createTextNode("Book Now")
-  // button_book.append(button_booknow)
-  button_book.innerText = "Book Now"
-  anchor.append(button_book);
+//   //  <img src="" class="sportsicon" alt=""/>
+//   imgicon_card3 = document.createElement("img");
+//   imgicon_card3.setAttribute("class", "sportsicon");
+//   imgicon_card3.setAttribute("src", ground_list[i]["sportsicon"]["tennisicon"]);
+//   imgicon_card3.setAttribute("alt", "icons");
+//   div_symbol.append(imgicon_card3);
 
-  // console.log(div_child);
-  document.querySelector("div.parent").append(div_child)
-}
+
+//   //  <div class="ratings"> </div>
+//   div_ratings = document.createElement("div");
+//   div_ratings.setAttribute("class", "ratings");
+//   div_child.append(div_ratings);
+
+//   //  <i class="fa-solid fa-star"> </i>
+//   i_star = document.createElement("i");
+//   i_star.setAttribute("class", "fa-solid fa-star");
+//   // h3_card_title.innerText = names[i];
+//   div_ratings.append(i_star);
+
+//   //  <span class="ratingno"> </span>
+//   ratings_no = document.createElement("span");
+//   ratings_no.setAttribute("class", "ratingno");
+//   ratings_no.innerText = ground_list[i]["ratingsnumber"];
+//   div_ratings.append(ratings_no);
+
+//   //anchor
+//   anchor = document.createElement("a");
+//   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+//   anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + ground_list[i]["groundname"])
+//   div_child.append(anchor)
+
+//   // <button class="book"></button>
+//   button_book = document.createElement("button");
+//   button_book.setAttribute("class", "book");
+//   // button_booknow =document.createTextNode("Book Now")
+//   // button_book.append(button_booknow)
+//   button_book.innerText = "Book Now"
+//   anchor.append(button_book);
+
+//   // console.log(div_child);
+//   document.querySelector("div.parent").append(div_child)
+// }
+
+
+
+
+
+
+
 // crud ground
 const groundOwnerProduct=JSON.parse(localStorage.getItem("ground_info"));
 
@@ -416,8 +423,8 @@ const groundOwnerProduct=JSON.parse(localStorage.getItem("ground_info"));
 console.log(groundOwnerProduct);
 // ground_list.push(groundOwnerProduct);
 
-
-const filtered=groundOwnerProduct.filter((item=>{
+let filtered;
+filtered=groundOwnerProduct.filter((item=>{
   if(item["status"]==true){
     return true
 
@@ -433,7 +440,7 @@ for (let i = 0; i <filtered.length; i++) {
   //  <div class="child"> </div>
   div_child = document.createElement("div");
   div_child.setAttribute("class", "child");
-  div_child.setAttribute("value", filtered[i]["valuename"])
+  div_child.setAttribute("value", filtered[i]["ground_city"])
   // console.log(div_child);
   //<br>
   br_tag = document.createElement("br");
@@ -455,7 +462,7 @@ for (let i = 0; i <filtered.length; i++) {
   //  <p class="location_name"> </p>
   p_location_name = document.createElement("p");
   p_location_name.setAttribute("class", "locationn");
-  p_location_name.innerText = filtered[i]["groundlocation"];
+  p_location_name.innerText = filtered[i]["ground_Place"];
   div_child.append(p_location_name);
 
 
@@ -464,6 +471,8 @@ for (let i = 0; i <filtered.length; i++) {
   div_symbol = document.createElement("div");
   div_symbol.setAttribute("class", "symbol");
   div_child.append(div_symbol);
+
+
 if(groundOwnerProduct[i]["sport_avail_1"]==true){
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card1 = document.createElement("img");
@@ -750,7 +759,6 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
 
 
 
-
 // filter data
 
 
@@ -765,8 +773,8 @@ selectOption.addEventListener("input", () => {
 
 
   if (seletedQuery !== "all") {
-    filteredData = ground_list.filter((item) => {
-      return item.valuename.includes(seletedQuery)
+    filteredData = filtered.filter((item) => {
+      return item.ground_city.includes(seletedQuery)
     })
 
   } 
@@ -778,7 +786,7 @@ selectOption.addEventListener("input", () => {
 
   // }
   else {
-    filteredData = ground_list;
+    filteredData = filtered;
   }
 
 console.log(filteredData);
@@ -799,13 +807,13 @@ console.log(filteredData);
 
     const h3_card_title = document.createElement("h3");
     h3_card_title.setAttribute("class", "groundn");
-    h3_card_title.innerText = item.groundname;
+    h3_card_title.innerText = item.ground_name;
     div_child.append(h3_card_title);
 
 
     //  <img src="" class="groimg" alt=""/>
     img_card = document.createElement("img");
-    img_card.setAttribute("src", item.image);
+    img_card.setAttribute("src", item.groundimg1);
     img_card.setAttribute("alt", "groundimage");
     img_card.setAttribute("class", "groimg");
     div_child.append(img_card);
@@ -813,7 +821,7 @@ console.log(filteredData);
     //  <p class="location_name"> </p>
     p_location_name = document.createElement("p");
     p_location_name.setAttribute("class", "locationn");
-    p_location_name.innerText = item.locationname;
+    p_location_name.innerText = item.ground_Place;
     div_child.append(p_location_name);
 
 
@@ -823,28 +831,37 @@ console.log(filteredData);
     div_symbol.setAttribute("class", "symbol");
     div_child.append(div_symbol);
 
+  
+if(item.sport_avail_1==true){
     //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card = document.createElement("img");
-    imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.cricketicon);
-    imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card);
+    imgicon_card1 = document.createElement("img");
+    imgicon_card1.setAttribute("class", "sportsicon");
+    imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+    imgicon_card1.setAttribute("alt", "icons");
+    div_symbol.append(imgicon_card1);
 
+}
+
+  if(item.sport_avail_2==true){
     //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card = document.createElement("img");
-    imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.footballicon);
-    imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card);
+    imgicon_card2 = document.createElement("img");
+    imgicon_card2.setAttribute("class", "sportsicon");
+    imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+    imgicon_card2.setAttribute("alt", "icons");
+    div_symbol.append(imgicon_card2);
 
+}
+
+
+ if(item.sport_avail_3==true){
     //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card = document.createElement("img");
-    imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.tennisicon);
-    imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card);
+    imgicon_card3 = document.createElement("img");
+    imgicon_card3.setAttribute("class", "sportsicon");
+    imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+    // imgicon_card.setAttribute("alt", "icons");
+    div_symbol.append(imgicon_card3);
 
-
+}
     //  <div class="ratings"> </div>
     div_ratings = document.createElement("div");
     div_ratings.setAttribute("class", "ratings");
@@ -859,7 +876,7 @@ console.log(filteredData);
     //  <span class="ratingno"> </span>
     ratings_no = document.createElement("span");
     ratings_no.setAttribute("class", "ratingno");
-    ratings_no.innerText = item.ratingsnumber;
+    ratings_no.innerText = ground_list[0]["ratingsnumber"];
     div_ratings.append(ratings_no);
 
     //anchor
@@ -901,7 +918,7 @@ searchbox.addEventListener("keydown", (e) => {
   
   }
     const filteredList = filteredData.filter((item) => {
-    return item.groundname.toLowerCase().includes(searchQuery) || item.locationname.toLowerCase().includes(searchQuery)
+    return item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery)
   })
 
 
@@ -925,13 +942,13 @@ searchbox.addEventListener("keydown", (e) => {
 
     const h3_card_title = document.createElement("h3");
     h3_card_title.setAttribute("class", "groundn");
-    h3_card_title.innerText = item.groundname;
+    h3_card_title.innerText = item.ground_name;
     div_child.append(h3_card_title);
 
 
     //  <img src="" class="groimg" alt=""/>
     img_card = document.createElement("img");
-    img_card.setAttribute("src", item.image);
+    img_card.setAttribute("src", item.groundimg1);
     img_card.setAttribute("alt", "groundimage");
     img_card.setAttribute("class", "groimg");
     div_child.append(img_card);
@@ -939,7 +956,7 @@ searchbox.addEventListener("keydown", (e) => {
     //  <p class="location_name"> </p>
     p_location_name = document.createElement("p");
     p_location_name.setAttribute("class", "locationn");
-    p_location_name.innerText = item.locationname;
+    p_location_name.innerText = item.ground_Place;
     div_child.append(p_location_name);
 
 
@@ -949,29 +966,38 @@ searchbox.addEventListener("keydown", (e) => {
     div_symbol.setAttribute("class", "symbol");
     div_child.append(div_symbol);
 
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card = document.createElement("img");
-    imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.cricketicon);
-    imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card);
-
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card = document.createElement("img");
-    imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.footballicon);
-    imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card);
-
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card = document.createElement("img");
-    imgicon_card.setAttribute("class", "sportsicon");
-    imgicon_card.setAttribute("src", item.sportsicon.tennisicon);
-    imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card);
-
-
-    //  <div class="ratings"> </div>
+    
+    if(item.sport_avail_1==true){
+        //  <img src="" class="sportsicon" alt=""/>
+        imgicon_card1 = document.createElement("img");
+        imgicon_card1.setAttribute("class", "sportsicon");
+        imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+        imgicon_card1.setAttribute("alt", "icons");
+        div_symbol.append(imgicon_card1);
+    
+    }
+    
+      if(item.sport_avail_2==true){
+        //  <img src="" class="sportsicon" alt=""/>
+        imgicon_card2 = document.createElement("img");
+        imgicon_card2.setAttribute("class", "sportsicon");
+        imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+        imgicon_card2.setAttribute("alt", "icons");
+        div_symbol.append(imgicon_card2);
+    
+    }
+    
+    
+     if(item.sport_avail_3==true){
+        //  <img src="" class="sportsicon" alt=""/>
+        imgicon_card3 = document.createElement("img");
+        imgicon_card3.setAttribute("class", "sportsicon");
+        imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+        // imgicon_card.setAttribute("alt", "icons");
+        div_symbol.append(imgicon_card3);
+    
+    }
+        //  <div class="ratings"> </div>
     div_ratings = document.createElement("div");
     div_ratings.setAttribute("class", "ratings");
     div_child.append(div_ratings);
@@ -985,7 +1011,7 @@ searchbox.addEventListener("keydown", (e) => {
     //  <span class="ratingno"> </span>
     ratings_no = document.createElement("span");
     ratings_no.setAttribute("class", "ratingno");
-    ratings_no.innerText = item.ratingsnumber;
+    ratings_no.innerText = ground_list[0]["ratingsnumber"];
     div_ratings.append(ratings_no);
 
     //anchor

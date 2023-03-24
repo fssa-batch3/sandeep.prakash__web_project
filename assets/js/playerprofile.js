@@ -8,6 +8,14 @@
 let user_record = JSON.parse(localStorage.getItem("user_details"));
 
 
+let filterPlayer=[];
+filterPlayer = user_record.filter((item)=>{
+    return item.player==true;
+})
+
+console.log(filterPlayer);
+
+
 
 const url2=window.location.search;  //?userid=97;
 console.log(url2);
@@ -17,8 +25,8 @@ const playerSearch=urlParameter2.get("player_id");
 // console.log(groundSearch2); // get value of name
 
  let show2;
-user_record.find(function(e){
-    if(e["user_as_player"]["player_id"] == playerSearch){
+filterPlayer.find(function(e){
+    if(e["user_id"] == playerSearch){
         return show2= e;
 
     }
@@ -46,7 +54,7 @@ div_sidebar_1.append(div_profile_box);
 
 
 player_image=document.createElement("img");
-player_image.setAttribute("src",show2["userimage"]["url"])
+player_image.setAttribute("src",show2["url"])
 player_image.setAttribute("class","profilephoto")
 div_profile_box.append(player_image);
 
@@ -57,7 +65,7 @@ div_profile_box.append(button_connect);
 
 p_playerName=document.createElement("p");
 p_playerName.setAttribute("class","namerow");
-p_playerName.innerText=show2["user_as_player"]["user_name"]
+p_playerName.innerText=show2["user_name"]
 div_profile_box.append(p_playerName);
 
 
