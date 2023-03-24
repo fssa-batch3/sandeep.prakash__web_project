@@ -2,7 +2,13 @@
 
 
 //URL
-
+const player=[
+{
+    "sportsicon0":"../../assets/images/cricketicon.png",
+    "sportsicon1":"../../assets/images/footballicon.png",
+    "sportsicon2":"../../assets/images/tennisicon.png",
+  }
+]
 
 
 let user_record = JSON.parse(localStorage.getItem("user_details"));
@@ -107,24 +113,30 @@ p_sportsplay_tag.innerText="Sports i will play";
 div_sports_known.append(p_sportsplay_tag);
 
 
-symbolimage1=document.createElement("img");
-symbolimage1.setAttribute("class","sportsicon");
+if(show2["sport_Choosed"]=="Cricket"){
+  symbolimage1=document.createElement("img");
+  symbolimage1.setAttribute("class","sportsicon");
+  symbolimage1.setAttribute("src",player[0]["sportsicon0"])
 // symbolimage1.setAttribute("src",showimage[0]["cricketicon"])
 // symbolimage.setAttribute("alt",)
-div_sports_known.append(symbolimage1);
+div_sports_known.append(symbolimage1);}
 
-symbolimage2=document.createElement("img");
-symbolimage2.setAttribute("class","sportsicon");
+if(show2["sport_Choosed"]=="Football"){
+  symbolimage2=document.createElement("img");
+  symbolimage2.setAttribute("class","sportsicon");
+  symbolimage2.setAttribute("src",player[0]["sportsicon1"])
+  // symbolimage.setAttribute("alt",)
 // symbolimage2.setAttribute("src",showimage[0]["cricketicon"])
 // symbolimage.setAttribute("alt",)
-div_sports_known.append(symbolimage2);
+div_sports_known.append(symbolimage2);}
 
-symbolimage3=document.createElement("img");
-symbolimage3.setAttribute("class","sportsicon");
-// symbolimage3.setAttribute("src",showimage[0]["cricketicon"])
+if(show2["sport_Choosed"]=="Tennis"){
+  symbolimage3=document.createElement("img");
+  symbolimage3.setAttribute("class","sportsicon");
+  symbolimage3.setAttribute("src",showimage[0]["sportsicon2"])
 // // symbolimage.setAttribute("alt",)
 div_sports_known.append(symbolimage3);
-
+}
 
 
 div_gameplayed=document.createElement("div");

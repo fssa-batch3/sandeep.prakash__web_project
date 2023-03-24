@@ -18,6 +18,7 @@ let loggedIn = localStorage.getItem("logged_in");
 for (let i = 0; i < user_record.length; i++) {
 
     if (loggedIn == user_record[i]["user_email"]) {
+        document.querySelector(".nameperson").innerText=user_record[i]["user_name"];
         document.getElementById("name1").value = user_record[i]["user_name"];
         document.getElementById("userEmail").value = user_record[i]["user_email"];
         document.getElementById("phoneno1").value = user_record[i]["user_phoneno"];
@@ -37,7 +38,9 @@ console.log(user_record);
 
 function update() {
     for (i = 0; i < user_record.length; i++) {
-        if (loggedIn == user_record[i].user_as_ground["user_email"]) {
+        if (loggedIn == user_record[i]["user_email"]) {
+
+            user_record[i]["user_name"]=document.querySelector(".nameperson").innerText
             user_record[i]["user_name"] = document.getElementById("name1").value
             user_record[i]["user_email"] = document.getElementById("userEmail").value
             user_record[i]["user_phoneno"] = document.getElementById("phoneno1").value

@@ -110,7 +110,7 @@ ul li a:hover{
          align-items: center;
         margin-left: 92%;
        position: relative;
-       bottom: 270px;
+       bottom: 210px;
        right: 2%;
        height: 102px;
     
@@ -189,7 +189,7 @@ input[type="search"]::placeholder{
     border: 2px solid rgb(35, 156, 211);
     position: relative;
     left: 230px;
-    bottom: 183px;
+    bottom: 113px;
 
 }
 .locationicon {
@@ -197,7 +197,7 @@ input[type="search"]::placeholder{
     height: 58px;
     position: relative;
     left: 170px;
-    bottom: 132px;
+    bottom: 62px;
 }
  /*search bar  */
 
@@ -309,6 +309,7 @@ input[type="search"]::placeholder{
         position: relative;
         left: 10px;
         bottom: 55px;
+        
     }
     .selectsportsword{
         font-size: 20px;

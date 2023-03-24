@@ -1,143 +1,143 @@
-// const ground_details=[
-//     {
-//         "groundname":"DNS TURF",
-//         "groundPlace":"Vyarsarpadi",
-//         "groundimage":{
-//            "image1":"../../assets/images/ground1.jpg",
-//            "image2":"../../assets/images/ground1b.jpg",
-//            "image3":"../../assets/images/ground1c.jpg"
-//         },
-//         "locationInfo":{   
-//       "locationLink":"https://goo.gl/maps/YB4zbcWExPUTbGFT6",
-//         "locationAddress":"Sri rajpurohit complex, 1/340, West Ave, MKB Nagar, Vyasarpadi, Chennai, Tamil Nadu 600039"},
-//     "sportsAvailImg":{
-//       "sportsicon0":"../../assets/images/cricketicon.png",
-//       "sportsicon1":"../../assets/images/footballicon.png",
-//       "sportsicon2":"../../assets/images/tennisicon.png",
-//     },
-//   "timing":"5:00AM -10:00PM",
-//   "rules":{
-//     "rule0":"For Football players are advised to wear shoes only on ground",
-//     "rule1":"sharp metal football are not allowed",
-//     "rule2":"For tennis 6 players are only allowed"
-//   },
-//   "price":"500",
-//   "groundbooking":"DNF TURF BOOKING",
-//   "timingoptions":{
-//     "timing0":"8:00AM-9:00AM",
-//     "timing1":"8:00AM-10:00AM",
-//     "timing2":"8:00AM-9:00AM",
-//     "timing3":"8:00AM-9:00AM",
-//     "timing4":"8:00AM-9:00AM",
-//     "timing5":"8:00AM-9:00AM",
-//     "timing6":"8:00AM-9:00AM",
-//     "timing7":"8:00AM-9:00AM",
-//     "timing8":"8:00AM-9:00AM",
-//     "timing9":"8:00AM-9:00AM",
-//     "timing10":"8:00AM-9:00AM",
-//     "timing11":"8:00AM-9:00AM",
+const ground_details=[
+    {
+        "groundname":"DNS TURF",
+        "groundPlace":"Vyarsarpadi",
+        "groundimage":{
+           "image1":"../../assets/images/ground1.jpg",
+           "image2":"../../assets/images/ground1b.jpg",
+           "image3":"../../assets/images/ground1c.jpg"
+        },
+        "locationInfo":{   
+      "locationLink":"https://goo.gl/maps/YB4zbcWExPUTbGFT6",
+        "locationAddress":"Sri rajpurohit complex, 1/340, West Ave, MKB Nagar, Vyasarpadi, Chennai, Tamil Nadu 600039"},
+    "sportsAvailImg":{
+      "sportsicon0":"../../assets/images/cricketicon.png",
+      "sportsicon1":"../../assets/images/footballicon.png",
+      "sportsicon2":"../../assets/images/tennisicon.png",
+    },
+  "timing":"5:00AM -10:00PM",
+  "rules":{
+    "rule0":"For Football players are advised to wear shoes only on ground",
+    "rule1":"sharp metal football are not allowed",
+    "rule2":"For tennis 6 players are only allowed"
+  },
+  "price":"500",
+  "groundbooking":"DNF TURF BOOKING",
+  "timingoptions":{
+    "timing0":"8:00AM-9:00AM",
+    "timing1":"8:00AM-10:00AM",
+    "timing2":"8:00AM-9:00AM",
+    "timing3":"8:00AM-9:00AM",
+    "timing4":"8:00AM-9:00AM",
+    "timing5":"8:00AM-9:00AM",
+    "timing6":"8:00AM-9:00AM",
+    "timing7":"8:00AM-9:00AM",
+    "timing8":"8:00AM-9:00AM",
+    "timing9":"8:00AM-9:00AM",
+    "timing10":"8:00AM-9:00AM",
+    "timing11":"8:00AM-9:00AM",
 
-//   },
-//   "sportsoptions":{
-//     "sports0":"Cricket",
-//     "sports1":"Tennis",
-//     "sports2":"Football"
-//   },
+  },
+  "sportsoptions":{
+    "sports0":"Cricket",
+    "sports1":"Tennis",
+    "sports2":"Football"
+  },
 
-//   "durationoptions":{
-//     "duration0":"Extra 1 hour",
-//     "duration1":"Extra 2 hour",
-//     "duration2":"Extra 3 hour",
+  "durationoptions":{
+    "duration0":"Extra 1 hour",
+    "duration1":"Extra 2 hour",
+    "duration2":"Extra 3 hour",
 
-//   },
-//   "playersoptions":{
-//    "player0":"1",
-//    "player1":"2",
-//    "player2":"3",
-//    "player3":"4",
-//    "player4":"5",
-//    "player5":"6",
-//    "player6":"7",
-//    "player7":"8",
-//    "player8":"9",
-//    "player9":"10",
-//    "player10":"11",
-//    "player11":"12",
-//    "player12":"13"
-//   }
+  },
+  "playersoptions":{
+   "player0":"1",
+   "player1":"2",
+   "player2":"3",
+   "player3":"4",
+   "player4":"5",
+   "player5":"6",
+   "player6":"7",
+   "player7":"8",
+   "player8":"9",
+   "player9":"10",
+   "player10":"11",
+   "player11":"12",
+   "player12":"13"
+  }
 
-//     },
-//     {
-//         "groundname":"Pitch and Play",
-//         "groundPlace":"Annasalai",
-//         "groundimage":{
-//            "image1":"../../assets/images/ground2.jpg",
-//            "image2":"../../assets/images/ground2b.jpg",
-//            "image3":"../../assets/images/ground2c.jpg"
-//         },
-//         "locationInfo":{   
-//       "locationLink":"https://goo.gl/maps/BELGDCGXEGRoSGrV7",
-//         "locationAddress":"4th Floor, Hamid Building, No 190, Mount Rd, opp. IBIS Hotel, Chennai, Tamil Nadu 600006"},
-//     "sportsAvailImg":{
-//       "sportsicon0":"../../assets/images/cricketicon.png",
-//       "sportsicon1":"../../assets/images/footballicon.png",
-//       "sportsicon2":"../../assets/images/tennisicon.png",
-//     },
-//   "timing":"5:00AM -10:00PM",
-//   "rules":{
-//     "rule0":"For Football players are advised to wear shoes only on ground",
-//     "rule1":"sharp metal football are not allowed",
-//     "rule2":"For tennis 6 players are only allowed"
-//   },
-//   "price":"500",
-//   "groundbooking":"DNF TURF BOOKING",
-//   "timingoptions":{
-//     "timing0":"8:00AM-9:00AM",
-//     "timing1":"8:00AM-10:00AM",
-//     "timing2":"8:00AM-9:00AM",
-//     "timing3":"8:00AM-9:00AM",
-//     "timing4":"8:00AM-9:00AM",
-//     "timing5":"8:00AM-9:00AM",
-//     "timing6":"8:00AM-9:00AM",
-//     "timing7":"8:00AM-9:00AM",
-//     "timing8":"8:00AM-9:00AM",
-//     "timing9":"8:00AM-9:00AM",
-//     "timing10":"8:00AM-9:00AM",
-//     "timing11":"8:00AM-9:00AM",
+    },
+    {
+        "groundname":"Pitch and Play",
+        "groundPlace":"Annasalai",
+        "groundimage":{
+           "image1":"../../assets/images/ground2.jpg",
+           "image2":"../../assets/images/ground2b.jpg",
+           "image3":"../../assets/images/ground2c.jpg"
+        },
+        "locationInfo":{   
+      "locationLink":"https://goo.gl/maps/BELGDCGXEGRoSGrV7",
+        "locationAddress":"4th Floor, Hamid Building, No 190, Mount Rd, opp. IBIS Hotel, Chennai, Tamil Nadu 600006"},
+    "sportsAvailImg":{
+      "sportsicon0":"../../assets/images/cricketicon.png",
+      "sportsicon1":"../../assets/images/footballicon.png",
+      "sportsicon2":"../../assets/images/tennisicon.png",
+    },
+  "timing":"5:00AM -10:00PM",
+  "rules":{
+    "rule0":"For Football players are advised to wear shoes only on ground",
+    "rule1":"sharp metal football are not allowed",
+    "rule2":"For tennis 6 players are only allowed"
+  },
+  "price":"500",
+  "groundbooking":"DNF TURF BOOKING",
+  "timingoptions":{
+    "timing0":"8:00AM-9:00AM",
+    "timing1":"8:00AM-10:00AM",
+    "timing2":"8:00AM-9:00AM",
+    "timing3":"8:00AM-9:00AM",
+    "timing4":"8:00AM-9:00AM",
+    "timing5":"8:00AM-9:00AM",
+    "timing6":"8:00AM-9:00AM",
+    "timing7":"8:00AM-9:00AM",
+    "timing8":"8:00AM-9:00AM",
+    "timing9":"8:00AM-9:00AM",
+    "timing10":"8:00AM-9:00AM",
+    "timing11":"8:00AM-9:00AM",
 
-//   },
-//   "sportsoptions":{
-//     "sports0":"Cricket",
-//     "sports1":"Tennis",
-//     "sports2":"Football"
-//   },
+  },
+  "sportsoptions":{
+    "sports0":"Cricket",
+    "sports1":"Tennis",
+    "sports2":"Football"
+  },
 
-//   "durationoptions":{
-//     "duration0":"Extra 1 hour",
-//     "duration1":"Extra 2 hour",
-//     "duration2":"Extra 3 hour",
+  "durationoptions":{
+    "duration0":"Extra 1 hour",
+    "duration1":"Extra 2 hour",
+    "duration2":"Extra 3 hour",
 
-//   },
-//   "playersoptions":{
-//    "player0":"1",
-//    "player1":"2",
-//    "player2":"3",
-//    "player3":"4",
-//    "player4":"5",
-//    "player5":"6",
-//    "player6":"7",
-//    "player7":"8",
-//    "player8":"9",
-//    "player9":"10",
-//    "player10":"11",
-//    "player11":"12",
-//    "player12":"13"
-//   }
+  },
+  "playersoptions":{
+   "player0":"1",
+   "player1":"2",
+   "player2":"3",
+   "player3":"4",
+   "player4":"5",
+   "player5":"6",
+   "player6":"7",
+   "player7":"8",
+   "player8":"9",
+   "player9":"10",
+   "player10":"11",
+   "player11":"12",
+   "player12":"13"
+  }
 
-//     },
+    },
     
 
-// ]
+]
 
 
 
@@ -943,7 +943,7 @@ br_tag7=document.createElement("br");
 div_addplayers.append(br_tag7);
 
 anchoraddplayers = document.createElement("a");
-anchoraddplayers.setAttribute("href","/pages/bookinground/booking.html")
+anchoraddplayers.setAttribute("href","../../pages/player/findplayers.html")
 div_addplayers.append(anchoraddplayers);
 
 
@@ -971,7 +971,7 @@ div_book1.setAttribute("class","book1");
 div_bookingbox.append(div_book1);
 
 h1_groundName=document.createElement("h1");
-// h1_groundName.innerText=show["groundbooking"];
+h1_groundName.innerText=show2["ground_name"]+" Booking";
 div_book1.append(h1_groundName);
 
 br_tag8=document.createElement("br");
@@ -1015,7 +1015,7 @@ div_book2.append(select_timings);
 // loopit
 for(let i=0;i<=11;i++){
     option_timings=document.createElement("option");
-    // option_timings.innerText=show["timingoptions"]["timing"+i];
+    option_timings.innerText=ground_details[0]["timingoptions"]["timing"+i];
     select_timings.append(option_timings)
 }
 
@@ -1040,7 +1040,7 @@ div_book2.append(select_sports);
 // loopit
 for(let i=0;i<=2;i++){
     option_sports=document.createElement("option");
-    // option_sports.innerText=show["sportsoptions"]["sports"+i]
+    option_sports.innerText=ground_details[0]["sportsoptions"]["sports"+i]
     select_sports.append(option_sports)
     
 }
@@ -1063,7 +1063,7 @@ div_book2.append(select_duration);
 // loopit
 for(let i=0;i<=2;i++){
     option_duration=document.createElement("option");
-    // option_duration.innerText=show["durationoptions"]["duration"+i]
+    option_duration.innerText=ground_details[0]["durationoptions"]["duration"+i]
     select_duration.append(option_duration)
 }
 
@@ -1092,7 +1092,7 @@ div_book2.append(select_players);
 // loopit
 for(let i=0;i<=12;i++){
     option_players=document.createElement("option");
-    // option_players.innerText=show["playersoptions"]["player"+i]
+    option_players.innerText=ground_details[0]["playersoptions"]["player"+i]
     select_players.append(option_players)
 }
 
@@ -1104,23 +1104,23 @@ div_book2.append(br_tag16);
 
 
 // sportsselect
-span_sportsSelect=document.createElement("span")
-span_sportsSelect.setAttribute("class","headingbook")
-span_sportsSelect.innerText="Courts"
-div_book2.append(span_sportsSelect);
+// span_sportsSelect=document.createElement("span")
+// span_sportsSelect.setAttribute("class","headingbook")
+// span_sportsSelect.innerText="Courts"
+// div_book2.append(span_sportsSelect);
 
-select_sports=document.createElement("select")
-select_sports.setAttribute("class","sportss");
-div_book2.append(select_sports);
+// select_sports=document.createElement("select")
+// select_sports.setAttribute("class","sportss");
+// div_book2.append(select_sports);
 
 
-// loopit
-for(let i=0;i<=2;i++){
-    option_sports=document.createElement("option");
-    // option_sports.innerText=show["sportsoptions"]["sports"+i]
-    select_sports.append(option_sports)
+// // loopit
+// for(let i=0;i<=2;i++){
+//     option_sports=document.createElement("option");
+//     // option_sports.innerText=show["sportsoptions"]["sports"+i]
+//     select_sports.append(option_sports)
     
-}
+// }
 
 
 br_tag12=document.createElement("br");
