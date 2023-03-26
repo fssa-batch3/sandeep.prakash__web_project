@@ -69,12 +69,7 @@
 
 
     </div> -->
-
-
-
-
-
-    <div class="mainpoage">
+     <div class="mainpoage">
         <div class="sidebar">
             <div class="sidebar1">
                 <div class="profilebox">
@@ -127,10 +122,10 @@
                     <span>Friends Request</span>
                 </div>
 
-                <div class="logout" onclick="onDelete()">
+              <button class="logout"> 
                     <i class='bx bx-log-out'></i>
                     <span>Log out</span>
-                </div>
+                </button> 
 
             </div>
             <div class="sidebar2">
@@ -143,22 +138,22 @@
                         <br>
 
                         <form>
-                            <label class="labelname">Name:</label><br>
-                            <input type="name" id="name1"><br>
+                            <label class="labelname">Name:</label ><br>
+                            <input type="name" id="name1"  disabled><br>
 
                             <label class="labelname">Age :</label><br>
-                            <input type="number" id="age"><br>
+                            <input type="number" id="age"  disabled><br>
                             <label class="labelname">Email:</label><br>
-                            <input type="email" id="userEmail" aria-label="email"><br>
+                            <input type="email" id="userEmail" aria-label="email" disabled><br>
                             <label class="labelname">Phone Number:</label><br>
-                            <input type="text" id="phoneno1" aria-label="phone number"><br>
+                            <input type="text" id="phoneno1" aria-label="phone number" disabled><br>
                             <label class="labelname">Password:</label><br>
-                            <input type="password" id="password" aria-label="password"><br>
+                            <input type="password" id="password" aria-label="password" disabled><br>
 
                         </form>
                         <div class="select">
                             <p class="labelname">Known Sports:</p><br>
-                            <select id="sportss">
+                            <select id="sportss"disabled>
 
                                 <option>Cricket</option>
                                 <option>Football</option>
@@ -166,7 +161,7 @@
 
                             </select><br>
                             <p class="labelname">Location</p><br>
-                            <select id="locationselect">
+                            <select id="locationselect" disabled>
                                 <option>Chennai</option>
                                 <option>Coimbatore</option>
                                 <option>Salem</option>
@@ -179,13 +174,13 @@
 
                             </select><br>
                             <p class="labelname">Timing Available</p><br>
-                            <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"><br>
+                            <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"  disabled><br>
 
                             <p>To</p><br>
-                            <input type="time" id="timingsto" aria-label="timingtoo" value="5:00">
+                            <input type="time" id="timingsto" aria-label="timingtoo" value="5:00"  disabled>
                         </div>
                         <br>
-                        <button class="profile2" type="submit" onclick="update()">Save</button>
+                        <button class="profile2" type="button">Edit</button>
 
                     </div>
 

@@ -417,8 +417,9 @@ let anchor;
 
 
 // crud ground
-const groundOwnerProduct=JSON.parse(localStorage.getItem("ground_info"));
 
+
+const groundOwnerProduct=JSON.parse(localStorage.getItem("ground_info"));
 
 console.log(groundOwnerProduct);
 // ground_list.push(groundOwnerProduct);
@@ -909,8 +910,9 @@ if(item.sport_avail_1==true){
 
 const searchbox = document.getElementById("search2");
 searchbox.addEventListener("keydown", (e) => {
-  const searchQuery = searchbox.value.trim().toUpperCase().toLowerCase();
+  const searchQuery = searchbox.value.trim().toLowerCase();
   // console.log(searchQuery);
+  
   
 
   if (e.key === "Enter") {
