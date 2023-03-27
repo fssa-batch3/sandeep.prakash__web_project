@@ -185,14 +185,27 @@ function getUserData() {
     const age = (document.getElementById("age").value)
 
     const gender = (document.getElementById("gender").value)
-    const sportChoose = (document.getElementById("sportss").value)
+    // const sportChoose = (document.getElementById("sportss").value)
     const sportLocation = (document.getElementById("locationselect").value)
 
     const timingsfrom = (document.getElementById("timingsfrom").value)
 
     const timingsto = (document.getElementById("timingsto").value)
     const id_generator = Math.floor(Math.random() * 300);
+    const cricket=document.getElementById("sportsavail1").checked
+    const football=document.getElementById("sportsavail2").checked
+    const tennis=document.getElementById("sportsavail3").checked
 
+// const sport_Choosed=[];
+// if(cricket.checked){
+//     sport_Choosed.push("cricket")
+// }
+// if(football.checked){
+//     sport_Choosed.push("football")
+// }
+// if(tennis.checked){
+//     sport_Choosed.push("tennis")
+// }
 
     let user_records = new Array();
 
@@ -237,7 +250,10 @@ if(checkjoinPlayer.checked==true){
                 ...user_data,
                 "user_age": age,
                 "user_gender": gender,
-                "sport_Choosed": sportChoose,
+                // "sport_Choosed": sport_Choosed,
+                "sports_choosed_cricket":cricket,
+                "sports_choosed_football":football,
+                "sports_choosed_tennis":tennis,
                 "sportLocationPlay": sportLocation,
                 "timingsfrom": timingsfrom,
                 "timingsto": timingsto

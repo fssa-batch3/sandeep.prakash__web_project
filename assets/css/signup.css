@@ -192,6 +192,23 @@ select:invalid{
     right: 20px;
     outline: 0px solid rgb(255, 255, 255);
 }
+.sportsavailable{
+    display: flex;
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    outline: none;
+  position: relative;
+bottom: 17px;
+left: 27px;
+font-size: larger;
+
+    
+}
+.sportname{
+    position: relative;
+    left: 0px;
+}
 
 
 

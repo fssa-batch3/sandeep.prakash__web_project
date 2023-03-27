@@ -60,6 +60,7 @@ ul li a:hover {
     padding: 2px 17px;
     height: 102%;
     width: 100%;
+    position: relative;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     font-weight: bold;

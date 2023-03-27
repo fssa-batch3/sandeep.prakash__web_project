@@ -52,6 +52,7 @@ ul li a:hover {
     font-size: medium;
     padding: 2px 17px;
     height: 102%;
+    position: relative;
     width: 100%;
     background-color: #ffffff;
     color: rgb(0, 0, 0);

@@ -1,3 +1,42 @@
+
+
+
+
+const loginUser=localStorage.getItem("logged_in")
+const loginbtn= document.querySelector(".login")
+
+
+
+
+if(loginUser!=="false"){
+ loginbtn.style.display="none"
+ const myprofile=document.createElement("button");
+ myprofile.setAttribute("class","login");
+ myprofile.innerText="My Account"
+ myprofile.style.width="150px";
+ myprofile.style.left="50px"
+ myprofile.addEventListener("click",()=>{
+   window.location.href="../../pages/player/newprofile.html"
+ });
+ document.querySelector(".contact").append(myprofile)
+}
+else{
+ loginbtn.style.display="block"
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 const ground_details=[
     {
         "groundname":"DNS TURF",
@@ -1151,7 +1190,7 @@ div_book2.append(anchorpaycash);
 
 button_paycash=document.createElement("button")
 button_paycash.setAttribute("class","paycash")
-button_paycash.innerText="Pay by cash";
+button_paycash.innerText="Book";
 anchorpaycash.append(button_paycash)
 
 

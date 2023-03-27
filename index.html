@@ -23,7 +23,7 @@
  <li><a href="#">Home</a> </li>
  <li><a href="./pages/bookinground/bookground.html">Book Grounds</a></li>
  <li><a href="./pages/player/findplayers.html">Find Players</a></li>
- <li><a href="./pages/contactus/contact.html">Contact us</a></li>
+ <li class="contact"><a href="./pages/contactus/contact.html">Contact us</a></li>
  <li><a href="./pages/login/login.html"> <button class="login">Login</button></a></li>
 </ul>
 <a href="/index.html"><img class="logo" src="./assets/images/Logo.png " alt="Book and play"></a>
@@ -177,5 +177,36 @@
     </footer>
          <!-- footer -->
 </body>
+<script>
+  const loginUser=localStorage.getItem("logged_in")
+ const loginbtn= document.querySelector(".login")
+
+
+
+
+ if(loginUser!=="false"){
+  loginbtn.style.display="none"
+  const myprofile=document.createElement("button");
+  myprofile.setAttribute("class","login");
+  myprofile.innerText="My Account"
+  myprofile.style.width="150px";
+  myprofile.style.left="50px"
+  myprofile.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  });
+  document.querySelector(".contact").append(myprofile)
+ }
+ else{
+  loginbtn.style.display="block"
+
+ }
+//  window.addEventListener("load",()=>{
+//  if(loginUser==false){
+//     console.log(log)
+//     // loginbtn.style.display="none"
+//   }
+// })
+ 
+</script>
 
 </html>

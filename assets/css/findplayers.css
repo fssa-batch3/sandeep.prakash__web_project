@@ -276,12 +276,14 @@ input[type="search"]::placeholder{
     .fa-star{
         color: goldenrod;
         font-size: 14px;
+        position: relative;
+        left: 30px;
     }
     .ratings{
         display: flex;
         justify-content: space-between;
         position: relative;
-        right: 2px;
+        left: 37px;
         bottom: 59px;
     
     }
@@ -289,7 +291,7 @@ input[type="search"]::placeholder{
         position: relative;
         font-size:90%;
         font-weight: bold;
-       right: 5px;
+       left: 7px;
         color: rgb(255, 255, 255);
     }
       .nameplayer{

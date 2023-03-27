@@ -113,7 +113,7 @@ p_sportsplay_tag.innerText="Sports i will play";
 div_sports_known.append(p_sportsplay_tag);
 
 
-if(show2["sport_Choosed"]=="Cricket"){
+if(show2["sports_choosed_cricket"]==true){
   symbolimage1=document.createElement("img");
   symbolimage1.setAttribute("class","sportsicon");
   symbolimage1.setAttribute("src",player[0]["sportsicon0"])
@@ -121,7 +121,7 @@ if(show2["sport_Choosed"]=="Cricket"){
 // symbolimage.setAttribute("alt",)
 div_sports_known.append(symbolimage1);}
 
-if(show2["sport_Choosed"]=="Football"){
+if(show2["sports_choosed_football"]==true){
   symbolimage2=document.createElement("img");
   symbolimage2.setAttribute("class","sportsicon");
   symbolimage2.setAttribute("src",player[0]["sportsicon1"])
@@ -130,10 +130,10 @@ if(show2["sport_Choosed"]=="Football"){
 // symbolimage.setAttribute("alt",)
 div_sports_known.append(symbolimage2);}
 
-if(show2["sport_Choosed"]=="Tennis"){
+if(show2["sports_choosed_tennis"]==true){
   symbolimage3=document.createElement("img");
   symbolimage3.setAttribute("class","sportsicon");
-  symbolimage3.setAttribute("src",showimage[0]["sportsicon2"])
+  symbolimage3.setAttribute("src",player[0]["sportsicon2"])
 // // symbolimage.setAttribute("alt",)
 div_sports_known.append(symbolimage3);
 }

@@ -1,4 +1,32 @@
 
+
+
+
+
+
+
+const loginUser=localStorage.getItem("logged_in")
+const loginbtn= document.querySelector(".login")
+
+
+
+
+if(loginUser!=="false"){
+ loginbtn.style.display="none"
+ const myprofile=document.createElement("button");
+ myprofile.setAttribute("class","login");
+ myprofile.innerText="My Account"
+ myprofile.style.width="150px";
+ myprofile.style.left="50px"
+ myprofile.addEventListener("click",()=>{
+   window.location.href="../../pages/player/newprofile.html"
+ });
+ document.querySelector(".contact").append(myprofile)
+}
+else{
+ loginbtn.style.display="block"
+
+}
 const ground_list = [
   //ground1
   {
