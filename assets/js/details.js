@@ -1000,9 +1000,15 @@ div_sidebar_2=document.createElement("div");
 div_sidebar_2.setAttribute("class","sidebar2");
 div_parent1.append(div_sidebar_2);
 
+
+div_forms=document.createElement("form");
+div_forms.setAttribute("id","formbook_btn");
+div_sidebar_2.append(div_forms)
+
+
 div_bookingbox=document.createElement("div"); 
 div_bookingbox.setAttribute("class","booking1");
-div_sidebar_2.append(div_bookingbox);
+div_forms.append(div_bookingbox);
 
 
 div_book1=document.createElement("div"); 
@@ -1173,6 +1179,7 @@ div_book2.append(anchorpayonline);
 
 button_payonline=document.createElement("button")
 button_payonline.setAttribute("class","pay")
+button_payonline.setAttribute("type","button")
 button_payonline.innerText="Pay online";
 anchorpayonline.append(button_payonline)
 
@@ -1195,7 +1202,7 @@ anchorpaycash.append(button_paycash)
 
 
 document.querySelector("div.main2").append(div_parent1)
-
+console.log(div_parent1);
 
 anchoredit = document.createElement("a");
 // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
@@ -1217,4 +1224,12 @@ anchoredit.append(button_edit);
 
 
 
+
+const bookBtn=document.querySelector(".paycash")
+bookBtn.addEventListener("submit",()=>{
+  if(loginUser!=="false"){
+    alert("pok")
+  }
+  
+})
 
