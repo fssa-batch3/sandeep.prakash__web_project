@@ -18,26 +18,26 @@ Register - Finished
 Login   - Finished
 Profile view   - Finished
 Profile updation - Finished
-Profile delete  - Finished
+Profile delete  - Finished.
 
 ground creating (crud)- Finished
 Ground view - Finished
 Ground update- Finished
 Ground delete- Finished
-Search and filter grounds - Finished
+Search and filter grounds - Finished.
 
 Player creating - Finished
 Player view- Finished
 player details- Finished
-Search and filter player- Finished
+Search and filter player- Finished.
 
 Booking ground-Yet to start
 Canceled booking -Yet to start
-Booking history -Yet to start
+Booking history -Yet to start.
 
-Giving request-Yet to start
-Chating-Yet to start
-Chat bot-Yet to start
+Giving request-Yet to start.
+Chating-Yet to start.
+Chat bot-Yet to start.
 
 
 
@@ -90,6 +90,7 @@ Navigate to the ground listing page.
 Select a ground to view its details.
 - Expected Result:
 The user can view the details of the selected ground
+
 
 ### View players
 - Scenario 1: Successfully view grounds
