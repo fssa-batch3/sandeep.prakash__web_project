@@ -12,6 +12,34 @@ Wireframe: Google Drive link(https://drive.google.com/file/d/12gku_ec54PN5gMPqHr
 Live Server Link:https://sandeepsan97.github.io/Book-and-play/
 
 
+### FEATURES
+
+Register - Finished
+Login   - Finished
+Profile view   - Finished
+Profile updation - Finished
+Profile delete  - Finished
+
+ground creating (crud)- Finished
+Ground view - Finished
+Ground update- Finished
+Ground delete- Finished
+Search and filter grounds - Finished
+
+Player creating - Finished
+Player view- Finished
+player details- Finished
+Search and filter player- Finished
+
+Booking ground-Yet to start
+Canceled booking -Yet to start
+Booking history -Yet to start
+
+Giving request-Yet to start
+Chating-Yet to start
+Chat bot-Yet to start
+
+
 
 USER SCENARIO STORY 
 ### Create an account
