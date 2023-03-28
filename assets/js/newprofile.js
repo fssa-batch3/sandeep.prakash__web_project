@@ -22,8 +22,18 @@ const user_timingsfrom= document.getElementById("timingsfrom")
 const user_timingsto= document.getElementById("timingsto")
 const cricket=document.getElementById("sportsavail1")
 const football=document.getElementById("sportsavail2")
-const tennis=document.getElementById("sportsavail3")
-
+const tennis=document.getElementById("sportsavail3");
+const sportname1=document.querySelector(".sportname1");
+const sportname2=document.querySelector(".sportname2");
+const sportname3=document.querySelector(".sportname3");
+const labellocation=document.querySelector(".labelnamel");
+const labelsports=document.querySelector(".labelnames");
+const labeltime=document.querySelector(".labelnametime");
+const labeltimeto=document.querySelector(".timep");
+const labelage=document.querySelector(".labelnamea");
+const join_as_player=document.getElementById("checkjoinplayer1");
+const join_player_word=document.querySelector(".joinasplayer");
+const joinform=document.getElementById("formbox")
 
 
 let user_record = JSON.parse(localStorage.getItem("user_details"));
@@ -31,38 +41,143 @@ let user_record = JSON.parse(localStorage.getItem("user_details"));
 let loggedIn = localStorage.getItem("logged_in");
 
 
+
+
+const editbutn1 =document.querySelector(".profile2");
+// for book ground user
+    
 for (let i = 0; i < user_record.length; i++) {
 
+
     if (loggedIn == user_record[i]["user_email"]) {
+
+if(user_record[i]["player"]==false){
         fsidename.innerText=user_record[i]["user_name"];
        namebox.value = user_record[i]["user_name"];
       user_email.value = user_record[i]["user_email"];
       user_phone.value = user_record[i]["user_phoneno"];
     user_password.value = user_record[i]["user_password"];
-     user_age.value = user_record[i]["user_age"];
-     document.getElementById("locationselect").value = user_record[i]["sportLocationPlay"];
-    //  document.getElementById("sportss").value  = user_record[i]["sport_Choosed"];
-       user_timingsfrom.value = user_record[i]["timingsfrom"];
-        user_timingsto.value = user_record[i]["timingsto"];
-        cricket.checked=user_record[i]["sports_choosed_cricket"];
-        football.checked=user_record[i]["sports_choosed_football"];
-        tennis.checked=user_record[i]["sports_choosed_tennis"]
-        // if(user_record[i].sport_Choosed.includes("cricket")){
-        //     cricket.checked=true
-        //     console.log(cricket);
-        // }
-        // if(user_record[i].sport_Choosed.includes("football")){
-        //     football.checked=true
-        // }
-        // if(user_record[i].sport_Choosed.includes("tennis")){
-        //     tennis.checked=true
-        // }
 
-        break;
 
-    }
+    user_age.style.display="none"
+user_location.style.display="none"
+user_timingsfrom.style.display="none"
+user_timingsto.style.display="none"
+cricket.style.display="none"
+football.style.display="none"
+tennis.style.display="none"
+sportname1.style.display="none"
+sportname2.style.display="none"
+sportname3.style.display="none"
+labellocation.style.display="none"
+labeltime.style.display="none"
+labeltimeto.style.display="none"
+labelsports.style.display="none"
+labelage.style.display="none"
+editbutn1.style.bottom="120px"
+
+
+let p_jointext = document.createElement("p");
+p_jointext.setAttribute("class", "pjointext");
+p_jointext.innerText = "If you want to join as a player click the join player box" ;
+joinform.append(p_jointext);
+console.log(p_jointext);
+
+
 
 }
+else{
+
+    join_as_player.style.display="none"
+    join_player_word.style.display="none"
+
+}
+    }
+}
+
+
+
+
+
+
+
+
+
+// for all user
+    for (let i = 0; i < user_record.length; i++) {
+
+        if (loggedIn == user_record[i]["user_email"]) {
+           
+            fsidename.innerText=user_record[i]["user_name"];
+           namebox.value = user_record[i]["user_name"];
+          user_email.value = user_record[i]["user_email"];
+          user_phone.value = user_record[i]["user_phoneno"];
+        user_password.value = user_record[i]["user_password"];
+         user_age.value = user_record[i]["user_age"];
+        
+         document.getElementById("locationselect").value = user_record[i]["sportLocationPlay"];
+        //  document.getElementById("sportss").value  = user_record[i]["sport_Choosed"];
+           user_timingsfrom.value = user_record[i]["timingsfrom"];
+            user_timingsto.value = user_record[i]["timingsto"];
+            cricket.checked=user_record[i]["sports_choosed_cricket"];
+            football.checked=user_record[i]["sports_choosed_football"];
+            tennis.checked=user_record[i]["sports_choosed_tennis"];
+            
+            // if(user_record[i].sport_Choosed.includes("cricket")){
+            //     cricket.checked=true
+            //     console.log(cricket);
+            // }
+            // if(user_record[i].sport_Choosed.includes("football")){
+            //     football.checked=true
+            // }
+            // if(user_record[i].sport_Choosed.includes("tennis")){
+            //     tennis.checked=true
+            // }
+       
+            break;
+    
+        }
+    
+    }
+
+join_as_player.addEventListener("click",()=>{
+
+
+
+    user_age.style.display="block"
+        user_location.style.display="block"
+        user_timingsfrom.style.display="block"
+        user_timingsto.style.display="block"
+        cricket.style.display="block"
+        football.style.display="block"
+        tennis.style.display="block"
+        sportname1.style.display="block"
+        sportname2.style.display="block"
+        sportname3.style.display="block"
+        labellocation.style.display="block"
+        labeltime.style.display="block"
+        labeltimeto.style.display="block"
+        labelsports.style.display="block"
+        labelage.style.display="block"
+        editbutn1.style.top="90px"
+        
+        for (let i = 0; i < user_record.length; i++) {
+
+            if (user_logged == user_record[i]["user_email"]) {
+                user_record[i]["player"]=true;
+                break
+            }
+
+            localStorage.setItem("user_details", JSON.stringify(user_record));
+
+        }
+
+
+
+})
+    
+
+
 
 
 

@@ -137,12 +137,10 @@
                         <h1>Edit your profile anytime</h1>
                         <br>
 
-                        <form>
+                        <form id="formbox">
                             <label class="labelname">Name:</label ><br>
                             <input type="name" id="name1"  disabled><br>
 
-                            <label class="labelname">Age :</label><br>
-                            <input type="number" id="age"  disabled><br>
                             <label class="labelname">Email:</label><br>
                             <input type="email" id="userEmail" aria-label="email" disabled><br>
                             <label class="labelname">Phone Number:</label><br>
@@ -150,9 +148,18 @@
                             <label class="labelname">Password:</label><br>
                             <input type="password" id="password" aria-label="password" disabled><br>
 
+
+                          
+
+
                         </form>
+                        <div class="joinplayer">
+                            <input type="checkbox" id="checkjoinplayer1"><label class="joinasplayer">Join as a player</label>
+                        </div>
+                        <label class="labelnamea">Age :</label><br>
+                        <input type="number" id="age"  disabled><br>
                         <div class="select">
-                            <p class="labelname">Known Sports:</p><br>
+                            <p class="labelnames">Known Sports:</p><br>
                             <!-- <select id="sportss"disabled>
 
                                 <option>Cricket</option>
@@ -163,16 +170,16 @@
                             <div id="sportss">
 
                                 <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket" disabled>
-                                <label class="sportname">Cricket</label><br>
+                                <label class="sportname1">Cricket</label><br>
                                 <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football"disabled >
-                                <label class="sportname">Football</label><br>
+                                <label class="sportname2">Football</label><br>
                                 <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis" disabled>
-                                <label class="sportname">Tennis</label><br>
+                                <label class="sportname3">Tennis</label><br>
                     
                         
                             </div><br>
 
-                            <p class="labelname">Location</p><br>
+                            <p class="labelnamel">Location</p><br>
                             <select id="locationselect" disabled>
                                 <option>Chennai</option>
                                 <option>Coimbatore</option>
@@ -185,10 +192,10 @@
                                 <option>Kolkata</option>
 
                             </select><br>
-                            <p class="labelname">Timing Available</p><br>
+                            <p class="labelnametime">Timing Available</p><br>
                             <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"  disabled><br>
 
-                            <p>To</p><br>
+                            <p class="timep">To</p><br>
                             <input type="time" id="timingsto" aria-label="timingtoo" value="5:00"  disabled>
                         </div>
                         <br>
