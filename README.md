@@ -43,7 +43,7 @@ Chat bot-Yet to start.
 
 USER SCENARIO STORY 
 ### Create an account
-- Scenario 1: Successfully create an account
+- Scenario : Successfully create an account
 - Steps:
 Click the login buttton if your are a new user sign up in registration page.
 Enter the required information such as name, email,phone number and password.
@@ -53,7 +53,7 @@ Click the "Register" button.
 The user is redirected to the login page.
 
 ### Login
-- Scenario 1: Successfully login in to account
+- Scenario : Successfully login in to account
 - Steps:
 Navigate to the login page.
 Enter the required information such as email, and password.
@@ -68,7 +68,7 @@ There you can update your information except email:
 
 
 ### View grounds
-- Scenario 1: Successfully view grounds
+- Scenario : Successfully view grounds
 - Steps:
 Log in as a buyer.
 Navigate to the grounds listing page.
@@ -82,7 +82,7 @@ The user can view the list of available grounds
 
 
 ### View grounds details
-- Scenario 1: Successfully 
+- Scenario : Successfully 
 View grounds details
 - Steps:
 Log in as a buyer.
@@ -93,7 +93,7 @@ The user can view the details of the selected ground
 
 
 ### View players
-- Scenario 1: Successfully view grounds
+- Scenario : Successfully view grounds
 - Steps:
 Log in as a userplayer.
 Navigate to the player listing page.
@@ -103,7 +103,7 @@ The user can view the list of available player
  You can also search the player by name.
 
 ### View player details
-- Scenario 1: Successfully 
+- Scenario : Successfully 
 View player details
 - Steps:
 Log in as a userplayer.
