@@ -14,7 +14,7 @@ Live Server Link:https://sandeepsan97.github.io/Book-and-play/
 
 
 
-Create an account
+####Create an account
 Scenario 1: Successfully create an account
 Steps:
 Click the login buttton if your are a new user sign up in registration page.
