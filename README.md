@@ -14,7 +14,7 @@ Live Server Link:https://sandeepsan97.github.io/Book-and-play/
 
 
 
-###Create an account
+### Create an account
 Scenario 1: Successfully create an account
 Steps:
 Click the login buttton if your are a new user sign up in registration page.
@@ -24,7 +24,7 @@ Click the "Register" button.
 Expected Result:
 The user is redirected to the login page.
 
-Login 
+### Login
 Scenario 1: Successfully login in to account
 Steps:
 Navigate to the login page.
@@ -34,12 +34,12 @@ Expected Result:
 The user is redirected to the home page.
 
 
-Your Profile:
+### Your Profile:
 Click My account 
 There you can update your information except email:
 
 
-View grounds
+### View grounds
 Scenario 1: Successfully view grounds
 Steps:
 Log in as a buyer.
@@ -53,7 +53,7 @@ The user can view the list of available grounds
 
 
 
-View grounds details
+### View grounds details
 Scenario 1: Successfully 
 View grounds details
 Steps:
@@ -62,4 +62,26 @@ Navigate to the ground listing page.
 Select a ground to view its details.
 Expected Result:
 The user can view the details of the selected ground
+
+### View players
+Scenario 1: Successfully view grounds
+Steps:
+Log in as a userplayer.
+Navigate to the player listing page.
+View the list of available player
+Expected Result:
+The user can view the list of available player
+ You can also search the player by name.
+
+### View player details
+Scenario 1: Successfully 
+View player details
+Steps:
+Log in as a userplayer.
+Navigate to the player listing page.
+Select a player to view its details.
+Expected Result:
+The user can view the details of the selected player
+
+
 
