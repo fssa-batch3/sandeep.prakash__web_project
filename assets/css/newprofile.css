@@ -123,6 +123,15 @@ top: 30px;
     position: relative;
     left: 20px;
 }
+.labelnamea{
+    position: relative;
+    left: 205px;
+}
+#age{
+    position: relative;
+    left:110px;
+
+}
 .logout{
     font-size: 15px;
     padding: 2px 2px;
@@ -298,9 +307,10 @@ form input {
 }
 
 
-.labelname ,.labelname1,.labelnametime,.labelnamea,.labelnames{
+.labelname ,.labelnamel,.labelnametime,.labelnamea,.labelnames{
     font-size: 20px;
     font-weight: 500;
+    position: relative;
 }
 #sportss {
     width: 50%;
@@ -326,6 +336,7 @@ form input {
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
+    position: relative;
 
 }
 #timingsfrom,#timingsto{
@@ -334,6 +345,7 @@ form input {
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
+    position: relative;
 
 
 
@@ -368,4 +380,7 @@ top: 37px;
 font-size: 20px;
 
 
+}
+.timep{
+    position: relative;
 }

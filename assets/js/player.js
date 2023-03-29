@@ -104,7 +104,7 @@ let span_ratingsno;
         
         span_ratingsno = document.createElement("span");
         span_ratingsno.setAttribute("class", "ratingno");
-        span_ratingsno.innerText =player_list[i]["ratingsnumber"];
+        span_ratingsno.innerText =player_list[0]["ratingsnumber"];
         div_ratings.append(span_ratingsno);
         
         

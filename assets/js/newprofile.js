@@ -1,7 +1,8 @@
 
 const editbtn = document.getElementById("editbutton");
 const sideBar2part = document.querySelector("div.sidebar2")
-const containerprofile = document.querySelector("div.container2")
+const containerprofile = document.querySelector("div.container2");
+const formsdiv=document.querySelector(".forms")
 
 
 editbtn.addEventListener("click", () => {
@@ -33,7 +34,10 @@ const labeltimeto=document.querySelector(".timep");
 const labelage=document.querySelector(".labelnamea");
 const join_as_player=document.getElementById("checkjoinplayer1");
 const join_player_word=document.querySelector(".joinasplayer");
-const joinform=document.getElementById("formbox")
+const joinform=document.getElementById("formbox");
+// profile image
+const imageShow = document.querySelector(".profileimg");
+let ok="../../assets/images/avatorprofile.jpg"
 
 
 let user_record = JSON.parse(localStorage.getItem("user_details"));
@@ -74,12 +78,14 @@ labeltime.style.display="none"
 labeltimeto.style.display="none"
 labelsports.style.display="none"
 labelage.style.display="none"
-editbutn1.style.bottom="120px"
+editbutn1.style.bottom="120px";
+// imageShow.setAttribute("class","profileimg")
+
 
 
 let p_jointext = document.createElement("p");
 p_jointext.setAttribute("class", "pjointext");
-p_jointext.innerText = "If you want to join as a player click the join player box" ;
+p_jointext.innerText = "If you want to join as a player click the join player box\n once you click it you will join as a player" ;
 joinform.append(p_jointext);
 console.log(p_jointext);
 
@@ -90,55 +96,90 @@ else{
 
     join_as_player.style.display="none"
     join_player_word.style.display="none"
-
-}
-    }
-}
-
-
-
-
-
-
-
-
-
-// for all user
-    for (let i = 0; i < user_record.length; i++) {
-
-        if (loggedIn == user_record[i]["user_email"]) {
+    if (loggedIn == user_record[i]["user_email"]) {
            
-            fsidename.innerText=user_record[i]["user_name"];
-           namebox.value = user_record[i]["user_name"];
-          user_email.value = user_record[i]["user_email"];
-          user_phone.value = user_record[i]["user_phoneno"];
-        user_password.value = user_record[i]["user_password"];
-         user_age.value = user_record[i]["user_age"];
+        fsidename.innerText=user_record[i]["user_name"];
+       namebox.value = user_record[i]["user_name"];
+      user_email.value = user_record[i]["user_email"];
+      user_phone.value = user_record[i]["user_phoneno"];
+    user_password.value = user_record[i]["user_password"];
+     user_age.value = user_record[i]["user_age"];
+    //  imageShow.setAttribute("class","profileimg")
+
+
+    
+     document.getElementById("locationselect").value = user_record[i]["sportLocationPlay"];
+    //  document.getElementById("sportss").value  = user_record[i]["sport_Choosed"];
+       user_timingsfrom.value = user_record[i]["timingsfrom"];
+        user_timingsto.value = user_record[i]["timingsto"];
+        cricket.checked=user_record[i]["sports_choosed_cricket"];
+        football.checked=user_record[i]["sports_choosed_football"];
+        tennis.checked=user_record[i]["sports_choosed_tennis"];
         
-         document.getElementById("locationselect").value = user_record[i]["sportLocationPlay"];
-        //  document.getElementById("sportss").value  = user_record[i]["sport_Choosed"];
-           user_timingsfrom.value = user_record[i]["timingsfrom"];
-            user_timingsto.value = user_record[i]["timingsto"];
-            cricket.checked=user_record[i]["sports_choosed_cricket"];
-            football.checked=user_record[i]["sports_choosed_football"];
-            tennis.checked=user_record[i]["sports_choosed_tennis"];
-            
-            // if(user_record[i].sport_Choosed.includes("cricket")){
-            //     cricket.checked=true
-            //     console.log(cricket);
-            // }
-            // if(user_record[i].sport_Choosed.includes("football")){
-            //     football.checked=true
-            // }
-            // if(user_record[i].sport_Choosed.includes("tennis")){
-            //     tennis.checked=true
-            // }
-       
-            break;
-    
-        }
-    
+        // if(user_record[i].sport_Choosed.includes("cricket")){
+        //     cricket.checked=true
+        //     console.log(cricket);
+        // }
+        // if(user_record[i].sport_Choosed.includes("football")){
+        //     football.checked=true
+        // }
+        // if(user_record[i].sport_Choosed.includes("tennis")){
+        //     tennis.checked=true
+        // }
+   
+        break;
+
     }
+
+
+}
+    }
+}
+
+
+
+
+
+
+
+
+
+// // for all user
+//     for (let i = 0; i < user_record.length; i++) {
+
+//         if (loggedIn == user_record[i]["user_email"]) {
+           
+//             fsidename.innerText=user_record[i]["user_name"];
+//            namebox.value = user_record[i]["user_name"];
+//           user_email.value = user_record[i]["user_email"];
+//           user_phone.value = user_record[i]["user_phoneno"];
+//         user_password.value = user_record[i]["user_password"];
+//          user_age.value = user_record[i]["user_age"];
+        
+//          document.getElementById("locationselect").value = user_record[i]["sportLocationPlay"];
+//         //  document.getElementById("sportss").value  = user_record[i]["sport_Choosed"];
+//            user_timingsfrom.value = user_record[i]["timingsfrom"];
+//             user_timingsto.value = user_record[i]["timingsto"];
+//             cricket.checked=user_record[i]["sports_choosed_cricket"];
+//             football.checked=user_record[i]["sports_choosed_football"];
+//             tennis.checked=user_record[i]["sports_choosed_tennis"];
+            
+//             // if(user_record[i].sport_Choosed.includes("cricket")){
+//             //     cricket.checked=true
+//             //     console.log(cricket);
+//             // }
+//             // if(user_record[i].sport_Choosed.includes("football")){
+//             //     football.checked=true
+//             // }
+//             // if(user_record[i].sport_Choosed.includes("tennis")){
+//             //     tennis.checked=true
+//             // }
+       
+//             break;
+    
+//         }
+    
+//     }
 
 join_as_player.addEventListener("click",()=>{
 
@@ -159,7 +200,15 @@ join_as_player.addEventListener("click",()=>{
         labeltimeto.style.display="block"
         labelsports.style.display="block"
         labelage.style.display="block"
-        editbutn1.style.top="90px"
+        editbutn1.style.top="190px"
+        labelage.style.top="50px";
+        formsdiv.style.height="1250px"
+        user_timingsfrom.style.top="150px";
+        user_timingsto.style.top="150px";
+ labeltime.style.top="120px"
+        labeltimeto.style.top="150px";
+        user_location.style.top="120px";
+        labellocation.style.top="120px";
         
         for (let i = 0; i < user_record.length; i++) {
 
@@ -344,11 +393,12 @@ logOut.addEventListener("click",(e)=>{
 
 
 
+imageShow.src=ok
 
 
 //profile image
 const imageFileUpload = document.getElementById("input-file");
-const imageShow = document.querySelector(".profileimg");
+// const imageShow = document.querySelector(".profileimg");
 
 
 

@@ -20,7 +20,7 @@
         <input type="email" placeholder="Email address " id="email" aria-label="email"><br>
         <input type="password" placeholder="Password" id="password" aria-label="password"><br>
         <!-- <a href="../../index.html"><input type="button" value="Login" id="login" aria-label="button" ></a> -->
-        <button id="login" type="submit" onclick="getData()">Login</button><br>
+        <button id="login" type="submit">Login</button><br>
         <a class="fp" href="#">Forget password</a><br>
         <p class="newsign">New user</p><br>
         <!-- <button id="newlogin" type="button" onclick="getData()">Create New Account</button><br> -->
@@ -33,36 +33,36 @@
 
 
   </div>
-  <script>
+  <script src="../../assets/js/login.js">
     
-    function getData() {
-      const email = (document.getElementById("email").value)
-      const user_password = (document.getElementById("password").value)
-      const arrayConvert = JSON.parse(localStorage.getItem("user_details"));
+    // function getData() {
+    //   const email = (document.getElementById("email").value)
+    //   const user_password = (document.getElementById("password").value)
+    //   const arrayConvert = JSON.parse(localStorage.getItem("user_details"));
 
-      let userCollect;
-      arrayConvert.find(element => {
-        if (element["user_email"] == email && element["user_password"] == user_password) {
-          return userCollect = 1;
-        }
-        else {
-          return userCollect = 0;
-        }
-      });
+    //   let userCollect;
+    //   arrayConvert.find(element => {
+    //     if (element["user_email"] == email && element["user_password"] == user_password) {
+    //       return userCollect = 1;
+    //     }
+    //     else {
+    //       return userCollect = 0;
+    //     }
+    //   });
 
-      if (userCollect == 1) {
-        // localStorage.setItem("user_name",name1)
+    //   if (userCollect == 1) {
+    //     // localStorage.setItem("user_name",name1)
     
-        window.location.href = "./accountcreated.html";
-        alert("login success");
+    //     window.location.href = "./accountcreated.html";
+    //     alert("login success");
 
-        localStorage.setItem("logged_in", email);
-      }
-      else {
-        alert("login failure");
-      }
+    //     localStorage.setItem("logged_in", email);
+    //   }
+    //   else {
+    //     alert("login failure");
+    //   }
 
-    }
+    // }
 
 
   </script>
