@@ -393,7 +393,7 @@ logOut.addEventListener("click",(e)=>{
 
 
 
-imageShow.src=ok
+// imageShow.src=ok
 
 
 //profile image
@@ -462,3 +462,29 @@ for (let i = 0; i < userRecords.length; i++) {
         break;
     }
 }
+
+
+   
+for (let i = 0; i < user_record.length; i++) {
+
+
+    if (loggedIn == user_record[i]["user_email"]) {
+
+
+        let box2=document.querySelector(".box2")
+        anchorbk = document.createElement("a");
+        anchorbk.setAttribute("href", "../../pages/booking history/bookinghistory.html?userid="+user_record[i]["user_id"])
+        // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
+        box2.append(anchorbk)
+        
+        let bookinghistoryDiv=document.querySelector(".bookinghistory");
+        anchorbk.append(bookinghistoryDiv);
+
+
+
+
+    }}
+
+
+
+

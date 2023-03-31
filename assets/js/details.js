@@ -8,7 +8,7 @@ const loginbtn= document.querySelector(".login")
 
 
 
-if(loginUser!=="false"){
+if(loginUser["email"]!=="false"){
  loginbtn.style.display="none"
  const myprofile=document.createElement("button");
  myprofile.setAttribute("class","login");
@@ -64,9 +64,9 @@ const ground_details=[
   "groundbooking":"DNF TURF BOOKING",
   "timingoptions":{
     "timing0":"8:00AM-9:00AM",
-    "timing1":"8:00AM-10:00AM",
-    "timing2":"8:00AM-9:00AM",
-    "timing3":"8:00AM-9:00AM",
+    "timing1":"9:00AM-10:00AM",
+    "timing2":"10:00AM-11:00AM",
+    "timing3":"11:00AM-12:00AM",
     "timing4":"8:00AM-9:00AM",
     "timing5":"8:00AM-9:00AM",
     "timing6":"8:00AM-9:00AM",
@@ -1040,6 +1040,7 @@ div_book2.append(label_date);
 inputdate=document.createElement("input")
 inputdate.setAttribute("type","date");
 inputdate.setAttribute("id","date");
+inputdate.setAttribute("required","");
 div_book2.append(inputdate);
 
 
@@ -1054,6 +1055,7 @@ div_book2.append(span_timingSelect);
 
 select_timings=document.createElement("select")
 select_timings.setAttribute("class","timings");
+select_timings.setAttribute("required","");
 div_book2.append(select_timings);
 
 
@@ -1079,6 +1081,7 @@ div_book2.append(span_sportsSelect);
 
 select_sports=document.createElement("select")
 select_sports.setAttribute("class","sportss");
+select_sports.setAttribute("required","");
 div_book2.append(select_sports);
 
 
@@ -1102,6 +1105,7 @@ div_book2.append(span_durationSelect);
 
 select_duration=document.createElement("select")
 select_duration.setAttribute("class","durations");
+select_duration.setAttribute("required","");
 div_book2.append(select_duration);
 
 
@@ -1131,6 +1135,7 @@ div_book2.append(span_playersSelect);
 
 select_players=document.createElement("select")
 select_players.setAttribute("class","players");
+select_players.setAttribute("required","");
 div_book2.append(select_players);
 
 
@@ -1195,7 +1200,7 @@ div_book2.append(anchorpaycash);
 
 
 
-button_paycash=document.createElement("button")
+button_paycash=document.createElement("p")
 button_paycash.setAttribute("class","paycash")
 button_paycash.innerText="Book";
 anchorpaycash.append(button_paycash)
@@ -1219,17 +1224,167 @@ anchoredit.append(button_edit);
 
 // console.log(div_child);
 // document.querySelector("div.parent").append(div_child)
+ popupdiv=document.createElement("div")
+popupdiv.setAttribute("id","popupdivmessage");
+
+ contentp=document.createElement("p");
+contentp.innerText="Sure you want to book it"
+contentp.style.color="black"
+popupdiv.append(contentp);
+
+button_no=document.createElement("p")
+button_no.setAttribute("id","nobtn")
+button_no.innerText="No";
+popupdiv.append(button_no);
+
+button_yes=document.createElement("button")
+button_yes.setAttribute("id","yesbtn")
+button_yes.setAttribute("type","submit")
+button_yes.innerText="Yes";
+popupdiv.append(button_yes);
 
 
 
 
+document.getElementById("formbook_btn").append(popupdiv)
 
 
-const bookBtn=document.querySelector(".paycash")
-bookBtn.addEventListener("submit",()=>{
-  if(loginUser!=="false"){
-    alert("pok")
-  }
+
+
+// const bookBtn=document.querySelector(".paycash")
+// bookBtn.addEventListener("submit",()=>{
+//   if(loginUser!=="false"){
+//     alert("pok")
+//   }
   
+// });
+popbox=document.getElementById("popupdivmessage");
+yesbtn=document.getElementById("yesbtn")
+nobtn=document.getElementById("nobtn")
+const bookingBtn=document.getElementById("formbook_btn");
+const bookbtn=document.querySelector(".paycash")
+bookbtn.addEventListener("click",(e)=>{
+  e.preventDefault()
+
+  // alert("ok");
+
+popbox.style.display="block"
+
+
+
+})
+nobtn.addEventListener("click",(e)=>{
+  e.preventDefault()
+
+  // alert("ok");
+
+popbox.style.display="none"
+
 })
 
+
+
+
+
+
+
+
+const id_generator_booking = Math.floor(Math.random() * 300);
+let user_record = JSON.parse(localStorage.getItem("user_details"));
+let userloggedIn = localStorage.getItem("logged_in");
+
+
+bookingBtn.addEventListener("submit",(e)=>{
+  e.preventDefault();
+ getBookingInfo();
+ getgroundData();
+
+  // alert("ok");
+  
+
+// popbox.style.display="none"
+
+
+
+
+});
+
+function getBookingInfo(){
+
+  const bookDate=document.getElementById("date").value;
+  const selectTimings=document.querySelector(".timings").value
+  const selectSports=document.querySelector(".sportss").value;
+  const selectDuration=document.querySelector(".durations").value;
+  const selectplayers=document.querySelector(".players").value;
+  
+
+let userBookingInfo=new Array();
+userBookingInfo=JSON.parse(localStorage.getItem("bookingInfo")) ?
+JSON.parse(localStorage.getItem("bookingInfo")) : []
+
+if (userBookingInfo.some((v) => {
+  return v.booking_Date == bookDate && v.booking_time==selectTimings
+})) {
+  alert("the book is already there")
+}
+
+
+else{
+
+
+
+  userBookingInfo.push(
+    {
+      "booking_Date":bookDate,
+      "booking_time":selectTimings,
+      "booking_sports":selectSports,
+      "booking_duration":selectDuration,
+      "selected_players":selectplayers
+    }
+  );
+  
+
+
+}
+localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
+  
+
+
+
+
+}
+function getgroundData(){
+
+
+
+  let userbooked_grounds=new Array();
+  userbooked_grounds=JSON.parse(localStorage.getItem("bookingGroundInfo")) ?
+  JSON.parse(localStorage.getItem("bookingGroundInfo")) : []
+  
+
+  
+  
+  
+    userbooked_grounds.push(
+      {
+ "ordered_id":id_generator_booking,
+ "user_id":userloggedIn,
+ "ground_id":show2["ground_id"]
+
+      }
+    );
+    
+  
+  
+
+  localStorage.setItem("bookingGroundInfo", JSON.stringify(userbooked_grounds))
+    
+  
+  
+
+
+
+
+
+  
+}
