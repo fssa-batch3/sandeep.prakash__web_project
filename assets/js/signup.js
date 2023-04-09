@@ -119,9 +119,6 @@
 // }
 
 
-
-
-
 const checkjoinPlayer = document.getElementById("checkjoinplayer");
 const joinplayerForm = document.querySelector(".joinplayercontainer");
 const forms1 = document.querySelector(".forms")
@@ -192,20 +189,20 @@ function getUserData() {
 
     const timingsto = (document.getElementById("timingsto").value)
     const id_generator = Math.floor(Math.random() * 300);
-    const cricket=document.getElementById("sportsavail1").checked
-    const football=document.getElementById("sportsavail2").checked
-    const tennis=document.getElementById("sportsavail3").checked
+    const cricket = document.getElementById("sportsavail1").checked
+    const football = document.getElementById("sportsavail2").checked
+    const tennis = document.getElementById("sportsavail3").checked
 
-// const sport_Choosed=[];
-// if(cricket.checked){
-//     sport_Choosed.push("cricket")
-// }
-// if(football.checked){
-//     sport_Choosed.push("football")
-// }
-// if(tennis.checked){
-//     sport_Choosed.push("tennis")
-// }
+    // const sport_Choosed=[];
+    // if(cricket.checked){
+    //     sport_Choosed.push("cricket")
+    // }
+    // if(football.checked){
+    //     sport_Choosed.push("football")
+    // }
+    // if(tennis.checked){
+    //     sport_Choosed.push("tennis")
+    // }
 
     let user_records = new Array();
 
@@ -224,25 +221,25 @@ function getUserData() {
 
         user_data = {
 
-"user_id":id_generator,
+            "user_id": id_generator,
             "user_name": name1,
             "user_last_name": name2,
             "user_email": email,
             "user_phoneno": user_phoneno,
             "user_password": user_password,
             "player": checkjoinPlayer.checked,
-            "imagename":"",
-            "url":""
+            "imagename": "",
+            "url": ""
 
         }
 
-if(checkjoinPlayer.checked==false){
-        window.location.href="./login.html"
+        if (checkjoinPlayer.checked == false) {
+            window.location.href = "./login.html"
 
-}
-if(checkjoinPlayer.checked==true){
-    window.location.href="./login.html"
-}
+        }
+        if (checkjoinPlayer.checked) {
+            window.location.href = "./login.html"
+        }
 
 
         if (checkjoinPlayer.checked) {
@@ -251,9 +248,9 @@ if(checkjoinPlayer.checked==true){
                 "user_age": age,
                 "user_gender": gender,
                 // "sport_Choosed": sport_Choosed,
-                "sports_choosed_cricket":cricket,
-                "sports_choosed_football":football,
-                "sports_choosed_tennis":tennis,
+                "sports_choosed_cricket": cricket,
+                "sports_choosed_football": football,
+                "sports_choosed_tennis": tennis,
                 "sportLocationPlay": sportLocation,
                 "timingsfrom": timingsfrom,
                 "timingsto": timingsto

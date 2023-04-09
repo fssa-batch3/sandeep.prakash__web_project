@@ -250,4 +250,103 @@
 
     
 </body>
+<script>
+
+
+  // function to send a booking request to a seller
+async function sendBookingRequest(sellerEmail) {
+  // retrieve the user's email from local storage
+  const email = localStorage.getItem('userEmail');
+
+  const subject = 'Booking Request';
+  const body = 'Dear seller,\n\nI would like to request a booking for your ground on the following date and time: ...\n\nThank you!';
+
+  // simulate sending the request to the seller
+  const response = await fetch('https://my-mock-api.com/send-booking-request', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      from: email,
+      to: sellerEmail,
+      subject: subject,
+      body: body,
+    }),
+  });
+
+  if (response.ok) {
+    console.log('Booking request sent to seller');
+    // simulate waiting for the seller's response
+    await new Promise(resolve => setTimeout(resolve, 5000));
+    
+    // simulate the seller accepting the booking request
+    const response2 = await fetch('https://my-mock-api.com/accept-booking-request', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: sellerEmail,
+        to: email,
+        subject: 'Booking Request Accepted',
+        body: 'Dear buyer,\n\nI have accepted your booking request for the following date and time: ...\n\nThank you!',
+      }),
+    });
+    
+    if (response2.ok) {
+      console.log('Booking request accepted by seller');
+      
+      // set a value in local storage indicating that the booking request was accepted
+      localStorage.setItem('bookingAccepted', true);
+      
+      return true;
+    } else {
+      console.log('Error accepting booking request');
+      return false;
+    }
+  } else {
+    console.log('Error sending booking request');
+    return false;
+  }
+}
+
+// example usage
+localStorage.setItem('userEmail', 'buyer@example.com');
+sendBookingRequest('seller@example.com')
+  .then(accepted => {
+    if (accepted) {
+      // check if the booking request was accepted from local storage
+      if (localStorage.getItem('bookingAccepted') === 'true') {
+        // book the ground for the user
+        console.log('Ground booked for user');
+        
+        // clear the local storage values
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('bookingAccepted');
+      } else {
+        // display an error message to the user
+        console.log('Booking request rejected by seller');
+      }
+    }
+  });
+
+
+
+//
+
+
+localStorage.setItem('userEmail', 'buyer@example.com');
+sendBookingRequest('seller@example.com').then(accepted => {
+  if (accepted) {
+    if (localStorage.getItem('bookingAccepted') === 'true') {
+      console.log('Ground booked for user');
+      localStorage.removeItem('userEmail');
+      localStorage.removeItem('bookingAccepted');
+    } else {
+      console.log('Booking request rejected by seller');
+    }
+  }
+});
+</script>
 </html>

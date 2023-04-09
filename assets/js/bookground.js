@@ -1,32 +1,41 @@
 
 
+const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
+const loginbtn = document.querySelector(".login")
 
 
-
-
-
-const loginUser=localStorage.getItem("logged_in")
-const loginbtn= document.querySelector(".login")
-
-
-
-
-if(loginUser!=="false"){
- loginbtn.style.display="none"
- const myprofile=document.createElement("button");
- myprofile.setAttribute("class","login");
- myprofile.innerText="My Account"
- myprofile.style.width="150px";
- myprofile.style.left="50px"
- myprofile.addEventListener("click",()=>{
-   window.location.href="../../pages/player/newprofile.html"
- });
- document.querySelector(".contact").append(myprofile)
+if (loginUser !== false) {
+  loginbtn.style.display = "none"
+  const myprofile = document.createElement("button");
+  myprofile.setAttribute("class", "login");
+  myprofile.innerText = "My Account"
+  myprofile.style.width = "150px";
+  myprofile.style.left = "50px"
+  myprofile.addEventListener("click", () => {
+    window.location.href = "../../pages/player/newprofile.html"
+  });
+  document.querySelector(".contact").append(myprofile)
 }
-else{
- loginbtn.style.display="block"
+else {
+  loginbtn.style.display = "block"
 
 }
+
+
+
+
+
+let findplayersbtn=document.querySelector(".findplayers")
+findplayersbtn.addEventListener("click",(e)=>{
+  if( !loginUser || loginUser[0]["player_status"]==false){
+    alert("Please join as a player or login to find players  ")
+    e.preventDefault();
+  }
+  else{
+    window.location.href="./pages/player/findplayers.html";
+  }
+
+})
 const ground_list = [
   //ground1
   {
@@ -447,25 +456,25 @@ let anchor;
 // crud ground
 
 
-const groundOwnerProduct=JSON.parse(localStorage.getItem("ground_info"));
+const groundOwnerProduct = JSON.parse(localStorage.getItem("ground_info"));
 
 console.log(groundOwnerProduct);
 // ground_list.push(groundOwnerProduct);
 
 let filtered;
-filtered=groundOwnerProduct.filter((item=>{
-  if(item["status"]==true){
+filtered = groundOwnerProduct.filter((item => {
+  if (item["status"] == true) {
     return true
 
   }
-  else{
-return false
+  else {
+    return false
   }
 }))
 
 
 
-for (let i = 0; i <filtered.length; i++) {
+for (let i = 0; i < filtered.length; i++) {
   //  <div class="child"> </div>
   div_child = document.createElement("div");
   div_child.setAttribute("class", "child");
@@ -502,7 +511,7 @@ for (let i = 0; i <filtered.length; i++) {
   div_child.append(div_symbol);
 
 
-if(groundOwnerProduct[i]["sport_avail_1"]==true){
+  if (groundOwnerProduct[i]["sport_avail_1"] == true) {
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card1 = document.createElement("img");
     imgicon_card1.setAttribute("class", "sportsicon");
@@ -510,9 +519,9 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
     imgicon_card1.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card1);
 
-}
+  }
 
-  if(groundOwnerProduct[i]["sport_avail_2"]==true){
+  if (groundOwnerProduct[i]["sport_avail_2"] == true) {
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card2 = document.createElement("img");
     imgicon_card2.setAttribute("class", "sportsicon");
@@ -520,10 +529,10 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
     imgicon_card2.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card2);
 
-}
+  }
 
 
- if(groundOwnerProduct[i]["sport_avail_3"]==true){
+  if (groundOwnerProduct[i]["sport_avail_3"] == true) {
     //  <img src="" class="sportsicon" alt=""/>
     imgicon_card3 = document.createElement("img");
     imgicon_card3.setAttribute("class", "sportsicon");
@@ -531,7 +540,7 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
     // imgicon_card.setAttribute("alt", "icons");
     div_symbol.append(imgicon_card3);
 
-}
+  }
 
 
 
@@ -555,7 +564,7 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
   //anchor
   anchor = document.createElement("a");
   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-  anchor.setAttribute("href", "../../pages/bookinground/ground1.html?userId=" + groundOwnerProduct[i]["ground_id"])
+  anchor.setAttribute("href", "../../pages/bookinground/ground1.html?ground_Id=" + groundOwnerProduct[i]["ground_id"])
   div_child.append(anchor)
 
   // <button class="book"></button>
@@ -651,10 +660,10 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
 // }
 // const searchBox = document.getElementById("search2");
 // searchBox.addEventListener('keydown',(e)=>{
-  
+
 //   if (e.key === "Enter") {
 //     e.preventDefault();
-  
+
 //   }
 // const searchContainer = e.target.value.toLowerCase().trim();
 // const ground=document.querySelectorAll("div.child");
@@ -675,10 +684,10 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
 
 // const selectOption = document.querySelector(".locationselect")
 // selectOption.addEventListener('input',(e)=>{
-  
+
 //   if (e.key === "Enter") {
 //     e.preventDefault();
-  
+
 //   }
 // const searchContainer = e.target.value.toLowerCase().trim();
 // const product=document.querySelectorAll("div.child");
@@ -727,10 +736,6 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
 // })
 
 // }
-
-
-
-
 
 
 
@@ -784,41 +789,43 @@ if(groundOwnerProduct[i]["sport_avail_1"]==true){
 //   filterProduct("all");
 // }
 
-
-
-
-
 // filter data
 
 
 const selectOption = document.querySelector(".locationselect")
 
 let filteredData = [];
-selectOption.addEventListener("input", () => {
+selectOption.addEventListener("change", (e) => {
   const seletedQuery = selectOption.value.trim()
   console.log(seletedQuery);
-  
+
   // const searchbox = document.getElementById("search2");
 
 
+  if (e.key === "Enter") {
+    e.preventDefault();
+    // e.stopPropagation();
+    // return false
+
+  }
   if (seletedQuery !== "all") {
     filteredData = filtered.filter((item) => {
       return item.ground_city.includes(seletedQuery)
     })
 
-  } 
+  }
   // else if (e.target===searchbox){
   //   filteredData=ground_list.filter((item) => {
   //     return item.groundname.toLowerCase().includes(searchQuery) || item.locationname.toLowerCase().includes(searchQuery)
   //   })
-  
+
 
   // }
   else {
     filteredData = filtered;
   }
 
-console.log(filteredData);
+  console.log(filteredData);
 
 
   const parentHtmlDiv = document.querySelector(".parent");
@@ -829,7 +836,7 @@ console.log(filteredData);
     const div_child = document.createElement("div");
     div_child.setAttribute("class", "child");
 
-    
+
 
     br_tag = document.createElement("br");
     div_child.append(br_tag);
@@ -860,37 +867,37 @@ console.log(filteredData);
     div_symbol.setAttribute("class", "symbol");
     div_child.append(div_symbol);
 
-  
-if(item.sport_avail_1==true){
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card1 = document.createElement("img");
-    imgicon_card1.setAttribute("class", "sportsicon");
-    imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
-    imgicon_card1.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card1);
 
-}
+    if (item.sport_avail_1 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card1 = document.createElement("img");
+      imgicon_card1.setAttribute("class", "sportsicon");
+      imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+      imgicon_card1.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card1);
 
-  if(item.sport_avail_2==true){
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card2 = document.createElement("img");
-    imgicon_card2.setAttribute("class", "sportsicon");
-    imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
-    imgicon_card2.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card2);
+    }
 
-}
+    if (item.sport_avail_2 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card2 = document.createElement("img");
+      imgicon_card2.setAttribute("class", "sportsicon");
+      imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+      imgicon_card2.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card2);
+
+    }
 
 
- if(item.sport_avail_3==true){
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card3 = document.createElement("img");
-    imgicon_card3.setAttribute("class", "sportsicon");
-    imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
-    // imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card3);
+    if (item.sport_avail_3 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card3 = document.createElement("img");
+      imgicon_card3.setAttribute("class", "sportsicon");
+      imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+      // imgicon_card.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card3);
 
-}
+    }
     //  <div class="ratings"> </div>
     div_ratings = document.createElement("div");
     div_ratings.setAttribute("class", "ratings");
@@ -935,19 +942,29 @@ if(item.sport_avail_1==true){
 
 
 
+// searchbox.addEventListener("keydown",(e)=>{
+//   if (e.key === "Enter") {
+//     e.preventDefault();
 
+//     // return false
+
+//   }
+
+// })
 const searchbox = document.getElementById("search2");
 searchbox.addEventListener("keydown", (e) => {
   const searchQuery = searchbox.value.trim().toLowerCase();
   // console.log(searchQuery);
-  
-  
+
+
 
   if (e.key === "Enter") {
     e.preventDefault();
-  
+    e.stopPropagation();
+    // return false
+
   }
-    const filteredList = filteredData.filter((item) => {
+  const filteredList = filteredData.filter((item) => {
     return item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery)
   })
 
@@ -996,38 +1013,38 @@ searchbox.addEventListener("keydown", (e) => {
     div_symbol.setAttribute("class", "symbol");
     div_child.append(div_symbol);
 
-    
-    if(item.sport_avail_1==true){
-        //  <img src="" class="sportsicon" alt=""/>
-        imgicon_card1 = document.createElement("img");
-        imgicon_card1.setAttribute("class", "sportsicon");
-        imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
-        imgicon_card1.setAttribute("alt", "icons");
-        div_symbol.append(imgicon_card1);
-    
+
+    if (item.sport_avail_1 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card1 = document.createElement("img");
+      imgicon_card1.setAttribute("class", "sportsicon");
+      imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+      imgicon_card1.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card1);
+
     }
-    
-      if(item.sport_avail_2==true){
-        //  <img src="" class="sportsicon" alt=""/>
-        imgicon_card2 = document.createElement("img");
-        imgicon_card2.setAttribute("class", "sportsicon");
-        imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
-        imgicon_card2.setAttribute("alt", "icons");
-        div_symbol.append(imgicon_card2);
-    
+
+    if (item.sport_avail_2 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card2 = document.createElement("img");
+      imgicon_card2.setAttribute("class", "sportsicon");
+      imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+      imgicon_card2.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card2);
+
     }
-    
-    
-     if(item.sport_avail_3==true){
-        //  <img src="" class="sportsicon" alt=""/>
-        imgicon_card3 = document.createElement("img");
-        imgicon_card3.setAttribute("class", "sportsicon");
-        imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
-        // imgicon_card.setAttribute("alt", "icons");
-        div_symbol.append(imgicon_card3);
-    
+
+
+    if (item.sport_avail_3 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card3 = document.createElement("img");
+      imgicon_card3.setAttribute("class", "sportsicon");
+      imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+      // imgicon_card.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card3);
+
     }
-        //  <div class="ratings"> </div>
+    //  <div class="ratings"> </div>
     div_ratings = document.createElement("div");
     div_ratings.setAttribute("class", "ratings");
     div_child.append(div_ratings);
@@ -1060,7 +1077,7 @@ searchbox.addEventListener("keydown", (e) => {
 
 
 
-    // ... continue creating the UI elements as before ...
+
 
     parentHtmlDiv.append(div_child);
   });

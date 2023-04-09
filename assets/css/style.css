@@ -54,6 +54,26 @@ ul li a:hover {
     color: rgb(130, 217, 235);
 
 }
+/* 
+.myaccount{
+    font-size:12px;
+    padding: 0px 2px;
+    height: 87%;
+    width: 70%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
+}
+.myaccount:hover{
+    background-color: #61bdff;
+} */
+
 
 .login {
     font-size: medium;
@@ -81,6 +101,7 @@ ul li a:hover {
     bottom: 85px;
     left: 46px;
 }
+
 
 /* header */
 
@@ -477,6 +498,8 @@ a {
    position: relative;
    left: 60%;
     }
+
+
     .login {
         font-size:12px;
         padding: 0px 2px;

@@ -4,51 +4,7 @@
     margin: 0px;
     padding: 0px;
 }
-/* 
-.logo img{
-    width:  130px;
-    height: 48px;
-    position: relative;
-    left: 20px;
-    top: 30px;
-}
-.sidebar ul li{
-    position: relative;
-    left: 30px;
-    top: 70px;
-    list-style-type: none;
-    height: 80px;
-    font-size:x-large;
-}
-.sidebar{
-    background-color: rgb(71, 71, 196);
-    width: 260px;
-    height: 860px;
-}
-.sidebar ul li i{
-    height: 50px;
-    min-width: 50px;
-    border-radius: 20px;
-line-height: 50px;
-position: relative;
-top: 4px;
-}
-.logout{
-    position: relative;
-    left: 30px;
-    top: 350px;
-}
 
-.logout i{
-    height: 50px;
-    width: 50px;
-    min-width: 50px;
-    border-radius: 20px;
-line-height: 50px;
-position: relative;
-top: 4px;
-/* left: 30px; */
-/* } */ *
 
 .sidebar{
     display: grid;
@@ -108,6 +64,22 @@ top: 30px;
   box-shadow: inset;
     
 }
+.fillbutton{
+    
+    width: 130px;
+    height: 30px;
+    position: relative;
+    right: 53px;
+    bottom: 5px;
+    background-color: rgb(83, 146, 198);
+    border: none;
+  box-shadow: inset;
+
+
+}
+
+
+
 .hr{
     width: 300px;
     height: 1px;
@@ -308,9 +280,10 @@ form input {
 
 
 .labelname ,.labelnamel,.labelnametime,.labelnamea,.labelnames{
-    font-size: 20px;
+    /* font-size: 10px; */
     font-weight: 500;
     position: relative;
+ 
 }
 #sportss {
     width: 50%;
@@ -321,6 +294,11 @@ form input {
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
+}
+#sportsvalue{
+    width: 120px;
+    height: 30px;
+
 }
 .timings {
     width: 50%;
@@ -384,9 +362,208 @@ font-size: 20px;
 .timep{
     position: relative;
 }
-#sportsavail2{
+
+
+/* fill */
+.formcontainer{
+   
+    position: fixed;
+    display: none;
+    width: 970px;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%,-50%);
+    padding: 30px 43px;
+    border-radius: 5%;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.closebtn{
     position: relative;
-    left: 3px;
+    left: 960px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
 
 
+}
+
+
+/* textarea{
+   resize: none; 
+}
+.formcontainer{
+    position: relative;
+    padding-left: 470px;
+    top: 70px;
+    font-size: 23px;
+}
+#groname{
+    width: 390px;
+    height: 30px;
+}
+.labelname{
+    position: relative;
+    right: 90px;
+} */
+textarea{
+   resize: none; 
+}
+
+.box1{
+    /* display: flex; */
+    position: relative;
+    right: 250px;
+top: 70px;
+   
+  
+  
+}
+#grolname{
+    position: relative;
+    /* right: 250px; */
+top: 50px;
+   
+
+}
+#groname{
+    position: relative;
+    bottom: 10px;
+}
+.labelgroname{
+    position: relative;
+    bottom: 10px;
+
+}
+
+.labelnamep{
+    position: relative;
+    /* right: 250px; */
+top: 50px;
+
+}
+#grolink{
+    position: relative;
+    /* right: 250px; */
+top: 60px;
+   
+
+}
+.labelnamell{
+    position: relative;
+    /* right: 250px; */
+top: 60px;
+
+}
+.groundlocationbox{
+    /* display: flex; */
+    position: relative;
+    left: 250px;
+  
+
+
+}
+.groundimageupload{
+    position: relative;
+    right: 290px;
+    top: 70px;
+  
+
+
+}
+.sportsavailable{
+    position: relative;
+    right: 290px;
+    top: 130px;
+  
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    position: relative;
+    right: 120px;
+    top: 50px;
+  
+
+}
+.sname{
+    position: relative;
+    right: 245px;
+    top: 42px;
+}
+.labelnames{
+    position: relative;
+    left: 20px;
+    top: 25px;
+}
+.groundtiming{
+    position: relative;
+    left: 370px;
+    width: 270px;
+    top: 50px;
+    text-align: center;
+    /* bottom: 130px; */
+  
+  
+
+}
+.groundrules{
+    position: relative;
+    left: 20px;
+    bottom: 67px;
+
+  
+
+}
+.groundprice{
+  
+
+
+}
+.values{
+    text-align: center;
+    position: relative;
+    left: 320px;
+    top: 120px;
+  
+
+}
+#submitbtn{
+    position: relative;
+    top: 10px;
+   
+   
+
+}
+#updatebtn{
+    position: relative;
+    left: 360px;
+    padding: 10px;
+    top: 20px;
+    display: none;
+}
+#deletebtn{
+    position: relative;
+    left: 360px;
+    padding: 10px;
+    top: 20px;
+    display: none;
+}
+/* #amount{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+#amount::-webkit-inner-spin-button{
+  -webkit-appearance: none;
 }

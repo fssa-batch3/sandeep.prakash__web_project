@@ -1,14 +1,11 @@
 
-
-
-
-const loginUser=localStorage.getItem("logged_in")
+const loginUser=JSON.parse(localStorage.getItem("user_logged_in"));
 const loginbtn= document.querySelector(".login")
 
 
 
 
-if(loginUser["email"]!=="false"){
+if(loginUser!==false){
  loginbtn.style.display="none"
  const myprofile=document.createElement("button");
  myprofile.setAttribute("class","login");
@@ -687,7 +684,7 @@ const url2=window.location.search;  //?userid=97;
 console.log(url2);
 const urlParameter2= new URLSearchParams(url2);
 // console.log(urlParameter)   // "userid":"97"
-const groundSearch2=urlParameter2.get("userId");
+const groundSearch2=urlParameter2.get("ground_Id");
 // console.log(groundSearch2); // get value of name
 
  let show2;
@@ -1209,18 +1206,18 @@ anchorpaycash.append(button_paycash)
 document.querySelector("div.main2").append(div_parent1)
 console.log(div_parent1);
 
-anchoredit = document.createElement("a");
-// anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-anchoredit.setAttribute("href", "../../pages/admin/form.html?userId="+show2["ground_id"])
-div_parent1.append(anchoredit)
-console.log(anchoredit);
-// <button class="book"></button>
-button_edit = document.createElement("button");
-button_edit.setAttribute("class", "edit");
-// button_booknow =document.createTextNode("Book Now")
-// button_book.append(button_booknow)
-button_edit.innerText = "edit"
-anchoredit.append(button_edit);
+// anchoredit = document.createElement("a");
+// // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+// anchoredit.setAttribute("href", "../../pages/admin/form.html?userId="+show2["ground_id"])
+// div_parent1.append(anchoredit)
+// console.log(anchoredit);
+// // <button class="book"></button>
+// button_edit = document.createElement("button");
+// button_edit.setAttribute("class", "edit");
+// // button_booknow =document.createTextNode("Book Now")
+// // button_book.append(button_booknow)
+// button_edit.innerText = "edit"
+// anchoredit.append(button_edit);
 
 // console.log(div_child);
 // document.querySelector("div.parent").append(div_child)
@@ -1291,13 +1288,108 @@ popbox.style.display="none"
 
 const id_generator_booking = Math.floor(Math.random() * 300);
 let user_record = JSON.parse(localStorage.getItem("user_details"));
-let userloggedIn = localStorage.getItem("logged_in");
+let userloggedIn =JSON.parse(localStorage.getItem("user_logged_in"));
 
 
 bookingBtn.addEventListener("submit",(e)=>{
   e.preventDefault();
  getBookingInfo();
  getgroundData();
+
+ 
+
+//API SEND REQUESTlet 
+// let groundName=groundOwnerProduct_details
+const arrayConvert = JSON.parse(localStorage.getItem("groundadmin_details"));
+
+let sellerEmail;
+for(let i=0;i<arrayConvert;i++){
+  if(show2["seller_id"]==arrayConvert[i]["seller_id"]){
+    sellerEmail=arrayConvert[i]["seller_email"]
+    
+  }
+}
+let user_email=loginUser[0]["user_email"]
+
+async function sendBookingRequest(){
+
+const subject= "Booking Request"
+const body='Dear seller,\n\nI would like to request a booking for your ground on the following date and time: ...\n\nThank you!';
+
+
+
+
+let response=await fetch("https://642c897cbf8cbecdb4f2d6bc.mockapi.io/bookandplay/sendrequest",{
+
+method:"POST",
+headers:{
+  "Content-Type":"application/json",
+},
+body:JSON.stringify({
+  from:user_email,
+  to:sellerEmail,
+  subject:subject,
+  body:body,
+
+}),
+});
+
+if(response.ok){
+  await new Promise(resolve=> setTimeout(resolve,6000));
+const response2=await fetch("https://642c897cbf8cbecdb4f2d6bc.mockapi.io/bookandplay/acceptrequest",{
+  
+method:"POST",
+headers:{
+  "Content-Type":"application/json",
+},
+body:JSON.stringify({
+  from:sellerEmail,
+  to:user_email,
+  subject:"Book request accepted",
+  body:'Dear buyer,\n\nI have accepted your booking request for the following date and time: ...\n\nThank you!',
+
+}),
+
+});
+
+
+if (response2.ok) {
+  localStorage.setItem("bookingaccepted",true)
+  return true
+  
+} else {
+  return false
+}
+
+
+
+}
+else{
+  return false
+}
+
+
+localStorage.setItem("userEmailbookinginfo",user_email)
+sendBookingRequest(sellerEmail).then(accepted=>{
+
+
+
+  if(accepted){
+    if(JSON.stringify(localStorage.getItem("bookingaccepted"))=="true"){
+      localStorage.removeItem('userEmailbookinginfo');
+      localStorage.removeItem('bookingAccepted');
+    }
+    else{
+      console.log("not");
+    }
+  }
+})
+
+
+}
+
+
+
 
   // alert("ok");
   
@@ -1368,7 +1460,7 @@ function getgroundData(){
     userbooked_grounds.push(
       {
  "ordered_id":id_generator_booking,
- "user_id":userloggedIn,
+ "user_id":userloggedIn[0].user_id,
  "ground_id":show2["ground_id"]
 
       }
@@ -1388,3 +1480,7 @@ function getgroundData(){
 
   
 }
+
+
+
+

@@ -249,7 +249,8 @@ input[type="search"]::placeholder {
 }
 /* groundimage */
 .groimg {
-    width: 90%;
+    width: 320px;
+    height: 220px;
     border: 2px solid transparent;
     border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
     color: rgb(12, 10, 10);

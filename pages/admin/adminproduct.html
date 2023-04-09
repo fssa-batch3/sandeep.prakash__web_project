@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New profile
     </title>
-    <link rel="stylesheet" href="../../assets/css/newprofile.css">
+    <link rel="stylesheet" href="../../assets/css/admindashboard.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Noto+Serif+Khojki:wght@500&family=Roboto&display=swap"
         rel="stylesheet">
@@ -31,7 +31,7 @@
                         <img  class="profileimg"src="../../assets/images/avatorprofile.jpg" alt="profile">
                     </div>
                     <div class="name-rankdisplay">
-                        <p class="nameperson">Samantha</p>
+                        <p class="nameperson">GROUND NAME</p>
                         <div class="rankdisplay">
                             <p class="rank">Rank</p>
                             <p>12200</p>
@@ -40,6 +40,7 @@
                     </div>
 
 <button id="editbutton">Edit Profile</button>
+<button class="fillbutton">Fill your ground</button>
                 </div>
                 <div class="hr">
 
@@ -56,10 +57,10 @@
                         <i class='bx bx-history'></i>
                         <span>Cash booking</span>
                     </div>
-                    <div class="analytics">
+                 <a href="../../pages/admin/myground.html"> <div class="analytics">
                         <i class='bx bxs-analyse'></i>
                         <span>My Ground</span>
-                    </div>
+                    </div></a>
                 </div>
                 <div class="hr">
 
@@ -74,10 +75,11 @@
                     <span>Friends Request</span>
                 </div> -->
 
-                <div class="logout">
+
+                <button class="logout"> 
                     <i class='bx bx-log-out'></i>
                     <span>Log out</span>
-                </div>
+                </button> 
                 
             </div>
             <div class="sidebar2">
@@ -126,13 +128,13 @@
                 
                   </select><br>
                       <p class="labelname">Timing Available</p><br>
-                      <input type="time"  id="timingsfrom" aria-label="timingsfrom" value="4:00"><br>
+                      <!-- <input type="time"  id="timingsfrom" aria-label="timingsfrom" value="4:00"><br> -->
                       
                       <p>To</p><br>
-                      <input type="time"  id="timingsto" aria-label="timingtoo" value="5:00">
+                      <!-- <input type="time"  id="timingsto" aria-label="timingtoo" value="5:00"> -->
                       </div>
                    <br>
-                 <button class="profile2" type="submit" onclick="update()">Save</button>
+                 <button class="profile2" type="submit" >Save</button>
                 
                 </div>
                 
@@ -146,7 +148,111 @@
 
         </div>
     </div>
-<script src=""></script>
+    <div class="formcontainer">
+        <button class="closebtn"><i class="fa-solid fa-xmark fa-bounce"></i></button>
+           
+        <form id="formbtn">
+            <div class="box1">
+            <div class="groundname">
+                <label class="labelgroname"> Ground Name:</label>
+                <input type="name" placeholder="Ground Name " id="groname" aria-label="name" required><br> 
+            </div>
+        
+            <label class="labelnamep"> Ground place:</label>
+            <input type="name" placeholder="Ground Location" id="grolname" aria-label="name" required><br>
+            </div>
+        
+            <div class="groundlocationbox">
+        
+                <label class="labelname"> Ground Address:</label>
+                <input type="name" placeholder="Ground Location" id="groaddress" aria-label="name" required><br>
+                <label class="labelnamell"> Ground Location Link:</label>
+                <input type="url" placeholder="Ground Location" id="grolink" aria-label="name" required><br>  
+            
+            </div>
+            <div class="values">
+                <p>Distict</p>
+                <select id="sportsvalue" required>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Coimbatore">Coimbatore</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Erode">Erode</option>
+                    <option value="Madurai">Madurai</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+
+            </div>
+            <div class="groundimageupload">
+                <label class="labelname"> Upload your Ground images:</label><br>
+                <input type="url" placeholder="Upload " id="grimg1" aria-label="groundimg" required><br> 
+                <input type="url" placeholder="Upload " id="grimg2" aria-label="groundimg" required><br>
+                <input type="url" placeholder="Upload " id="grimg3" aria-label="groundimg" required><br>  
+            
+            </div>
+            
+                <!-- <div class="groundimgshow">
+                    
+                </div> -->
+                <div class="sportsavailable">
+                    <label class="labelnames"> Sports Available:</label><br>
+                    <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket">
+                    <label class="sname">Cricket</label><br>
+                    <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football"  >
+                    <label class="sname">Football</label><br>
+                    <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis" >
+                    <label class="sname">Tennis</label><br>
+            
+
+            
+                </div>
+                <div class="groundtiming">
+                    <label class="">Timings </label><br>
+                    <p>From</p>
+                    <input type="time" id="timingsfrom" aria-label="sportsavail" pattern="(0[1-9]|1[0-2]):[0-5][0-9] (am|pm)" required>
+                    <p>To</p>
+                    <input type="time" id="timingsto" aria-label="sportsavail"required >
+            
+                </div>
+             
+            
+            <div class="groundrules">
+                <label class="">Add Your Ground rules </label><br>
+                <textarea id="rules" rows="8"    cols="30"></textarea required><br>
+            
+            </div>
+            <div class="groundprice">
+                
+                
+                <label class="">Enter your price</label><br>
+                <input type="number" id="amount" aria-label="sportsavail" required ><br>
+            
+            
+            
+            </div>
+           
+            
+            
+            
+            
+            <button type="submit" id="submitbtn">Submit</button>
+            
+            
+            
+            
+            </form>
+            <div class="buttonsbox">
+                <button type="submit" id="updatebtn">Update</button>
+            
+                <button type="submit" id="deletebtn">Disable</button>
+        
+            </div>
+        
+            
+        
+            </div>
+<!--          
+            <script src="../../assets/js/formadmin.js"></script> -->
+<script src="../../assets/js/admindashboard.js"></script>
 </body>
 
 </html>

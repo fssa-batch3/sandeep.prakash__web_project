@@ -1,5 +1,5 @@
-if (localStorage.getItem("ground_info")) {
-    return
+if (JSON.parse(localStorage.getItem("ground_info"))) {
+    // return
 }
 else {
     localStorage.setItem("ground_info", JSON.stringify([

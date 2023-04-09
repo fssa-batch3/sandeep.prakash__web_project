@@ -1,0 +1,207 @@
+
+/* fill */
+.formcontainer{
+   
+    position: fixed;
+
+    width: 970px;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%,-50%);
+    padding: 30px 43px;
+    border-radius: 5%;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.closebtn{
+    position: relative;
+    left: 960px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+
+textarea{
+    resize: none; 
+ }
+
+.box1{
+    /* display: flex; */
+    position: relative;
+    right: 250px;
+top: 70px;
+   
+  
+  
+}
+#grolname{
+    position: relative;
+    left: 250px;
+top: 50px;
+   
+
+}
+#groname{
+    position: relative;
+    bottom: 10px;
+    left: 260px;
+}
+.labelgroname{
+    position: relative;
+    bottom: 10px;
+left: 230px;
+}
+
+.labelnamep{
+    position: relative;
+    left: 220px;
+top: 50px;
+
+}
+#grolink{
+    position: relative;
+    left: 250px;
+top: 60px;
+   
+
+}
+.labelnamell{
+    position: relative;
+    left: 250px;
+top: 60px;
+
+}
+.groundlocationbox{
+    /* display: flex; */
+    position: relative;
+    left: 250px;
+  
+
+
+}
+.groundimageupload{
+    width: 200px;
+    position: relative;
+    left: 20px;
+    top: 70px;
+  
+
+
+}
+.sportsavailable{
+    position: relative;
+    left: 290px;
+    top: 130px;
+  
+
+}
+#sportsvalue{
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    left: 832px;
+    top: 120px;
+    /* position: relative;
+    bottom: 900ox; */
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    position: relative;
+    right: 270px;
+    top: 50px;
+  
+
+}
+.sname{
+    position: relative;
+    right: 245px;
+    top: 42px;
+}
+.labelnames{
+    position: relative;
+    right: 290px;
+    top: 25px;
+}
+.groundtiming{
+    position: relative;
+    left: 737px;
+    width: 270px;
+    top: 50px;
+    text-align: center;
+    /* bottom: 130px; */
+  
+  
+
+}
+.groundrules{
+    position: relative;
+    left: 390px;
+    bottom: 67px;
+
+  
+
+}
+/* .groundprice{
+  
+
+
+} */
+.values{
+ 
+  
+
+}
+#submitbtn{
+    position: relative;
+    top: 10px;
+    display: none;
+   
+   
+
+}
+#updatebtn{
+    position: relative;
+    left: 360px;
+    padding: 10px;
+    top: 20px;
+
+}
+#deletebtn{
+    position: relative;
+    left: 360px;
+    padding: 10px;
+    top: 20px;
+ 
+}
+/* #amount{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+#amount::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+.labelname{
+    position: relative;
+    left: 220px;
+}
+#groaddress{
+    position: relative;
+    left: 220px;
+}

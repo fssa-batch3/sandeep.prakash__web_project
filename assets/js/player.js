@@ -130,16 +130,19 @@ const selectOption = document.querySelector(".locationselect")
 
 let filteredData = [];
 selectOption.addEventListener("input", () => {
-  const seletedQuery = selectOption.value.trim()
-  console.log(seletedQuery);
+  const seletedQueryfil = selectOption.value.trim()
+  console.log(seletedQueryfil);
   
   // const searchbox = document.getElementById("search2");
 
 
-  if (seletedQuery !== "all") {
+  if (seletedQueryfil !== "all") {
     filteredData = filterPlayer.filter((item) => {
-      return item.sportLocationPlay.includes(seletedQuery)
+      return item.sportLocationPlay.includes(seletedQueryfil)
+      
     })
+    filteredData=filteredData.filter((item)=>
+      item.sportLocationPlay!==undefined)
 
   } 
   // else if (e.target===searchbox){
@@ -166,8 +169,6 @@ parentHtmlDiv.innerHTML = "";
 
 
 filteredData.forEach((item) => {
-
-
 
 
     div_child = document.createElement("div");

@@ -127,7 +127,7 @@
 
         <p><a href="#">FAQ</a> </p>
         <p><a href="#">Contact</a></p>
-    
+    <!-- <img src=""> -->
       </div>
         <div class="column1">
          <p class="foot-heading">Connect us on</p><br>
@@ -142,4 +142,46 @@
     </footer>
          <!-- footer -->
 </body>
+<script>
+    const defaultImagePath = "assets/images/image.jpg";
+
+const userRecords = JSON.parse(localStorage.getItem("user_details"));
+const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
+
+for (let i = 0; i < userRecords.length; i++) {
+    if (user_logged[0]["user_email"] == userRecords[i]["user_email"]) {
+        const savedImage = userRecords[i];
+        if (savedImage && savedImage.url) {
+            imageShow.src = savedImage.url;
+        }
+        else {
+            imageShow.src = defaultImagePath;
+        }
+        break;
+    }
+}
+
+imageFileUpload.addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => {
+        const userRecords = JSON.parse(localStorage.getItem("user_details"))
+        const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
+        for (let i = 0; i < userRecords.length; i++) {
+            if (user_logged[0]["user_email"] == userRecords[i]["user_email"]) {
+                userRecords[i]["imagename"] = file.name;
+                userRecords[i]["url"] = defaultImagePath;
+                localStorage.setItem("user_details", JSON.stringify(userRecords));
+                break;
+            };
+        }
+        imageShow.src = defaultImagePath;
+    };
+    fileReader.readAsDataURL(file);
+});
+
+</script>
 </html>
+
+
+

@@ -1,6 +1,3 @@
-
-
-
 //URL
 const player=[
 {
@@ -13,8 +10,9 @@ const player=[
 
 let user_record = JSON.parse(localStorage.getItem("user_details"));
 
+// let filterPlayer=[];
 
-let filterPlayer=[];
+let filterPlayer;
 filterPlayer = user_record.filter((item)=>{
     return item.player==true;
 })
@@ -235,10 +233,6 @@ send_btn.append(i_send_symbol);
 
 
 document.querySelector("div.main2").append(div_parent1)
-
-
-
-
 
 
 const ctx =canvas_chart
