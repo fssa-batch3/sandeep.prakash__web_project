@@ -398,91 +398,91 @@ true
 
 
 
-if (JSON.parse(localStorage.getItem("user_details"))) {
-    // return
-}
+// if (JSON.parse(localStorage.getItem("user_details"))) {
+//     // return
+// }
 
-else{
-    localStorage.setItem("user_details", JSON.stringify([
+// else{
+//     localStorage.setItem("user_details", JSON.stringify([
 
 
-// {
-//     imagename
-// : 
-// "5656321-removebg-preview.png",
-// player
-// : 
-// true,
-// sportLocationPlay
-// : 
-// "Salem",
-// sports_choosed_cricket
-// : 
-// true,
-// sports_choosed_football
-// : 
-// false,
-// sports_choosed_tennis
-// : 
-// false,
-// timingsfrom
-// : 
-// "18:16",
-// timingsto
-// : 
-// "18:15",
-// url
-// : 
-// "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvo",
-// user_age
-// : 
-// "89",
-// user_email
-// : 
-// "sandeep909600@gmail.com",
-// user_id
-// : 
-// 71,
-// user_last_name
-// : 
-// "ok",
-// user_name
-// : 
-// "sandeep",
-// user_password
-// : 
-// "SAusah989",
-// user_phoneno
-// : 
-// "192029000"
+// // {
+// //     imagename
+// // : 
+// // "5656321-removebg-preview.png",
+// // player
+// // : 
+// // true,
+// // sportLocationPlay
+// // : 
+// // "Salem",
+// // sports_choosed_cricket
+// // : 
+// // true,
+// // sports_choosed_football
+// // : 
+// // false,
+// // sports_choosed_tennis
+// // : 
+// // false,
+// // timingsfrom
+// // : 
+// // "18:16",
+// // timingsto
+// // : 
+// // "18:15",
+// // url
+// // : 
+// // "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAvo",
+// // user_age
+// // : 
+// // "89",
+// // user_email
+// // : 
+// // "sandeep909600@gmail.com",
+// // user_id
+// // : 
+// // 71,
+// // user_last_name
+// // : 
+// // "ok",
+// // user_name
+// // : 
+// // "sandeep",
+// // user_password
+// // : 
+// // "SAusah989",
+// // user_phoneno
+// // : 
+// // "192029000"
+// // }
+
+
+
+//     ]))
 // }
 
 
-
-    ]))
-}
-
-
-if (JSON.parse(localStorage.getItem("user_logged_in"))) {
-    // return
-}
-
-else{
-    localStorage.setItem("user_logged_in", JSON.stringify([
-// {
-//     player_status
-// : 
-// true,
-// user_email
-// : 
-// "sandeep909600@gmail.com",
-// user_id
-// : 
-// 71
+// if (JSON.parse(localStorage.getItem("user_logged_in"))) {
+//     // return
 // }
 
-    ]))
-}
+// else{
+//     localStorage.setItem("user_logged_in", JSON.stringify([
+// // {
+// //     player_status
+// // : 
+// // true,
+// // user_email
+// // : 
+// // "sandeep909600@gmail.com",
+// // user_id
+// // : 
+// // 71
+// // }
+
+//     ]))
+// }
 
 
 
