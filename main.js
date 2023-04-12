@@ -403,7 +403,7 @@ if (JSON.parse(localStorage.getItem("user_details"))) {
 }
 
 else{
-    localStorage.setItem("user_details", JSON.stringify([
+
 
 
 // {
@@ -459,7 +459,6 @@ else{
 
 
 
-    ]))
 }
 
 
@@ -468,20 +467,7 @@ if (JSON.parse(localStorage.getItem("user_logged_in"))) {
 }
 
 else{
-    localStorage.setItem("user_logged_in", JSON.stringify([
-// {
-//     player_status
-// : 
-// true,
-// user_email
-// : 
-// "sandeep909600@gmail.com",
-// user_id
-// : 
-// 71
-// }
-
-    ]))
+  
 }
 
 
