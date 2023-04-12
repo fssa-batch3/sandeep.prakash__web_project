@@ -187,9 +187,11 @@
          const loginbtn= document.querySelector(".login")
         
         
-        
-        
-         if(loginUser!==false){
+        if(loginUser==null){
+
+        }
+        else{
+          if(loginUser!==false){
           loginbtn.style.display="none"
           const myprofile=document.createElement("button");
           myprofile.setAttribute("class","login");
@@ -207,6 +209,8 @@
         
          }
         
+        }
+         
         
         let findplayersbtn=document.querySelector(".findplayers")
         findplayersbtn.addEventListener("click",(e)=>{

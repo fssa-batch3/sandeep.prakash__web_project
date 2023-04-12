@@ -5,23 +5,30 @@ const loginbtn= document.querySelector(".login")
 
 
 
-if(loginUser!==false){
- loginbtn.style.display="none"
- const myprofile=document.createElement("button");
- myprofile.setAttribute("class","login");
- myprofile.innerText="My Account"
- myprofile.style.width="150px";
- myprofile.style.left="50px"
- myprofile.addEventListener("click",()=>{
-   window.location.href="../../pages/player/newprofile.html"
- });
- document.querySelector(".contact").append(myprofile)
+if(loginUser==null){
+
 }
 else{
- loginbtn.style.display="block"
+  if(loginUser!==false){
+  loginbtn.style.display="none"
+  const myprofile=document.createElement("button");
+  myprofile.setAttribute("class","login");
+  myprofile.innerText="My Account"
+  myprofile.style.width="150px";
+  myprofile.style.left="50px"
+  myprofile.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  });
+  document.querySelector(".contact").append(myprofile)
+ }
+ else{
+  loginbtn.style.display="block"
+  
+
+ }
 
 }
-
+ 
 
 
 
@@ -1295,108 +1302,7 @@ bookingBtn.addEventListener("submit",(e)=>{
   e.preventDefault();
  getBookingInfo();
  getgroundData();
-
- 
-
-//API SEND REQUESTlet 
-// let groundName=groundOwnerProduct_details
-const arrayConvert = JSON.parse(localStorage.getItem("groundadmin_details"));
-
-let sellerEmail;
-for(let i=0;i<arrayConvert;i++){
-  if(show2["seller_id"]==arrayConvert[i]["seller_id"]){
-    sellerEmail=arrayConvert[i]["seller_email"]
-    
-  }
-}
-let user_email=loginUser[0]["user_email"]
-
-async function sendBookingRequest(){
-
-const subject= "Booking Request"
-const body='Dear seller,\n\nI would like to request a booking for your ground on the following date and time: ...\n\nThank you!';
-
-
-
-
-let response=await fetch("https://642c897cbf8cbecdb4f2d6bc.mockapi.io/bookandplay/sendrequest",{
-
-method:"POST",
-headers:{
-  "Content-Type":"application/json",
-},
-body:JSON.stringify({
-  from:user_email,
-  to:sellerEmail,
-  subject:subject,
-  body:body,
-
-}),
-});
-
-if(response.ok){
-  await new Promise(resolve=> setTimeout(resolve,6000));
-const response2=await fetch("https://642c897cbf8cbecdb4f2d6bc.mockapi.io/bookandplay/acceptrequest",{
-  
-method:"POST",
-headers:{
-  "Content-Type":"application/json",
-},
-body:JSON.stringify({
-  from:sellerEmail,
-  to:user_email,
-  subject:"Book request accepted",
-  body:'Dear buyer,\n\nI have accepted your booking request for the following date and time: ...\n\nThank you!',
-
-}),
-
-});
-
-
-if (response2.ok) {
-  localStorage.setItem("bookingaccepted",true)
-  return true
-  
-} else {
-  return false
-}
-
-
-
-}
-else{
-  return false
-}
-
-
-localStorage.setItem("userEmailbookinginfo",user_email)
-sendBookingRequest(sellerEmail).then(accepted=>{
-
-
-
-  if(accepted){
-    if(JSON.stringify(localStorage.getItem("bookingaccepted"))=="true"){
-      localStorage.removeItem('userEmailbookinginfo');
-      localStorage.removeItem('bookingAccepted');
-    }
-    else{
-      console.log("not");
-    }
-  }
-})
-
-
-}
-
-
-
-
-  // alert("ok");
-  
-
-// popbox.style.display="none"
-
-
+console.log("jihuihuhbuhugu");
 
 
 });
@@ -1460,7 +1366,7 @@ function getgroundData(){
     userbooked_grounds.push(
       {
  "ordered_id":id_generator_booking,
- "user_id":userloggedIn[0].user_id,
+ "request_user_id":userloggedIn[0].user_id,
  "ground_id":show2["ground_id"]
 
       }

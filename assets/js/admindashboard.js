@@ -38,21 +38,32 @@ const id_generator = Math.floor(Math.random() * 300);
 
 
 
-
-
-
 let sellerId = sellerloggedDta[0].seller_Id
 
 
 let groundRecords = JSON.parse(localStorage.getItem("ground_info"));
 
-for (let i = 0; i < groundRecords.length; i++) {
-    let groundsellerincludes = groundRecords[i]["seller_id"]
-    if (sellerId == groundsellerincludes) {
-        fillBtn.style.display = "none"
 
-    }
+if(groundRecords==null){
+// console.log("okokokokok");
 }
+else{
+
+    for (let i = 0; i < groundRecords.length;i++) {
+        // console.log("groundRecords[i]['seller_id']: ", groundRecords[i]['seller_id']);
+        let groundsellerincludes = groundRecords[i]["seller_id"]
+        if (sellerId == groundsellerincludes) {
+            fillBtn.style.display = "none"
+    
+        }
+        else {
+            fillBtn.style.display = "block"
+        }
+    }
+
+
+}
+
 
 
 

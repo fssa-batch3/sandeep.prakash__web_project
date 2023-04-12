@@ -4,24 +4,30 @@ const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 const loginbtn = document.querySelector(".login")
 
 
-if (loginUser !== false) {
-  loginbtn.style.display = "none"
-  const myprofile = document.createElement("button");
-  myprofile.setAttribute("class", "login");
-  myprofile.innerText = "My Account"
-  myprofile.style.width = "150px";
-  myprofile.style.left = "50px"
-  myprofile.addEventListener("click", () => {
-    window.location.href = "../../pages/player/newprofile.html"
+if(loginUser==null){
+
+}
+else{
+  if(loginUser!==false){
+  loginbtn.style.display="none"
+  const myprofile=document.createElement("button");
+  myprofile.setAttribute("class","login");
+  myprofile.innerText="My Account"
+  myprofile.style.width="150px";
+  myprofile.style.left="50px"
+  myprofile.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
   });
   document.querySelector(".contact").append(myprofile)
-}
-else {
-  loginbtn.style.display = "block"
+ }
+ else{
+  loginbtn.style.display="block"
+  
+
+ }
 
 }
-
-
+ 
 
 
 
@@ -462,6 +468,7 @@ console.log(groundOwnerProduct);
 // ground_list.push(groundOwnerProduct);
 
 let filtered;
+console.log(filtered);
 filtered = groundOwnerProduct.filter((item => {
   if (item["status"] == true) {
     return true
@@ -960,8 +967,8 @@ searchbox.addEventListener("keydown", (e) => {
 
   if (e.key === "Enter") {
     e.preventDefault();
-    e.stopPropagation();
-    // return false
+    // e.stopPropagation();
+    // // return false
 
   }
   const filteredList = filteredData.filter((item) => {

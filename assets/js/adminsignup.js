@@ -31,8 +31,7 @@ alert("email id already taken")
 
  else{
     admin_records.push({
-        "seller_id":id_generator,
-      
+            "seller_id":id_generator,
             "seller_name":name1,
             "seller_ground_name":name2,
             "seller_email":email,
