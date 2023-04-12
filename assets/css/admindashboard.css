@@ -69,7 +69,7 @@ top: 30px;
     width: 130px;
     height: 30px;
     position: relative;
-    left: 77px;
+    right: 50px;
     bottom: 5px;
     background-color: rgb(83, 146, 198);
     border: none;
@@ -100,8 +100,8 @@ top: 30px;
     left: 205px;
 }
 #age{
-    position: relative;
-    left:110px;
+    /* position: relative;
+    left:0px; */
 
 }
 .logout{
@@ -154,7 +154,9 @@ cursor: pointer;
 }
 
 
-
+.container2{
+    display: none;
+}
 
 
 

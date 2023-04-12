@@ -54,10 +54,12 @@ else{
         let groundsellerincludes = groundRecords[i]["seller_id"]
         if (sellerId == groundsellerincludes) {
             fillBtn.style.display = "none"
+          
     
         }
         else {
-            fillBtn.style.display = "block"
+            // fillBtn.style.display = "block"
+        
         }
     }
 
@@ -283,13 +285,127 @@ function getSellerGround() {
 
 
 
+//admin proile edit//
+
+
+const editbtn = document.getElementById("editbutton");
+const sideBar2part = document.querySelector("div.sidebar2")
+const containerprofile = document.querySelector("div.container2");
+
+
+
+editbtn.addEventListener("click", () => {
+
+    containerprofile.style.display = "block"
+
+
+})
+const namebox = document.getElementById("name1")
+const groundnamebox = document.getElementById("name2")
+const user_email = document.getElementById("userEmail")
+const user_phone = document.getElementById("phoneno1")
+const user_password = document.getElementById("password");
+
+
+for( let i=0;i<sellerdata.length;i++){
+
+    if(sellerloggedDta[0]["seller_email"]==sellerdata[i]["seller_email"]){
+
+        
+
+
+namebox.value = sellerdata[i]["seller_name"];
+groundnamebox.value = sellerdata[i]["seller_ground_name"];
+user_email.value = sellerdata[i]["seller_email"];
+user_phone.value = sellerdata[i]["seller_phoneno"];
+user_password.value = sellerdata[i]["seller_password"];
+
+
+
+    }
+    
+}
+
+
+// edit update
+
+// // edit
+const editbutn = document.querySelector(".profile2");
+editbutn.addEventListener("click", () => {
+
+
+
+
+
+    if (editbutn.innerHTML == "Edit") {
+
+
+        editbutn.innerHTML = "Save"
+        namebox.removeAttribute("disabled");
+        groundnamebox.removeAttribute("disabled")
+        user_phone.removeAttribute("disabled");
+        user_password.removeAttribute("disabled")
+       
+
+    }
+
+    else if (editbutn.innerHTML == "Save") {
+        editbutn.innerHTML = "Edit";
+        namebox.setAttribute("disabled", "");
+        groundnamebox.setAttribute("disabled","")
+        // user_email.setAttribute("disabled","")
+        user_phone.setAttribute("disabled", "");
+        user_password.setAttribute("disabled", "")
+       
+
+    sellerdata.find(e => {
+
+
+
+        if (user_email.value == e["seller_email"]) {
+
+         
+            e["seller_name"] = namebox.value
+            e["user_email"] = user_email.value
+            e["seller_phoneno"] = user_phone.value
+            e["seller_password"] = user_password.value
+e["seller_ground_name"]=groundnamebox.value
+
+
+            localStorage.setItem("groundadmin_details", JSON.stringify(sellerdata));
+
+
+
+        }
+
+
+    })  }
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const logOut = document.querySelector(".logout")
 logOut.addEventListener("click", (e) => {
 
     const log_out = delete sellerloggedDta
 
     localStorage.setItem("seller_logged_in", log_out);
-    window.location.href = "../../pages/login/login.html"
+    window.location.href = "../../pages/admin/adminlogin.html"
 
 
 })
