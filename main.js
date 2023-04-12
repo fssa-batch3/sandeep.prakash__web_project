@@ -1,7 +1,4 @@
 
-
-
-
 if (JSON.parse(localStorage.getItem("ground_info"))) {
     // return
 }
