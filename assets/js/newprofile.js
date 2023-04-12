@@ -209,7 +209,7 @@ join_as_player.addEventListener("click", () => {
     labeltimeto.style.top = "150px";
     user_location.style.top = "120px";
     labellocation.style.top = "120px";
-    user_age.style.top="190px"
+    user_age.style.top="30px"
 
     for (let i = 0; i < user_record.length; i++) {
 
