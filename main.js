@@ -68,7 +68,7 @@ if (JSON.parse(localStorage.getItem("user_logged_in"))) {
 }
 
 else{
-    localStorage.setItem("ground_info", JSON.stringify([
+    localStorage.setItem("user_logged_in", JSON.stringify([
 {
     player_status
 : 
