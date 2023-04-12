@@ -285,7 +285,7 @@ function getSellerGround() {
 
 const logOut = document.querySelector(".logout")
 logOut.addEventListener("click", (e) => {
-    alert("ok")
+
     const log_out = delete sellerloggedDta
 
     localStorage.setItem("seller_logged_in", log_out);
