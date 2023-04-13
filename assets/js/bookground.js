@@ -468,7 +468,6 @@ console.log(groundOwnerProduct);
 // ground_list.push(groundOwnerProduct);
 
 let filtered;
-console.log(filtered);
 filtered = groundOwnerProduct.filter((item => {
   if (item["status"] == true) {
     return true
