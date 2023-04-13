@@ -76,6 +76,8 @@ View the list of available grounds
 - Expected Result:
 The user can view the list of available grounds
  You can also search the grounds and you can search by filtered city
+  first you have to select which city or all areas 
+  and search for the result
 
 
 
@@ -101,6 +103,8 @@ View the list of available player
 - Expected Result:
 The user can view the list of available player
  You can also search the player by name.
+  first you have to select which city or all areas 
+  and search for the result
 
 ### View player details
 - Scenario : Successfully 
