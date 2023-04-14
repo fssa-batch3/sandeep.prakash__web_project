@@ -137,9 +137,9 @@ Click the "login" button.
 The user is redirected to the seller user profile  page.
 
 ### Seller Profile
-There you can update your information except email:
-Then you can create your ground by filling the form you are allowed to create one ground.
-Then you can update your ground information by clicking My Ground
+- There you can update your information except email:
+-Then you can create your ground by filling the form you are allowed to create one ground.
+- Then you can update your ground information by clicking My Ground
 
 
 
