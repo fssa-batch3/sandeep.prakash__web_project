@@ -115,6 +115,35 @@ Navigate to the player listing page.
 Select a player to view its details.
 - Expected Result:
 The user can view the details of the selected player
+ 
+
+### Seller USER SCENARIO STORY Bottom of my page
+### Create an account
+- Scenario : Successfully create an account
+- Steps:
+Click the login buttton if your are a new user sign up in registration page.
+Enter the required information such as name, email,phone number and password.
+Click the "Register" button.
+- Expected Result:
+The seller user is redirected to the login page.
+
+### Login
+- Scenario : Successfully login in to account
+- Steps:
+Navigate to the login page.
+Enter the required information such as email, and password.
+Click the "login" button.
+- Expected Result:
+The user is redirected to the seller user profile  page.
+
+### Seller Profile
+- There you can update your information except email:
+- Then you can create your ground by filling the form you are allowed to create one ground.
+- Then you can update your ground information by clicking My Ground
+
+
+
+
 
 
 
