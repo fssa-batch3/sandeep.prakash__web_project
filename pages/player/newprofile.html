@@ -56,6 +56,10 @@
                         <i class='bx bx-history'></i>
                         <span>Booking History</span>
                     </div>
+                    <div class="bookinghistory">
+                        <i class='bx bx-history'></i>
+                        <span>Current Booking</span>
+                    </div>
                     <div class="analytics">
                         <i class='bx bxs-analyse'></i>
                         <span>Analytics</span>
@@ -94,17 +98,17 @@
                             <input type="name" id="name1"  disabled><br>
 
                             <label class="labelname">Email:</label><br>
-                            <input type="email" id="userEmail" aria-label="email" disabled><br>
+                            <input type="email" id="userEmail" aria-label="email" ><br>
                             <label class="labelname">Phone Number:</label><br>
-                            <input type="text" id="phoneno1" aria-label="phone number" disabled><br>
+                            <input type="text" id="phoneno1" aria-label="phone number"  pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" title="Please enter a valid 10-digit phone number" disabled  required><br>
                             <label class="labelname">Password:</label><br>
-                            <input type="password" id="password" aria-label="password" disabled><br>
+                            <input type="password" id="password" aria-label="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters." disabled><br>
 
 
                           
 
 
-                        </form>
+                        
                         <div class="joinplayer">
                             <input type="checkbox" id="checkjoinplayer1"><label class="joinasplayer">Join as a player</label>
                         </div>
@@ -119,6 +123,7 @@
                                 <option>Tennis</option>
 
                             </select><br> -->
+                           
                             <div id="sportss">
 
                                 <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket" disabled>
@@ -151,8 +156,8 @@
                             <input type="time" id="timingsto" aria-label="timingtoo" value="5:00"  disabled>
                         </div>
                         <br>
-                        <button class="profile2" type="button">Edit</button>
-
+                        <button class="profile2" type="submit">Edit</button>
+                    </form>
                     </div>
 
 

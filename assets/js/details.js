@@ -30,6 +30,22 @@ else{
 }
  
 
+let findplayersbtn=document.querySelector(".findplayers")
+findplayersbtn.addEventListener("click",(e)=>{
+  if( !loginUser || loginUser[0]["player_status"]==false ){
+    alert("Please join as a player  or login to find players ")
+    e.preventDefault();
+  }
+ 
+
+  else{
+    window.location.href="./pages/player/findplayers.html";
+  }
+
+
+
+})
+
 
 
 
@@ -1158,23 +1174,23 @@ div_book2.append(br_tag16);
 
 
 // sportsselect
-// span_sportsSelect=document.createElement("span")
-// span_sportsSelect.setAttribute("class","headingbook")
-// span_sportsSelect.innerText="Courts"
-// div_book2.append(span_sportsSelect);
+span_sportsSelect=document.createElement("span")
+span_sportsSelect.setAttribute("class","headingbook")
+span_sportsSelect.innerText="Courts"
+div_book2.append(span_sportsSelect);
 
-// select_sports=document.createElement("select")
-// select_sports.setAttribute("class","sportss");
-// div_book2.append(select_sports);
+select_sports=document.createElement("select")
+select_sports.setAttribute("class","sportss");
+div_book2.append(select_sports);
 
 
-// // loopit
-// for(let i=0;i<=2;i++){
-//     option_sports=document.createElement("option");
-//     // option_sports.innerText=show["sportsoptions"]["sports"+i]
-//     select_sports.append(option_sports)
+// loopit
+for(let i=0;i<=3;i++){
+    option_sports=document.createElement("option");
+    // option_sports.innerText=show["sportsoptions"]["sports"+i]
+    select_sports.append(option_sports)
     
-// }
+}
 
 
 br_tag12=document.createElement("br");
@@ -1269,6 +1285,7 @@ const bookingBtn=document.getElementById("formbook_btn");
 const bookbtn=document.querySelector(".paycash")
 bookbtn.addEventListener("click",(e)=>{
   e.preventDefault()
+  checkUser();
 
   // alert("ok");
 
@@ -1287,6 +1304,15 @@ popbox.style.display="none"
 })
 
 
+function checkUser(){
+  if( !loginUser ){
+    alert("Please login to book grounds ")
+    e.preventDefault();
+  }
+
+}
+
+
 
 
 
@@ -1301,11 +1327,16 @@ let userloggedIn =JSON.parse(localStorage.getItem("user_logged_in"));
 bookingBtn.addEventListener("submit",(e)=>{
   e.preventDefault();
  getBookingInfo();
- getgroundData();
 console.log("jihuihuhbuhugu");
 
 
 });
+
+
+
+
+
+
 
 function getBookingInfo(){
 
@@ -1333,11 +1364,16 @@ else{
 
   userBookingInfo.push(
     {
+      "ordered_id":id_generator_booking,
+      "request_user_id":userloggedIn[0].user_id,
+      "ground_id":show2["ground_id"],
+      "seller_id":show2["seller_id"],
       "booking_Date":bookDate,
       "booking_time":selectTimings,
       "booking_sports":selectSports,
       "booking_duration":selectDuration,
-      "selected_players":selectplayers
+      "selected_players":selectplayers,
+      "booking_status":"pending"
     }
   );
   
@@ -1351,31 +1387,31 @@ localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
 
 
 }
-function getgroundData(){
+// function getgroundData(){
 
 
 
-  let userbooked_grounds=new Array();
-  userbooked_grounds=JSON.parse(localStorage.getItem("bookingGroundInfo")) ?
-  JSON.parse(localStorage.getItem("bookingGroundInfo")) : []
+//   let userbooked_grounds=new Array();
+//   userbooked_grounds=JSON.parse(localStorage.getItem("bookingGroundInfo")) ?
+//   JSON.parse(localStorage.getItem("bookingGroundInfo")) : []
   
 
   
   
   
-    userbooked_grounds.push(
-      {
- "ordered_id":id_generator_booking,
- "request_user_id":userloggedIn[0].user_id,
- "ground_id":show2["ground_id"]
+//     userbooked_grounds.push(
+//       {
+//  "ordered_id":id_generator_booking,
+//  "request_user_id":userloggedIn[0].user_id,
+//  "ground_id":show2["ground_id"]
 
-      }
-    );
+//       }
+//     );
     
   
   
 
-  localStorage.setItem("bookingGroundInfo", JSON.stringify(userbooked_grounds))
+//   localStorage.setItem("bookingGroundInfo", JSON.stringify(userbooked_grounds))
     
   
   
@@ -1385,7 +1421,7 @@ function getgroundData(){
 
 
   
-}
+// }
 
 
 

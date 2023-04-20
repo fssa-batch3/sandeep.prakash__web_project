@@ -31,7 +31,7 @@
 </div><br>
     <label >Email:</label><br>
     <div class="boxform">
-    <input type="email" placeholder="Email address " id="email" aria-label="email" name="email-id" required><br>
+    <input type="email" placeholder="Email address " id="email" aria-label="email" name="email-id"   pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  required><br>
     <i class="fa-regular fa-circle-check"></i>
     <i class="fa-solid fa-circle-exclamation"></i>
 </div><br>
@@ -43,7 +43,7 @@
 </div><br>
     <label >Password:</label><br>
     <div class="boxform">
-    <input type="password" placeholder="Password" id="password" aria-label="Password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"title="PLease fill the password with one symbols and Upper case" required><br>
+    <input type="password" placeholder="Password" id="password" aria-label="Password" name="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters." required><br>
     <i class="fa-regular fa-circle-check"></i>
     <i class="fa-solid fa-circle-exclamation"></i>
 </div><br>

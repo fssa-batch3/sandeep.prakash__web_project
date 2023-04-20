@@ -200,16 +200,21 @@ join_as_player.addEventListener("click", () => {
     labeltimeto.style.display = "block"
     labelsports.style.display = "block"
     labelage.style.display = "block"
-    editbutn1.style.top = "190px"
+    editbutn1.style.top = "80px"
     labelage.style.top = "50px";
-    formsdiv.style.height = "1250px"
-    user_timingsfrom.style.top = "150px";
-    user_timingsto.style.top = "150px";
-    labeltime.style.top = "120px"
+    formsdiv.style.height = "1220px"
+    user_timingsfrom.style.top = "160px";
+    user_timingsto.style.top = "60px";
+    labeltime.style.top = "160px"
     labeltimeto.style.top = "150px";
-    user_location.style.top = "120px";
-    labellocation.style.top = "120px";
+    user_location.style.top = "170px";
+    labellocation.style.top = "170px";
     user_age.style.top="30px"
+    // p_jointext.style.left="none";
+    sportname1.style.left = "20px"
+    sportname2.style.left = "20px"
+    sportname3.style.left = "20px"
+  
 
     for (let i = 0; i < user_record.length; i++) {
 
@@ -231,20 +236,25 @@ join_as_player.addEventListener("click", () => {
 
 
 
-
-
 // // edit
-const editbutn = document.querySelector(".profile2");
-editbutn.addEventListener("click", () => {
+const editbutn = document.getElementById("formbox");
+
+// const editbutn1 = document.querySelector(".profile2");
+
+editbutn.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    console.log("nfff");
 
 
 
 
 
-    if (editbutn.innerHTML == "Edit") {
+    if (editbutn1.innerHTML == "Edit") {
 
 
-        editbutn.innerHTML = "Save"
+        editbutn1.innerHTML = "Save"
+        console.log("namebox disabled before:", namebox.disabled);
         // user_email.removeAttribute("disabled")
         namebox.removeAttribute("disabled");
         fsidename.removeAttribute("disabled")
@@ -261,8 +271,8 @@ editbutn.addEventListener("click", () => {
 
     }
 
-    else if (editbutn.innerHTML == "Save") {
-        editbutn.innerHTML = "Edit";
+    else if (editbutn1.innerHTML == "Save") {
+        editbutn1.innerHTML = "Edit";
         namebox.setAttribute("disabled", "");
         // user_email.setAttribute("disabled","")
         user_phone.setAttribute("disabled", "");
@@ -372,7 +382,7 @@ editbutn.addEventListener("click", () => {
 
 //     }
 // }
-
+//logout
 const logOut = document.querySelector(".logout")
 logOut.addEventListener("click", (e) => {
 
@@ -471,7 +481,7 @@ for (let i = 0; i < user_record.length; i++) {
 
         let box2 = document.querySelector(".box2")
         anchorbk = document.createElement("a");
-        anchorbk.setAttribute("href", "../../pages/booking history/bookinghistory.html?userid=" + user_record[i]["user_id"])
+        anchorbk.setAttribute("href", "../../pages/bookinground/mybooking.html?userid=" + user_record[i]["user_id"])
         // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
         box2.append(anchorbk)
 

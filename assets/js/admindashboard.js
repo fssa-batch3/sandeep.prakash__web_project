@@ -98,6 +98,11 @@ function getSellerGround() {
     const groundRules = (document.getElementById("rules").value);
     const groundCity = (document.getElementById("sportsvalue").value);
     const groundPrice = (document.getElementById("amount").value);
+    const groundincreasingPrice = (document.getElementById("increaseamount").value);
+
+
+
+
 
 
     console.log(id_generator);
@@ -130,6 +135,7 @@ function getSellerGround() {
             "ground_rules": groundRules,
             "ground_city": groundCity,
             "ground_price": groundPrice,
+            "groundIncreasePrice":groundincreasingPrice,
             "status": true
         });
 

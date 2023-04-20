@@ -4,51 +4,7 @@
     margin: 0px;
     padding: 0px;
 }
-/* 
-.logo img{
-    width:  130px;
-    height: 48px;
-    position: relative;
-    left: 20px;
-    top: 30px;
-}
-.sidebar ul li{
-    position: relative;
-    left: 30px;
-    top: 70px;
-    list-style-type: none;
-    height: 80px;
-    font-size:x-large;
-}
-.sidebar{
-    background-color: rgb(71, 71, 196);
-    width: 260px;
-    height: 860px;
-}
-.sidebar ul li i{
-    height: 50px;
-    min-width: 50px;
-    border-radius: 20px;
-line-height: 50px;
-position: relative;
-top: 4px;
-}
-.logout{
-    position: relative;
-    left: 30px;
-    top: 350px;
-}
 
-.logout i{
-    height: 50px;
-    width: 50px;
-    min-width: 50px;
-    border-radius: 20px;
-line-height: 50px;
-position: relative;
-top: 4px;
-/* left: 30px; */
-/* } */ *
 
 .sidebar{
     display: grid;
@@ -61,8 +17,9 @@ top: 4px;
     background-color: rgb(165, 172, 172);
     position: relative;
     left: 10px;
-    border-radius: 50px;
+    border-radius: 20px;
   margin: 12px 10px;
+  height: 120vh;
   /* position: static; */
 }
 .sidebar2{
@@ -259,7 +216,7 @@ form input {
     left: 35%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 990px;
+    height: 1100px;
 
 
 }
@@ -278,6 +235,8 @@ form input {
     height: 35px;
     border-radius: 5px;
     border: 1px solid black;
+    margin-right: 220px;
+    
 
 }
 #userEmail{
@@ -307,11 +266,23 @@ form input {
 }
 
 
-.labelname ,.labelnamel,.labelnametime,.labelnamea,.labelnames{
+.labelname ,.labelnametime,.labelnamea,.labelnames{
     font-size: 20px;
     font-weight: 500;
     position: relative;
 }
+.labelnametime{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    margin-top: 5px;
+
+}
+.labelnamel{
+    position: relative;
+    top: 110px;
+}
+
 #sportss {
     width: 50%;
     height: 35px;
@@ -337,17 +308,36 @@ form input {
     text-align: center;
     border-radius: 5px;
     position: relative;
+ top: 99px;
 
 }
-#timingsfrom,#timingsto{
+#timingsfrom{
     width: 50%;
     height: 35px;
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
     position: relative;
+   top: 102px;
 
 
+
+}
+.labelnametime{
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 90px;
+}
+
+#timingsto{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 93px;
 
 }
 /* button */
@@ -362,31 +352,42 @@ form input {
     margin-bottom: 5px;
     position: relative;
     background-color: rgba(12, 175, 23, 0.783);
-    margin-left: 160px;
-    /* left: 163px; */
     box-shadow: 0 3px 10px rgb(3, 10, 87);
 
+}
+.pjointext{
+    position: relative;
+    bottom: 300px;
 }
 #checkjoinplayer1{
     font-size: 10px;
     position: relative;
-    left: 143px;
-    top: 35px;
+    left: 48px;
+    top: 60px;
 }
 .joinplayer label{
 position: relative;
-left: 150px;
-top: 37px;
+right: 80px;
+top: 57px;
 font-size: 20px;
 
 
 }
 .timep{
     position: relative;
-}
-#sportsavail2{
     position: relative;
-    left: 3px;
+    top: 90px;
+}
+#sportsavail2,#sportsavail1,#sportsavail3{
+    position: relative;
+    right: 110px;
+    top: 33px;
 
 
+}
+.sportname1,.sportname2,.sportname3{
+    position: relative;
+}
+.labelnamea{
+   margin-right: 400px;
 }
