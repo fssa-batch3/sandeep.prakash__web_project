@@ -127,7 +127,24 @@ const ground_details=[
    "player10":"11",
    "player11":"12",
    "player12":"13"
+  },
+  "courtsoptions":{
+    "courts0":"1",
+    "courts1":"2",
+    "courts2":"3",
+    "courts3":"4",
+    "courts4":"5",
+    "courts5":"6",
+    
+
+
+  },
+  "optionvalue":{
+    "value0":"1",
+    "value1":"2",
+    "value2":"3",
   }
+
 
     },
     {
@@ -1140,7 +1157,8 @@ div_book2.append(select_duration);
 // loopit
 for(let i=0;i<=2;i++){
     option_duration=document.createElement("option");
-    option_duration.innerText=ground_details[0]["durationoptions"]["duration"+i]
+    option_duration.innerText=ground_details[0]["durationoptions"]["duration"+i];
+    option_duration.setAttribute("value",ground_details[0]["optionvalue"]["value"+i])
     select_duration.append(option_duration)
 }
 
@@ -1193,10 +1211,10 @@ div_book2.append(select_sports);
 
 
 // loopit
-for(let i=0;i<=3;i++){
-    option_sports=document.createElement("option");
-    // option_sports.innerText=show["sportsoptions"]["sports"+i]
-    select_sports.append(option_sports)
+for(let i=0;i<=5;i++){
+    option_courts=document.createElement("option");
+    option_courts.innerText=ground_details[0]["courtsoptions"]["courts"+i]
+    select_sports.append(option_courts)
     
 }
 
@@ -1434,3 +1452,11 @@ localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
 
 
 
+// change  amount
+
+
+let extraHours=document.querySelector(".durations");
+extraHours.addEventListener("click",()=>{
+ let value=extraHours.value
+ console.log(value);
+})
