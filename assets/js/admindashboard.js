@@ -100,7 +100,7 @@ function getSellerGround() {
     const groundPrice = (document.getElementById("amount").value);
     const groundincreasingPrice = (document.getElementById("increaseamount").value);
 
-
+const groundCourts=document.getElementById("sportscourts").value
 
 
 
@@ -136,6 +136,7 @@ function getSellerGround() {
             "ground_city": groundCity,
             "ground_price": groundPrice,
             "groundIncreasePrice":groundincreasingPrice,
+            "groundCourt":groundCourts,
             "status": true
         });
 

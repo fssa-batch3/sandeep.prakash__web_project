@@ -35,6 +35,8 @@ const labelage = document.querySelector(".labelnamea");
 const join_as_player = document.getElementById("checkjoinplayer1");
 const join_player_word = document.querySelector(".joinasplayer");
 const joinform = document.getElementById("formbox");
+// const joinPlayer=document.querySelector(".pjointext");
+// console.log(joinPlayer+"ok");
 // profile image
 const imageShow = document.querySelector(".profileimg");
 let ok = "../../assets/images/avatorprofile.jpg"
@@ -92,8 +94,10 @@ for (let i = 0; i < user_record.length; i++) {
 
 
         }
+        
         else {
 
+            //  p_jointext.style.display="none";
             join_as_player.style.display = "none"
             join_player_word.style.display = "none"
             if (loggedIn[0]["user_email"] == user_record[i]["user_email"]) {
@@ -130,6 +134,8 @@ for (let i = 0; i < user_record.length; i++) {
                 break;
 
             }
+     
+
 
 
         }
@@ -137,7 +143,8 @@ for (let i = 0; i < user_record.length; i++) {
 }
 
 
-
+const joinPlayer=document.querySelector(".pjointext");
+// console.log(joinPlayer+12);
 
 
 
@@ -183,8 +190,7 @@ for (let i = 0; i < user_record.length; i++) {
 
 join_as_player.addEventListener("click", () => {
 
-
-
+joinPlayer.style.bottom="650px"
     user_age.style.display = "block"
     user_location.style.display = "block"
     user_timingsfrom.style.display = "block"
@@ -210,10 +216,18 @@ join_as_player.addEventListener("click", () => {
     user_location.style.top = "170px";
     labellocation.style.top = "170px";
     user_age.style.top="30px"
-    // p_jointext.style.left="none";
+    // joinPlayer.style.display="none";
     sportname1.style.left = "20px"
     sportname2.style.left = "20px"
     sportname3.style.left = "20px"
+
+    user_age.required = true;
+    user_location.required = true;
+    user_timingsfrom.required = true;
+    user_timingsto.required = true;
+    sportname1.required = true;
+ sportname2.required = true;
+ sportname3.required = true;
   
 
     for (let i = 0; i < user_record.length; i++) {

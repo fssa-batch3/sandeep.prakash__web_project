@@ -25,21 +25,21 @@
                 <label>Your Name:</label><br>
                 <div class="boxform">
                     <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="name"
-                        pattern="[a-zA-Z0-9]+" required><br>
+                    pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required><br>
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div><br>
                 <label>Organisation/Ground Name:</label><br>
                 <div class="boxform">
                     <input type="name" placeholder="Your Name " id="name2" aria-label="name" name="name"
-                        pattern="[a-zA-Z0-9]+" required><br>
+                    pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required><br>
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div><br>
                 <label>Email:</label><br>
                 <div class="boxform">
                     <input type="email" placeholder="Email address " id="email" aria-label="email" name="email-id"
-                        required><br>
+                    pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  required><br>
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div><br>
@@ -58,7 +58,7 @@
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div><br>
-                <label>Proof of business certificate:</label><br>
+                <!-- <label>Proof of business certificate:</label><br> -->
                 <!-- <div class="boxform">
 <input type="file" placeholder="Password" id="poc" aria-label="Password" name="password" title="PLease fill the password with one symbols and Upper case" required><br>
 <i class="fa-regular fa-circle-check"></i>

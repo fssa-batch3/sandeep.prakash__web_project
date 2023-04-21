@@ -17,8 +17,9 @@
     <div class="forms">
       <h1 class="sign">Sign in</h1>
       <form id="loginform">
-        <input type="email" placeholder="Email address " id="email" aria-label="email"><br>
-        <input type="password" placeholder="Password" id="password" aria-label="password"><br>
+        <input type="email" placeholder="Email address " id="email" aria-label="email"   pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
+        <input type="password" placeholder="Password" id="password" aria-label="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+        title="PLease fill the password with one symbols and Upper case" required><br>
         <!-- <a href="../../index.html"><input type="button" value="Login" id="login" aria-label="button" ></a> -->
         <button id="login" type="submit">Login</button><br>
         <a class="fp" href="#">Forget password</a><br>

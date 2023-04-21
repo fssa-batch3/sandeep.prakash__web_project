@@ -89,6 +89,9 @@ top: 30px;
     left:110px;
 
 }
+#age::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
 .logout{
     font-size: 15px;
     padding: 2px 2px;

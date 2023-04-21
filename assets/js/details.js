@@ -83,18 +83,22 @@ const ground_details=[
   "price":"500",
   "groundbooking":"DNF TURF BOOKING",
   "timingoptions":{
-    "timing0":"8:00AM-9:00AM",
-    "timing1":"9:00AM-10:00AM",
-    "timing2":"10:00AM-11:00AM",
-    "timing3":"11:00AM-12:00AM",
-    "timing4":"8:00AM-9:00AM",
-    "timing5":"8:00AM-9:00AM",
-    "timing6":"8:00AM-9:00AM",
-    "timing7":"8:00AM-9:00AM",
-    "timing8":"8:00AM-9:00AM",
-    "timing9":"8:00AM-9:00AM",
-    "timing10":"8:00AM-9:00AM",
-    "timing11":"8:00AM-9:00AM",
+    "timing0":"6:00AM-7:00AM",
+    "timing1":"7:00AM-8:00AM",
+    "timing2":"9:00AM-10:00AM",
+    "timing3":"10:00AM-11:00AM",
+    "timing4":"11:00AM-12:00PM",
+    "timing5":"12:00PM-01:00PM",
+    "timing6":"01:00PM-02:00PM",
+    "timing7":"02:00PM-03:00PM",
+    "timing8":"03:00PM-04:00PM",
+    "timing9":"04:00PM-05:00PM",
+    "timing10":"05:00PM-06:00PM",
+    "timing11":"6:00PM-7:00PM",
+    "timing12":"7:00PM-8:00PM",
+    "timing13":"9:00PM-10:00PM",
+    "timing14":"10:00PM-11:00PM",
+    "timing15":"11:00PM-12:00AM",
 
   },
   "sportsoptions":{
@@ -151,18 +155,22 @@ const ground_details=[
   "price":"500",
   "groundbooking":"DNF TURF BOOKING",
   "timingoptions":{
-    "timing0":"8:00AM-9:00AM",
-    "timing1":"8:00AM-10:00AM",
-    "timing2":"8:00AM-9:00AM",
-    "timing3":"8:00AM-9:00AM",
-    "timing4":"8:00AM-9:00AM",
-    "timing5":"8:00AM-9:00AM",
-    "timing6":"8:00AM-9:00AM",
-    "timing7":"8:00AM-9:00AM",
-    "timing8":"8:00AM-9:00AM",
-    "timing9":"8:00AM-9:00AM",
-    "timing10":"8:00AM-9:00AM",
-    "timing11":"8:00AM-9:00AM",
+    "timing0":"6:00AM-7:00AM",
+    "timing1":"7:00AM-8:00AM",
+    "timing2":"9:00AM-10:00AM",
+    "timing3":"10:00AM-11:00AM",
+    "timing4":"11:00AM-12:00PM",
+    "timing5":"12:00PM-01:00PM",
+    "timing6":"01:00PM-02:00PM",
+    "timing7":"02:00PM-03:00PM",
+    "timing8":"03:00PM-04:00PM",
+    "timing9":"04:00PM-05:00PM",
+    "timing10":"05:00PM-06:00PM",
+    "timing11":"6:00PM-7:00PM",
+    "timing12":"7:00PM-8:00PM",
+    "timing13":"9:00PM-10:00PM",
+    "timing14":"10:00PM-11:00PM",
+    "timing15":"11:00PM-12:00AM",
 
   },
   "sportsoptions":{
@@ -1080,7 +1088,7 @@ div_book2.append(select_timings);
 
 
 // loopit
-for(let i=0;i<=11;i++){
+for(let i=0;i<=15;i++){
     option_timings=document.createElement("option");
     option_timings.innerText=ground_details[0]["timingoptions"]["timing"+i];
     select_timings.append(option_timings)

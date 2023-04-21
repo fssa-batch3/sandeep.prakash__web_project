@@ -19,13 +19,13 @@
 
     <label >First Name:</label><br>
     <div class="boxform">
-    <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="name" pattern="[a-zA-Z0-9]+" required><br>
+    <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="name" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required><br>
     <i class="fa-regular fa-circle-check"></i>
     <i class="fa-solid fa-circle-exclamation"></i>
 </div><br>
     <label >Last Name:</label><br>
     <div class="boxform">
-    <input type="name" placeholder="Your Name " id="name2" aria-label="name" name="name"  pattern="[a-zA-Z0-9]+" required><br>
+    <input type="name" placeholder="Your Name " id="name2" aria-label="name" name="name"  pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required><br>
     <i class="fa-regular fa-circle-check"></i>
     <i class="fa-solid fa-circle-exclamation"></i>
 </div><br>
@@ -62,13 +62,13 @@
     <!-- <p class="labelname"> Display Name:</p><br>
         <input type="name" placeholder="Your Name " id="name" aria-label="name" ><br>  -->
         <p class="labelname">Age :</p><br>
-        <input type="number" placeholder="Age " id="age" aria-label="age" ><br> 
+        <input type="number" placeholder="Age " id="age" aria-label="age" min="1" max="120" pattern="^(1[8-9]|[2-9][0-9])$" title="The age should contain 1 to 120"><br> 
 
      
             
         <div class="select">
             <p class="labelname">Gender</p><br>
-            <input type="name" placeholder="Gender " id="gender" aria-label="gender" ><br> 
+            <input type="name" placeholder="Gender " id="gender" aria-label="gender" pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." ><br> 
        
         <p class="labelname">Known Sports:</p><br>
 

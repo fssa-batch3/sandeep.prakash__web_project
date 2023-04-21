@@ -132,8 +132,6 @@ document.querySelector(".parent").append(childdiv)
 
 
 
-
-
 const acceptbtn= document.querySelectorAll(".acceptbtn")
 
 acceptbtn.forEach((button)=>{

@@ -95,14 +95,14 @@
 
                         <form id="formbox">
                             <label class="labelname">Name:</label ><br>
-                            <input type="name" id="name1"  disabled><br>
+                            <input type="name" id="name1"  pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." disabled required ><br>
 
                             <label class="labelname">Email:</label><br>
-                            <input type="email" id="userEmail" aria-label="email" ><br>
+                            <input type="email" id="userEmail" aria-label="email" disabled ><br>
                             <label class="labelname">Phone Number:</label><br>
-                            <input type="text" id="phoneno1" aria-label="phone number"  pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" title="Please enter a valid 10-digit phone number" disabled  required><br>
+                            <input type="text" id="phoneno1" aria-label="phone number"  pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" title="Please enter a valid 10-digit phone number" disabled required><br>
                             <label class="labelname">Password:</label><br>
-                            <input type="password" id="password" aria-label="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters." disabled><br>
+                            <input type="password" id="password" aria-label="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters." required disabled ><br>
 
 
                           
@@ -113,7 +113,7 @@
                             <input type="checkbox" id="checkjoinplayer1"><label class="joinasplayer">Join as a player</label>
                         </div>
                         <label class="labelnamea">Age :</label><br>
-                        <input type="number" id="age"  disabled><br><br>
+                        <input type="number" id="age"  min="1" max="120" pattern="^(1[8-9]|[2-9][0-9])$" title="The age should contain 1 to 120" disabled ><br><br>
                         <div class="select">
                             <p class="labelnames">Known Sports:</p><br>
                             <!-- <select id="sportss"disabled>
@@ -137,7 +137,8 @@
                             </div><br>
 
                             <p class="labelnamel">Location</p><br>
-                            <select id="locationselect" disabled>
+                            <select id="locationselect" disabled >
+
                                 <option>Chennai</option>
                                 <option>Coimbatore</option>
                                 <option>Salem</option>
@@ -150,7 +151,7 @@
 
                             </select><br>
                             <p class="labelnametime">Timing Available</p><br>
-                            <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"  disabled><br>
+                            <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"  disabled ><br>
 
                             <p class="timep">To</p><br>
                             <input type="time" id="timingsto" aria-label="timingtoo" value="5:00"  disabled>
