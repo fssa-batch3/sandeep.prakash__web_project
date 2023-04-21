@@ -1456,7 +1456,8 @@ localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
 
 
 let extraHours=document.querySelector(".durations");
-extraHours.addEventListener("click",()=>{
+extraHours.addEventListener("change",()=>{
  let value=extraHours.value
  console.log(value);
+
 })
