@@ -573,7 +573,7 @@ function groundData( array=[]){
     //anchor
     anchor = document.createElement("a");
     // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-    anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
+    anchor.setAttribute("href", "../../pages/bookinground/ground1.html?ground_Id=" + item.ground_id)
     div_child.append(anchor)
 
     // <button class="book"></button>
