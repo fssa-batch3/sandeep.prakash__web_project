@@ -1153,6 +1153,10 @@ select_duration.setAttribute("class","durations");
 select_duration.setAttribute("required","");
 div_book2.append(select_duration);
 
+sel_duration=document.createElement("option");
+sel_duration.innerText="Select an Option";
+select_duration.append(sel_duration)
+
 
 // loopit
 for(let i=0;i<=2;i++){
@@ -1161,6 +1165,7 @@ for(let i=0;i<=2;i++){
     option_duration.setAttribute("value",ground_details[0]["optionvalue"]["value"+i])
     select_duration.append(option_duration)
 }
+select_duration.options[0].removeAttribute("selected");
 
 
 
@@ -1454,10 +1459,50 @@ localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
 
 // change  amount
 
+let pricediv=parseInt(p_priceamount.innerText);
+let newadded=parseInt(show2["groundIncreasePrice"]);
+let newprice=pricediv
+
+let one=newprice=pricediv+newadded;
+console.log(one);
+let two =newprice=pricediv+newadded*2;
+console.log(two);
+let three=newprice=pricediv+newadded*3
+
+
 
 let extraHours=document.querySelector(".durations");
 extraHours.addEventListener("change",()=>{
  let value=extraHours.value
  console.log(value);
 
+
+ if(value==1 ){
+  p_priceamount.innerText=one
+ }
+ else if(value==2){
+
+  p_priceamount.innerText=two
+ }
+ else if(value==3){
+
+  p_priceamount.innerText=three
+  
+ }
+ else{
+  p_priceamount.innerText=show2["ground_price"]
+ }
+
+
 })
+
+
+// for date 
+
+let date = document.getElementById("date");
+console.log(date);
+//let today = new Date().toISOString().split("T")[0];
+let today=new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
+.toISOString()
+.split("T")[0];
+date.setAttribute("min", today);

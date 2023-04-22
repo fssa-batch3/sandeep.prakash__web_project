@@ -32,7 +32,7 @@
                 <label>Organisation/Ground Name:</label><br>
                 <div class="boxform">
                     <input type="name" placeholder="Your Name " id="name2" aria-label="name" name="name"
-                    pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required><br>
+                    pattern="^[a-zA-Z ]{3,50}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required><br>
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div><br>
@@ -53,8 +53,7 @@
                 <label>Password:</label><br>
                 <div class="boxform">
                     <input type="password" placeholder="Password" id="password" aria-label="Password" name="password"
-                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
-                        title="PLease fill the password with one symbols and Upper case" required><br>
+                    pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character" required><br>
                     <i class="fa-regular fa-circle-check"></i>
                     <i class="fa-solid fa-circle-exclamation"></i>
                 </div><br>

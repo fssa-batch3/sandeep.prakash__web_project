@@ -33,6 +33,10 @@ const groundTimingTo = (document.getElementById("timingsto"));
 const groundRules = (document.getElementById("rules"));
 const groundCity = (document.getElementById("sportsvalue"));
 const groundPrice = (document.getElementById("amount"));
+const groundincreasingPrice = (document.getElementById("increaseamount"))
+
+const groundCourts=document.getElementById("sportscourts")
+console.log(groundCourts);
 
 
 
@@ -76,6 +80,8 @@ groundTimingTo.value = sellerProducts["ground_timing_to"]
 groundRules.value = sellerProducts["ground_rules"]
 groundCity.value = sellerProducts["ground_city"]
 groundPrice.value = sellerProducts["ground_price"]
+groundincreasingPrice.value=sellerProducts["groundIncreasePrice"];
+groundCourts.value=sellerProducts["groundCourt"]
 
 }
 
@@ -92,8 +98,8 @@ groundPrice.value = sellerProducts["ground_price"]
 
 // // update 
 
-const updatebutton = document.getElementById("updatebtn")
-updatebutton.addEventListener("click", () => {
+const updatebutton = document.getElementById("formbtn")
+updatebutton.addEventListener("submit", () => {
 
   sellerProducts["ground_name"] = groundName.value;
            sellerProducts["ground_Place"] = groundPlace.value
@@ -110,13 +116,13 @@ updatebutton.addEventListener("click", () => {
            sellerProducts["ground_rules"] = groundRules.value
            sellerProducts["ground_city"] = groundCity.value
            sellerProducts["ground_price"] = groundPrice.value
+           sellerProducts["groundIncreasePrice"]=groundincreasingPrice.value
+           sellerProducts["groundCourt"]=groundCourts.value
 
 
             localStorage.setItem("ground_info", JSON.stringify(groundRecords))
 
 
-       
- 
 
 })
 

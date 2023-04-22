@@ -478,114 +478,233 @@ filtered = groundOwnerProduct.filter((item => {
   }
 }))
 
+groundData(filtered)
 
 
-for (let i = 0; i < filtered.length; i++) {
-  //  <div class="child"> </div>
-  div_child = document.createElement("div");
-  div_child.setAttribute("class", "child");
-  div_child.setAttribute("value", filtered[i]["ground_city"])
-  // console.log(div_child);
-  //<br>
-  br_tag = document.createElement("br");
-  div_child.append(br_tag);
-  //  <h3 class="card-title"> </h5>
-  h3_card_title = document.createElement("h3");
-  h3_card_title.setAttribute("class", "groundn");
-  h3_card_title.innerText = filtered[i]["ground_name"];
-  div_child.append(h3_card_title);
+function groundData( array=[]){
+  
+  const parentHtmlDiv = document.querySelector(".parent");
+  parentHtmlDiv.innerHTML = "";
 
+  filtered.forEach((item) => {
 
-  //  <img src="" class="groimg" alt=""/>
-  img_card = document.createElement("img");
-  img_card.setAttribute("src", filtered[i]["groundimg1"]);
-  img_card.setAttribute("alt", "groundimage");
-  img_card.setAttribute("class", "groimg");
-  div_child.append(img_card);
-
-  //  <p class="location_name"> </p>
-  p_location_name = document.createElement("p");
-  p_location_name.setAttribute("class", "locationn");
-  p_location_name.innerText = filtered[i]["ground_Place"];
-  div_child.append(p_location_name);
+    const div_child = document.createElement("div");
+    div_child.setAttribute("class", "child");
 
 
 
-  //  <div class="symbol"> </div>
-  div_symbol = document.createElement("div");
-  div_symbol.setAttribute("class", "symbol");
-  div_child.append(div_symbol);
+    br_tag = document.createElement("br");
+    div_child.append(br_tag);
+
+    const h3_card_title = document.createElement("h3");
+    h3_card_title.setAttribute("class", "groundn");
+    h3_card_title.innerText = item.ground_name;
+    div_child.append(h3_card_title);
 
 
-  if (groundOwnerProduct[i]["sport_avail_1"] == true) {
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card1 = document.createElement("img");
-    imgicon_card1.setAttribute("class", "sportsicon");
-    imgicon_card1.setAttribute("src", ground_list[i]["sportsicon"]["cricketicon"]);
-    imgicon_card1.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card1);
+    //  <img src="" class="groimg" alt=""/>
+    img_card = document.createElement("img");
+    img_card.setAttribute("src", item.groundimg1);
+    img_card.setAttribute("alt", "groundimage");
+    img_card.setAttribute("class", "groimg");
+    div_child.append(img_card);
 
-  }
-
-  if (groundOwnerProduct[i]["sport_avail_2"] == true) {
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card2 = document.createElement("img");
-    imgicon_card2.setAttribute("class", "sportsicon");
-    imgicon_card2.setAttribute("src", ground_list[i]["sportsicon"]["footballicon"]);
-    imgicon_card2.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card2);
-
-  }
-
-
-  if (groundOwnerProduct[i]["sport_avail_3"] == true) {
-    //  <img src="" class="sportsicon" alt=""/>
-    imgicon_card3 = document.createElement("img");
-    imgicon_card3.setAttribute("class", "sportsicon");
-    imgicon_card3.setAttribute("src", ground_list[i]["sportsicon"]["tennisicon"]);
-    // imgicon_card.setAttribute("alt", "icons");
-    div_symbol.append(imgicon_card3);
-
-  }
+    //  <p class="location_name"> </p>
+    p_location_name = document.createElement("p");
+    p_location_name.setAttribute("class", "locationn");
+    p_location_name.innerText = item.ground_Place;
+    div_child.append(p_location_name);
 
 
 
-  //  <div class="ratings"> </div>
-  div_ratings = document.createElement("div");
-  div_ratings.setAttribute("class", "ratings");
-  div_child.append(div_ratings);
+    //  <div class="symbol"> </div>
+    div_symbol = document.createElement("div");
+    div_symbol.setAttribute("class", "symbol");
+    div_child.append(div_symbol);
 
-  //  <i class="fa-solid fa-star"> </i>
-  i_star = document.createElement("i");
-  i_star.setAttribute("class", "fa-solid fa-star");
-  // h3_card_title.innerText = names[i];
-  div_ratings.append(i_star);
 
-  //  <span class="ratingno"> </span>
-  ratings_no = document.createElement("span");
-  ratings_no.setAttribute("class", "ratingno");
-  ratings_no.innerText = ground_list[i]["ratingsnumber"];
-  div_ratings.append(ratings_no);
+    if (item.sport_avail_1 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card1 = document.createElement("img");
+      imgicon_card1.setAttribute("class", "sportsicon");
+      imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+      imgicon_card1.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card1);
 
-  //anchor
-  anchor = document.createElement("a");
-  // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-  anchor.setAttribute("href", "../../pages/bookinground/ground1.html?ground_Id=" + groundOwnerProduct[i]["ground_id"])
-  div_child.append(anchor)
+    }
 
-  // <button class="book"></button>
-  button_book = document.createElement("button");
-  button_book.setAttribute("class", "book");
-  // button_booknow =document.createTextNode("Book Now")
-  // button_book.append(button_booknow)
-  button_book.innerText = "Book Now"
-  anchor.append(button_book);
+    if (item.sport_avail_2 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card2 = document.createElement("img");
+      imgicon_card2.setAttribute("class", "sportsicon");
+      imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+      imgicon_card2.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card2);
 
-  // console.log(div_child);
-  document.querySelector("div.parent").append(div_child)
+    }
+
+
+    if (item.sport_avail_3 == true) {
+      //  <img src="" class="sportsicon" alt=""/>
+      imgicon_card3 = document.createElement("img");
+      imgicon_card3.setAttribute("class", "sportsicon");
+      imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+      // imgicon_card.setAttribute("alt", "icons");
+      div_symbol.append(imgicon_card3);
+
+    }
+    //  <div class="ratings"> </div>
+    div_ratings = document.createElement("div");
+    div_ratings.setAttribute("class", "ratings");
+    div_child.append(div_ratings);
+
+    //  <i class="fa-solid fa-star"> </i>
+    i_star = document.createElement("i");
+    i_star.setAttribute("class", "fa-solid fa-star");
+    // h3_card_title.innerText = names[i];
+    div_ratings.append(i_star);
+
+    //  <span class="ratingno"> </span>
+    ratings_no = document.createElement("span");
+    ratings_no.setAttribute("class", "ratingno");
+    ratings_no.innerText = ground_list[0]["ratingsnumber"];
+    div_ratings.append(ratings_no);
+
+    //anchor
+    anchor = document.createElement("a");
+    // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+    anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
+    div_child.append(anchor)
+
+    // <button class="book"></button>
+    button_book = document.createElement("button");
+    button_book.setAttribute("class", "book");
+    // button_booknow =document.createTextNode("Book Now")
+    // button_book.append(button_booknow)
+    button_book.innerText = "Book Now"
+    anchor.append(button_book);
+
+
+
+    // ... continue creating the UI elements as before ...
+
+    parentHtmlDiv.append(div_child);
+  });
+
+
+
 
 
 }
+
+
+
+// for (let i = 0; i < filtered.length; i++) {
+//   //  <div class="child"> </div>
+//   div_child = document.createElement("div");
+//   div_child.setAttribute("class", "child");
+//   div_child.setAttribute("value", filtered[i]["ground_city"])
+//   // console.log(div_child);
+//   //<br>
+//   br_tag = document.createElement("br");
+//   div_child.append(br_tag);
+//   //  <h3 class="card-title"> </h5>
+//   h3_card_title = document.createElement("h3");
+//   h3_card_title.setAttribute("class", "groundn");
+//   h3_card_title.innerText = filtered[i]["ground_name"];
+//   div_child.append(h3_card_title);
+
+
+//   //  <img src="" class="groimg" alt=""/>
+//   img_card = document.createElement("img");
+//   img_card.setAttribute("src", filtered[i]["groundimg1"]);
+//   img_card.setAttribute("alt", "groundimage");
+//   img_card.setAttribute("class", "groimg");
+//   div_child.append(img_card);
+
+//   //  <p class="location_name"> </p>
+//   p_location_name = document.createElement("p");
+//   p_location_name.setAttribute("class", "locationn");
+//   p_location_name.innerText = filtered[i]["ground_Place"];
+//   div_child.append(p_location_name);
+
+
+
+//   //  <div class="symbol"> </div>
+//   div_symbol = document.createElement("div");
+//   div_symbol.setAttribute("class", "symbol");
+//   div_child.append(div_symbol);
+
+
+//   if (groundOwnerProduct[i]["sport_avail_1"] == true) {
+//     //  <img src="" class="sportsicon" alt=""/>
+//     imgicon_card1 = document.createElement("img");
+//     imgicon_card1.setAttribute("class", "sportsicon");
+//     imgicon_card1.setAttribute("src", ground_list[i]["sportsicon"]["cricketicon"]);
+//     imgicon_card1.setAttribute("alt", "icons");
+//     div_symbol.append(imgicon_card1);
+
+//   }
+
+//   if (groundOwnerProduct[i]["sport_avail_2"] == true) {
+//     //  <img src="" class="sportsicon" alt=""/>
+//     imgicon_card2 = document.createElement("img");
+//     imgicon_card2.setAttribute("class", "sportsicon");
+//     imgicon_card2.setAttribute("src", ground_list[i]["sportsicon"]["footballicon"]);
+//     imgicon_card2.setAttribute("alt", "icons");
+//     div_symbol.append(imgicon_card2);
+
+//   }
+
+
+//   if (groundOwnerProduct[i]["sport_avail_3"] == true) {
+//     //  <img src="" class="sportsicon" alt=""/>
+//     imgicon_card3 = document.createElement("img");
+//     imgicon_card3.setAttribute("class", "sportsicon");
+//     imgicon_card3.setAttribute("src", ground_list[i]["sportsicon"]["tennisicon"]);
+//     // imgicon_card.setAttribute("alt", "icons");
+//     div_symbol.append(imgicon_card3);
+
+//   }
+
+
+
+//   //  <div class="ratings"> </div>
+//   div_ratings = document.createElement("div");
+//   div_ratings.setAttribute("class", "ratings");
+//   div_child.append(div_ratings);
+
+//   //  <i class="fa-solid fa-star"> </i>
+//   i_star = document.createElement("i");
+//   i_star.setAttribute("class", "fa-solid fa-star");
+//   // h3_card_title.innerText = names[i];
+//   div_ratings.append(i_star);
+
+//   //  <span class="ratingno"> </span>
+//   ratings_no = document.createElement("span");
+//   ratings_no.setAttribute("class", "ratingno");
+//   ratings_no.innerText = ground_list[i]["ratingsnumber"];
+//   div_ratings.append(ratings_no);
+
+//   //anchor
+//   anchor = document.createElement("a");
+//   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+//   anchor.setAttribute("href", "../../pages/bookinground/ground1.html?ground_Id=" + groundOwnerProduct[i]["ground_id"])
+//   div_child.append(anchor)
+
+//   // <button class="book"></button>
+//   button_book = document.createElement("button");
+//   button_book.setAttribute("class", "book");
+//   // button_booknow =document.createTextNode("Book Now")
+//   // button_book.append(button_booknow)
+//   button_book.innerText = "Book Now"
+//   anchor.append(button_book);
+
+//   // console.log(div_child);
+//   document.querySelector("div.parent").append(div_child)
+
+
+// }
 
 
 
@@ -802,6 +921,7 @@ const selectOption = document.querySelector(".locationselect")
 
 let filteredData = [];
 selectOption.addEventListener("change", (e) => {
+
   const seletedQuery = selectOption.value.trim()
   console.log(seletedQuery);
 
@@ -829,118 +949,119 @@ selectOption.addEventListener("change", (e) => {
   // }
   else {
     filteredData = filtered;
+    
   }
 
   console.log(filteredData);
+// groundData(filteredData)
 
+  // const parentHtmlDiv = document.querySelector(".parent");
+  // parentHtmlDiv.innerHTML = "";
 
-  const parentHtmlDiv = document.querySelector(".parent");
-  parentHtmlDiv.innerHTML = "";
+  // filteredData.forEach((item) => {
 
-  filteredData.forEach((item) => {
-
-    const div_child = document.createElement("div");
-    div_child.setAttribute("class", "child");
-
-
-
-    br_tag = document.createElement("br");
-    div_child.append(br_tag);
-
-    const h3_card_title = document.createElement("h3");
-    h3_card_title.setAttribute("class", "groundn");
-    h3_card_title.innerText = item.ground_name;
-    div_child.append(h3_card_title);
-
-
-    //  <img src="" class="groimg" alt=""/>
-    img_card = document.createElement("img");
-    img_card.setAttribute("src", item.groundimg1);
-    img_card.setAttribute("alt", "groundimage");
-    img_card.setAttribute("class", "groimg");
-    div_child.append(img_card);
-
-    //  <p class="location_name"> </p>
-    p_location_name = document.createElement("p");
-    p_location_name.setAttribute("class", "locationn");
-    p_location_name.innerText = item.ground_Place;
-    div_child.append(p_location_name);
+  //   const div_child = document.createElement("div");
+  //   div_child.setAttribute("class", "child");
 
 
 
-    //  <div class="symbol"> </div>
-    div_symbol = document.createElement("div");
-    div_symbol.setAttribute("class", "symbol");
-    div_child.append(div_symbol);
+  //   br_tag = document.createElement("br");
+  //   div_child.append(br_tag);
+
+  //   const h3_card_title = document.createElement("h3");
+  //   h3_card_title.setAttribute("class", "groundn");
+  //   h3_card_title.innerText = item.ground_name;
+  //   div_child.append(h3_card_title);
 
 
-    if (item.sport_avail_1 == true) {
-      //  <img src="" class="sportsicon" alt=""/>
-      imgicon_card1 = document.createElement("img");
-      imgicon_card1.setAttribute("class", "sportsicon");
-      imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
-      imgicon_card1.setAttribute("alt", "icons");
-      div_symbol.append(imgicon_card1);
+  //   //  <img src="" class="groimg" alt=""/>
+  //   img_card = document.createElement("img");
+  //   img_card.setAttribute("src", item.groundimg1);
+  //   img_card.setAttribute("alt", "groundimage");
+  //   img_card.setAttribute("class", "groimg");
+  //   div_child.append(img_card);
 
-    }
-
-    if (item.sport_avail_2 == true) {
-      //  <img src="" class="sportsicon" alt=""/>
-      imgicon_card2 = document.createElement("img");
-      imgicon_card2.setAttribute("class", "sportsicon");
-      imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
-      imgicon_card2.setAttribute("alt", "icons");
-      div_symbol.append(imgicon_card2);
-
-    }
-
-
-    if (item.sport_avail_3 == true) {
-      //  <img src="" class="sportsicon" alt=""/>
-      imgicon_card3 = document.createElement("img");
-      imgicon_card3.setAttribute("class", "sportsicon");
-      imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
-      // imgicon_card.setAttribute("alt", "icons");
-      div_symbol.append(imgicon_card3);
-
-    }
-    //  <div class="ratings"> </div>
-    div_ratings = document.createElement("div");
-    div_ratings.setAttribute("class", "ratings");
-    div_child.append(div_ratings);
-
-    //  <i class="fa-solid fa-star"> </i>
-    i_star = document.createElement("i");
-    i_star.setAttribute("class", "fa-solid fa-star");
-    // h3_card_title.innerText = names[i];
-    div_ratings.append(i_star);
-
-    //  <span class="ratingno"> </span>
-    ratings_no = document.createElement("span");
-    ratings_no.setAttribute("class", "ratingno");
-    ratings_no.innerText = ground_list[0]["ratingsnumber"];
-    div_ratings.append(ratings_no);
-
-    //anchor
-    anchor = document.createElement("a");
-    // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-    anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
-    div_child.append(anchor)
-
-    // <button class="book"></button>
-    button_book = document.createElement("button");
-    button_book.setAttribute("class", "book");
-    // button_booknow =document.createTextNode("Book Now")
-    // button_book.append(button_booknow)
-    button_book.innerText = "Book Now"
-    anchor.append(button_book);
+  //   //  <p class="location_name"> </p>
+  //   p_location_name = document.createElement("p");
+  //   p_location_name.setAttribute("class", "locationn");
+  //   p_location_name.innerText = item.ground_Place;
+  //   div_child.append(p_location_name);
 
 
 
-    // ... continue creating the UI elements as before ...
+  //   //  <div class="symbol"> </div>
+  //   div_symbol = document.createElement("div");
+  //   div_symbol.setAttribute("class", "symbol");
+  //   div_child.append(div_symbol);
 
-    parentHtmlDiv.append(div_child);
-  });
+
+  //   if (item.sport_avail_1 == true) {
+  //     //  <img src="" class="sportsicon" alt=""/>
+  //     imgicon_card1 = document.createElement("img");
+  //     imgicon_card1.setAttribute("class", "sportsicon");
+  //     imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+  //     imgicon_card1.setAttribute("alt", "icons");
+  //     div_symbol.append(imgicon_card1);
+
+  //   }
+
+  //   if (item.sport_avail_2 == true) {
+  //     //  <img src="" class="sportsicon" alt=""/>
+  //     imgicon_card2 = document.createElement("img");
+  //     imgicon_card2.setAttribute("class", "sportsicon");
+  //     imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+  //     imgicon_card2.setAttribute("alt", "icons");
+  //     div_symbol.append(imgicon_card2);
+
+  //   }
+
+
+  //   if (item.sport_avail_3 == true) {
+  //     //  <img src="" class="sportsicon" alt=""/>
+  //     imgicon_card3 = document.createElement("img");
+  //     imgicon_card3.setAttribute("class", "sportsicon");
+  //     imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+  //     // imgicon_card.setAttribute("alt", "icons");
+  //     div_symbol.append(imgicon_card3);
+
+  //   }
+  //   //  <div class="ratings"> </div>
+  //   div_ratings = document.createElement("div");
+  //   div_ratings.setAttribute("class", "ratings");
+  //   div_child.append(div_ratings);
+
+  //   //  <i class="fa-solid fa-star"> </i>
+  //   i_star = document.createElement("i");
+  //   i_star.setAttribute("class", "fa-solid fa-star");
+  //   // h3_card_title.innerText = names[i];
+  //   div_ratings.append(i_star);
+
+  //   //  <span class="ratingno"> </span>
+  //   ratings_no = document.createElement("span");
+  //   ratings_no.setAttribute("class", "ratingno");
+  //   ratings_no.innerText = ground_list[0]["ratingsnumber"];
+  //   div_ratings.append(ratings_no);
+
+  //   //anchor
+  //   anchor = document.createElement("a");
+  //   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+  //   anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
+  //   div_child.append(anchor)
+
+  //   // <button class="book"></button>
+  //   button_book = document.createElement("button");
+  //   button_book.setAttribute("class", "book");
+  //   // button_booknow =document.createTextNode("Book Now")
+  //   // button_book.append(button_booknow)
+  //   button_book.innerText = "Book Now"
+  //   anchor.append(button_book);
+
+
+
+  //   // ... continue creating the UI elements as before ...
+
+  //   parentHtmlDiv.append(div_child);
+  // });
 
 
 
@@ -975,118 +1096,124 @@ searchbox.addEventListener("keydown", (e) => {
   })
 
 
-  const parentHtmlDiv = document.querySelector(".parent");
-  parentHtmlDiv.innerHTML = "";
+groundData(filteredList)
+
+  // const parentHtmlDiv = document.querySelector(".parent");
+  // parentHtmlDiv.innerHTML = "";
 
 
 
 
 
-  filteredList.forEach((item) => {
+  // filteredList.forEach((item) => {
 
 
 
-    const div_child = document.createElement("div");
-    div_child.setAttribute("class", "child");
+  //   const div_child = document.createElement("div");
+  //   div_child.setAttribute("class", "child");
 
 
-    br_tag = document.createElement("br");
-    div_child.append(br_tag);
+  //   br_tag = document.createElement("br");
+  //   div_child.append(br_tag);
 
-    const h3_card_title = document.createElement("h3");
-    h3_card_title.setAttribute("class", "groundn");
-    h3_card_title.innerText = item.ground_name;
-    div_child.append(h3_card_title);
-
-
-    //  <img src="" class="groimg" alt=""/>
-    img_card = document.createElement("img");
-    img_card.setAttribute("src", item.groundimg1);
-    img_card.setAttribute("alt", "groundimage");
-    img_card.setAttribute("class", "groimg");
-    div_child.append(img_card);
-
-    //  <p class="location_name"> </p>
-    p_location_name = document.createElement("p");
-    p_location_name.setAttribute("class", "locationn");
-    p_location_name.innerText = item.ground_Place;
-    div_child.append(p_location_name);
+  //   const h3_card_title = document.createElement("h3");
+  //   h3_card_title.setAttribute("class", "groundn");
+  //   h3_card_title.innerText = item.ground_name;
+  //   div_child.append(h3_card_title);
 
 
+  //   //  <img src="" class="groimg" alt=""/>
+  //   img_card = document.createElement("img");
+  //   img_card.setAttribute("src", item.groundimg1);
+  //   img_card.setAttribute("alt", "groundimage");
+  //   img_card.setAttribute("class", "groimg");
+  //   div_child.append(img_card);
 
-    //  <div class="symbol"> </div>
-    div_symbol = document.createElement("div");
-    div_symbol.setAttribute("class", "symbol");
-    div_child.append(div_symbol);
-
-
-    if (item.sport_avail_1 == true) {
-      //  <img src="" class="sportsicon" alt=""/>
-      imgicon_card1 = document.createElement("img");
-      imgicon_card1.setAttribute("class", "sportsicon");
-      imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
-      imgicon_card1.setAttribute("alt", "icons");
-      div_symbol.append(imgicon_card1);
-
-    }
-
-    if (item.sport_avail_2 == true) {
-      //  <img src="" class="sportsicon" alt=""/>
-      imgicon_card2 = document.createElement("img");
-      imgicon_card2.setAttribute("class", "sportsicon");
-      imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
-      imgicon_card2.setAttribute("alt", "icons");
-      div_symbol.append(imgicon_card2);
-
-    }
-
-
-    if (item.sport_avail_3 == true) {
-      //  <img src="" class="sportsicon" alt=""/>
-      imgicon_card3 = document.createElement("img");
-      imgicon_card3.setAttribute("class", "sportsicon");
-      imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
-      // imgicon_card.setAttribute("alt", "icons");
-      div_symbol.append(imgicon_card3);
-
-    }
-    //  <div class="ratings"> </div>
-    div_ratings = document.createElement("div");
-    div_ratings.setAttribute("class", "ratings");
-    div_child.append(div_ratings);
-
-    //  <i class="fa-solid fa-star"> </i>
-    i_star = document.createElement("i");
-    i_star.setAttribute("class", "fa-solid fa-star");
-    // h3_card_title.innerText = names[i];
-    div_ratings.append(i_star);
-
-    //  <span class="ratingno"> </span>
-    ratings_no = document.createElement("span");
-    ratings_no.setAttribute("class", "ratingno");
-    ratings_no.innerText = ground_list[0]["ratingsnumber"];
-    div_ratings.append(ratings_no);
-
-    //anchor
-    anchor = document.createElement("a");
-    // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-    anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
-    div_child.append(anchor)
-
-    // <button class="book"></button>
-    button_book = document.createElement("button");
-    button_book.setAttribute("class", "book");
-    // button_booknow =document.createTextNode("Book Now")
-    // button_book.append(button_booknow)
-    button_book.innerText = "Book Now"
-    anchor.append(button_book);
+  //   //  <p class="location_name"> </p>
+  //   p_location_name = document.createElement("p");
+  //   p_location_name.setAttribute("class", "locationn");
+  //   p_location_name.innerText = item.ground_Place;
+  //   div_child.append(p_location_name);
 
 
 
+  //   //  <div class="symbol"> </div>
+  //   div_symbol = document.createElement("div");
+  //   div_symbol.setAttribute("class", "symbol");
+  //   div_child.append(div_symbol);
 
 
-    parentHtmlDiv.append(div_child);
-  });
+  //   if (item.sport_avail_1 == true) {
+  //     //  <img src="" class="sportsicon" alt=""/>
+  //     imgicon_card1 = document.createElement("img");
+  //     imgicon_card1.setAttribute("class", "sportsicon");
+  //     imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+  //     imgicon_card1.setAttribute("alt", "icons");
+  //     div_symbol.append(imgicon_card1);
+
+  //   }
+
+  //   if (item.sport_avail_2 == true) {
+  //     //  <img src="" class="sportsicon" alt=""/>
+  //     imgicon_card2 = document.createElement("img");
+  //     imgicon_card2.setAttribute("class", "sportsicon");
+  //     imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+  //     imgicon_card2.setAttribute("alt", "icons");
+  //     div_symbol.append(imgicon_card2);
+
+  //   }
+
+
+  //   if (item.sport_avail_3 == true) {
+  //     //  <img src="" class="sportsicon" alt=""/>
+  //     imgicon_card3 = document.createElement("img");
+  //     imgicon_card3.setAttribute("class", "sportsicon");
+  //     imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+  //     // imgicon_card.setAttribute("alt", "icons");
+  //     div_symbol.append(imgicon_card3);
+
+  //   }
+  //   //  <div class="ratings"> </div>
+  //   div_ratings = document.createElement("div");
+  //   div_ratings.setAttribute("class", "ratings");
+  //   div_child.append(div_ratings);
+
+  //   //  <i class="fa-solid fa-star"> </i>
+  //   i_star = document.createElement("i");
+  //   i_star.setAttribute("class", "fa-solid fa-star");
+  //   // h3_card_title.innerText = names[i];
+  //   div_ratings.append(i_star);
+
+  //   //  <span class="ratingno"> </span>
+  //   ratings_no = document.createElement("span");
+  //   ratings_no.setAttribute("class", "ratingno");
+  //   ratings_no.innerText = ground_list[0]["ratingsnumber"];
+  //   div_ratings.append(ratings_no);
+
+  //   //anchor
+  //   anchor = document.createElement("a");
+  //   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+  //   anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
+  //   div_child.append(anchor)
+
+  //   // <button class="book"></button>
+  //   button_book = document.createElement("button");
+  //   button_book.setAttribute("class", "book");
+  //   // button_booknow =document.createTextNode("Book Now")
+  //   // button_book.append(button_booknow)
+  //   button_book.innerText = "Book Now"
+  //   anchor.append(button_book);
+
+
+
+
+
+  //   parentHtmlDiv.append(div_child);
+  // });
+
+
+
+
 
 });
 
