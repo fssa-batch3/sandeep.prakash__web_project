@@ -486,7 +486,7 @@ function groundData( array=[]){
   const parentHtmlDiv = document.querySelector(".parent");
   parentHtmlDiv.innerHTML = "";
 
-  filtered.forEach((item) => {
+  array.forEach((item) => {
 
     const div_child = document.createElement("div");
     div_child.setAttribute("class", "child");
@@ -953,7 +953,7 @@ selectOption.addEventListener("change", (e) => {
   }
 
   console.log(filteredData);
-// groundData(filteredData)
+groundData(filteredData)
 
   // const parentHtmlDiv = document.querySelector(".parent");
   // parentHtmlDiv.innerHTML = "";
@@ -1091,12 +1091,26 @@ searchbox.addEventListener("keydown", (e) => {
     // // return false
 
   }
+
+
+
   const filteredList = filteredData.filter((item) => {
     return item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery)
   })
 
 
-groundData(filteredList)
+groundData(filteredList);
+
+
+if(selectOption.value==""){
+  const filteredList2 = filtered.filter((item) => {
+    return item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery)
+  })
+  
+  groundData(filteredList2)
+
+}
+
 
   // const parentHtmlDiv = document.querySelector(".parent");
   // parentHtmlDiv.innerHTML = "";
