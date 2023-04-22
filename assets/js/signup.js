@@ -123,6 +123,7 @@ const checkjoinPlayer = document.getElementById("checkjoinplayer");
 const joinplayerForm = document.querySelector(".joinplayercontainer");
 const forms1 = document.querySelector(".forms")
 const body = document.querySelector("body")
+const sportLocation = (document.getElementById("locationselect"))
 
 checkjoinPlayer.addEventListener("click", (e) => {
     joinplayerForm.style.display = "block";
@@ -135,8 +136,8 @@ checkjoinPlayer.addEventListener("click", (e) => {
     const age = (document.getElementById("age"))
 
     const gender = (document.getElementById("gender"))
-    const sportChoose = (document.getElementById("sportss"))
-    const sportLocation = (document.getElementById("locationselect"))
+    // const sportChoose = (document.getElementById("sportss"))
+    // const sportLocation = (document.getElementById("locationselect"))
 
     const timingsfrom = (document.getElementById("timingsfrom"))
 
@@ -145,8 +146,8 @@ checkjoinPlayer.addEventListener("click", (e) => {
 
     age.required = true;
     gender.required = true;
-    sportChoose.required = true;
-    sportLocation.required = true;
+    // sportChoose.required = true;
+    sportLocation.required=true
     timingsfrom.required = true;
     timingsto.required = true;
 
@@ -167,6 +168,7 @@ const form = document.getElementById("signupform");
 form.addEventListener('submit', e => {
     e.preventDefault();
     getUserData();
+
 
 });
 
@@ -192,6 +194,9 @@ function getUserData() {
     const cricket = document.getElementById("sportsavail1").checked
     const football = document.getElementById("sportsavail2").checked
     const tennis = document.getElementById("sportsavail3").checked
+    // sportLocation.required= true
+
+
 
     // const sport_Choosed=[];
     // if(cricket.checked){

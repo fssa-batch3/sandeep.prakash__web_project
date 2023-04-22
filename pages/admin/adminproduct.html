@@ -28,7 +28,9 @@
             <div class="sidebar1">
                 <div class="profilebox">
                     <div class="profileimgplace">
-                        <img  class="profileimg"src="../../assets/images/avatorprofile.jpg" alt="profile">
+                        <img class="profileimg" src="https://freeimage.host/i/HkW7U4S" alt="profile">
+                        <label for="input-file"> <i class='bx bxs-plus-circle'></i></label>
+                        <input type="file" accept="image/jpeg,image/png,image/jpg" id="input-file">
                     </div>
                     <div class="name-rankdisplay">
                         <p class="nameperson">GROUND NAME</p>
@@ -91,22 +93,24 @@
                      <h1 >Edit your profile anytime</h1>
                         <br>
                                   
-                     <form>
+                     <form id="formbox">
                     <label class="labelname"> Display Name:</label><br>
-                    <input type="name"  id="name1" disabled><br> 
+                    <input type="name"  id="name1"  pattern=^[a-zA-Z]{3,20}$ title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required disabled><br> 
                     
-                    <label class="labelname">GropundName :</label><br>
-                    <input type="name"  id="name2" disabled><br> 
+                    <label class="labelname">Ground Name :</label><br>
+                    <input type="name"  id="name2"  pattern="^[a-zA-Z ]{3,50}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required disabled><br> 
                     <label class="labelname">Email:</label><br>
                     <input type="email" id="userEmail" aria-label="email" disabled><br>
                     <label class="labelname">Phone Number:</label><br>
-                    <input type="text" id="phoneno1" aria-label="phone number" disabled><br>
+                    <input type="tel" id="phoneno1" aria-label="phone number"  pattern="[0-9]{10}" title="PLease enter 10 digit number" required  disabled><br>
                     <label class="labelname">Password:</label><br>
-                    <input type="password" id="password" aria-label="password" disabled><br>
+                    <input type="password" id="password" aria-label="password"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character" required  disabled><br>
+
+                    <button class="profile2" type="submit" >Edit</button>
                                 
                     </form>
 
-                 <button class="profile2" type="submit" >Edit</button>
+
                 
                 </div>
                 

@@ -221,13 +221,25 @@ joinPlayer.style.bottom="650px"
     sportname2.style.left = "20px"
     sportname3.style.left = "20px"
 
+
+
+      user_age.removeAttribute("disabled");
+        user_location.removeAttribute("disabled")
+        user_sports.removeAttribute("disabled");
+        user_timingsfrom.removeAttribute("disabled")
+        user_timingsto.removeAttribute("disabled");
+        cricket.removeAttribute("disabled");
+        football.removeAttribute("disabled");
+        tennis.removeAttribute("disabled");
+
     user_age.required = true;
-    user_location.required = true;
+    user_location.setAttribute("required", true);
     user_timingsfrom.required = true;
     user_timingsto.required = true;
     sportname1.required = true;
  sportname2.required = true;
  sportname3.required = true;
+ 
   
 
     for (let i = 0; i < user_record.length; i++) {
@@ -411,17 +423,12 @@ logOut.addEventListener("click", (e) => {
 
 
 
-
-
-
 // imageShow.src=ok
 
 
 //profile image
 const imageFileUpload = document.getElementById("input-file");
 // const imageShow = document.querySelector(".profileimg");
-
-
 
 imageFileUpload.addEventListener("change", (e) => {
 

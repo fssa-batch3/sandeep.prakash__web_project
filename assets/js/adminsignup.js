@@ -36,7 +36,9 @@ alert("email id already taken")
             "seller_ground_name":name2,
             "seller_email":email,
             "seller_phoneno":user_phoneno,
-            "seller_password":user_password        
+            "seller_password":user_password ,
+            "imagename": "",
+            "url": ""  
         
 
     }

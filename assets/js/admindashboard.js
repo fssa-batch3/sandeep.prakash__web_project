@@ -2,6 +2,8 @@ const formContainer = document.querySelector(".formcontainer");
 const fillBtn = document.querySelector(".fillbutton");
 const closebtn = document.querySelector(".closebtn")
 
+const fsidename = document.querySelector(".nameperson")
+
 fillBtn.addEventListener("click", (e) => {
     e.preventDefault()
 
@@ -69,13 +71,7 @@ else{
 
 
 
-
-
-
-
-
-
-
+//ground filling
 
 formButton.addEventListener("submit", e => {
 
@@ -152,146 +148,6 @@ const groundCourts=document.getElementById("sportscourts").value
 
 
 
-// local storage
-
-// view
-
-
-// let groundRecords = JSON.parse(localStorage.getItem("ground_info"));
-// let update_btn=document.getElementById("updatebtn");
-// let delete_btn=document.getElementById("deletebtn");
-// let submit_btn=document.getElementById("submitbtn");
-
-
-// if(groundRecords["status"]=true){
-//     fillBtn.innerText="Edit your ground";
-//     update_btn.style.display="block";
-//     delete_btn.style.display="block";
-//     submit_btn.style.display="none";
-
-
-
-
-// }
-// const groundName = document.getElementById("groname");
-// const groundPlace = (document.getElementById("grolname"));
-// const groundLocationLink = (document.getElementById("grolink"));
-// const groundaddress=(document.getElementById("groaddress"));
-// const groundImage1 = (document.getElementById("grimg1"));
-// const groundImage2 = (document.getElementById("grimg2"));
-// const groundImage3 = (document.getElementById("grimg3"));
-// const sportsAvail1 = (document.getElementById("sportsavail1"));
-// const sportsAvail2 = (document.getElementById("sportsavail2"));
-// const sportsAvail3 = (document.getElementById("sportsavail3"));
-// const groundTimingfrom = (document.getElementById("timingsfrom"));
-// const groundTimingTo = (document.getElementById("timingsfrom"));
-// const groundRules = (document.getElementById("rules"));
-// const groundCity = (document.getElementById("sportsvalue"));
-// const groundPrice = (document.getElementById("amount"));
-
-
-
-// view 
-
-
-// const url2 = window.location.search;
-// console.log(url2)
-// const urlParameter2 = new URLSearchParams(url2);
-// // console.log(urlParameter)
-// const groundSearch2 = urlParameter2.get("userId");
-// // console.log(groundSearch2);
-
-// let show2;
-// groundRecords.find(function (e) {
-//     if (e["ground_id"] == groundSearch2) {
-//         return show2 = e;
-
-//     }
-//     else {
-//         return show2 = 0;
-//     }
-// })
-
-
-// groundRecords.find((e=>{
-
-// if(show2["ground_id"]==e["ground_id"]){
-//  groundName.value = show2["ground_name"]
-// groundPlace.value = show2["ground_Place"]
-// groundaddress.value=show2["ground_Address"]
-// groundLocationLink.value = show2["ground_locat_link"]
-// groundImage1.value = show2["groundimg1"]
-// groundImage2.value = show2["groundimg2"]
-// groundImage3.value = show2["groundimg3"]
-// sportsAvail1.checked = show2["sport_avail_1"]
-// sportsAvail2.checked = show2["sport_avail_2"]
-// sportsAvail3.checked = show2["sport_avail_3"]
-// groundTimingTo.value = show2["ground_timing_to"]
-// groundRules.value = show2["ground_rules"]
-// groundCity.value = show2["ground_city"]
-// groundPrice.value = show2["ground_price"]
-
-// }
-
-
-
-
-// }))
-
-
-
-
-// let groundRecords2 = JSON.parse(localStorage.getItem("ground_info"));
-
-// // update 
-
-// const updatebutton = document.getElementById("updatebtn")
-// updatebutton.addEventListener("click", () => {
-
-
-//     groundRecords2.find((e => {
-//         if (show2["ground_id"] === e["ground_id"]) {
-//             e["ground_name"] = groundName.value;
-//             e["ground_Place"] = groundPlace.value
-//             e["ground_locat_link"] = groundLocationLink.value
-//             e["groundimg1"] = groundImage1.value
-//             e["groundimg2"] = groundImage2.value
-//             e["groundimg3"] = groundImage3.value
-//             e["sport_avail_1"] = sportsAvail1.checked
-//             e["sport_avail_2"] = sportsAvail2.checked
-//             e["sport_avail_3"] = sportsAvail3.checked
-//             e["ground_timing_to"] = groundTimingTo.value
-//             e["ground_rules"] = groundRules.value
-//             e["ground_city"] = groundCity.value
-//             e["ground_price"] = groundPrice.value
-
-
-//             localStorage.setItem("ground_info", JSON.stringify(groundRecords2))
-
-
-//         }
-//     }))
-
-// })
-
-// // update
-
-// const deletebutton = document.getElementById("deletebtn")
-// deletebutton.addEventListener("click", () => {
-
-//     let groundRecords2 = JSON.parse(localStorage.getItem("ground_info"));
-//     groundRecords2.find(function (item) {
-//         console.log(show2);
-//         if (show2["ground_id"] === item["ground_id"]) {
-//             item["status"] = false
-
-//         }
-//         localStorage.setItem("ground_info", JSON.stringify(groundRecords2))
-//     })
-// })
-
-
-
 //admin proile edit//
 
 
@@ -319,7 +175,7 @@ for( let i=0;i<sellerdata.length;i++){
     if(sellerloggedDta[0]["seller_email"]==sellerdata[i]["seller_email"]){
 
         
-
+fsidename.innerText=sellerdata[i]["seller_ground_name"];
 
 namebox.value = sellerdata[i]["seller_name"];
 groundnamebox.value = sellerdata[i]["seller_ground_name"];
@@ -336,18 +192,21 @@ user_password.value = sellerdata[i]["seller_password"];
 
 // edit update
 
+
+
 // // edit
-const editbutn = document.querySelector(".profile2");
-editbutn.addEventListener("click", () => {
+const editbutn = document.getElementById("formbox");
+const editbutn1 = document.querySelector(".profile2");
+editbutn.addEventListener("submit", (e) => {
+    e.preventDefault()
 
 
 
 
+    if (editbutn1.innerHTML == "Edit") {
 
-    if (editbutn.innerHTML == "Edit") {
 
-
-        editbutn.innerHTML = "Save"
+        editbutn1.innerHTML = "Save"
         namebox.removeAttribute("disabled");
         groundnamebox.removeAttribute("disabled")
         user_phone.removeAttribute("disabled");
@@ -356,8 +215,8 @@ editbutn.addEventListener("click", () => {
 
     }
 
-    else if (editbutn.innerHTML == "Save") {
-        editbutn.innerHTML = "Edit";
+    else if (editbutn1.innerHTML == "Save") {
+        editbutn1.innerHTML = "Edit";
         namebox.setAttribute("disabled", "");
         groundnamebox.setAttribute("disabled","")
         // user_email.setAttribute("disabled","")
@@ -371,7 +230,7 @@ editbutn.addEventListener("click", () => {
 
         if (user_email.value == e["seller_email"]) {
 
-         
+         e["seller_ground_name"]=fsidename.innerText
             e["seller_name"] = namebox.value
             e["user_email"] = user_email.value
             e["seller_phoneno"] = user_phone.value
@@ -401,7 +260,7 @@ e["seller_ground_name"]=groundnamebox.value
 
 
 
-
+// logout
 
 
 
@@ -416,3 +275,85 @@ logOut.addEventListener("click", (e) => {
 
 
 })
+
+
+
+
+
+
+
+// image ground
+
+
+
+
+//profile image
+const imageFileUpload = document.getElementById("input-file");
+const imageShow = document.querySelector(".profileimg");
+let ok = "../../assets/images/avatorprofile.jpg"
+// const imageShow = document.querySelector(".profileimg");
+
+
+
+imageFileUpload.addEventListener("change", (e) => {
+
+    const file = e.target.files[0];
+
+    // if (file != file.type.match("image.*")) {
+    //     alert("please choose the image ");
+
+    // };
+
+    const fileReader = new FileReader();
+    fileReader.onload = (e) => {
+        imageShow.src = e.target.result;
+
+        const sellerdata = JSON.parse(localStorage.getItem("groundadmin_details"));
+        const sellerloggedDta = JSON.parse(localStorage.getItem("seller_logged_in"));
+
+
+        for (let i = 0; i < sellerdata.length; i++) {
+
+            if (sellerloggedDta[0]["user_email"] == sellerdata[i]["user_email"]) {
+                // let user_data;
+                // user_data = {
+
+                //     imagename: file.name,
+                //     url: e.target.result
+                // };
+                // console.log(userRecords[i])
+                // //4
+                // console.log(userRecords[i]["imagename"])
+                sellerdata[i]["imagename"] = file.name;
+                sellerdata[i]["url"] = e.target.result;
+
+
+                break;
+            };
+
+
+        }
+        localStorage.setItem("groundadmin_details", JSON.stringify(sellerdata));
+    };
+    fileReader.readAsDataURL(file);
+
+
+
+
+})
+
+
+for (let i = 0; i < sellerdata.length; i++) {
+    if (sellerloggedDta[0]["seller_email"] == sellerdata[i]["seller_email"]) {
+        const savedImage = sellerdata[i];
+        if (savedImage && savedImage.url) {
+            imageShow.src = savedImage.url;
+        }
+        else {
+            imageShow.src = "https://iili.io/HkW7U4S.jpg"
+        }
+        break;
+    }
+}
+
+

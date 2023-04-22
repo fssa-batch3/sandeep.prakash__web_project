@@ -102,9 +102,9 @@ const ground_details=[
 
   },
   "sportsoptions":{
-    "sports0":"Cricket",
-    "sports1":"Tennis",
-    "sports2":"Football"
+   "sports0":"Cricket",
+    "sports1":"Football",
+    "sports2":"Tennis"
   },
 
   "durationoptions":{
@@ -129,12 +129,11 @@ const ground_details=[
    "player12":"13"
   },
   "courtsoptions":{
-    "courts0":"1",
-    "courts1":"2",
-    "courts2":"3",
-    "courts3":"4",
-    "courts4":"5",
-    "courts5":"6",
+    "courts1":"1",
+    "courts2":"2",
+    "courts3":"3",
+    "courts4":"4",
+    "courts5":"5",
     
 
 
@@ -192,8 +191,8 @@ const ground_details=[
   },
   "sportsoptions":{
     "sports0":"Cricket",
-    "sports1":"Tennis",
-    "sports2":"Football"
+    "sports1":"Football",
+    "sports2":"Tennis"
   },
 
   "durationoptions":{
@@ -1131,12 +1130,24 @@ div_book2.append(select_sports);
 
 
 // loopit
-for(let i=0;i<=2;i++){
-    option_sports=document.createElement("option");
-    option_sports.innerText=ground_details[0]["sportsoptions"]["sports"+i]
-    select_sports.append(option_sports)
-    
-}
+if(show2["sport_avail_1"]==true){
+    option_sports1=document.createElement("option");
+    option_sports1.innerText=ground_details[0]["sportsoptions"]["sports0"]
+    select_sports.append(option_sports1)
+  }
+  if(show2["sport_avail_2"]==true){
+    option_sports2=document.createElement("option");
+    option_sports2.innerText=ground_details[0]["sportsoptions"]["sports1"]
+    select_sports.append(option_sports2)
+  }
+
+  if(show2["sport_avail_3"]==true){
+    option_sports3=document.createElement("option");
+    option_sports3.innerText=ground_details[0]["sportsoptions"]["sports2"]
+    select_sports.append(option_sports3)
+  }
+
+
 
 
 br_tag12=document.createElement("br");
@@ -1211,12 +1222,12 @@ span_sportsSelect.innerText="Courts"
 div_book2.append(span_sportsSelect);
 
 select_sports=document.createElement("select")
-select_sports.setAttribute("class","sportss");
+select_sports.setAttribute("class","courtss");
 div_book2.append(select_sports);
 
 
 // loopit
-for(let i=0;i<=5;i++){
+for(let i=1;i<=show2["groundCourt"];i++){
     option_courts=document.createElement("option");
     option_courts.innerText=ground_details[0]["courtsoptions"]["courts"+i]
     select_sports.append(option_courts)
@@ -1233,11 +1244,11 @@ div_book2.append(anchorpayonline);
 
 
 
-button_payonline=document.createElement("button")
-button_payonline.setAttribute("class","pay")
-button_payonline.setAttribute("type","button")
-button_payonline.innerText="Pay online";
-anchorpayonline.append(button_payonline)
+// button_payonline=document.createElement("button")
+// button_payonline.setAttribute("class","pay")
+// button_payonline.setAttribute("type","button")
+// button_payonline.innerText="Pay online";
+// anchorpayonline.append(button_payonline)
 
 br_tag17=document.createElement("br");
 div_book2.append(br_tag17);
@@ -1359,6 +1370,9 @@ bookingBtn.addEventListener("submit",(e)=>{
   e.preventDefault();
  getBookingInfo();
 console.log("jihuihuhbuhugu");
+popbox.style.display="none"
+
+
 
 
 });
@@ -1376,6 +1390,8 @@ function getBookingInfo(){
   const selectSports=document.querySelector(".sportss").value;
   const selectDuration=document.querySelector(".durations").value;
   const selectplayers=document.querySelector(".players").value;
+  const selectedCourts=document.querySelector(".courtss").value
+  const groundPrice=document.querySelector(".pricelast").innerText
   
 
 let userBookingInfo=new Array();
@@ -1383,9 +1399,9 @@ userBookingInfo=JSON.parse(localStorage.getItem("bookingInfo")) ?
 JSON.parse(localStorage.getItem("bookingInfo")) : []
 
 if (userBookingInfo.some((v) => {
-  return v.booking_Date == bookDate && v.booking_time==selectTimings
+  return v.booking_Date == bookDate && v.booking_time==selectTimings && v.selectedCourts ==selectedCourts
 })) {
-  alert("the book is already there")
+  alert("The court is already booked on the selected timing ")
 }
 
 
@@ -1404,7 +1420,9 @@ else{
       "booking_sports":selectSports,
       "booking_duration":selectDuration,
       "selected_players":selectplayers,
-      "booking_status":"pending"
+      "selectedCourts":selectedCourts,
+      "booking_status":"pending",
+      'groundPrice':groundPrice
     }
   );
   

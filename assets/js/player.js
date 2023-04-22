@@ -53,62 +53,133 @@ let i_star;
 let span_ratingsno;
 
 
+playerData(filterPlayer)
+
+function playerData( array=[]){
+  
+const parentHtmlDiv = document.querySelector(".parent");
+parentHtmlDiv.innerHTML = "";
+
+
+array.forEach((item) => {
+
+
+    div_child = document.createElement("div");
+    div_child.setAttribute("class" ,"child");
+    div_child.setAttribute("value", item.sportLocationPlay)
+    console.log(div_child);
+    
+    
+    div_group = document.createElement("div");
+    div_group.setAttribute("class", "group");
+    div_child.append(div_group)
+    
+    br_tag=document.createElement("br");
+    div_group.append(br_tag);
+    
+    //  <img src="" class="groimg" alt=""/>
+    img_card = document.createElement("img");
+    img_card.setAttribute("src", item.url);
+    img_card.setAttribute("alt", "playerProfile");
+    img_card.setAttribute("class", "userlogo");
+    div_group.append(img_card);
+    
+    p_player= document.createElement("p");
+    p_player.setAttribute("class","nameplayer");
+    p_player.innerText = item.user_name;
+    div_group.append(p_player);
+    
+    anchor = document.createElement("a");
+    anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+item.user_id)
+    // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
+    div_group.append(anchor)
+    
+    // <button class="book"></button>
+    button_visit = document.createElement("button");
+    button_visit .setAttribute("class", "visit");
+    button_visit.innerText="Visit"
+    anchor.append(button_visit);
+    
+    div_ratings = document.createElement("div");
+    div_ratings.setAttribute("class", "ratings");
+    div_group.append(div_ratings); 
+    
+    i_star = document.createElement("i");
+    i_star.setAttribute("class", "fa-solid fa-star");
+    // h3_card_title.innerText = names[i];
+    div_ratings.append(i_star);
+    
+    span_ratingsno = document.createElement("span");
+    span_ratingsno.setAttribute("class", "ratingno");
+    span_ratingsno.innerText =player_list[0]["ratingsnumber"];
+    div_ratings.append(span_ratingsno);
+    
+    
+    document.querySelector("div.parent").append(div_child)
+
+    
 
 
 
-    for (let i = 0; i < filterPlayer.length ; i++) {
-        div_child = document.createElement("div");
-        div_child.setAttribute("class" ,"child");
-        div_child.setAttribute("value", filterPlayer[i]["sportLocationPlay"])
-        console.log(div_child);
+
+})
+
+}
+
+
+//     for (let i = 0; i < filterPlayer.length ; i++) {
+//         div_child = document.createElement("div");
+//         div_child.setAttribute("class" ,"child");
+//         div_child.setAttribute("value", filterPlayer[i]["sportLocationPlay"])
+//         console.log(div_child);
         
         
-        div_group = document.createElement("div");
-        div_group.setAttribute("class", "group");
-        div_child.append(div_group)
+//         div_group = document.createElement("div");
+//         div_group.setAttribute("class", "group");
+//         div_child.append(div_group)
         
-        br_tag=document.createElement("br");
-        div_group.append(br_tag);
+//         br_tag=document.createElement("br");
+//         div_group.append(br_tag);
         
-        //  <img src="" class="groimg" alt=""/>
-        img_card = document.createElement("img");
-        img_card.setAttribute("src", filterPlayer[i]["url"]);
-        img_card.setAttribute("alt", "playerProfile");
-        img_card.setAttribute("class", "userlogo");
-        div_group.append(img_card);
+//         //  <img src="" class="groimg" alt=""/>
+//         img_card = document.createElement("img");
+//         img_card.setAttribute("src", filterPlayer[i]["url"]);
+//         img_card.setAttribute("alt", "playerProfile");
+//         img_card.setAttribute("class", "userlogo");
+//         div_group.append(img_card);
         
-        p_player= document.createElement("p");
-        p_player.setAttribute("class","nameplayer");
-        p_player.innerText = filterPlayer[i]["user_name"];
-        div_group.append(p_player);
+//         p_player= document.createElement("p");
+//         p_player.setAttribute("class","nameplayer");
+//         p_player.innerText = filterPlayer[i]["user_name"];
+//         div_group.append(p_player);
         
-        anchor = document.createElement("a");
-        anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+filterPlayer[i]["user_id"])
-        // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
-        div_group.append(anchor)
+//         anchor = document.createElement("a");
+//         anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+filterPlayer[i]["user_id"])
+//         // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
+//         div_group.append(anchor)
         
-        // <button class="book"></button>
-        button_visit = document.createElement("button");
-        button_visit .setAttribute("class", "visit");
-        button_visit.innerText="Visit"
-        anchor.append(button_visit);
+//         // <button class="book"></button>
+//         button_visit = document.createElement("button");
+//         button_visit .setAttribute("class", "visit");
+//         button_visit.innerText="Visit"
+//         anchor.append(button_visit);
         
-        div_ratings = document.createElement("div");
-        div_ratings.setAttribute("class", "ratings");
-        div_group.append(div_ratings); 
+//         div_ratings = document.createElement("div");
+//         div_ratings.setAttribute("class", "ratings");
+//         div_group.append(div_ratings); 
         
-        i_star = document.createElement("i");
-        i_star.setAttribute("class", "fa-solid fa-star");
-        // h3_card_title.innerText = names[i];
-        div_ratings.append(i_star);
+//         i_star = document.createElement("i");
+//         i_star.setAttribute("class", "fa-solid fa-star");
+//         // h3_card_title.innerText = names[i];
+//         div_ratings.append(i_star);
         
-        span_ratingsno = document.createElement("span");
-        span_ratingsno.setAttribute("class", "ratingno");
-        span_ratingsno.innerText =player_list[0]["ratingsnumber"];
-        div_ratings.append(span_ratingsno);
+//         span_ratingsno = document.createElement("span");
+//         span_ratingsno.setAttribute("class", "ratingno");
+//         span_ratingsno.innerText =player_list[0]["ratingsnumber"];
+//         div_ratings.append(span_ratingsno);
         
         
-        document.querySelector("div.parent").append(div_child)
+//         document.querySelector("div.parent").append(div_child)
     
         
         
@@ -116,7 +187,7 @@ let span_ratingsno;
 
 
 
-}
+// }
 
 
 
@@ -157,84 +228,77 @@ selectOption.addEventListener("input", () => {
   }
 
 
+playerData(filteredData)
+
+
+// const parentHtmlDiv = document.querySelector(".parent");
+// parentHtmlDiv.innerHTML = "";
 
 
 
-const parentHtmlDiv = document.querySelector(".parent");
-parentHtmlDiv.innerHTML = "";
 
 
 
+// filteredData.forEach((item) => {
 
 
-
-filteredData.forEach((item) => {
-
-
-    div_child = document.createElement("div");
-    div_child.setAttribute("class" ,"child");
-    div_child.setAttribute("value", item.sportLocationPlay)
-    console.log(div_child);
+//     div_child = document.createElement("div");
+//     div_child.setAttribute("class" ,"child");
+//     div_child.setAttribute("value", item.sportLocationPlay)
+//     console.log(div_child);
     
     
-    div_group = document.createElement("div");
-    div_group.setAttribute("class", "group");
-    div_child.append(div_group)
+//     div_group = document.createElement("div");
+//     div_group.setAttribute("class", "group");
+//     div_child.append(div_group)
     
-    br_tag=document.createElement("br");
-    div_group.append(br_tag);
+//     br_tag=document.createElement("br");
+//     div_group.append(br_tag);
     
-    //  <img src="" class="groimg" alt=""/>
-    img_card = document.createElement("img");
-    img_card.setAttribute("src", item.url);
-    img_card.setAttribute("alt", "playerProfile");
-    img_card.setAttribute("class", "userlogo");
-    div_group.append(img_card);
+//     //  <img src="" class="groimg" alt=""/>
+//     img_card = document.createElement("img");
+//     img_card.setAttribute("src", item.url);
+//     img_card.setAttribute("alt", "playerProfile");
+//     img_card.setAttribute("class", "userlogo");
+//     div_group.append(img_card);
     
-    p_player= document.createElement("p");
-    p_player.setAttribute("class","nameplayer");
-    p_player.innerText = item.user_name;
-    div_group.append(p_player);
+//     p_player= document.createElement("p");
+//     p_player.setAttribute("class","nameplayer");
+//     p_player.innerText = item.user_name;
+//     div_group.append(p_player);
     
-    anchor = document.createElement("a");
-    anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+item.user_id)
-    // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
-    div_group.append(anchor)
+//     anchor = document.createElement("a");
+//     anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+item.user_id)
+//     // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
+//     div_group.append(anchor)
     
-    // <button class="book"></button>
-    button_visit = document.createElement("button");
-    button_visit .setAttribute("class", "visit");
-    button_visit.innerText="Visit"
-    anchor.append(button_visit);
+//     // <button class="book"></button>
+//     button_visit = document.createElement("button");
+//     button_visit .setAttribute("class", "visit");
+//     button_visit.innerText="Visit"
+//     anchor.append(button_visit);
     
-    div_ratings = document.createElement("div");
-    div_ratings.setAttribute("class", "ratings");
-    div_group.append(div_ratings); 
+//     div_ratings = document.createElement("div");
+//     div_ratings.setAttribute("class", "ratings");
+//     div_group.append(div_ratings); 
     
-    i_star = document.createElement("i");
-    i_star.setAttribute("class", "fa-solid fa-star");
-    // h3_card_title.innerText = names[i];
-    div_ratings.append(i_star);
+//     i_star = document.createElement("i");
+//     i_star.setAttribute("class", "fa-solid fa-star");
+//     // h3_card_title.innerText = names[i];
+//     div_ratings.append(i_star);
     
-    span_ratingsno = document.createElement("span");
-    span_ratingsno.setAttribute("class", "ratingno");
-    span_ratingsno.innerText =player_list[0]["ratingsnumber"];
-    div_ratings.append(span_ratingsno);
+//     span_ratingsno = document.createElement("span");
+//     span_ratingsno.setAttribute("class", "ratingno");
+//     span_ratingsno.innerText =player_list[0]["ratingsnumber"];
+//     div_ratings.append(span_ratingsno);
     
     
-    document.querySelector("div.parent").append(div_child)
+//     document.querySelector("div.parent").append(div_child)
 
-    
-
-
+  
 
 
-
-
-
-
-
-})
+// })
 })
 
 
@@ -250,7 +314,6 @@ searchbox.addEventListener("keydown", (e) => {
   const searchQuery = searchbox.value.trim().toUpperCase().toLowerCase();
   // console.log(searchQuery);
   
-
   if (e.key === "Enter") {
     e.preventDefault();
   
@@ -260,80 +323,82 @@ searchbox.addEventListener("keydown", (e) => {
   })
 
 
-  const parentHtmlDiv = document.querySelector(".parent");
-  parentHtmlDiv.innerHTML = "";
+  playerData(filteredList)
+  
+  if(selectOption.value==""){
+    const filteredList2 = filterPlayer.filter((item) => {
+      return item.user_name.toLowerCase().includes(searchQuery)
+    })
+    
+    playerData(filteredList2)
+  
+  }
+
+//   const parentHtmlDiv = document.querySelector(".parent");
+//   parentHtmlDiv.innerHTML = "";
 
 
 
-  filteredList.forEach((item) => {
+//   filteredList.forEach((item) => {
 
 
 
 
-    div_child = document.createElement("div");
-    div_child.setAttribute("class" ,"child");
-    div_child.setAttribute("value", item.sportLocationPlay)
-    console.log(div_child);
+//     div_child = document.createElement("div");
+//     div_child.setAttribute("class" ,"child");
+//     div_child.setAttribute("value", item.sportLocationPlay)
+//     console.log(div_child);
     
     
-    div_group = document.createElement("div");
-    div_group.setAttribute("class", "group");
-    div_child.append(div_group)
+//     div_group = document.createElement("div");
+//     div_group.setAttribute("class", "group");
+//     div_child.append(div_group)
     
-    br_tag=document.createElement("br");
-    div_group.append(br_tag);
+//     br_tag=document.createElement("br");
+//     div_group.append(br_tag);
     
-    //  <img src="" class="groimg" alt=""/>
-    img_card = document.createElement("img");
-    img_card.setAttribute("src", item.url);
-    img_card.setAttribute("alt", "playerProfile");
-    img_card.setAttribute("class", "userlogo");
-    div_group.append(img_card);
+//     //  <img src="" class="groimg" alt=""/>
+//     img_card = document.createElement("img");
+//     img_card.setAttribute("src", item.url);
+//     img_card.setAttribute("alt", "playerProfile");
+//     img_card.setAttribute("class", "userlogo");
+//     div_group.append(img_card);
     
-    p_player= document.createElement("p");
-    p_player.setAttribute("class","nameplayer");
-    p_player.innerText = item.user_name;
-    div_group.append(p_player);
+//     p_player= document.createElement("p");
+//     p_player.setAttribute("class","nameplayer");
+//     p_player.innerText = item.user_name;
+//     div_group.append(p_player);
     
-    anchor = document.createElement("a");
-    anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+item.user_id)
-    // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
-    div_group.append(anchor)
+//     anchor = document.createElement("a");
+//     anchor.setAttribute("href", "../../pages/player/playerprofile.html?player_id="+item.user_id)
+//     // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
+//     div_group.append(anchor)
     
-    // <button class="book"></button>
-    button_visit = document.createElement("button");
-    button_visit .setAttribute("class", "visit");
-    button_visit.innerText="Visit"
-    anchor.append(button_visit);
+//     // <button class="book"></button>
+//     button_visit = document.createElement("button");
+//     button_visit .setAttribute("class", "visit");
+//     button_visit.innerText="Visit"
+//     anchor.append(button_visit);
     
-    div_ratings = document.createElement("div");
-    div_ratings.setAttribute("class", "ratings");
-    div_group.append(div_ratings); 
+//     div_ratings = document.createElement("div");
+//     div_ratings.setAttribute("class", "ratings");
+//     div_group.append(div_ratings); 
     
-    i_star = document.createElement("i");
-    i_star.setAttribute("class", "fa-solid fa-star");
-    // h3_card_title.innerText = names[i];
-    div_ratings.append(i_star);
+//     i_star = document.createElement("i");
+//     i_star.setAttribute("class", "fa-solid fa-star");
+//     // h3_card_title.innerText = names[i];
+//     div_ratings.append(i_star);
     
-    span_ratingsno = document.createElement("span");
-    span_ratingsno.setAttribute("class", "ratingno");
-    span_ratingsno.innerText =player_list[0]["ratingsnumber"];
-    div_ratings.append(span_ratingsno);
+//     span_ratingsno = document.createElement("span");
+//     span_ratingsno.setAttribute("class", "ratingno");
+//     span_ratingsno.innerText =player_list[0]["ratingsnumber"];
+//     div_ratings.append(span_ratingsno);
     
     
-    document.querySelector("div.parent").append(div_child)
-
-    
+//     document.querySelector("div.parent").append(div_child)
 
 
-
-
-
-
-
-
-
-})
+// })
 
 
   
