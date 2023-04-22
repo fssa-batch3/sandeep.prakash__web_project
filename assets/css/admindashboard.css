@@ -164,16 +164,6 @@ cursor: pointer;
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* sidebar2 */
 
 
@@ -369,14 +359,15 @@ font-size: 20px;
 /* fill */
 .formcontainer{
    
-    position: fixed;
+    position: relative;
+    bottom: 460px;
     display: none;
     width: 990px;
-    height:800px;
+    height:830px;
     top: 50%;
     left: 62%;
     transform: translate(-50%,-50%);
-    padding: 30px 43px;
+    padding: 0px 43px;
     border-radius: 5%;
     background-color: white;
     border: 1px solid black;
@@ -385,6 +376,7 @@ font-size: 20px;
 .closebtn{
     position: relative;
     left: 960px;
+    top: 20px;
     background: none;
     border: none;
     padding: 0;
@@ -392,13 +384,6 @@ font-size: 20px;
     font-size: inherit;
     font-family: inherit;
     cursor: pointer;
-}
-
-* {
-    margin: 0px;
-    padding: 0px;
-
-
 }
 
 
@@ -528,9 +513,16 @@ top: 60px;
 
 }
 .groundprice{
+    position: relative;
+    left: 50px;
   
 
 
+}
+#amount{
+    width: 200px;
+    position: relative;
+    
 }
 .values{
     text-align: center;
@@ -542,25 +534,19 @@ top: 60px;
 }
 #submitbtn{
     position: relative;
-    top: 10px;
-   
-   
+    bottom: 50px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(88, 253, 88);
+    outline: none;
 
 }
-#updatebtn{
-    position: relative;
-    left: 360px;
-    padding: 10px;
-    top: 20px;
-    display: none;
+#submitbtn:hover{
+    background-color: greenyellow;
 }
-#deletebtn{
-    position: relative;
-    left: 360px;
-    padding: 10px;
-    top: 20px;
-    display: none;
-}
+
+
+
 /* #amount{
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -575,11 +561,26 @@ top: 60px;
     -webkit-appearance: none;
   }
 
-#sportscourts,.court{
+#sportscourts{
     position: relative;
     right:390px;
-    width: 50px;
+    width: 80px;
+    bottom: 30px;
+}
+.court{
+    position: relative;
+    right:390px;
+    bottom: 30px;
 }
 #increaseamount{
     width: 90px;
+    position: relative;
+    bottom: 70px;
+    right: 300px;
+}
+.increaseamountword{
+    position: relative;
+    bottom: 70px;
+    right: 300px;
+
 }
