@@ -34,7 +34,11 @@ console.log(JSON.stringify(acceptedBooking, null, 2))
           "sportsiconcric":"../../assets/images/cricketicon.png",
           "sportsiconfoot":"../../assets/images/footballicon.png",
           "sportsiconten":"../../assets/images/tennisicon.png",
+          "ratingsnumber": "4.0",
         },
+
+      
+
 
 ]
 //
@@ -68,13 +72,6 @@ console.log(JSON.stringify(acceptedBooking, null, 2))
 //         return show2 = 0;
 //     }
 // })
-
-
-
-
-
-
-
 
 
 
@@ -187,7 +184,7 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   //  <span class="ratingno"> </span>
   ratings_no = document.createElement("span");
   ratings_no.setAttribute("class", "ratingno");
-  //   ratings_no.innerText = ground_list[i]["ratingsnumber"];
+    ratings_no.innerText = showimage[0]["ratingsnumber"];
   div_ratings.append(ratings_no);
 
   //anchor
@@ -251,7 +248,15 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   h4players = document.createElement("h4");
   // h4name.setAttribute("");
   h4players.innerText = "Players"
-  columndiv1.append(h4players)
+  columndiv1.append(h4players);
+
+
+
+
+  h4courts=document.createElement("h4");
+  // h4name.setAttribute("");
+  h4courts.innerText="Court"
+  columndiv1.append(h4courts);
 
   h4price = document.createElement("h4");
   // h4name.setAttribute("");
@@ -295,10 +300,17 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   divbox6.innerText=acceptedBooking[i]["selected_players"];
   columndiv2.append(divbox6);
 
-  divbox7 = document.createElement("div");
+  divbox7=document.createElement("div");
   divbox7.setAttribute("class", "box7");
-  divbox7.innerText=acceptedBooking[i]["selected_players"];
+  divbox7.innerText=acceptedBooking[i]["selectedCourts"];
   columndiv2.append(divbox7);
+
+
+
+  divbox8=document.createElement("div");
+  divbox8.setAttribute("class", "box8");
+  divbox8.innerText=acceptedBooking[i]["groundPrice"];
+  columndiv2.append(divbox8);
 
   // btnaccept = document.createElement("button");
   // btnaccept.setAttribute("id", "acceptbtn");

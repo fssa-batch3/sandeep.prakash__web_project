@@ -274,8 +274,6 @@ editbutn.addEventListener("submit", (e) => {
 
 
 
-
-
     if (editbutn1.innerHTML == "Edit") {
 
 
@@ -311,8 +309,6 @@ editbutn.addEventListener("submit", (e) => {
         cricket.setAttribute("disabled", "");
         football.setAttribute("disabled", "");
         tennis.setAttribute("disabled", "");
-
-
 
     user_record.find(e => {
 

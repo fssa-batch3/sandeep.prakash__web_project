@@ -142,6 +142,11 @@ cursor: pointer;
 }
 
 
+a{
+    text-decoration: none;
+    color: rgb(111, 67, 255);
+}
+
 
 
 

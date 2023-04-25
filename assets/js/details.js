@@ -1407,8 +1407,6 @@ if (userBookingInfo.some((v) => {
 
 else{
 
-
-
   userBookingInfo.push(
     {
       "ordered_id":id_generator_booking,
@@ -1430,6 +1428,29 @@ else{
 
 }
 localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
+
+
+
+
+// settimeout
+setTimeout(()=>{
+
+  let bookingDecline=userBookingInfo.find((booking)=>{
+    return (
+      booking.booking_Date === bookDate && 
+      booking.booking_time === selectTimings && 
+      booking.selectedCourts === selectedCourts
+      );
+
+    });
+
+  if(bookingDecline && bookingDecline.booking_status === "pending"){
+    bookingDecline.booking_status="decline";
+    localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
+  }
+
+
+}, 1 * 60 * 1000)
   
 
 
@@ -1524,3 +1545,5 @@ let today=new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
 .toISOString()
 .split("T")[0];
 date.setAttribute("min", today);
+
+

@@ -126,6 +126,23 @@ const body = document.querySelector("body")
 const sportLocation = (document.getElementById("locationselect"))
 
 checkjoinPlayer.addEventListener("click", (e) => {
+
+
+
+
+    // for uncheck the checbox
+    if(checkjoinPlayer.checked==false){
+        joinplayerForm.style.display = "none";
+        forms1.style.position = "relative";
+        forms1.style.right = "0px"
+        joinplayerForm.style.left = "0px"
+        body.style.overflowY = ""
+    }
+
+
+    else{
+
+    
     joinplayerForm.style.display = "block";
     forms1.style.position = "relative";
     forms1.style.right = "350px"
@@ -152,6 +169,8 @@ checkjoinPlayer.addEventListener("click", (e) => {
     timingsto.required = true;
 
 
+
+    }
 
 
 });

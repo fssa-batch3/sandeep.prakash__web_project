@@ -117,24 +117,27 @@ ul li a:hover {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 12vh;
-    grid-gap: 30px;
+    grid-gap: 50px;
     width: 60%;
-    height: 360px;
+    height: 410px;
     background-color: rgb(136, 234, 142);
+    border-radius: 5px;
 }
 
-.box1,.box2,.box3,.box4,.box5,.box6,.box7{
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
     width: 170px;
-    height: 330px;
-    background-color: #00021a;
+    height: 350px;
+    background-color: #5e6af1;
     color: white;
+    text-align: center;
+    border-radius: 10px;
 }
 .acceptbtn{
     width: 70px;
     height: 20px;
     position: relative;
     left: 90px;
-    top: 190px;
+    top: 220px;
 }
 
 .declinebtn{
@@ -142,7 +145,7 @@ ul li a:hover {
     height: 20px;
     position: relative;
     left: 50px;
-    top: 190px;
+    top: 220px;
 }
 .column1{
    padding: 10px;
@@ -152,11 +155,14 @@ gap: 28px;
 }
 .column2{
     width: 170px;
-    height: 300px;
+    height: 342px;
     padding: 10px;
  display: flex;
  flex-direction: column;
  gap: 20px;
+ 
+ /* position: relative;
+ top: 20px; */
  }
 
 
@@ -165,7 +171,9 @@ gap: 28px;
 
 
 
-
+ .req{
+    color: #000000;
+ }
 
 
 

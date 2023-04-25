@@ -65,6 +65,12 @@ for( let i=0; i <filterGroundrequest.length;i++){
     h4players.innerText="Players"
     columndiv1.append(h4players)
 
+
+    h4courts=document.createElement("h4");
+    // h4name.setAttribute("");
+    h4courts.innerText="Court"
+    columndiv1.append(h4courts);
+
     h4price=document.createElement("h4");
     // h4name.setAttribute("");
     h4price.innerText="Price"
@@ -99,7 +105,7 @@ for( let i=0; i <filterGroundrequest.length;i++){
 
     divbox5=document.createElement("div");
     divbox5.setAttribute("class", "box5");
-    divbox5.innerText=filterGroundrequest[i]["booking_duration"];
+    divbox5.innerText="Extra "+ filterGroundrequest[i]["booking_duration"]+" Hours";
     columndiv2.append(divbox5);
 
     divbox6=document.createElement("div");
@@ -109,8 +115,13 @@ for( let i=0; i <filterGroundrequest.length;i++){
 
     divbox7=document.createElement("div");
     divbox7.setAttribute("class", "box7");
-    // divbox7.innerText=requestBooking[i]["selected_players"];
+    divbox7.innerText=filterGroundrequest[i]["selectedCourts"];
     columndiv2.append(divbox7);
+
+    divbox8=document.createElement("div");
+    divbox8.setAttribute("class", "box8");
+    divbox8.innerText=filterGroundrequest[i]["groundPrice"];
+    columndiv2.append(divbox8);
 
     btnaccept=document.createElement("button");
     btnaccept.setAttribute("class","acceptbtn");
@@ -161,7 +172,8 @@ acceptbtn.forEach((button)=>{
     alert(`${orderedId} not found`)
   }
     //  let filterRequest=JSON.parse(localStorage.getItem("bookingInfo"))
-
+    
+// button.style.display="none"
 
   
 

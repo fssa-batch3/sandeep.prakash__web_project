@@ -4,7 +4,7 @@
 }
 /* form container */
 #container {
-    background-image: url(../../assets/images/light.jpg);
+    background-image: url(../../assets/images/signup.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -26,8 +26,8 @@
     left: 35%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 60%;
-    background-color: rgba(0, 0, 0, 0.3);
+    height: 53%;
+    background-color: rgb(255, 255, 255);
 
 }
 
@@ -39,17 +39,21 @@
     height: 45px;
     border-radius: 5px;
     border: none;
+    background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
 
 }
 
 input[type="email"]::placeholder {
     padding-left: 5%;
+    color: rgb(0, 0, 0);
 
 
 }
 
 input[type="password"]::placeholder {
     padding-left: 5%;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -59,6 +63,8 @@ input[type="password"]::placeholder {
     height: 45px;
     border-radius: 5px;
     border: none;
+    background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
 
 }
 
@@ -69,10 +75,10 @@ input[type="password"]::placeholder {
     font-weight: bolder;
     cursor: pointer;
  background-color: rgba(14, 163, 24, 0.783);
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px 90px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(35, 34, 34);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border: none;
 
 }
@@ -82,23 +88,24 @@ input[type="password"]::placeholder {
 }
 
 .sign {
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
  /* signin */
 
 /* forgetpassword */
 
-.fp {
-    color: white;
+/* .fp {
+    color: rgb(255, 255, 255);
     font-size: large;
-}
+    text-decoration: none;
+} */
 /* forgetpassword */
 
 /* new signup */
 
 .newsign {
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: large;
 }
@@ -112,7 +119,7 @@ input[type="password"]::placeholder {
     background-color: rgba(14, 163, 24, 0.783);
     color: white;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgb(35, 34, 34);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border: none;
 
 
@@ -129,7 +136,7 @@ input[type="password"]::placeholder {
     }
     /* form container */
     #container {
-        background-image: url(../../assets/images/light.jpg);
+        background-image: url(../../assets/images/signup.jpg);
         height: 100vh;
         background-position: center;
         background-size: cover;
@@ -152,7 +159,7 @@ input[type="password"]::placeholder {
         border-radius: 2%;
         box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
         height: 53%;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgb(255, 255, 255);
     
     }
     
@@ -164,18 +171,19 @@ input[type="password"]::placeholder {
         height: 45px;
         border-radius: 5px;
         border: none;
-    
+        background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
     }
     
     input[type="email"]::placeholder {
         padding-left: 5%;
     
-    
+        color: rgb(0, 0, 0);
     }
     
     input[type="password"]::placeholder {
         padding-left: 5%;
-    
+        color: rgb(0, 0, 0);
     }
     
     
@@ -184,7 +192,8 @@ input[type="password"]::placeholder {
         height: 45px;
         border-radius: 5px;
         border: none;
-    
+        background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
     }
     
     #login {
@@ -197,7 +206,7 @@ input[type="password"]::placeholder {
         color: white;
         padding: 6px 60px;
         border-radius: 10px;
-        box-shadow: 0 3px 10px rgb(35, 34, 34);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         border: none;
     
     }
@@ -207,23 +216,24 @@ input[type="password"]::placeholder {
     }
     
     .sign {
-        color: white;
+        color: rgb(0, 0, 0);
     
     }
      /* signin */
     
     /* forgetpassword */
     
-    .fp {
+    /* .fp {
         color: white;
         font-size: large;
-    }
+        text-decoration: none;
+    } */
     /* forgetpassword */
     
     /* new signup */
     
     .newsign {
-        color: white;
+        color: rgb(0, 0, 0);
         font-weight: bold;
         font-size: 17px;
     }
@@ -237,7 +247,7 @@ input[type="password"]::placeholder {
         background-color: rgba(14, 163, 24, 0.783);
         color: white;
         border-radius: 10px;
-        box-shadow: 0 3px 10px rgb(35, 34, 34);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
         border: none;
     
     
@@ -261,7 +271,7 @@ input[type="password"]::placeholder {
         border-radius: 2%;
         box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
         height: 60%;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgb(255, 255, 255);
     
     }
 }
