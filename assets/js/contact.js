@@ -47,48 +47,79 @@ findplayersbtn.addEventListener("click", (e) => {
 
 // api
 
-// <!--Start of Tawk.to Script-->
-// {/* <script type="text/javascript"> */}
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/6447109b31ebfa0fe7fa2abc/1guqpho13';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-
-// </script>
-// <!--End of Tawk.to Script-->
-
-
-Tawk_API.onChatMessageReceived = function(data) {
-  console.log('New message received:', data.msg);
-  // ...
-};
+// // <!--Start of Tawk.to Script-->
+// // {/* <script type="text/javascript"> */}
+// var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+// (function(){
+// var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+// s1.async=true;
+// s1.src='https://embed.tawk.to/6447109b31ebfa0fe7fa2abc/1guqpho13';
+// s1.charset='UTF-8';
+// s1.setAttribute('crossorigin','*');
+// s0.parentNode.insertBefore(s1,s0);
+// })();
 
 
 
-// Tawk_API.onChatMessageReceived = function(data) {
-//   console.log('New message received:', data.msg);
-//   // ...
+// window.Tawk_API = window.Tawk_API || {};
+// window.Tawk_API.onChatStarted = function(data){
+//     //place your code here
+  
+
+//     Tawk_API.sendMessage('Hi there! How can I assist you today?');
 // };
 
-
-
-
+// // Tawk_API.onChatStarted = function(data) {
+// //   Tawk_API.sendMessage('Hi there! How can I assist you today?');
+// // };
 
 // Tawk_API.onChatMessageReceived = function(data) {
-//   // This function will be called when a new message is received
-//   var message = data.msg.toLowerCase(); // convert the message to lowercase for case-insensitive matching
-  
-//   // Check if the user's message contains a certain keyword and send a response accordingly
-//   if (message.includes('hello')) {
-//     Tawk_API.sendMessage('Hello! How can I assist you today?');
-//   } else if (message.includes('help')) {
-//     Tawk_API.sendMessage('I can help you with the following topics: ...');
+//   var message = data.msg.toLowerCase();
+//   if (message.includes('help')) {
+//     Tawk_API.sendMessage('Sure! What do you need help with?');
+//   } else if (message.includes('pricing')) {
+//     Tawk_API.sendMessage('Our pricing starts at $10/month. You can find more information on our website.');
+//   } else if (message.includes('features')) {
+//     Tawk_API.sendMessage('We offer a range of features, including live chat, chatbots, analytics, and more. Check out our website for more information.');
 //   } else {
-//     Tawk_API.sendMessage('Sorry, I did not understand your message. Please try again.');
+//     Tawk_API.sendMessage('I\'m sorry, I didn\'t understand. Could you please rephrase your question?');
 //   }
 // };
+
+
+
+
+
+// // </script>
+// // <!--End of Tawk.to Script-->
+
+
+// // Tawk_API.onChatMessageReceived = function(data) {
+// //   console.log('New message received:', data.msg);
+// //   // ...
+// // };
+
+
+
+// // Tawk_API.onChatMessageReceived = function(data) {
+// //   console.log('New message received:', data.msg);
+// //   // ...
+// // };
+
+
+
+
+
+// // Tawk_API.onChatMessageReceived = function(data) {
+// //   // This function will be called when a new message is received
+// //   var message = data.msg.toLowerCase(); // convert the message to lowercase for case-insensitive matching
+  
+// //   // Check if the user's message contains a certain keyword and send a response accordingly
+// //   if (message.includes('hello')) {
+// //     Tawk_API.sendMessage('Hello! How can I assist you today?');
+// //   } else if (message.includes('help')) {
+// //     Tawk_API.sendMessage('I can help you with the following topics: ...');
+// //   } else {
+// //     Tawk_API.sendMessage('Sorry, I did not understand your message. Please try again.');
+// //   }
+// // };

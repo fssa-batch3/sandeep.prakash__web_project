@@ -39,6 +39,7 @@ const joinform = document.getElementById("formbox");
 // console.log(joinPlayer+"ok");
 // profile image
 const imageShow = document.querySelector(".profileimg");
+let textarea=document.querySelector(".textabout")
 let ok = "../../assets/images/avatorprofile.jpg"
 
 
@@ -79,7 +80,8 @@ for (let i = 0; i < user_record.length; i++) {
             labeltime.style.display = "none"
             labeltimeto.style.display = "none"
             labelsports.style.display = "none"
-            labelage.style.display = "none"
+            labelage.style.display = "none";
+            textarea.style.display="none"
             editbutn1.style.bottom = "120px";
             // imageShow.setAttribute("class","profileimg")
 
@@ -206,9 +208,9 @@ joinPlayer.style.bottom="650px"
     labeltimeto.style.display = "block"
     labelsports.style.display = "block"
     labelage.style.display = "block"
-    editbutn1.style.top = "80px"
+    editbutn1.style.top = "280px"
     labelage.style.top = "50px";
-    formsdiv.style.height = "1220px"
+    formsdiv.style.height = "1270px"
     user_timingsfrom.style.top = "160px";
     user_timingsto.style.top = "60px";
     labeltime.style.top = "160px"
@@ -219,7 +221,8 @@ joinPlayer.style.bottom="650px"
     // joinPlayer.style.display="none";
     sportname1.style.left = "20px"
     sportname2.style.left = "20px"
-    sportname3.style.left = "20px"
+    sportname3.style.left = "20px";
+    textarea.style.display="block"
 
 
 
@@ -231,6 +234,7 @@ joinPlayer.style.bottom="650px"
         cricket.removeAttribute("disabled");
         football.removeAttribute("disabled");
         tennis.removeAttribute("disabled");
+        textarea.removeAttribute("disabled");
 
     user_age.required = true;
     user_location.setAttribute("required", true);
@@ -292,6 +296,7 @@ editbutn.addEventListener("submit", (e) => {
         cricket.removeAttribute("disabled");
         football.removeAttribute("disabled");
         tennis.removeAttribute("disabled");
+        textarea.removeAttribute("disabled");
 
     }
 
@@ -309,6 +314,7 @@ editbutn.addEventListener("submit", (e) => {
         cricket.setAttribute("disabled", "");
         football.setAttribute("disabled", "");
         tennis.setAttribute("disabled", "");
+        textarea.setAttribute("disabled", "");
 
     user_record.find(e => {
 
@@ -328,7 +334,8 @@ editbutn.addEventListener("submit", (e) => {
             e["timingsto"] = user_timingsto.value
             e["sports_choosed_cricket"] = cricket.checked;
             e["sports_choosed_football"] = football.checked;
-            e["sports_choosed_tennis"] = tennis.checked
+            e["sports_choosed_tennis"] = tennis.checked;
+            e["aboutplayers"]=textarea.value
 
             //   if(cricket.checked){
             //    e["sport_Choosed"]=true
@@ -404,6 +411,7 @@ editbutn.addEventListener("submit", (e) => {
 
 //     }
 // }
+
 //logout
 const logOut = document.querySelector(".logout")
 logOut.addEventListener("click", (e) => {
@@ -436,6 +444,7 @@ imageFileUpload.addEventListener("change", (e) => {
     // };
 
     const fileReader = new FileReader();
+    console.log(fileReader);
     fileReader.onload = (e) => {
         imageShow.src = e.target.result;
 
@@ -469,15 +478,15 @@ imageFileUpload.addEventListener("change", (e) => {
     fileReader.readAsDataURL(file);
 
 
+});
 
-
-})
-
+// refresh
 const userRecords = JSON.parse(localStorage.getItem("user_details"));
 const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
 for (let i = 0; i < userRecords.length; i++) {
     if (user_logged[0]["user_email"] == userRecords[i]["user_email"]) {
         const savedImage = userRecords[i];
+        console.log(savedImage);
         if (savedImage && savedImage.url) {
             imageShow.src = savedImage.url;
         }

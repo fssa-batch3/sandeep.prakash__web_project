@@ -11,6 +11,7 @@ let filterGroundrequest=requestBooking.filter((data)=>{
 
 });
 
+console.log(filterGroundrequest);
 
 for(const request of filterGroundrequest){
     const{ request_user_id }=request
@@ -123,11 +124,11 @@ for( let i=0; i <filterGroundrequest.length;i++){
     divbox8.innerText=filterGroundrequest[i]["groundPrice"];
     columndiv2.append(divbox8);
 
-    btnaccept=document.createElement("button");
-    btnaccept.setAttribute("class","acceptbtn");
-    btnaccept.setAttribute("value",filterGroundrequest[i]["ordered_id"]);
-    btnaccept.innerText="Accept"
-    childdiv.append(btnaccept)
+    // btnaccept=document.createElement("button");
+    // btnaccept.setAttribute("class","acceptbtn");
+    // btnaccept.setAttribute("value",filterGroundrequest[i]["ordered_id"]);
+    // btnaccept.innerText="Accept"
+    // childdiv.append(btnaccept)
 
     btndecline=document.createElement("button");
     btndecline.setAttribute("class","declinebtn");
@@ -143,43 +144,43 @@ document.querySelector(".parent").append(childdiv)
 
 
 
-const acceptbtn= document.querySelectorAll(".acceptbtn")
+// const acceptbtn= document.querySelectorAll(".acceptbtn")
 
-acceptbtn.forEach((button)=>{
-    button.addEventListener("click",()=>{
-     let orderedId=button.value
-     console.log(orderedId);
-    //  let filterGroundrequest=JSON.parse(localStorage.getItem("bookingInfo")).filter((data)=>{
-    //    return data.seller_id==sellerId
+// acceptbtn.forEach((button)=>{
+//     button.addEventListener("click",()=>{
+//      let orderedId=button.value
+//      console.log(orderedId);
+//     //  let filterGroundrequest=JSON.parse(localStorage.getItem("bookingInfo")).filter((data)=>{
+//     //    return data.seller_id==sellerId
 
-    //  })
-     let bookingindex=requestBooking.findIndex((booking)=>{
-      return  booking.ordered_id==orderedId
-     });
-     console.log(filterGroundrequest)
-     console.log(bookingindex)
-     console.log(requestBooking)
+//     //  })
+//      let bookingindex=requestBooking.findIndex((booking)=>{
+//       return  booking.ordered_id==orderedId
+//      });
+//      console.log(filterGroundrequest)
+//      console.log(bookingindex)
+//      console.log(requestBooking)
 
-     if(bookingindex 
-        >-1){ 
-        requestBooking[bookingindex].booking_status="accepted";
-        console.log(requestBooking[bookingindex])
-        console.log(requestBooking)
-        localStorage.setItem("bookingInfo",JSON.stringify(requestBooking));
-        alert("booking accepted")
-     }
-  else{
-    alert(`${orderedId} not found`)
-  }
-    //  let filterRequest=JSON.parse(localStorage.getItem("bookingInfo"))
+//      if(bookingindex 
+//         >-1){ 
+//         requestBooking[bookingindex].booking_status="accepted";
+//         console.log(requestBooking[bookingindex])
+//         console.log(requestBooking)
+//         localStorage.setItem("bookingInfo",JSON.stringify(requestBooking));
+//         alert("booking accepted")
+//      }
+//   else{
+//     alert(`${orderedId} not found`)
+//   }
+//     //  let filterRequest=JSON.parse(localStorage.getItem("bookingInfo"))
     
-// button.style.display="none"
+// // button.style.display="none"
 
   
 
-})
+// })
 
-})
+// })
 
 const declinebtn=document.querySelectorAll(".declinebtn");
 declinebtn.forEach((button)=>{
@@ -200,10 +201,13 @@ declinebtn.forEach((button)=>{
      if(bookingindex 
         >-1){ 
         requestBooking[bookingindex].booking_status="declined";
+        requestBooking[bookingindex].booking_time="";
+        requestBooking[bookingindex].seller_id=""
+
         console.log(requestBooking[bookingindex])
         console.log(requestBooking)
         localStorage.setItem("bookingInfo",JSON.stringify(requestBooking));
-        alert("booking declined")
+        alert("Are you sure want to cancel the booking")
      }
   else{
     alert(`${orderedId} not found`)

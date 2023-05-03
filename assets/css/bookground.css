@@ -10,8 +10,9 @@ header {
     height: 12vh;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
     font-family: 'Noto Serif Khojki', serif;
+    background-color: rgba(32,56,120,255);
 }
 .checkbtn{
     font-size: 22px;
@@ -83,11 +84,12 @@ ul li a:hover {
     overflow: hidden;
     height: 16vh;
     border: 20px solid;
-    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+    /* border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60; */
     position: sticky;
     top: 0%;
     z-index: 2;
     background-color: white;
+border-color: rgba(32,56,120,255);
 }
 
 .content1 {
@@ -209,13 +211,13 @@ input[type="search"]::placeholder {
 /* main2 groundlist1 */
 
 .main2 {
-
+    /* background-color: rgba(241, 251, 255, 255); */
     /* height: 310vh; */
     /* overflow: hidden; */
     color: white;
     border: 20px solid;
-    border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60;
-
+    /* border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60; */
+    border-color: rgba(32,56,120,255);
 }
 
 .parent {
@@ -351,8 +353,8 @@ footer {
 
     height: 30vh;
 
-    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-
+    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
+    background-color:  rgba(32,56,120,255);
     background-size: cover;
     color: white;
 

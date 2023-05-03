@@ -31,10 +31,10 @@ else {
                 " For Football players are advised to wear shoes only on ground\n sharp metal football are not allowed For tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "22:28",
+                "10:00 AM",
             ground_timing_to
                 :
-                "21:28",
+                "10:00 PM",
             groundimg1
                 :
                 "https://iili.io/Hj2NLMJ.jpg",
@@ -58,7 +58,7 @@ else {
                 true,
             groundCourt
                 :
-                "2",
+                "5",
             groundIncreasePrice
                 :
                 "200",
@@ -94,10 +94,10 @@ else {
                 "For Football players are advised to wear shoes only on ground<\n sharp metal football are not allowed\n For tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "05:27",
+                "10:00 AM",
             ground_timing_to
                 :
-                "11:27",
+                "10:00 PM",
             groundimg1
                 :
                 "https://iili.io/HjPs46b.jpg",
@@ -121,7 +121,7 @@ else {
                 true,
                 groundCourt
                 :
-                "2",
+                "6",
             groundIncreasePrice
                 :
                 "200",
@@ -157,10 +157,10 @@ else {
                 "For Football players are advised to wear shoes only on ground\n   sharp metal football are not allowed \n   For tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "01:27",
+                "11:00 AM",
             ground_timing_to
                 :
-                "14:37",
+                "10:00 PM",
             groundimg1
                 :
                 "https://iili.io/HjLw6Je.jpg\"",
@@ -220,10 +220,10 @@ else {
                 "For Football players are advised to wear shoes only on ground\n   sharp metal football are not allowed \n For tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "16:39",
+                "1:00 AM",
             ground_timing_to
                 :
-                "13:38",
+                "10:00 AM",
             groundimg1
                 :
                 "https://iili.io/HjQK6mB.jpg",
@@ -287,10 +287,10 @@ seller_id
                 "        For Football players are advised to wear shoes only on ground\n         sharp metal football are not allowed \n         For tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "23:56",
+                "11:00 AM",
             ground_timing_to
                 :
-                "02:56",
+                "11:00 PM",
             groundimg1
                 :
                 "https://iili.io/HwYWZvt.jpg",
@@ -349,10 +349,10 @@ seller_id
                 "  For Football players are advised to wear shoes only on ground\n         sharp metal football are not allowed \n         For tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "03:00",
+                "3:00 PM",
             ground_timing_to
                 :
-                "03:00",
+                "10:00 PM",
             groundimg1
                 :
                 "https://iili.io/HwanpVf.jpg",
@@ -412,10 +412,10 @@ seller_id
                 "For Football players are advised to wear shoes only on ground\nsharp metal football are not allowed\nFor tennis 6 players are only allowed",
             ground_timing_from
                 :
-                "00:11",
+                "10:00 PM",
             ground_timing_to
                 :
-                "00:11",
+                "11:00 PM",
             groundimg1
                 :
                 "https://iili.io/HwaDs4f.jpg",
@@ -478,13 +478,4 @@ if (JSON.parse(localStorage.getItem("user_logged_in"))) {
 else {
 
 }
-
-
-
-
-
-
-
-
-
 

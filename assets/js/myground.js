@@ -12,6 +12,37 @@ let sellerProducts=groundRecords.find((data)=>{
 console.log(sellerProducts);
 // local storage
 
+
+
+// time
+
+let startTimeValue= null;
+let endTimeValue=null;
+const timePicker={
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "h:i K", 
+    time_24hr: false,
+  minuteIncrement: 60,
+//   defaultDate: "12:00 AM",
+  onChange: function(selectedDates, dateStr) {
+    // Store selected start and end times in global variables
+    if (this.input.id === "startTime") {
+      startTime = dateStr;
+    } else if (this.input.id === "endTime") {
+      endTime = dateStr;
+    }
+    // localStorage.setItem("startTime", startTime);
+    // localStorage.setItem("endTime", endTime);
+  }
+
+}
+const startTimepicker = flatpickr("#startTime", timePicker);
+const endTimepicker = flatpickr("#endTime", timePicker);
+
+  
+
+
 // view
 
 
@@ -28,8 +59,8 @@ const groundImage3 = (document.getElementById("grimg3"));
 const sportsAvail1 = (document.getElementById("sportsavail1"));
 const sportsAvail2 = (document.getElementById("sportsavail2"));
 const sportsAvail3 = (document.getElementById("sportsavail3"));
-const groundTimingfrom = (document.getElementById("timingsfrom"));
-const groundTimingTo = (document.getElementById("timingsto"));
+const groundTimingfrom = (document.getElementById("startTime"));
+const groundTimingTo = (document.getElementById("endTime"));
 const groundRules = (document.getElementById("rules"));
 const groundCity = (document.getElementById("sportsvalue"));
 const groundPrice = (document.getElementById("amount"));
@@ -112,7 +143,8 @@ updatebutton.addEventListener("submit", () => {
            sellerProducts["sport_avail_1"] = sportsAvail1.checked
            sellerProducts["sport_avail_2"] = sportsAvail2.checked
            sellerProducts["sport_avail_3"] = sportsAvail3.checked
-           sellerProducts["ground_timing_to"] = groundTimingTo.value
+           sellerProducts["ground_timing_from"] = groundTimingfrom.value
+           sellerProducts["ground_timing_to"]=groundTimingTo.value
            sellerProducts["ground_rules"] = groundRules.value
            sellerProducts["ground_city"] = groundCity.value
            sellerProducts["ground_price"] = groundPrice.value
@@ -125,8 +157,13 @@ updatebutton.addEventListener("submit", () => {
 
 
 })
-
-// update
+// function replacer(key, value) {
+//     if (key === "_flatpickr") {
+//       return undefined; // Skip the _flatpickr property
+//     }
+//     return value;
+//   }
+// delete
 
 const deletebutton = document.getElementById("deletebtn")
 deletebutton.addEventListener("click", () => {

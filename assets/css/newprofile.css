@@ -224,7 +224,7 @@ form input {
     left: 35%;
     border-radius: 2%;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 1100px;
+    height: 1235px;
 
 
 }
@@ -398,4 +398,9 @@ font-size: 20px;
 }
 .labelnamea{
    margin-right: 400px;
+}
+.textabout{
+    resize: none;
+    width: 200px;
+    height: 120px;
 }

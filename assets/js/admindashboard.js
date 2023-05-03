@@ -68,7 +68,35 @@ else{
 
 }
 
+// time l
 
+
+
+let startTimeValue= null;
+let endTimeValue=null;
+const timePicker={
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "h:i K", 
+    time_24hr: false,
+  minuteIncrement: 60,
+//   defaultDate: "12:00 AM",
+  onChange: function(selectedDates, dateStr) {
+    // Store selected start and end times in global variables
+    if (this.input.id === "startTime") {
+      startTime = dateStr;
+    } else if (this.input.id === "endTime") {
+      endTime = dateStr;
+    }
+    // localStorage.setItem("startTime", startTime);
+    // localStorage.setItem("endTime", endTime);
+  }
+
+}
+const startTimepicker = flatpickr("#startTime", timePicker);
+const endTimepicker = flatpickr("#endTime", timePicker);
+
+  
 
 
 //ground filling
@@ -77,6 +105,10 @@ formButton.addEventListener("submit", e => {
 
     e.preventDefault();
     getSellerGround();
+
+
+
+  
 });
 function getSellerGround() {
     const groundName = (document.getElementById("groname").value);
@@ -89,12 +121,16 @@ function getSellerGround() {
     const sportsAvail1 = (document.getElementById("sportsavail1").checked);
     const sportsAvail2 = (document.getElementById("sportsavail2").checked);
     const sportsAvail3 = (document.getElementById("sportsavail3").checked);
-    const groundTimingfrom = (document.getElementById("timingsfrom").value);
-    const groundTimingTo = (document.getElementById("timingsto").value);
+    // const groundTimingfrom = (document.getElementById("timingsfrom").value);
+    // const groundTimingTo = (document.getElementById("timingsto").value);
     const groundRules = (document.getElementById("rules").value);
     const groundCity = (document.getElementById("sportsvalue").value);
     const groundPrice = (document.getElementById("amount").value);
     const groundincreasingPrice = (document.getElementById("increaseamount").value);
+//    let  groundTimingFrom=starttimestring;
+// let groundTimingTo=endTimestring
+// console.log(starttimestring);
+//   console.log(endTimestring);
 
 const groundCourts=document.getElementById("sportscourts").value
 
@@ -126,8 +162,8 @@ const groundCourts=document.getElementById("sportscourts").value
             "sport_avail_1": sportsAvail1,
             "sport_avail_2": sportsAvail2,
             "sport_avail_3": sportsAvail3,
-            "ground_timing_from": groundTimingfrom,
-            "ground_timing_to": groundTimingTo,
+            "ground_timing_from": startTime,
+            "ground_timing_to": endTime,
             "ground_rules": groundRules,
             "ground_city": groundCity,
             "ground_price": groundPrice,
@@ -138,8 +174,9 @@ const groundCourts=document.getElementById("sportscourts").value
 
 
     }
-    localStorage.setItem("ground_info", JSON.stringify(groundOwnerRecords))
 
+    localStorage.setItem("ground_info", JSON.stringify(groundOwnerRecords))
+alert("Your GroundInfo is Submitted Successfully")
 }
 
 

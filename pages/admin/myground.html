@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
         integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 </head>
 
@@ -24,29 +25,38 @@
 
     <div class="formcontainer">
         <button class="closebtn"><i class="fa-solid fa-xmark fa-bounce"></i></button>
-           
+
         <form id="formbtn">
             <div class="box1">
-            <div class="groundname">
-                <label class="labelgroname"> Ground Name:</label>
-                <input type="name" placeholder="Ground Name " id="groname" aria-label="name"  pattern="^[a-zA-Z ]{3,50}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 50 characters." required><br> 
+                <div class="groundname">
+                    <label class="labelgroname"> Ground Name:</label>
+                    <input type="name" placeholder="Ground Name " id="groname" aria-label="name"
+                        pattern="^[a-zA-Z ]{3,50}$"
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 50 characters."
+                        required><br>
+                </div>
+
+                <label class="labelnamep"> Ground Main Area:</label>
+                <input type="name" placeholder="Ground Location" id="grolname" aria-label="name"
+                    pattern="^[a-zA-Z ]{3,60}$"
+                    title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 60 characters."
+                    required><br>
             </div>
-        
-            <label class="labelnamep"> Ground place:</label>
-            <input type="name" placeholder="Ground Location" id="grolname" aria-label="name" pattern="^[a-zA-Z ]{3,60}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 60 characters." required><br>
-            </div>
-        
+
             <div class="groundlocationbox">
-        
+
                 <label class="labelname"> Ground Address:</label>
-                <input type="name" placeholder="Ground Location" id="groaddress" aria-label="name" pattern="^[a-zA-Z ]{3,400}$" title="Please enter a valid input (letters and spaces only, between 3 to 400 characters)" required><br>
+                <input type="name" placeholder="Ground Location" id="groaddress" aria-label="name"
+                pattern="^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?~` ]{3,400}$"
+                    title="Please enter a valid input (letters and spaces only, between 3 to 400 characters)"
+                    required><br>
                 <label class="labelnamell"> Ground Location Link:</label>
-                <input type="url" placeholder="Ground Location" id="grolink" aria-label="name" required><br>  
-            
+                <input type="url" placeholder="Ground Location" id="grolink" aria-label="name" required><br>
+
             </div>
             <div class="values">
                 <p>Distict</p>
-                <select id="sportsvalue" required >
+                <select id="sportsvalue" required>
                     <option value="Chennai">Chennai</option>
                     <option value="Coimbatore">Coimbatore</option>
                     <option value="Salem">Salem</option>
@@ -57,40 +67,44 @@
             </div>
             <div class="groundimageupload">
                 <label class="labelnamei"> Upload your Ground images:</label><br>
-                <input type="url" placeholder="Upload " id="grimg1" aria-label="groundimg" required><br> 
+                <input type="url" placeholder="Upload " id="grimg1" aria-label="groundimg" required><br>
                 <input type="url" placeholder="Upload " id="grimg2" aria-label="groundimg" required><br>
-                <input type="url" placeholder="Upload " id="grimg3" aria-label="groundimg" required><br>  
-            
+                <input type="url" placeholder="Upload " id="grimg3" aria-label="groundimg" required><br>
+
             </div>
-            
-                <!-- <div class="groundimgshow">
+
+            <!-- <div class="groundimgshow">
                     
                 </div> -->
-                <div class="sportsavailable">
-                    <label class="labelnames"> Sports Available:</label><br>
-                    <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket">
-                    <label class="sname">Cricket</label><br>
-                    <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football"  >
-                    <label class="sname">Football</label><br>
-                    <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis" >
-                    <label class="sname">Tennis</label><br>
-            
+            <div class="sportsavailable">
+                <label class="labelnames"> Sports Available:</label><br>
+                <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket">
+                <label class="sname">Cricket</label><br>
+                <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football">
+                <label class="sname">Football</label><br>
+                <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis">
+                <label class="sname">Tennis</label><br>
 
-            
-                </div>
-                <div class="groundtiming">
-                    <label class="">Timings </label><br>
-                    <p>From</p>
+
+
+            </div>
+            <div class="groundtiming">
+                <label class="">Timings </label><br>
+                <!-- <p>From</p>
                     <input type="time" id="timingsfrom" aria-label="sportsavail" pattern="(0[1-9]|1[0-2]):[0-5][0-9] (am|pm)" required>
                     <p>To</p>
-                    <input type="time" id="timingsto" aria-label="sportsavail"required >
-            
-                </div>
-             
-            
+                    <input type="time" id="timingsto" aria-label="sportsavail"required > -->
+                Start Time: <input type="text" id="startTime" required placeholder="12:00">
+                End Time: <input type="text" id="endTime" required placeholder="12:00">
+
+            </div>
+
+
             <div class="groundrules">
                 <label class="">Add Your Ground rules </label><br>
-                <textarea id="rules" pattern="^[a-zA-Z0-9\s]{3,600}$" title="Please enter a valid input (letters, numbers and spaces only, between 3 to 600 characters)" rows="8"    cols="30"></textarea required><br>
+                <textarea id="rules" pattern="^[a-zA-Z0-9\s]{3,600}$"
+                    title="Please enter a valid input (letters, numbers and spaces only, between 3 to 600 characters)"
+                    rows="8" cols="30"></textarea required><br>
             
             </div>
             <div class="groundprice">
@@ -136,6 +150,8 @@
             
         
             </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
  
 <script src="../../assets/js/myground.js"></script>
 </body>

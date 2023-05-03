@@ -277,7 +277,8 @@ function getUserData() {
                 "sports_choosed_tennis": tennis,
                 "sportLocationPlay": sportLocation,
                 "timingsfrom": timingsfrom,
-                "timingsto": timingsto
+                "timingsto": timingsto,
+                "aboutplayers":""
 
 
             }

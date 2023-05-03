@@ -9,7 +9,8 @@
 
 
 header {
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
+    background-color:  rgba(32,56,120,255);
 
     height: 14vh;
     background-position: center;
@@ -97,9 +98,9 @@ ul li a:hover {
 }
 
 .cont2 {
-    background-color: rgb(2, 2, 45);
-    border: 5px solid rgb(25, 11, 82);
-    border-radius: 10%;
+
+    border: 3px solid  rgba(32,56,120,255);
+    border-radius: 10px;
     width: 6%;
     height: 102px;
     box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
@@ -109,7 +110,7 @@ ul li a:hover {
     margin-left: 90%;
     position: relative;
     bottom: 143px;
-
+    background-color: white;
 
 
 }
@@ -117,11 +118,15 @@ ul li a:hover {
 .userlogo {
     width: 35px;
     position: relative;
+    left: 25px;
 
 }
 
 
+.userbar{
 
+   /* height: 500px; */
+}
 
 
 .fa-user {
@@ -134,7 +139,7 @@ ul li a:hover {
 .userprofile {
     font-size: 13px;
     padding: 5px 5px;
-    background-color: rgb(5, 120, 47);
+    background-color:  rgba(32,56,120,255);
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -151,9 +156,9 @@ ul li a:hover {
 
 .main2 {
     height: 127vh;
+    border: 20px solid;
 
-
-
+    border-color: rgba(32,56,120,255);
 }
 
 .bar {
@@ -168,7 +173,9 @@ ul li a:hover {
     color: white;
     margin: 10px 10px;
     border-radius: 9%;
-    height: 75vh;
+    height: 85vh;
+    border: 1px solid black;
+    padding: 10px 80px;
 
 }
 
@@ -285,7 +292,9 @@ ul li a:hover {
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;
     top: 30px;
+    
 }
+
 
 .top {
     color: rgb(0, 0, 0);
@@ -297,18 +306,40 @@ ul li a:hover {
     color: rgb(0, 0, 0);
     background-color: rgba(229, 233, 236, 0.952);
     padding: 20px 10px;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
     
+  
+    
+.main::-webkit-scrollbar {
+    width: 10px; 
+  }
 
-}
+  .main::-webkit-scrollbar-track {
+    background-color: #f6f6f6; /* Set the background color of the scrollbar track */
+  }
+  .main::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Set the color of the scrollbar thumb on hover */
+  }
 
-.messageto {
+
+.messagefrom {
     background-color: rgb(248, 248, 248);
+    text-align: start;
     color: black;
-    width: 10%;
-    padding: 7px 15px;
+    max-width: fit-content;
+    min-height: fit-content;
+     padding: 7px 20px;
     margin-left: 13px;
-    border-radius: 35%;
+    border-radius: 10px;
     box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+    overflow: hidden;
+    white-space:normal;
+    word-wrap: break-word;
+    margin-bottom: 10px;
 }
 .h2head{
     background-color: #0A66C2;
@@ -316,15 +347,23 @@ ul li a:hover {
     border-radius: 10px;
     width: 320px;
 }
-.messagefrom {
+.messageto {
     background-color: rgb(126, 126, 126);
+    text-align: start;
     color: rgb(255, 255, 255);
-    width: 10%;
-    padding: 7px 15px;
-    margin-left: 78%;
-    border-radius: 35%;
+    max-width: fit-content;
+   min-height: fit-content;
+    padding: 7px 20px;
+    margin-left: 66%;
+    border-radius: 10px;
     box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+    overflow: hidden;
+    white-space:normal;
+    word-wrap: break-word;
+    margin-bottom: 10px;
 }
+
+
 
 .bottom form {
     display: flex;
@@ -412,12 +451,17 @@ form button {
 .dropdownstatistics:hover .dropdownlist {
     display: block;
 }
+.timeside{
+    font-size: 0.5em;
+    /* position: relative;
+    left: 20px; */
+}
 
 /* footer section */
 footer {
     height: 30vh;
-    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-
+    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
+    background-color:  rgba(32,56,120,255);
     background-size: cover;
     color: white;
 
@@ -484,14 +528,14 @@ a {
     width: 130px;
     height: 130px;
     padding: 20px;
-    border-radius: 90px;
+    border-radius: 30px;
 }
 
 .profilebox{
     width: 500px;
     height: 200px;
     background-color: #00acee;
-    border-radius: 30px;
+    border-radius: 10px;
     display: flex;
   
 }
@@ -509,7 +553,7 @@ a {
     position: relative;
     top: 70px;
     padding: 15px;
-    border-radius: 17px;
+    border-radius: 10px;
     right: 60px;
 
 
@@ -543,7 +587,7 @@ a {
      width: 200px;
     height: 100px;
     background-color: #00acee;
-    border-radius: 30px;
+    border-radius: 10px;
     position: relative;
 top: 20px;    
 }
@@ -602,7 +646,7 @@ top: 17px;
     width: 200px;
    height: 100px;
    background-color: #00acee;
-   border-radius: 30px;
+   border-radius: 10px;
    position: relative;
 top: 20px;    
 }
@@ -737,7 +781,7 @@ ul li a:hover {
 }
 
 .cont2 {
-    background-color: rgb(2, 2, 45);
+    /* background-color: rgb(2, 2, 45); */
     border: 5px solid rgb(25, 11, 82);
     border-radius: 10%;
     width: 70px;
@@ -764,6 +808,7 @@ ul li a:hover {
 .userbar{
     position: relative;
     bottom: 15px;
+
 }
 
 
@@ -780,7 +825,7 @@ ul li a:hover {
 .userprofile {
     font-size: 8px;
     padding: 2px 2px;
-    background-color: rgb(5, 120, 47);
+    background-color:  rgba(32,56,120,255);
     color: white;
     font-weight: 600;
     cursor: pointer;

@@ -10,8 +10,9 @@ header {
     height: 12vh;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
     font-family: 'Noto Serif Khojki', serif;
+    background-color: rgba(32,56,120,255);
 }
 
 
@@ -75,7 +76,7 @@ ul li a:hover {
 .logo {
     width: 14%;
     position: relative;
-    top: 30px;
+    bottom: 70px;
     left: 46px;
 }
 
@@ -90,7 +91,7 @@ ul li a:hover {
     position: sticky;
     top: 0%;
     z-index: 2;
-    background-color: white;
+    border-color: rgba(32,56,120,255);
 }
 
 
@@ -100,7 +101,8 @@ ul li a:hover {
     /* overflow: hidden; */
     color: white;
     border: 20px solid;
-    border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60;
+    border-color: rgba(32,56,120,255);
+    /* border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60; */
 
 }
 .parent {
@@ -114,10 +116,11 @@ ul li a:hover {
 .box{
     background-color: #8bebdd;
     width: 670px;
-    height: 400px;
+    height: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 70px;
+    border-radius: 20px;
     /* width: %; */
   
 
@@ -256,8 +259,8 @@ bottom: 20px;
     grid-template-rows: 12vh;
     grid-gap: 30px;
     width:160%;
-    height: 370px;
-    background-color: rgb(136, 234, 142);
+    height: 480px;
+    background-color: rgb(157, 250, 222);
     position: relative;
     left: 70px;
     border-radius: 10px;
@@ -265,8 +268,9 @@ bottom: 20px;
 }
 
 .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
-    width: 150px;
+    width: 210px;
     height: 330px;
+    padding: 10px;
     background-color: #5e6af1;
     color: white;
     text-align: center;
@@ -292,20 +296,21 @@ bottom: 20px;
    /* padding: 10px; */
 display: flex;
 flex-direction: column;
-gap: 28px;
+gap: 45px;
 position: relative;
 left: 20px;
+color: #00021a;
 
 }
 .column2{
     width: 20px;
     height: 334px;
-    padding: 10px;
+    padding:1px;
  display: flex;
  flex-direction: column;
- gap: 20px;
- /* position: relative;
- left: 90px; */
+ gap: 21px;
+ position: relative;
+ right: 70px;
  }
 
 
@@ -324,9 +329,9 @@ left: 20px;
 /* footer */
 footer {
     height: 50vh;
-
-    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-
+/* 
+    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
+    background-color: rgba(32,56,120,255);
     background-size: cover;
     color: white;
 

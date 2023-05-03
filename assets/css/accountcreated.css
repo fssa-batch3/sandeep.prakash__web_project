@@ -4,7 +4,7 @@
 }
 /* account created container */
 #container {
-    background-image: url(../../assets/images/light.jpg);
+    background-image: url(../../assets/images/signup.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
 
 
 }
