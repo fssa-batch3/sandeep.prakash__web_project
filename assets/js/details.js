@@ -904,7 +904,7 @@ div_book2.append(br_tag16);
 // sportsselect
 span_sportsSelect = document.createElement("span")
 span_sportsSelect.setAttribute("class", "headingbook")
-span_sportsSelect.innerText = "Courts"
+span_sportsSelect.innerText = "Select Which Courts"
 div_book2.append(span_sportsSelect);
 
 select_sports = document.createElement("select")
