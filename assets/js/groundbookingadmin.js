@@ -200,6 +200,9 @@ declinebtn.forEach((button)=>{
 
      if(bookingindex 
         >-1){ 
+            if( confirm("Are you sure want to decline the booking")){
+
+            
         requestBooking[bookingindex].booking_status="declined";
         requestBooking[bookingindex].booking_time="";
         requestBooking[bookingindex].seller_id=""
@@ -207,7 +210,10 @@ declinebtn.forEach((button)=>{
         console.log(requestBooking[bookingindex])
         console.log(requestBooking)
         localStorage.setItem("bookingInfo",JSON.stringify(requestBooking));
-        alert("Are you sure want to cancel the booking")
+            }
+            else{
+                
+            }
      }
   else{
     alert(`${orderedId} not found`)

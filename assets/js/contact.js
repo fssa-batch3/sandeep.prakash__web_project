@@ -31,15 +31,21 @@ else {
 
 let findplayersbtn = document.querySelector(".findplayers")
 findplayersbtn.addEventListener("click", (e) => {
-  if (!loginUser || loginUser[0]["player_status"] == false) {
-    alert("Please join as a player  or login to find players ")
+  if (!loginUser ) {
+    alert("Please login to find players ")
+    e.preventDefault();
+  }
+
+  else if( loginUser[0]["player_status"] == false){
+    alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
     e.preventDefault();
   }
 
 
-  else {
-    window.location.href = "./pages/player/findplayers.html";
-  }
+
+      else {
+        window.location.href = "./pages/player/findplayers.html";
+      }
 
 
 

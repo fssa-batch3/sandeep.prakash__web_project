@@ -9,7 +9,23 @@ const player = [
 
 
 
-
+// own profile
+let imageShow=document.querySelector(".userlogo")
+const userRecords = JSON.parse(localStorage.getItem("user_details"));
+const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
+for (let i = 0; i < userRecords.length; i++) {
+    if (user_logged[0]["user_email"] == userRecords[i]["user_email"]) {
+        const savedImage = userRecords[i];
+        console.log(savedImage);
+        if (savedImage && savedImage.url) {
+            imageShow.src = savedImage.url;
+        }
+        else {
+            imageShow.src = "https://iili.io/HkW7U4S.jpg"
+        }
+        break;
+    }
+}
 
 
 
@@ -290,6 +306,22 @@ else {
     }
     messageofchat.innerText = particularmessage.text+ timestampconvert(particularmessage.timestamp);;
     div_chat_main.append(messageofchat);
+
+//delete btn
+    let delbtn=document.createElement("button");
+    delbtn.setAttribute("class","delbtn")
+    delbtn.innerText="Delete";
+    if(particularmessage.type == "received"){
+      delbtn.style.display="none"
+
+    }
+
+    delbtn.addEventListener("click",()=>{
+      deletemess(particularmessage);
+      messageofchat.remove()
+
+    })
+    messageofchat.append(delbtn)
   }
 
 
@@ -359,6 +391,11 @@ i_send_symbol = document.createElement("i");
 i_send_symbol.setAttribute("class", "bx bx-send");
 send_btn.append(i_send_symbol);
 
+ text=document.createElement("p");
+  text.textContent="* You cannot chat with  them please connect with them and make them in your friendlist";
+  text.setAttribute("class","chatalerttext")
+  div_sidebar_2.append(text)
+
 
 document.querySelector("div.main2").append(div_parent1)
 
@@ -414,59 +451,117 @@ console.log(loginUserID);
 
 
 
-connectBtn.forEach((conBtn) => {
-  playerId = conBtn.value
-  conBtn.addEventListener("click", () => {
-    // alert(playerId)
-    // local storage
-    let request_records = new Array();
-    request_records = JSON.parse(localStorage.getItem("request_details")) ?
-      JSON.parse(localStorage.getItem("request_details")) : []
-
-
-
+  connectBtn.forEach((conBtn) => {
+    playerId = conBtn.value
     if (playerId == loginUserID) {
-      alert("this your profile")
+      // alert("this your profile")
+      conBtn.style.display = "none"
     }
-    else if (request_records.some((v) => {
-      v.requested_user == loginUserID && v.receiving_user == playerId
-
-    })) {
-      connectBtn.style.display = "none"
-    }
+    conBtn.addEventListener("click", () => {
 
 
 
-    else {
-      request_records.push({
-        "requested_user": loginUserID,
-        "receiving_user": playerId,
-        "request_status": "pending"
-
-      });
-
-      localStorage.setItem("request_details", JSON.stringify(request_records))
-      alert("you requested")
 
 
 
-    }
-
-
+      
+      if(conBtn.innerHTML=="Connect"){
+      // alert(playerId)
+      // local storage
+      let request_records = new Array();
+      request_records = JSON.parse(localStorage.getItem("request_details")) ?
+        JSON.parse(localStorage.getItem("request_details")) : []
+  
+  
+  
+      // if (playerId == loginUserID) {
+      //   alert("this your profile")
+      //   connectBtn.style.display = "none"
+      // }
+      //  if (request_records.some((v) => {
+      //   v.requested_user === loginUserID && v.receiving_user === playerId
+  
+      // })) {
+      //   conBtn.innerHTML="Requested"
+      //   console.log("ok");
+      // }
+  
+  
+  
+      // else {
+        request_records.push({
+          "requested_user": loginUserID,
+          "receiving_user": playerId,
+          "request_status": "pending"
+  
+        });
+  
+        localStorage.setItem("request_details", JSON.stringify(request_records))
+        alert("you requested")
+  
+  
+  
+      // }
+      }
+  
+    })
+  
+  
   })
-
-})
-
+  
 
 
+  let requestrecords= JSON.parse(localStorage.getItem("request_details"));
+  console.log(requestrecords);
+  const connectBtn2 = document.querySelector(".connectbtn");
+
+  if(requestrecords==null){
+
+  }
+  else{
+
+  
+  if (requestrecords.some((v) => {
+    return v.requested_user === loginUserID && v.receiving_user === playerId
+  
+  })) {
+  
+    connectBtn2.innerText= "Requested"
+    console.log("ok");
+  }
+  
+}
 
 
 
 
+// chat blur remove
+if(requestrecords==null){
+
+}
+else{
+
+  
+  if (requestrecords.some((v) => {
+    return v.requested_user === loginUserID && v.receiving_user === playerId && v.request_status=="accepted"
+  
+  })) {
+    connectBtn2.innerText="Friend"
+   let chatbox = document.querySelector(".container");
+  //  let side_bar2=document.querySelector(".sidebar2");
+   let textalert=document.querySelector(".chatalerttext");
+   console.log(textalert);
+  chatbox.style.filter = "none";
+  textalert.style.display="none";
+  chatbox.style.left = "30px";
+  
+  // chatbox.innerText="You cannot chat with before they accept your request"
 
 
-
-
+    console.log("ok");
+  }
+  
+}
 
 
 
@@ -567,3 +662,22 @@ function timestampconvert(timestamp){
   hours=hours?hours:12;
   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampmformat}`;
 }
+
+
+// delete messages
+
+
+function deletemess(message){
+  let messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
+  let existingmessageuser=messageofUser.findIndex((mess)=>mess.sender_id===loginUserID && mess.receiver_id===show2.user_id);
+
+if(existingmessageuser!==-1){
+  let exitingmesss=messageofUser[existingmessageuser].messages.findIndex((messs)=>messs.text===message.text && messs.timestamp ===messs.timestamp);
+  if(exitingmesss!==-1){
+    messageofUser[existingmessageuser].messages.splice(exitingmesss,1);
+    localStorage.setItem("user_Messages",JSON.stringify(messageofUser))
+  }
+}
+
+}
+

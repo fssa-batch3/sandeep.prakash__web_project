@@ -365,7 +365,7 @@ form input {
 }
 .pjointext{
     position: relative;
-    bottom: 300px;
+    bottom: 330px;
 }
 #checkjoinplayer1{
     font-size: 10px;
@@ -403,4 +403,9 @@ font-size: 20px;
     resize: none;
     width: 200px;
     height: 120px;
+    position: relative;
+}
+.linetext{
+    position: relative;
+
 }

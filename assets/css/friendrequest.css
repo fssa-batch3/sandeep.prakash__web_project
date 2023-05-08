@@ -213,7 +213,7 @@ input[type="search"]::placeholder{
     border: none;
     border-radius: 3px;
     position: relative;
-    top:20px;
+    top:70px;
   
   }
   /* main1 */
@@ -262,7 +262,7 @@ input[type="search"]::placeholder{
         cursor: pointer;
         border: none;
         position: relative;
-        top: 10px;
+        top: 0px;
         right: 10%;
         border-radius: 5%;
     }
@@ -331,7 +331,15 @@ input[type="search"]::placeholder{
         left: 230px;
         bottom: 70px;
     }
-
+.accept{
+    position: relative;
+    right: 70px;
+}
+.decline{
+    position: relative;
+    left: 70px;
+    bottom: 30px;
+}
     /* main2 */
     /* footer */
  

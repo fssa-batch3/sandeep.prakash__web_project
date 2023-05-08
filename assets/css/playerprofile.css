@@ -145,7 +145,8 @@ ul li a:hover {
     cursor: pointer;
     border: none;
     position: relative;
-    top: 10px;
+    top: 20px;
+    left: 5px;
     border-radius: 3px;
 
 
@@ -282,8 +283,8 @@ ul li a:hover {
 /* sidebar2 */
 .container {
     background-color: rgba(233, 235, 241, 0.82);
-    width: 390px;
-    height: 70vh;
+    width: 490px;
+    height: 77vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
@@ -292,6 +293,10 @@ ul li a:hover {
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;
     top: 30px;
+    filter :blur(3px);
+    left: 170px;
+    
+   
     
 }
 
@@ -306,7 +311,7 @@ ul li a:hover {
     color: rgb(0, 0, 0);
     background-color: rgba(229, 233, 236, 0.952);
     padding: 20px 10px;
-    height: 200px;
+    height: 490px;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -345,7 +350,7 @@ ul li a:hover {
     background-color: #0A66C2;
     padding: 10px 30px;
     border-radius: 10px;
-    width: 320px;
+    width: 420px;
 }
 .messageto {
     background-color: rgb(126, 126, 126);
@@ -373,7 +378,7 @@ ul li a:hover {
 }
 
 form input {
-    width: 330px;
+    width: 430px;
     height: 37px;
     border: 1px solid black;
     padding-left: 7px;
@@ -455,6 +460,10 @@ form button {
     font-size: 0.5em;
     /* position: relative;
     left: 20px; */
+}
+.delbtn{
+    position: relative;
+    /* bottom: 30px; */
 }
 
 /* footer section */
@@ -668,6 +677,17 @@ top: 50px;
 #myChart{
     position: relative;
     left:70px;
+}
+
+
+.chatalerttext{
+    color: #00021a;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    position: relative;
+    bottom: 170px;
+
+
 }
 
 

@@ -383,10 +383,7 @@ cancelbtn.forEach((button)=>{
     button.addEventListener("click",()=>{
      let orderedId=button.value
      console.log(orderedId);
-    //  let filterGroundrequest=JSON.parse(localStorage.getItem("bookingInfo")).filter((data)=>{
-    //    return data.seller_id==sellerId
 
-    //  })
      let bookingindex=requestBooking.findIndex((booking)=>{
       return  booking.ordered_id==orderedId
      });
@@ -395,15 +392,20 @@ cancelbtn.forEach((button)=>{
     //  console.log(requestBooking)
 
      if(bookingindex > -1 && requestBooking[bookingindex].booking_status=="accepted"){ 
+    if(  confirm("Are you sure want to cancel the booking")){
         requestBooking[bookingindex].booking_status="cancel";
+        requestBooking[bookingindex].booking_time="";
+        requestBooking[bookingindex].seller_id=""
         console.log(requestBooking[bookingindex])
         console.log(requestBooking)
         localStorage.setItem("bookingInfo",JSON.stringify(requestBooking));
-        alert("canceled")
+    }
+    else{
+      //
+    }
+       
      }
-  else{
-    alert(`${orderedId} not found`)
-  }
+
     //  let filterRequest=JSON.parse(localStorage.getItem("bookingInfo"))
 
 

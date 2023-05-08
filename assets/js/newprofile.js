@@ -39,7 +39,8 @@ const joinform = document.getElementById("formbox");
 // console.log(joinPlayer+"ok");
 // profile image
 const imageShow = document.querySelector(".profileimg");
-let textarea=document.querySelector(".textabout")
+let textarea=document.querySelector(".textabout");
+let textline=document.querySelector(".linetext")
 let ok = "../../assets/images/avatorprofile.jpg"
 
 
@@ -79,9 +80,12 @@ for (let i = 0; i < user_record.length; i++) {
             labellocation.style.display = "none"
             labeltime.style.display = "none"
             labeltimeto.style.display = "none"
+            formsdiv.style.height = "750px"
             labelsports.style.display = "none"
             labelage.style.display = "none";
-            textarea.style.display="none"
+            textarea.style.display="none";
+            textline.style.display="none";
+
             editbutn1.style.bottom = "120px";
             // imageShow.setAttribute("class","profileimg")
 
@@ -192,7 +196,7 @@ const joinPlayer=document.querySelector(".pjointext");
 
 join_as_player.addEventListener("click", () => {
 
-joinPlayer.style.bottom="650px"
+joinPlayer.style.bottom="820px"
     user_age.style.display = "block"
     user_location.style.display = "block"
     user_timingsfrom.style.display = "block"
@@ -208,21 +212,32 @@ joinPlayer.style.bottom="650px"
     labeltimeto.style.display = "block"
     labelsports.style.display = "block"
     labelage.style.display = "block"
-    editbutn1.style.top = "280px"
+    editbutn1.style.top = "142px"
     labelage.style.top = "50px";
-    formsdiv.style.height = "1270px"
-    user_timingsfrom.style.top = "160px";
-    user_timingsto.style.top = "60px";
-    labeltime.style.top = "160px"
-    labeltimeto.style.top = "150px";
+    formsdiv.style.height = "1410px"
+    user_timingsfrom.style.top = "190px";
+    user_timingsto.style.top = "90px";
+    labeltime.style.top = "180px"
+    labeltimeto.style.top = "190px";
     user_location.style.top = "170px";
     labellocation.style.top = "170px";
-    user_age.style.top="30px"
+    user_age.style.top="50px"
+    labelage.style.top="60px"
     // joinPlayer.style.display="none";
     sportname1.style.left = "20px"
     sportname2.style.left = "20px"
     sportname3.style.left = "20px";
     textarea.style.display="block"
+    textline.style.display="block";
+    textarea.style.top="130px"
+    textline.style.top="120px";
+    cricket.style.top="50px"
+    football.style.top="50px"
+    tennis.style.top="50px"
+    sportname1.style.top = "20px"
+    sportname2.style.top= "20px"
+    sportname3.style.top = "20px";
+    labelsports.style.top = "30px";
 
 
 

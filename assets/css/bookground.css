@@ -249,7 +249,12 @@ padding-bottom: 10px;
 
 
 }
-
+.noresult{
+    font-size: 110px;
+    color: #000000;
+    display: inline-block;
+    flex: 1;
+}
 .child:hover {
    
     border: 0.1px solid rgba(2, 3, 14, 0.45);

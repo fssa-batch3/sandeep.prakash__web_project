@@ -32,17 +32,21 @@ else {
 
 let findplayersbtn = document.querySelector(".findplayers")
 findplayersbtn.addEventListener("click", (e) => {
-  if (!loginUser || loginUser[0]["player_status"] == false) {
-    alert("Please join as a player  or login to find players ")
+  if (!loginUser ) {
+    alert("Please login to find players ")
+    e.preventDefault();
+  }
+
+  else if( loginUser[0]["player_status"] == false){
+    alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
     e.preventDefault();
   }
 
 
-  else {
-    window.location.href = "./pages/player/findplayers.html";
-  }
 
-
+      else {
+        window.location.href = "./pages/player/findplayers.html";
+      }
 
 })
 
@@ -333,7 +337,7 @@ groundOwnerProduct_details.find(function (e) {
     return show2 = 0;
   }
 })
-
+console.log(show2);
 
 // timing filter
 
@@ -678,27 +682,27 @@ br_tag6 = document.createElement("br");
 div_sidebar_1.append(br_tag6);
 
 
-div_addplayers = document.createElement("div");
-div_addplayers.setAttribute("class", "addplayer");
-div_sidebar_1.append(div_addplayers);
+// div_addplayers = document.createElement("div");
+// div_addplayers.setAttribute("class", "addplayer");
+// div_sidebar_1.append(div_addplayers);
 
-h3_addplayers = document.createElement("h3");
-h3_addplayers.innerText = "You can also Add players to play with";
-div_addplayers.append(h3_addplayers);
+// h3_addplayers = document.createElement("h3");
+// h3_addplayers.innerText = "You can also Add players to play with";
+// div_addplayers.append(h3_addplayers);
 
-br_tag7 = document.createElement("br");
-div_addplayers.append(br_tag7);
+// br_tag7 = document.createElement("br");
+// div_addplayers.append(br_tag7);
 
-anchoraddplayers = document.createElement("a");
-anchoraddplayers.setAttribute("href", "../../pages/player/findplayers.html")
-div_addplayers.append(anchoraddplayers);
+// anchoraddplayers = document.createElement("a");
+// anchoraddplayers.setAttribute("href", "../../pages/player/findplayers.html")
+// div_addplayers.append(anchoraddplayers);
 
 
 
-buttonAddPlayers = document.createElement("button")
-buttonAddPlayers.setAttribute("class", "addplayers")
-buttonAddPlayers.innerText = "Add Players";
-anchoraddplayers.append(buttonAddPlayers)
+// buttonAddPlayers = document.createElement("button")
+// buttonAddPlayers.setAttribute("class", "addplayers")
+// buttonAddPlayers.innerText = "Add Players";
+// anchoraddplayers.append(buttonAddPlayers)
 
 
 
@@ -1065,6 +1069,15 @@ const selectTimings = document.querySelector(".timings")
 let ok = Array.from(selectTimings)
 console.log(ok);
 
+const sellerdata = JSON.parse(localStorage.getItem("groundadmin_details"));
+// getting seller email
+
+  // const {seller_id}=getsellerdetail
+
+  const sellerEmail=sellerdata.find((data)=> show2.seller_id ===data.seller_id);
+show2["sellerdetail"]=sellerEmail;
+let selleremail=show2["sellerdetail"]["seller_email"]
+ 
 
 
 
@@ -1146,8 +1159,50 @@ function getBookingInfo() {
     );
 
 
-    localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
-    alert("Your ground is Booked Congraulation you will receive a 7 digit code after 5 min show this code when you visit the turf")
+    localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo));
+
+
+    // email elastic
+    //random confirmation code
+    let code="";
+    
+    for(let i=0;i<7;i++){
+      code+= Math.floor(Math.random()*10)
+    }
+    console.log(code);
+
+
+    // email
+
+    Email.send({
+      Host:"smtp.elasticemail.com",
+      Username:"bookandplay@gmail.com",
+      Password:"6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To:userloggedIn[0].user_email,
+      From:"sandeep909600@gmail.com",
+      Subject:"Your Booking Confirmation code is here",
+      Body:`Hi ${userloggedIn[0].user_email} Your ground is booked on this ${selectedTimings} on ${bookDate} Your Confirmation code is here ${code} Please show this on turf entrance to visit`,
+
+    }).then((success)=>{
+      alert("Your ground is Booked Congraulation you will receive a 7 digit code after 5 min show this code when you visit the turf")
+
+    })
+
+    Email.send({
+      Host:"smtp.elasticemail.com",
+      Username:"bookandplay@gmail.com",
+      Password:"6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To:selleremail,
+      From:"sandeep909600@gmail.com",
+      Subject:"Your Booking Confirmation code is here",
+      Body:`Hi ${selleremail} Your ground is booked on this ${selectedTimings} on ${bookDate} The  Confirmation code is here ${code} the visitor will show this on turf entrance to visit`,
+
+    })
+
+
+
+
+  
 
   }
 

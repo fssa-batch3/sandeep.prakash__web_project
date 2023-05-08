@@ -18,7 +18,23 @@ const player_list =[
     
     
     ]
-
+// own profile
+let imageShow=document.querySelector(".userlogo1")
+const userRecords = JSON.parse(localStorage.getItem("user_details"));
+const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
+for (let i = 0; i < userRecords.length; i++) {
+    if (user_logged[0]["user_email"] == userRecords[i]["user_email"]) {
+        const savedImage = userRecords[i];
+        console.log(savedImage);
+        if (savedImage && savedImage.url) {
+            imageShow.src = savedImage.url;
+        }
+        else {
+            imageShow.src = "https://iili.io/HkW7U4S.jpg"
+        }
+        break;
+    }
+}
 
 
     let user_record = JSON.parse(localStorage.getItem("user_details"));
