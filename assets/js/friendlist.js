@@ -15,8 +15,6 @@ const player_list = [
 
 
 
-
-
 ]
 
 
@@ -26,7 +24,6 @@ const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 let loginuserid = loginUser[0]["user_id"];
 let requestrecords = JSON.parse(localStorage.getItem("request_details"));
 // player filter 
-
 
 
 let filterPlayer = [];
@@ -91,7 +88,12 @@ function playerData(array = []) {
 
         //  <img src="" class="groimg" alt=""/>
         img_card = document.createElement("img");
+        if(item.requested_userDetails.url==""){
+            img_card.setAttribute("src","https://iili.io/HkW7U4S.jpg");
+          }
+          else{
         img_card.setAttribute("src", item.requested_userDetails.url);
+          }
         img_card.setAttribute("alt", "playerProfile");
         img_card.setAttribute("class", "userlogo");
         div_group.append(img_card);

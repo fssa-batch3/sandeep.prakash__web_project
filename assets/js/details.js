@@ -1152,7 +1152,7 @@ function getBookingInfo() {
         "selectedCourts": selectedCourts,
         "booking_status": "accepted",
         'groundPrice': groundPrice,
-        "created_at": new Date(),
+        "created_at": new Date().getTime(),
 
 
       }

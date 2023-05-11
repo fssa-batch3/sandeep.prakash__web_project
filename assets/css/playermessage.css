@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+
+.maincontainer{
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-template-rows: 102vh;
+    grid-gap: 30px;
+   
+}
+
+.side2{
+    background-color: rgb(165, 172, 172);
+    margin-left: 35px;
+    border-radius: 20px;
+   max-width: fit-content;
+}
+.side3chatmain{
+    background-color: rgb(194, 235, 245);
+    border-radius: 60px;
+    margin: 0px 0px;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatdiv{
+    width: 330px;
+    height: 75px;
+    background-color: aqua;
+    margin: 20px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    
+}
+.peopleimage{
+    width: 56px;
+    height: 56px;
+    border-radius: 20px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+.playername{
+    position: relative;
+    top: 20px;
+    font-size: large;
+    
+}
+
+.player_dp{
+    width:56px;
+    height: 56px;
+    border-radius: 20px;
+    position: relative;
+    bottom: 50px;
+
+}
+.container {
+    background-color: rgba(233, 235, 241, 0.82);
+    width: 930px;
+    height: 97vh;
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 20%; */
+    border-radius: 10px;
+    border: 1px solid none;
+    box-shadow: 0 3px 10px rgb(0, 0, 0);
+    position: relative;
+    /* top: 30px; */
+    /* filter :blur(3px); */
+    /* left: 170px; */
+  
+    
+   
+    
+}
+
+
+.top {
+    color: rgb(0, 0, 0);
+    padding: 1%;
+}
+
+.main {
+    flex: 1;
+    color: rgb(0, 0, 0);
+    background-color: rgba(229, 233, 236, 0.952);
+    padding: 20px 10px;
+    height: 490px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+    
+  
+    
+.main::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+  .main::-webkit-scrollbar-track {
+    background-color: #f6f6f6; 
+  }
+  .main::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+
+
+.messagefrom {
+    background-color: rgb(248, 248, 248);
+    text-align: start;
+    color: black;
+
+    max-width: fit-content;
+    min-height: fit-content;
+    position: relative;
+
+     padding: 7px 20px;
+    margin-left: 13px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+    overflow: hidden;
+    white-space:normal;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+}
+.h2head{
+    background-color: #0A66C2;
+    padding: 10px 30px;
+    border-radius: 10px;
+    width: 855px;
+    text-align:center
+    /* position: relative;
+    left: 50px; */
+}
+
+
+.messageto {
+    background-color: rgb(126, 126, 126);
+    text-align: start;
+    color: rgb(255, 255, 255);
+    max-width: fit-content;
+   min-height: fit-content;
+
+    padding: 7px 20px; 
+ margin-left: 66%;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+    overflow: hidden;
+    white-space:normal;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+    /* position: relative;
+    bottom:810px; */
+}
+
+
+
+.bottom form {
+    display: flex;
+    background-color: rgba(147, 147, 147, 0.952);
+     height: 50px;
+     border-radius: 10px;
+}
+
+form input {
+    width: 855px;
+    height: 37px;
+    border: 1px solid black;
+    padding-left: 7px;
+    outline: none;
+    border-radius: 20px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+
+}
+
+form button {
+    background-color: rgba(147, 147, 147, 0.952);
+    height: 10px;
+    font-size: medium;
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    font-size: 25px;
+    position: relative;
+    left: 12px;
+    top: 10px;
+}

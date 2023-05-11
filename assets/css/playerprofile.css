@@ -345,6 +345,10 @@ ul li a:hover {
     white-space:normal;
     word-wrap: break-word;
     margin-bottom: 10px;
+    display: grid;
+grid-template-columns: 3fr 1fr;
+
+grid-gap: 5px;
 }
 .h2head{
     background-color: #0A66C2;
@@ -366,6 +370,12 @@ ul li a:hover {
     white-space:normal;
     word-wrap: break-word;
     margin-bottom: 10px;
+display: grid;
+grid-template-columns: 3fr 1fr ifr;
+
+grid-gap: 5px;
+
+
 }
 
 
@@ -457,12 +467,14 @@ form button {
     display: block;
 }
 .timeside{
-    font-size: 0.5em;
+    font-size: 0.7em;
     /* position: relative;
     left: 20px; */
 }
 .delbtn{
+    /* display: none; */
     position: relative;
+    font-size: 0.4em;
     /* bottom: 30px; */
 }
 

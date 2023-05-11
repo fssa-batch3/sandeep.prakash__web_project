@@ -94,8 +94,16 @@ array.forEach((item) => {
     div_group.append(br_tag);
     
     //  <img src="" class="groimg" alt=""/>
+
+    
     img_card = document.createElement("img");
-    img_card.setAttribute("src", item.url);
+    if(item.url==""){
+      img_card.setAttribute("src","https://iili.io/HkW7U4S.jpg");
+    }
+    else{
+      img_card.setAttribute("src", item.url);
+    }
+ 
     img_card.setAttribute("alt", "playerProfile");
     img_card.setAttribute("class", "userlogo");
     div_group.append(img_card);

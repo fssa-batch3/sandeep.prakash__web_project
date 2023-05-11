@@ -136,6 +136,29 @@ for( let i=0; i <filterGroundrequest.length;i++){
     btndecline.innerText="Decline"
     childdiv.append(btndecline)
 
+
+  // for displyingnone cancel nbtn after 20 minutes
+
+  let bookingTime=filterGroundrequest[i]["created_at"];
+let currentdate=new Date().getTime();
+let diffinmills=Math.abs(bookingTime-currentdate);
+console.log(diffinmills);
+let diffmins=Math.floor(diffinmills/60000);
+console.log(diffmins);
+// let cancelbook=document.querySelectorAll(".cancelbt")
+
+if(diffmins>20){
+  btndecline.style.display="none"
+  
+}
+else{
+  btndecline.style.display="block"
+}
+
+
+
+
+
 document.querySelector(".parent").append(childdiv)
 
 

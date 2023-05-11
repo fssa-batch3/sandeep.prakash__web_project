@@ -122,7 +122,11 @@ div_sidebar_1.append(div_profile_box);
 
 
 player_image = document.createElement("img");
-player_image.setAttribute("src", show2["url"])
+if(show2["url"]==""){
+player_image.setAttribute("src","https://iili.io/HkW7U4S.jpg")
+}
+else{
+player_image.setAttribute("src", show2["url"])}
 player_image.setAttribute("class", "profilephoto")
 div_profile_box.append(player_image);
 
@@ -304,7 +308,7 @@ else {
     else {
       messageofchat.setAttribute("class", "messageto");
     }
-    messageofchat.innerText = particularmessage.text+ timestampconvert(particularmessage.timestamp);;
+    messageofchat.innerHTML = `${particularmessage.text}<span class="timeside">${timestampconvert(particularmessage.timestamp)} </span>`;;
     div_chat_main.append(messageofchat);
 
 //delete btn
@@ -424,6 +428,15 @@ else {
   // sidebar2.style.display="block"
 }
 
+
+
+// mouserightclick
+let messto=document.querySelectorAll(".messageto")
+messto.forEach((data)=>{
+  data.addEventListener(("click"),()=>{
+    alert("ok")
+})
+})
 //  request
 
 

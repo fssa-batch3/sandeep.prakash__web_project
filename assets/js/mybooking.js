@@ -236,6 +236,11 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   // div_child.append(anchor)
 
   // <button class="book"></button>
+
+
+
+
+  // if()
   button_book = document.createElement("button");
   button_book.setAttribute("class", "cancelbtn");
   button_book.setAttribute("value",acceptedBooking[i]["ordered_id"])
@@ -244,6 +249,23 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   button_book.innerText = "Cancel"
   div_child.append(button_book);
 
+  // for displyingnone cancel nbtn after 20 minutes
+
+  let bookingTime=acceptedBooking[i]["created_at"];
+let currentdate=new Date().getTime();
+let diffinmills=Math.abs(bookingTime-currentdate);
+console.log(diffinmills);
+let diffmins=Math.floor(diffinmills/60000);
+console.log(diffmins);
+// let cancelbook=document.querySelectorAll(".cancelbt")
+
+if(diffmins>20){
+  button_book.style.display="none"
+  
+}
+else{
+  button_book.style.display="block"
+}
 
 
 
@@ -380,6 +402,33 @@ for (let i = 0; i < acceptedBooking.length; i++) {
 
 const cancelbtn=document.querySelectorAll(".cancelbtn");
 cancelbtn.forEach((button)=>{
+
+
+
+
+
+
+
+//   setTimeout(()=>{
+//     button.style.display="none"
+
+
+//     localStorage.setItem('hideTime', new Date().getTime() + 60000);
+
+
+//   },  60000)
+
+
+//   let localtime=localStorage.getItem("hideTime");
+//   console.log(localtime);
+// let dateok=new Date().getTime()
+// console.log(dateok);
+
+//   if(dateok>localtime){
+//     // console.log("oksdasmn");
+//     cancelbtn[0].style.display="none"
+//   }
+
     button.addEventListener("click",()=>{
      let orderedId=button.value
      console.log(orderedId);
@@ -418,3 +467,32 @@ cancelbtn.forEach((button)=>{
 
 
 
+///
+
+
+
+  // // settimeout
+  // setTimeout(() => {
+
+  //   let bookingDecline = userBookingInfo.find((booking) => {
+  //     return (
+  //       booking.booking_Date === bookDate &&
+  //       booking.booking_time === selectTimings &&
+  //       booking.selectedCourts === selectedCourts
+  //     );
+
+  //   });
+
+  //   if (bookingDecline && bookingDecline.booking_status === "pending") {
+  //     bookingDecline.booking_status = "decline";
+  //     localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo))
+  //   }
+
+
+  // }, 1 * 60 * 1000)
+
+  // setTimeout(()=>{
+  //   cancelbtn.style.display="none"
+  // },  60000)
+// 30 minutes
+  // 1800000
