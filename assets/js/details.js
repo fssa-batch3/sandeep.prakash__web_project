@@ -406,7 +406,7 @@ if (startIndexNo > endindexNo) {
   endindexNo += 24
 }
 
-let groundtimeOptions = {};
+let groundtimeOptions = {"":`Select  a timing`};
 for (let i = startIndexNo; i <= endindexNo; i++) {
   let indexno = i % 24;
   let timeKey = `timing${indexno}`;
@@ -749,7 +749,7 @@ label_date.innerText = "Date"
 div_book2.append(label_date);
 
 
-inputdate = document.createElement("input")
+let inputdate = document.createElement("input")
 inputdate.setAttribute("type", "date");
 inputdate.setAttribute("id", "date");
 inputdate.setAttribute("required", "");
@@ -794,14 +794,78 @@ div_book2.append(select_timings);
 //     select_timings.append(option_timings)
 // }
 //options for time
-for (let time in groundtimeOptions) {
-  option_timings = document.createElement("option");
-  option_timings.innerText = groundtimeOptions[time];
-  select_timings.append(option_timings)
-
+let bookingInfo1;
+if(localStorage.getItem("bookingInfo")){
+bookingInfo1=JSON.parse(localStorage.getItem("bookingInfo"));
+}
+else{
+  bookingInfo1=[]
 }
 
 
+// let chosedate=document.getElementById("date");
+inputdate.addEventListener("input",(e)=>{
+  console.log(inputdate.value);
+
+  
+
+  for (let time in groundtimeOptions) {
+    option_timings = document.createElement("option");
+    option_timings.innerText = groundtimeOptions[time];
+
+ 
+  for(let i=0;i<bookingInfo1.length;i++){
+    console.log("okuuuu");
+    if(bookingInfo1[i]["booking_Date"]==inputdate.value){
+      console.log("okda");
+      if(bookingInfo1[i]["booking_time"][i].includes(option_timings.innerText)){
+        option_timings.setAttribute("disabled","")
+
+      }
+    }
+  
+  }
+  select_timings.append(option_timings);
+  }
+
+
+})
+
+
+// let currentdate=new Date;
+// let hours=currentdate.getHours();
+// let minutes=currentdate.getMinutes();
+// let ampmformat=hours>=12?`PM`:`AM`;
+// hours=hours%12;
+// hours=hours?hours:12;
+// let currentform=`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampmformat}`;
+
+// console.log(currentform);
+
+// // let selectime=document.querySelector(".timings");
+// // (selectime);
+
+
+
+// let opt=select_timings.options;
+
+// for(let i=0;i<opt.length;i++){
+//   let optvalue=opt[i].value.trim();
+//   // console.log(optvalue);
+//   let starttime=optvalue.split("-")[0]
+//   console.log(starttime);
+//   // console.log(starttime.split(":").map(Number));
+
+//   let[starthour,startmin]=starttime.split(":").map(Number);
+//   // console.log([starthour,startmin]);
+
+//   // if(starthour<currenthours||(starthour===currenthours && startmin<currentmin)){
+//   //   opt[i].style.display="none"
+//   // }
+//   // if(optvalue>=currenttime){
+//   //   opt[i].style.display="none"
+//   // }
+// }
 
 br_tag11 = document.createElement("br");
 div_book2.append(br_tag11);

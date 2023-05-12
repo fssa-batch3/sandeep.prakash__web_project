@@ -630,7 +630,8 @@ function sendMessage() {
     )
   }
 
-  localStorage.setItem("user_Messages", JSON.stringify(usersMessage))
+  localStorage.setItem("user_Messages", JSON.stringify(usersMessage));
+  location.reload();
 
   // let div_chat_main = document.querySelector(".main");
   //   let p_mess_from = document.createElement("p");

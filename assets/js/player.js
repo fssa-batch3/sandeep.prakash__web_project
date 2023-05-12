@@ -189,9 +189,19 @@ selectOption.addEventListener("input", () => {
     filteredData = filterPlayer;
   }
 
-
+  if(filteredData.length===0){
+    const parentHtmlDiv2 = document.querySelector(".parent");
+    let p= document.createElement("p");
+    p.setAttribute("class","noresult");
+    p.innerText="No result found"
+    parentHtmlDiv2.innerHTML = "";
+    parentHtmlDiv2.append(p)
+    console.log("pkdd");
+    
+  }
+  else{
 playerData(filteredData)
-
+  }
 
 })
 

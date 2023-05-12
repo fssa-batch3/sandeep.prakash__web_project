@@ -132,6 +132,10 @@
     white-space:normal;
     word-wrap: break-word;
     margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    
+    grid-gap: 5px;
 }
 .h2head{
     background-color: #0A66C2;
@@ -161,6 +165,10 @@
     margin-bottom: 10px;
     /* position: relative;
     bottom:810px; */
+    display: grid;
+grid-template-columns: 3fr 1fr ifr;
+
+grid-gap: 5px;
 }
 
 
@@ -196,4 +204,16 @@ form button {
     position: relative;
     left: 12px;
     top: 10px;
+}
+
+.timeside{
+    font-size: 0.7em;
+    /* position: relative;
+    left: 20px; */
+}
+.delbtn{
+    /* display: none; */
+    position: relative;
+    font-size: 0.4em;
+    /* bottom: 30px; */
 }

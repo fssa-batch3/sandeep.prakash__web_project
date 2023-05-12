@@ -323,9 +323,8 @@ div_container_sidebar2.append(div_chat_main);
       else {
         messageofchat.setAttribute("class", "messageto");
       }
-      messageofchat.innerText = particularmessage.text+ timestampconvert(particularmessage.timestamp);;
+      messageofchat.innerHTML = `${particularmessage.text}<span class="timeside">${timestampconvert(particularmessage.timestamp)} </span>`;;
       div_chat_main.append(messageofchat);
-  
   //delete btn
       let delbtn=document.createElement("button");
       delbtn.setAttribute("class","delbtn")
@@ -435,6 +434,7 @@ function sendMessage() {
   }
 
   localStorage.setItem("user_Messages", JSON.stringify(usersMessage))
+  location.reload();
 
   // let div_chat_main = document.querySelector(".main");
   //   let p_mess_from = document.createElement("p");
