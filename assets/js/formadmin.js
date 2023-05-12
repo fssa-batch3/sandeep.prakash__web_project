@@ -1,8 +1,6 @@
 // const formButton = document.getElementById("formbtn");
 // const id_generator = Math.floor(Math.random() * 300);
 
-
-
 // formButton.addEventListener("submit", e => {
 
 //     e.preventDefault();
@@ -24,7 +22,6 @@
 //     const groundRules = (document.getElementById("rules").value);
 //     const groundCity = (document.getElementById("sportsvalue").value);
 //     const groundPrice = (document.getElementById("amount").value);
-
 
 //     console.log(id_generator);
 //     let groundOwnerRecords = new Array();
@@ -58,20 +55,16 @@
 //             "status": true
 //         });
 
-
 //     }
 //     localStorage.setItem("ground_info", JSON.stringify(groundOwnerRecords))
 
 // }
 
-
 // // local storage
 
 // // view
 
-
 // let groundRecords = JSON.parse(localStorage.getItem("ground_info"));
-
 
 // const groundName = document.getElementById("groname");
 // const groundPlace = (document.getElementById("grolname"));
@@ -89,10 +82,7 @@
 // const groundCity = (document.getElementById("sportsvalue"));
 // const groundPrice = (document.getElementById("amount"));
 
-
-
-// // view 
-
+// // view
 
 // const url2 = window.location.search;
 // console.log(url2)
@@ -111,7 +101,6 @@
 //         return show2 = 0;
 //     }
 // })
-
 
 // groundRecords.find((e=>{
 
@@ -133,21 +122,14 @@
 
 // }
 
-
-
-
 // }))
-
-
-
 
 // let groundRecords2 = JSON.parse(localStorage.getItem("ground_info"));
 
-// // // update 
+// // // update
 
 // const updatebutton = document.getElementById("updatebtn")
 // updatebutton.addEventListener("click", () => {
-
 
 //     groundRecords2.find((e => {
 //         if (show2["ground_id"] === e["ground_id"]) {
@@ -165,9 +147,7 @@
 //             e["ground_city"] = groundCity.value
 //             e["ground_price"] = groundPrice.value
 
-
 //             localStorage.setItem("ground_info", JSON.stringify(groundRecords2))
-
 
 //         }
 //     }))

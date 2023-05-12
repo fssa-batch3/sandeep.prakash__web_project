@@ -1,5 +1,5 @@
-const groundbookingInfo=JSON.parse(localStorage.getItem("bookingInfo"));
+const groundbookingInfo = JSON.parse(localStorage.getItem("bookingInfo"));
 
-for(let i=0;i<groundbookingInfo.length;i++){
-    // if()
+for (let i = 0; i < groundbookingInfo.length; i++) {
+  // if()
 }

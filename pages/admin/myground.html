@@ -13,10 +13,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
         integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 </head>
@@ -24,7 +24,9 @@
 <body>
 
     <div class="formcontainer">
-        <button class="closebtn"><i class="fa-solid fa-xmark fa-bounce"></i></button>
+        <button class="closebtn">
+<i class="fa-solid fa-xmark fa-bounce"></i>
+</button>
 
         <form id="formbtn">
             <div class="box1">
@@ -33,14 +35,16 @@
                     <input type="name" placeholder="Ground Name " id="groname" aria-label="name"
                         pattern="^[a-zA-Z ]{3,50}$"
                         title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 50 characters."
-                        required><br>
+                        required>
+<br>
                 </div>
 
                 <label class="labelnamep"> Ground Main Area:</label>
                 <input type="name" placeholder="Ground Location" id="grolname" aria-label="name"
                     pattern="^[a-zA-Z ]{3,60}$"
                     title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 60 characters."
-                    required><br>
+                    required>
+<br>
             </div>
 
             <div class="groundlocationbox">
@@ -49,9 +53,11 @@
                 <input type="name" placeholder="Ground Location" id="groaddress" aria-label="name"
                 pattern="^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':&quot;\\|,.<>\/?~` ]{3,400}$"
                     title="Please enter a valid input (letters and spaces only, between 3 to 400 characters)"
-                    required><br>
+                    required>
+<br>
                 <label class="labelnamell"> Ground Location Link:</label>
-                <input type="url" placeholder="Ground Location" id="grolink" aria-label="name" required><br>
+                <input type="url" placeholder="Ground Location" id="grolink" aria-label="name" required>
+<br>
 
             </div>
             <div class="values">
@@ -66,10 +72,14 @@
                 </select>
             </div>
             <div class="groundimageupload">
-                <label class="labelnamei"> Upload your Ground images:</label><br>
-                <input type="url" placeholder="Upload " id="grimg1" aria-label="groundimg" required><br>
-                <input type="url" placeholder="Upload " id="grimg2" aria-label="groundimg" required><br>
-                <input type="url" placeholder="Upload " id="grimg3" aria-label="groundimg" required><br>
+                <label class="labelnamei"> Upload your Ground images:</label>
+<br>
+                <input type="url" placeholder="Upload " id="grimg1" aria-label="groundimg" required>
+<br>
+                <input type="url" placeholder="Upload " id="grimg2" aria-label="groundimg" required>
+<br>
+                <input type="url" placeholder="Upload " id="grimg3" aria-label="groundimg" required>
+<br>
 
             </div>
 
@@ -77,19 +87,22 @@
                     
                 </div> -->
             <div class="sportsavailable">
-                <label class="labelnames"> Sports Available:</label><br>
+                <label class="labelnames"> Sports Available:</label>
+<br>
                 <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket">
-                <label class="sname">Cricket</label><br>
+                <label class="sname">Cricket</label>
+<br>
                 <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football">
-                <label class="sname">Football</label><br>
+                <label class="sname">Football</label>
+<br>
                 <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis">
-                <label class="sname">Tennis</label><br>
-
-
+                <label class="sname">Tennis</label>
+<br>
 
             </div>
             <div class="groundtiming">
-                <label class="">Timings </label><br>
+                <label class="">Timings </label>
+<br>
                 <!-- <p>From</p>
                     <input type="time" id="timingsfrom" aria-label="sportsavail" pattern="(0[1-9]|1[0-2]):[0-5][0-9] (am|pm)" required>
                     <p>To</p>
@@ -99,36 +112,35 @@
 
             </div>
 
-
             <div class="groundrules">
-                <label class="">Add Your Ground rules </label><br>
+                <label class="">Add Your Ground rules </label>
+<br>
                 <textarea id="rules" pattern="^[a-zA-Z0-9\s]{3,600}$"
                     title="Please enter a valid input (letters, numbers and spaces only, between 3 to 600 characters)"
-                    rows="8" cols="30"></textarea required><br>
+                    rows="8" cols="30">
+</textarea required><br>
             
             </div>
             <div class="groundprice">
                 
-                
-                <label class="">Enter your price</label><br>
-                <input type="number" id="amount" aria-label="sportsavail" pattern="^([1-4][0-9]{2}|5000|[1-9][0-9]|[1-9])$" title="Please enter a number between 1 and 5000"  required ><br>
-            
-            
+                <label class="">Enter your price</label>
+<br>
+                <input type="number" id="amount" aria-label="sportsavail" pattern="^([1-4][0-9]{2}|5000|[1-9][0-9]|[1-9])$" title="Please enter a number between 1 and 5000" required>
+<br>
             
             </div>
             <div class="groundprice">
                 
-                
-                <label class="">Enter your increasing price for extra hours like actual price+increasing price </label><br>
-                <input type="number" id="increaseamount" aria-label="sportsavail" pattern="^([1-4][0-9]{2}|5000|[1-9][0-9]|[1-9])$" title="Please enter a number between 1 and 5000"  required ><br>
-            
-            
+                <label class="">Enter your increasing price for extra hours like actual price+increasing price </label>
+<br>
+                <input type="number" id="increaseamount" aria-label="sportsavail" pattern="^([1-4][0-9]{2}|5000|[1-9][0-9]|[1-9])$" title="Please enter a number between 1 and 5000" required>
+<br>
             
             </div>
             <div class="groundcourt">
                 
-                
-                <label class="court">Courts Available</label><br>
+                <label class="court">Courts Available</label>
+<br>
                 <select id="sportscourts" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -147,7 +159,6 @@
         
             </div>
         </form>
-            
         
             </div>
 

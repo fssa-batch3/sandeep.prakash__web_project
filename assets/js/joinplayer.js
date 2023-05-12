@@ -6,7 +6,6 @@
 
 // function getPlayerData() {
 
-
 //   // window.location.href="../../index.html";
 //   const name1 = (document.getElementById("name1").value)
 
@@ -20,9 +19,7 @@
 
 //   const timingsto = (document.getElementById("timingsto").value)
 
-
 //   let playerRecords = JSON.parse(localStorage.getItem("user_details"))
-
 
 //   for (let i = 0; i <= playerRecords.length - 1; i++) {
 
@@ -39,7 +36,6 @@
 //         "timingsto": timingsto
 //       };
 
-
 //       break;
 
 //     }
@@ -48,8 +44,4 @@
 
 //   localStorage.setItem("user_details", JSON.stringify(playerRecords));
 
-
 // }
-
-
-
