@@ -172,11 +172,11 @@ ul li a:hover {
 .sidebar1 {
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    margin: 10px 10px;
-    border-radius: 9%;
+    margin: 0px 10px;
+    border-radius: 20px;
     height: 85vh;
     border: 1px solid black;
-    padding: 10px 80px;
+    padding: 20px 80px;
 
 }
 
@@ -193,8 +193,8 @@ ul li a:hover {
 }
 
 .box1 {
-
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+/* 
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
 
     border: 1px solid rgb(25, 11, 82);
     border-radius: 10%;
@@ -555,7 +555,7 @@ a {
 .profilebox{
     width: 500px;
     height: 230px;
-    background-color: #00acee;
+    background-color:  rgba(32,56,120,255);
     border-radius: 10px;
     display: flex;
   
@@ -568,7 +568,7 @@ a {
 }
 
 .aboutrow{
-  background-color: #40bb2f;
+    background-color: rgba(241, 251, 255, 255);
     width: 230px;
     height: 80px;
     position: relative;
@@ -576,6 +576,7 @@ a {
     padding: 15px;
     border-radius: 10px;
     right: 60px;
+    color: #00021a;
 
 
 }
@@ -607,7 +608,7 @@ a {
 .sportsknown{
      width: 200px;
     height: 100px;
-    background-color: #00acee;
+    background-color:  rgba(32,56,120,255);
     border-radius: 10px;
     position: relative;
 top: 20px;    
@@ -652,7 +653,7 @@ top: 17px;
 .scoreno{
     width: 90px;
     height: 30px;
-    background-color: #00ee6b;
+    background-color: rgba(241, 251, 255, 255);
     position: relative;
     left: 50px;
     top: 20px;
@@ -666,7 +667,7 @@ top: 17px;
 .gamesplaybox{
     width: 200px;
    height: 100px;
-   background-color: #00acee;
+   background-color:  rgba(32,56,120,255);
    border-radius: 10px;
    position: relative;
 top: 20px;    

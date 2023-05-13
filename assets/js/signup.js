@@ -105,6 +105,35 @@
 
 // }
 
+
+
+  
+
+let startTimeValue= null;
+let endTimeValue=null;
+const timePicker={
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "h:i K", 
+    time_24hr: false,
+  minuteIncrement: 60,
+//   defaultDate: "12:00 AM",
+  onChange: function(selectedDates, dateStr) {
+    // Store selected start and end times in global variables
+    if (this.input.id === "startTime") {
+      startTime = dateStr;
+    } else if (this.input.id === "endTime") {
+      endTime = dateStr;
+    }
+    // localStorage.setItem("startTime", startTime);
+    // localStorage.setItem("endTime", endTime);
+  }
+
+}
+const startTimepicker = flatpickr("#startTime", timePicker);
+const endTimepicker = flatpickr("#endTime", timePicker);
+
+
 const checkjoinPlayer = document.getElementById("checkjoinplayer");
 const joinplayerForm = document.querySelector(".joinplayercontainer");
 const forms1 = document.querySelector(".forms");
@@ -132,9 +161,9 @@ checkjoinPlayer.addEventListener("click", (e) => {
     // const sportChoose = (document.getElementById("sportss"))
     // const sportLocation = (document.getElementById("locationselect"))
 
-    const timingsfrom = document.getElementById("timingsfrom");
+    const timingsfrom = document.getElementById("startTime");
 
-    const timingsto = document.getElementById("timingsto");
+    const timingsto = document.getElementById("endTime");
 
     age.required = true;
     gender.required = true;
@@ -168,9 +197,12 @@ function getUserData() {
   // const sportChoose = (document.getElementById("sportss").value)
   const sportLocation = document.getElementById("locationselect").value;
 
-  const timingsfrom = document.getElementById("timingsfrom").value;
+  // const timingsfrom = document.getElementById("timingsfrom").value;
 
-  const timingsto = document.getElementById("timingsto").value;
+  // const timingsto = document.getElementById("timingsto").value;
+  const timingsfrom = document.getElementById("startTime").value;
+
+  const timingsto = document.getElementById("endTime").value;
   const id_generator = Math.floor(Math.random() * 300);
   const cricket = document.getElementById("sportsavail1").checked;
   const football = document.getElementById("sportsavail2").checked;
@@ -221,16 +253,16 @@ function getUserData() {
     if (checkjoinPlayer.checked) {
       user_data = {
         ...user_data,
-        user_age: age,
-        user_gender: gender,
+        "user_age": age,
+        "user_gender": gender,
         // "sport_Choosed": sport_Choosed,
-        sports_choosed_cricket: cricket,
-        sports_choosed_football: football,
-        sports_choosed_tennis: tennis,
-        sportLocationPlay: sportLocation,
-        timingsfrom,
-        timingsto,
-        aboutplayers: "",
+        "sports_choosed_cricket": cricket,
+        "sports_choosed_football": football,
+        "sports_choosed_tennis": tennis,
+        "sportLocationPlay": sportLocation,
+        "timingsfrom":timingsfrom,
+        "timingsto":timingsto,
+       "aboutplayers": "",
       };
     }
     //  window.location.href="./login.html"
@@ -238,6 +270,7 @@ function getUserData() {
     user_records.push(user_data);
 
     localStorage.setItem("user_details", JSON.stringify(user_records));
+    alert("Account created successfully")
   }
 
   // checkjoinPlayer.checked

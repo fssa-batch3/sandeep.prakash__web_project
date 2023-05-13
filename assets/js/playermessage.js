@@ -409,13 +409,13 @@ function deletemess(message) {
   const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
   const existingmessageuser = messageofUser.findIndex(
     (mess) =>
-      mess.sender_id === loginuserid && mess.receiver_id === searchuser_id
+      mess.sender_id === loginuserid && mess.receiver_id === Number(searchuser_id)
   );
 
   if (existingmessageuser !== -1) {
     const exitingmesss = messageofUser[existingmessageuser].messages.findIndex(
       (messs) =>
-        messs.text === message.text && messs.timestamp === messs.timestamp
+        messs.text === message.text && messs.timestamp === message.timestamp
     );
     if (exitingmesss !== -1) {
       messageofUser[existingmessageuser].messages.splice(exitingmesss, 1);

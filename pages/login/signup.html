@@ -8,6 +8,7 @@
     <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../../assets/css/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 <body>
     <!-- signup container -->
@@ -121,12 +122,14 @@
 <br>
         <p class="labelnametime">Timing Available</p>
 <br>
-        <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00">
+        <!-- <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"> -->
+        <input type="text" id="startTime" required placeholder="12:00">
 <br>
         
         <p class="toword">To</p>
 <br>
-        <input type="time" id="timingsto" aria-label="timingsto" value="6:00">
+        <!-- <input type="time" id="timingsto" aria-label="timingsto" value="6:00"> -->
+        <input type="text" id="endTime" required placeholder="12:00">
         </div>
         <br>
 
@@ -141,7 +144,7 @@
        
     </div>
        <!-- signup form -->
-
+       <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../../assets/js/signup.js"></script>
    
 </body>

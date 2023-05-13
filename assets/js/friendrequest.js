@@ -15,19 +15,22 @@ const player_list = [
 
 const user_record = JSON.parse(localStorage.getItem("user_details"));
 const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
-const loginuserid = loginUser[0]["user_id"];
+const loginuserid = loginUser[0].user_id;
 const requestrecords = JSON.parse(localStorage.getItem("request_details"));
 // player filter
 
 let filterPlayer = [];
-filterPlayer = requestrecords.filter((item) => item.receiving_user == loginuserid && item.request_status=="pending");
+filterPlayer = requestrecords.filter(
+  (item) =>
+    item.receiving_user == loginuserid && item.request_status == "pending"
+);
 
 for (const userrequested of filterPlayer) {
   const { requested_user } = userrequested;
   const userDetails = user_record.find(
     (usersdata) => requested_user == usersdata.user_id
   );
-  userrequested["requested_userDetails"] = userDetails;
+  userrequested.requested_userDetails = userDetails;
 }
 
 console.log(filterPlayer);
@@ -43,20 +46,19 @@ let div_ratings;
 let i_star;
 let span_ratingsno;
 
-playerData(filterPlayer)
+playerData(filterPlayer);
 
 function playerData(array = []) {
   const parentHtmlDiv = document.querySelector(".parent");
   parentHtmlDiv.innerHTML = "";
 
-    array.forEach((item) => {
-
-        div_child = document.createElement("div");
+  array.forEach((item) => {
+    div_child = document.createElement("div");
     div_child.setAttribute("class", "child");
     div_child.setAttribute("value", item.requested_userDetails.user_id);
     console.log(div_child);
 
-        div_group = document.createElement("div");
+    div_group = document.createElement("div");
     div_group.setAttribute("class", "group");
     div_child.append(div_group);
 
@@ -82,8 +84,8 @@ function playerData(array = []) {
     anchor = document.createElement("a");
     anchor.setAttribute(
       "href",
-      "../../pages/player/playerprofile.html?player_id=" +
-        item.requested_userDetails.user_id
+      `../../pages/player/playerprofile.html?player_id=${ 
+        item.requested_userDetails.user_id}`
     );
     // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
     div_group.append(anchor);
@@ -95,7 +97,7 @@ function playerData(array = []) {
     button_visit.innerText = "Visit";
     anchor.append(button_visit);
 
-        button_accept = document.createElement("button");
+    button_accept = document.createElement("button");
     button_accept.setAttribute("class", "accept");
     button_accept.setAttribute("value", item.requested_userDetails.user_id);
     button_accept.innerText = "Accept";
@@ -121,34 +123,30 @@ function playerData(array = []) {
     span_ratingsno.innerText = player_list[0].ratingsnumber;
     div_ratings.append(span_ratingsno);
 
-        document.querySelector("div.parent").append(div_child)
-
-    })
-
+    document.querySelector("div.parent").append(div_child);
+  });
 }
 
 // accept request
 const acceptbtn = document.querySelectorAll(".accept");
 acceptbtn.forEach((button) => {
   button.addEventListener("click", () => {
-    let req_userId = button.value;
+    const req_userId = button.value;
 
-    const reqIndex = requestrecords.findIndex((request) => {
-            return request.requested_user == req_userId  && request.receiving_user==loginuserid
-        })
+    const reqIndex = requestrecords.findIndex((request) => request.requested_user == req_userId  && request.receiving_user==loginuserid)
     });
-    console.log(reqIndex);
-
-    if (reqIndex > -1) {
-      if (confirm("Are you sure want to accept the request")) {
-
-                requestrecords[reqIndex].request_status= "accepted";
-             
-                localStorage.setItem("request_details", JSON.stringify(requestrecords));
-      } else {
-      }
-    }
   });
+  console.log(reqIndex);
+
+  if (reqIndex > -1) {
+    if (confirm("Are you sure want to accept the request")) {
+      requestrecords[reqIndex].request_status = "accepted";
+
+      localStorage.setItem("request_details", JSON.stringify(requestrecords));
+    } else {
+    }
+  }
+// });
 // });
 
 // declined
@@ -156,17 +154,16 @@ acceptbtn.forEach((button) => {
 const declinebtn = document.querySelectorAll(".decline");
 declinebtn.forEach((button) => {
   button.addEventListener("click", () => {
-    let req_userId = button.value;
+    const req_userId = button.value;
 
-    let reqIndex2 = requestrecords.findIndex((request2) => request2.requested_user == req_userId && request2.receiving_user==loginuserid)
+    const reqIndex2 = requestrecords.findIndex((request2) => request2.requested_user == req_userId && request2.receiving_user==loginuserid)
 
     console.log(reqIndex2);
 
     if (reqIndex > -1) {
       if (confirm("Are you sure want to decline the request")) {
+        requestrecords[reqIndex2].request_status = "declined";
 
-                requestrecords[reqIndex2].request_status = "declined";
-             
         localStorage.setItem("request_details", JSON.stringify(requestrecords));
       } else {
       }

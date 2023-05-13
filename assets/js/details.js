@@ -337,43 +337,109 @@ if (startIndexNo > endindexNo) {
   endindexNo += 24;
 }
 
-const groundtimeOptions = { };
+const groundtimeOptions = {};
 for (let i = startIndexNo; i <= endindexNo; i++) {
   const indexno = i % 24;
   const timeKey = `timing${indexno}`;
   groundtimeOptions[timeKey] = timingOptions[timeKey];
 }
 
-// let div_parent1;
-// let div_sidebar_1;
-// let div_box1;
-// let h2_groundName;
-// let p_placeName;
-// let div_containerSlider;
-// let inputcheckbox1;
-// let inputcheckbox2;
-// let inputcheckbox3;
-// let div_labeldot;
-// let label_dots1;
-// let label_dots2;
-// let label_dots3;
-// let div_box2;
-// let ground_image1;
-// let ground_image2;
-// let ground_image3;
-
-// let br_tag;
-// let h3_card_title;
-// let img_card;
-// let p_location_name ;
-// let div_symbol;
-// let imgicon_card ;
-// let div_ratings ;
-// let i_star;
-// let ratings_no;
-// let button_book;
-// let anchor;
+let div_parent1;
+let div_sidebar_1;
+let div_box1;
+let h2_groundName;
+let p_placeName;
+let div_containerSlider;
+let div_imagecontainer;
+let inputcheckbox1;
+let inputcheckbox2;
+let inputcheckbox3;
+let div_labeldot;
+let label_dots1;
+let label_dots2;
+let label_dots3;
+let div_box2;
+let ground_image1;
+let ground_image2;
+let ground_image3;
+let br_tag1;
+let br_tag;
+let div_locationinfo;
+let h3_location;
+let i_location;
+let h3_card_title;
+let img_card;
+let p_location_name;
+let p_address;
+let br_tag2;
+let div_sportsavail;
+let h2_sportsavail;
+let div_symbol;
+let div_sportssymbol;
+let imgicon_card;
+let symbolimage1;
+let symbolimage2;
+let symbolimage3;
+let div_ratings;
+let br_tag3;
+let span_time;
+let span_time2;
+let div_timing;
+let br_tag4;
+let i_clock;
+let div_price;
+let p_price;
+let p_priceamount;
+let div_rules;
+let h3_timing;
+let h2_rules;
+let p_rules;
+let br_tag5;
+let br_tag6;
+let i_star;
+let ratings_no;
+let button_book;
+let anchor;
 let select_sports;
+let div_sidebar_2;
+let div_forms;
+let div_bookingbox;
+let div_book1;
+let h1_groundName;
+let br_tag8;
+let br_tag9;
+let div_book2;
+let label_date;
+let  inputdate ;
+let br_tag10;
+let span_timingSelect;
+let select_timings;
+let option_timings;
+let br_tag11;
+let option_sports1;
+let option_sports2;
+let option_sports3;
+let br_tag12;
+let span_durationSelect;
+let select_duration;
+let sel_duration;
+let option_duration;
+let span_playersSelect;
+let select_players;
+let br_tag15;
+let span_sportsSelect;
+let option_courts;
+let anchorpayonline;
+let br_tag17;
+let button_paycash;
+let popupdiv;
+let contentp;
+let button_no;
+let button_yes;
+
+
+
+
 
 div_parent1 = document.createElement("div");
 div_parent1.setAttribute("class", "bar");
@@ -554,7 +620,7 @@ span_time.innerText = `${show2.ground_timing_from}-`;
 div_timing.append(span_time);
 
 span_time2 = document.createElement("span");
-span_time2.setAttribute("class", "span2time")
+span_time2.setAttribute("class", "span2time");
 span_time2.innerText = show2.ground_timing_to;
 div_timing.append(span_time2);
 
@@ -589,8 +655,6 @@ div_rules.append(p_rules);
 
 br_tag5 = document.createElement("br");
 div_sidebar_1.append(br_tag5);
-
-
 
 br_tag6 = document.createElement("br");
 div_sidebar_1.append(br_tag6);
@@ -652,7 +716,7 @@ label_date.setAttribute("class", "headingbook");
 label_date.innerText = "Date";
 div_book2.append(label_date);
 
-const inputdate = document.createElement("input");
+ inputdate = document.createElement("input");
 inputdate.setAttribute("type", "date");
 inputdate.setAttribute("id", "date");
 inputdate.setAttribute("required", "");
@@ -703,49 +767,88 @@ console.log(select_sports);
 // let chosedate=document.getElementById("date");
 inputdate.addEventListener("input", updatetime);
 // select_sports.addEventListener("input",updatetime)
-  function updatetime(){
-  let selecteddate = inputdate.value;
-  let selected_court=select_sports.value;
-select_timings.innerHTML = "";
-let defoption=document.createElement("option");
-defoption.innerText ="Select a timing" ;
-defoption.value=""
-select_timings.append(defoption)
+function updatetime() {
+  const selecteddate = inputdate.value;
+  const selected_court = select_sports.value;
+  select_timings.innerHTML = "";
+  const defoption = document.createElement("option");
+  defoption.innerText = "Select a timing";
+  defoption.value = "";
+  select_timings.append(defoption);
+
+  // Get the current time
+  const currentdate = new Date();
+  const hours = currentdate.getHours();
+  const minutes = currentdate.getMinutes();
+  const current_time = hours * 60 + minutes;
+  // let ampmformat=hours>=12?`PM`:`AM`;
+  // hours=hours%12;
+  // hours=hours?hours:12;
+  // let currentform=`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampmformat}`;
+
+  const currentdateform = `${currentdate.getFullYear()}-${(
+    currentdate.getMonth() + 1
+  )
+    .toString()
+    .padStart(2, "0")}-${currentdate.getDate().toString().padStart(2, "0")}`;
+
+  // console.log(currentform);
 
   for (const time in groundtimeOptions) {
     option_timings = document.createElement("option");
     option_timings.innerText = groundtimeOptions[time];
 
+    const optionstart = groundtimeOptions[time].split("-")[0].trim();
+    const optionstarsplit = optionstart.split(/:|\s/);
+    console.log(optionstarsplit);
+    const optionstartampm = optionstarsplit[2];
+    console.log(optionstartampm);
+    let optionstarthour = parseInt(optionstarsplit[0]);
+    const optionstartmin = parseInt(optionstarsplit[1]);
+    if (optionstartampm === "PM" && optionstarthour !== 12) {
+      optionstarthour += 12;
+    } else if (optionstartampm === "AM" && optionstarthour === 12) {
+      optionstarthour = 0;
+    }
+    const opionstarttiming = optionstarthour * 60 + optionstartmin;
+
+    const optionend = groundtimeOptions[time].split("-")[1].trim();
+    const optionendsplit = optionend.split(/:|\s/);
+    const optionendampm = optionendsplit[2];
+    console.log(optionendampm);
+    let optionendhour = parseInt(optionendsplit[0]);
+    const optionendmin = parseInt(optionendsplit[1]);
+    if (optionendampm === "PM" && optionendhour !== 12) {
+      optionendhour += 12;
+    } else if (optionendampm === "AM" && optionendhour === 12) {
+      optionendhour = 0;
+    }
+    const opionendtiming = optionendhour * 60 + optionendmin;
+
+    if (selecteddate === currentdateform && opionendtiming < current_time) {
+      option_timings.setAttribute("disabled", "");
+    }
     for (let i = 0; i < bookingInfo1.length; i++) {
       // console.log("ok");
-      if (bookingInfo1[i].booking_Date == selecteddate && bookingInfo1[i].selectedCourts ==selected_court) {
-
-
+      if (
+        bookingInfo1[i].booking_Date == selecteddate &&
+        bookingInfo1[i].selectedCourts == selected_court
+      ) {
         if (Array.isArray(bookingInfo1[i].booking_time)) {
           for (const booking_time of bookingInfo1[i].booking_time) {
             if (booking_time === option_timings.innerText) {
-              option_timings.setAttribute("disabled", "")
+              option_timings.setAttribute("disabled", "");
             }
           }
+        } else if (bookingInfo1[i].booking_time == option_timings.innerText) {
+          option_timings.setAttribute("disabled", "");
         }
-        else {
-          if (
-            bookingInfo1[i].booking_time == option_timings.innerText
-          ) {
-            option_timings.setAttribute("disabled", "")
-
-          }
-
-        }
-
-
       }
     }
 
     select_timings.append(option_timings);
   }
 }
-
 
 // let currentdate=new Date;
 // let hours=currentdate.getHours();
@@ -877,7 +980,7 @@ span_sportsSelect.setAttribute("class", "headingbook");
 span_sportsSelect.innerText = "Select Which Courts";
 div_book2.append(span_sportsSelect);
 
- select_sports = document.createElement("select");
+select_sports = document.createElement("select");
 select_sports.setAttribute("class", "courtss");
 div_book2.append(select_sports);
 
@@ -885,7 +988,7 @@ div_book2.append(select_sports);
 for (let i = 1; i <= show2.groundCourt; i++) {
   option_courts = document.createElement("option");
   option_courts.innerText = ground_details[0].courtsoptions[`courts${i}`];
-  option_courts.value=ground_details[0].courtsoptions[`courts${i}`];
+  option_courts.value = ground_details[0].courtsoptions[`courts${i}`];
   select_sports.append(option_courts);
 }
 
@@ -1072,9 +1175,9 @@ function getBookingInfo() {
       booking_sports: selectSports,
       booking_duration: selectDuration,
       selected_players: selectplayers,
-      selectedCourts: selectedCourts,
+      selectedCourts,
       booking_status: "accepted",
-      groundPrice: groundPrice,
+      groundPrice,
       created_at: new Date().getTime(),
     });
 
@@ -1193,6 +1296,5 @@ const today = new Date(Date.now() - new Date().getTimezoneOffset() * 60000)
   .split("T")[0];
 date.setAttribute("min", today);
 
-
 // for courts timing asorting
-select_sports.addEventListener("input",updatetime)
+select_sports.addEventListener("input", updatetime);

@@ -8,7 +8,7 @@ const player = [
 ];
 
 // own profile
-const imageShow=document.querySelector(".userlogo")
+const imageShow = document.querySelector(".userlogo");
 const userRecords = JSON.parse(localStorage.getItem("user_details"));
 const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
 for (let i = 0; i < userRecords.length; i++) {
@@ -44,16 +44,15 @@ let show2;
 filterPlayer.find((e) => {
   if (e.user_id == playerSearch) {
     return (show2 = e);
-  } else {
-    return (show2 = 0);
   }
+  return (show2 = 0);
 });
 
 //
-const MessageofUser = JSON.parse(localStorage.getItem("user_Messages"))
-const playerIdmessage = show2["user_id"];
+const MessageofUser = JSON.parse(localStorage.getItem("user_Messages"));
+const playerIdmessage = show2.user_id;
 const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
-const loginUserID = loginUser[0]["user_id"]
+const loginUserID = loginUser[0].user_id;
 
 if (MessageofUser == null) {
 } else {
@@ -64,7 +63,6 @@ if (MessageofUser == null) {
   );
   show2.user_messages = messageUser;
   console.log(show2);
-
 }
 
 if (MessageofUser == null) {
@@ -94,10 +92,10 @@ div_profile_box.setAttribute("class", "profilebox");
 div_sidebar_1.append(div_profile_box);
 
 player_image = document.createElement("img");
-if (show2["url"] == "") {
+if (show2.url == "") {
   player_image.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
 } else {
-  player_image.setAttribute("src", show2["url"]);
+  player_image.setAttribute("src", show2.url);
 }
 player_image.setAttribute("class", "profilephoto");
 div_profile_box.append(player_image);
@@ -110,19 +108,19 @@ div_profile_box.append(button_connect);
 
 p_playerName = document.createElement("p");
 p_playerName.setAttribute("class", "namerow");
-p_playerName.innerText = show2.user_name
+p_playerName.innerText = show2.user_name;
 div_profile_box.append(p_playerName);
 
 p_playerAbout = document.createElement("p");
 p_playerAbout.setAttribute("class", "aboutrow");
-p_playerAbout.innerText = show2["aboutplayers"];
+p_playerAbout.innerText = show2.aboutplayers;
 div_profile_box.append(p_playerAbout);
 
 div_rating_box = document.createElement("div");
 div_rating_box.setAttribute("class", "ratingsrow");
 div_profile_box.append(div_rating_box);
 
-i_star = document.createElement("i")
+i_star = document.createElement("i");
 i_star.setAttribute("class", "fa-solid fa-star");
 div_rating_box.append(i_star);
 
@@ -139,7 +137,7 @@ div_sports_known = document.createElement("div");
 div_sports_known.setAttribute("class", "sportsknown");
 div_box2.append(div_sports_known);
 
-p_sportsplay_tag = document.createElement("p")
+p_sportsplay_tag = document.createElement("p");
 p_sportsplay_tag.setAttribute("class", "sportsplay");
 p_sportsplay_tag.innerText = "Sports i will play";
 div_sports_known.append(p_sportsplay_tag);
@@ -177,6 +175,7 @@ div_box2.append(div_gameplayed);
 
 p_score_tagName = document.createElement("p");
 p_score_tagName.setAttribute("class", "scorehead");
+p_score_tagName.innerText="Timing Iam available to play"
 // p_playerName
 div_gameplayed.append(p_score_tagName);
 
@@ -185,17 +184,17 @@ p_score_no.setAttribute("class", "scoreno");
 // p_playerName
 div_gameplayed.append(p_score_no);
 
-div_box3 = document.createElement("div");
-div_box3.setAttribute("class", "box3");
-div_sidebar_1.append(div_box3);
+// div_box3 = document.createElement("div");
+// div_box3.setAttribute("class", "box3");
+// div_sidebar_1.append(div_box3);
 
-div_statistics = document.createElement("div");
-div_statistics.setAttribute("class", "statistics1");
-div_box3.append(div_statistics);
+// div_statistics = document.createElement("div");
+// div_statistics.setAttribute("class", "statistics1");
+// div_box3.append(div_statistics);
 
-canvas_chart = document.createElement("canvas");
-canvas_chart.setAttribute("id", "myChart");
-div_statistics.append(canvas_chart);
+// canvas_chart = document.createElement("canvas");
+// canvas_chart.setAttribute("id", "myChart");
+// div_statistics.append(canvas_chart);
 
 // sidebar2
 
@@ -269,7 +268,7 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
     div_chat_main.append(messageofchat);
 
     // delete btn
-    const delbtn=document.createElement("button");
+    const delbtn = document.createElement("button");
     delbtn.setAttribute("class", "delbtn");
     delbtn.innerText = "Delete";
     if (particularmessage.type == "received") {
@@ -282,7 +281,6 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
     });
     messageofchat.append(delbtn);
   }
-  
 }
 
 // for (let i = 0; i < show2.received_messages.messages.length; i++) {
@@ -348,21 +346,21 @@ div_sidebar_2.append(text);
 
 document.querySelector("div.main2").append(div_parent1);
 
-const ctx = canvas_chart;
-new Chart(ctx, {
-  type: "doughnut",
-  data: {
-    labels: ["Win", "Loss", "Draw"],
-    datasets: [
-      {
-        label: " of Matches",
-        data: [12, 19, 3],
-        hoverOffset: 4,
-        borderWidth: 1,
-      },
-    ],
-  },
-});
+// const ctx = canvas_chart;
+// new Chart(ctx, {
+//   type: "doughnut",
+//   data: {
+//     labels: ["Win", "Loss", "Draw"],
+//     datasets: [
+//       {
+//         label: " of Matches",
+//         data: [12, 19, 3],
+//         hoverOffset: 4,
+//         borderWidth: 1,
+//       },
+//     ],
+//   },
+// });
 
 let sidebar2;
 if (loginUserID == show2.user_id) {
@@ -373,7 +371,7 @@ if (loginUserID == show2.user_id) {
 }
 
 // mouserightclick
-const messto=document.querySelectorAll(".messageto")
+const messto = document.querySelectorAll(".messageto");
 messto.forEach((data) => {
   data.addEventListener("click", () => {
     alert("ok");
@@ -399,7 +397,7 @@ console.log(loginUserID);
 
 // })
 
-  connectBtn.forEach((conBtn) => {
+connectBtn.forEach((conBtn) => {
   playerId = conBtn.value;
   if (playerId == loginUserID) {
     // alert("this your profile")
@@ -407,14 +405,14 @@ console.log(loginUserID);
   }
 
   conBtn.addEventListener("click", () => {
-      
-      if(conBtn.innerHTML=="Connect"){
+    if (conBtn.innerHTML == "Connect") {
       // alert(playerId)
       // local storage
       let request_records = new Array();
       request_records = JSON.parse(localStorage.getItem("request_details"))
-        ? JSON.parse(localStorage.getItem("request_details")):[];
-  
+        ? JSON.parse(localStorage.getItem("request_details"))
+        : [];
+
       // if (playerId == loginUserID) {
       //   alert("this your profile")
       //   connectBtn.style.display = "none"
@@ -436,76 +434,80 @@ console.log(loginUserID);
 
       localStorage.setItem("request_details", JSON.stringify(request_records));
       alert("you requested");
-  
+
       // }
     }
   });
 });
 
-let requestrecords = JSON.parse(localStorage.getItem("request_details"));
+const requestrecords = JSON.parse(localStorage.getItem("request_details"));
 console.log(requestrecords);
 const connectBtn2 = document.querySelector(".connectbtn");
 
 if (requestrecords == null) {
-} else {
-  if (
-    requestrecords.some((v) => v.requested_user === loginUserID && v.receiving_user === playerId)) {
+} else if (
+  requestrecords.some(
+    (v) => v.requested_user === loginUserID && v.receiving_user === playerId
+  )
+) {
   {
     connectBtn2.innerText = "Requested";
     console.log("ok");
   }
 }
-}
 // chat blur remove
 if (requestrecords == null) {
-} else {
-  
-  if (requestrecords.some((v) => v.requested_user === loginUserID && v.receiving_user === playerId && v.request_status=="accepted")) {
-    connectBtn2.innerText = "Friend";
-    const chatbox = document.querySelector(".container");
-    //  let side_bar2=document.querySelector(".sidebar2");
-    let textalert = document.querySelector(".chatalerttext");
-    console.log(textalert);
-    chatbox.style.filter = "none";
-    textalert.style.display = "none";
-    chatbox.style.left = "30px";
+} else if (
+  requestrecords.some(
+    (v) =>
+      v.requested_user === loginUserID &&
+      v.receiving_user === playerId &&
+      v.request_status == "accepted"
+  )
+) {
+  connectBtn2.innerText = "Friend";
+  const chatbox = document.querySelector(".container");
+  //  let side_bar2=document.querySelector(".sidebar2");
+  const textalert = document.querySelector(".chatalerttext");
+  console.log(textalert);
+  chatbox.style.filter = "none";
+  textalert.style.display = "none";
+  chatbox.style.left = "30px";
 
-    // chatbox.innerText="You cannot chat with before they accept your request"
+  // chatbox.innerText="You cannot chat with before they accept your request"
 
-    console.log("ok");
-  }
+  console.log("ok");
 }
 
 // chat feature
 const sendBtn = document.getElementById("send_button");
-const formbtn = document.getElementById("sendbtn")
+const formbtn = document.getElementById("sendbtn");
 formbtn.addEventListener("submit", (e) => {
   e.preventDefault();
   sendMessage();
   // location.reload();
-
-})
+});
 
 let messagebox;
 
 function sendMessage() {
   messagebox = document.getElementById("message").value;
 
-  const receiver = show2["user_id"];
+  const receiver = show2.user_id;
   let usersMessage = new Array();
   usersMessage = JSON.parse(localStorage.getItem("user_Messages"))
     ? JSON.parse(localStorage.getItem("user_Messages"))
     : [];
 
-  const existingmessagedUser = usersMessage.findIndex((mess) =>
-    mess.sender_id === loginUserID && mess.receiver_id === receiver
+  const existingmessagedUser = usersMessage.findIndex(
+    (mess) => mess.sender_id === loginUserID && mess.receiver_id === receiver
   );
 
-  const existingmessage={
-    "text": messagebox,
-    "sender": "user",
-    "timestamp": new Date().getTime(),
-  }
+  const existingmessage = {
+    text: messagebox,
+    sender: "user",
+    timestamp: new Date().getTime(),
+  };
 
   if (existingmessagedUser !== -1) {
     usersMessage[existingmessagedUser].messages.push(existingmessage);
@@ -524,7 +526,7 @@ function sendMessage() {
   }
 
   localStorage.setItem("user_Messages", JSON.stringify(usersMessage));
-  location.reload();
+  // location.reload();
 
   // let div_chat_main = document.querySelector(".main");
   //   let p_mess_from = document.createElement("p");
@@ -562,12 +564,12 @@ function sendMessage() {
 // }
 
 function timestampconvert(timestamp) {
-  const date=new Date(timestamp);
+  const date = new Date(timestamp);
   let hours = date.getHours();
-  const minutes=date.getMinutes();
-  const ampmformat=hours>=12?`PM`:`AM`;
-  hours%=12;
-  hours = hours ? hours : 12;
+  const minutes = date.getMinutes();
+  const ampmformat = hours >= 12 ? `PM` : `AM`;
+  hours %= 12;
+  hours = hours || 12;
   return `${hours.toString().padStart(2, "0")}:${minutes
     .toString()
     .padStart(2, "0")} ${ampmformat}`;
@@ -577,10 +579,13 @@ function timestampconvert(timestamp) {
 
 function deletemess(message) {
   const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
-  const existingmessageuser=messageofUser.findIndex((mess)=>mess.sender_id===loginUserID && mess.receiver_id===show2.user_id);
+  const existingmessageuser = messageofUser.findIndex(
+    (mess) =>
+      mess.sender_id === loginUserID && mess.receiver_id === show2.user_id
+  );
 
   if (existingmessageuser !== -1) {
-    let exitingmesss = messageofUser[existingmessageuser].messages.findIndex(
+    const exitingmesss = messageofUser[existingmessageuser].messages.findIndex(
       (messs) =>
         messs.text === message.text && messs.timestamp === messs.timestamp
     );

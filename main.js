@@ -185,26 +185,3 @@ if (JSON.parse(localStorage.getItem("user_logged_in"))) {
   // return
 } else {
 }
-
-
-
-
-
-
-
-
-for (let i = 0; i < bookingInfo1.length; i++) {
-  console.log("okuuuu");
-  if (bookingInfo1[i].booking_Date == inputdate.value) {
-
-
-    console.log("okda");
-    if (
-      bookingInfo1[i].booking_time==option_timings.innerText
-    ) {
-      option_timings.setAttribute("disabled", "");
-    }
-  }
-}
-
-

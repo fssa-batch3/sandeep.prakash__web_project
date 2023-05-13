@@ -2,8 +2,7 @@ const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 const loginbtn = document.querySelector(".login");
 
 if (loginUser == null) {
-} else {
-  if (loginUser !== false) {
+} else if (loginUser !== false) {
     loginbtn.style.display = "none";
     const myprofile = document.createElement("button");
     myprofile.setAttribute("class", "login");
@@ -18,14 +17,13 @@ if (loginUser == null) {
     loginbtn.style.display = "block";
 
  }
-}
 
-const findplayersbtn=document.querySelector(".findplayers")
+const findplayersbtn = document.querySelector(".findplayers");
 findplayersbtn.addEventListener("click", (e) => {
   if (!loginUser) {
     alert("Please login to find players ");
     e.preventDefault();
-  } else if (loginUser[0]["player_status"] == false) {
+  } else if (loginUser[0].player_status == false) {
     alert(
       "Please join as a player to find players. To join as a player please tick the box on your profile page "
     );
@@ -402,15 +400,13 @@ console.log(groundOwnerProduct);
 // ground_list.push(groundOwnerProduct);
 
 let filtered;
-filtered = groundOwnerProduct.filter((item => {
-  if (item["status"] == true) {
-    return true
-
+filtered = groundOwnerProduct.filter((item) => {
+  if (item.status == true) {
+    return true;
   }
-  
-    return false
-  
-}));
+
+  return false;
+});
 
 groundData(filtered);
 
@@ -454,7 +450,7 @@ function groundData(array = []) {
       imgicon_card1.setAttribute("class", "sportsicon");
       imgicon_card1.setAttribute(
         "src",
-        ground_list[0]["sportsicon"]["cricketicon"]
+        ground_list[0].sportsicon["cricketicon"]
       );
       imgicon_card1.setAttribute("alt", "icons");
       div_symbol.append(imgicon_card1);
@@ -466,7 +462,7 @@ function groundData(array = []) {
       imgicon_card2.setAttribute("class", "sportsicon");
       imgicon_card2.setAttribute(
         "src",
-        ground_list[0]["sportsicon"]["footballicon"]
+        ground_list[0].sportsicon["footballicon"]
       );
       imgicon_card2.setAttribute("alt", "icons");
       div_symbol.append(imgicon_card2);
@@ -478,7 +474,7 @@ function groundData(array = []) {
       imgicon_card3.setAttribute("class", "sportsicon");
       imgicon_card3.setAttribute(
         "src",
-        ground_list[0]["sportsicon"]["tennisicon"]
+        ground_list[0].sportsicon["tennisicon"]
       );
       // imgicon_card.setAttribute("alt", "icons");
       div_symbol.append(imgicon_card3);
@@ -505,7 +501,7 @@ function groundData(array = []) {
     // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
     anchor.setAttribute(
       "href",
-      "../../pages/bookinground/ground1.html?ground_Id=" + item.ground_id
+      `../../pages/bookinground/ground1.html?ground_Id=${  item.ground_id}`
     );
     div_child.append(anchor);
 
@@ -521,7 +517,6 @@ function groundData(array = []) {
 
     parentHtmlDiv.append(div_child);
   });
-
 }
 
 // for (let i = 0; i < filtered.length; i++) {
@@ -827,7 +822,9 @@ selectOption.addEventListener("change", (e) => {
     // return false
   }
   if (seletedQuery !== "all") {
-    filteredData = filtered.filter((item) => item.ground_city.includes(seletedQuery));
+    filteredData = filtered.filter((item) =>
+      item.ground_city.includes(seletedQuery)
+    );
   }
   // else if (e.target===searchbox){
   //   filteredData=ground_list.filter((item) => {
@@ -842,7 +839,7 @@ selectOption.addEventListener("change", (e) => {
   console.log(filteredData);
   if (filteredData.length === 0) {
     const parentHtmlDiv2 = document.querySelector(".parent");
-    const p= document.createElement("p");
+    const p = document.createElement("p");
     p.setAttribute("class", "noresult");
     p.innerText = "No result found";
     parentHtmlDiv2.innerHTML = "";
@@ -950,8 +947,7 @@ selectOption.addEventListener("change", (e) => {
 
   //   parentHtmlDiv.append(div_child);
   // });
-
-})
+});
 
 // searchbox.addEventListener("keydown",(e)=>{
 //   if (e.key === "Enter") {
@@ -963,140 +959,153 @@ selectOption.addEventListener("change", (e) => {
 
 // })
 
+// const searchbox = document.getElementById("search2");
+// searchbox.addEventListener("keydown", (e) => {
+//   const searchQuery = searchbox.value.trim().toLowerCase();
+//   // console.log(searchQuery);
+
+//   if (e.key === "Enter") {
+//     e.preventDefault();
+//     // e.stopPropagation();
+//     // // return false
+//   }
+
+//   const filteredList = filteredData.filter((item) =>
+//    item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery))
+//   groundData(filteredList);
+
+//   // if(selectOption.value==""){
+//   //     filteredList2 = filtered.filter((item) => item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery))
+//   //     };
+
+//   //     groundData(filteredList2);
+//   //   });
+//   let filteredList2;
+//   if (selectOption.value == "") {
+//     filteredList2 = filtered.filter((item) => item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery))
+ 
+
+//     groundData(filteredList2);
+//   }
+// });
 
 
 const searchbox = document.getElementById("search2");
 searchbox.addEventListener("keydown", (e) => {
   const searchQuery = searchbox.value.trim().toLowerCase();
   // console.log(searchQuery);
-
   if (e.key === "Enter") {
     e.preventDefault();
     // e.stopPropagation();
     // // return false
   }
-
-
-
   const filteredList = filteredData.filter((item) => {
     return item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery)
   })
 groundData(filteredList);
-
-// if(selectOption.value==""){
-//     filteredList2 = filtered.filter((item) => item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery))
-//     };
-
-//     groundData(filteredList2);
-//   });
-let filteredList2;
 if(selectOption.value==""){
-  filteredList2 = filtered.filter((item) => {
+  const filteredList2 = filtered.filter((item) => {
     return item.ground_name.toLowerCase().includes(searchQuery) || item.ground_Place.toLowerCase().includes(searchQuery)
   })
   
   groundData(filteredList2)
 }
-
-  
 })
-  // const parentHtmlDiv = document.querySelector(".parent");
-  // parentHtmlDiv.innerHTML = "";
+// const parentHtmlDiv = document.querySelector(".parent");
+// parentHtmlDiv.innerHTML = "";
 
-  // filteredList.forEach((item) => {
+// filteredList.forEach((item) => {
 
-  //   const div_child = document.createElement("div");
-  //   div_child.setAttribute("class", "child");
+//   const div_child = document.createElement("div");
+//   div_child.setAttribute("class", "child");
 
-  //   br_tag = document.createElement("br");
-  //   div_child.append(br_tag);
+//   br_tag = document.createElement("br");
+//   div_child.append(br_tag);
 
-  //   const h3_card_title = document.createElement("h3");
-  //   h3_card_title.setAttribute("class", "groundn");
-  //   h3_card_title.innerText = item.ground_name;
-  //   div_child.append(h3_card_title);
+//   const h3_card_title = document.createElement("h3");
+//   h3_card_title.setAttribute("class", "groundn");
+//   h3_card_title.innerText = item.ground_name;
+//   div_child.append(h3_card_title);
 
-  //   //  <img src="" class="groimg" alt=""/>
-  //   img_card = document.createElement("img");
-  //   img_card.setAttribute("src", item.groundimg1);
-  //   img_card.setAttribute("alt", "groundimage");
-  //   img_card.setAttribute("class", "groimg");
-  //   div_child.append(img_card);
+//   //  <img src="" class="groimg" alt=""/>
+//   img_card = document.createElement("img");
+//   img_card.setAttribute("src", item.groundimg1);
+//   img_card.setAttribute("alt", "groundimage");
+//   img_card.setAttribute("class", "groimg");
+//   div_child.append(img_card);
 
-  //   //  <p class="location_name"> </p>
-  //   p_location_name = document.createElement("p");
-  //   p_location_name.setAttribute("class", "locationn");
-  //   p_location_name.innerText = item.ground_Place;
-  //   div_child.append(p_location_name);
+//   //  <p class="location_name"> </p>
+//   p_location_name = document.createElement("p");
+//   p_location_name.setAttribute("class", "locationn");
+//   p_location_name.innerText = item.ground_Place;
+//   div_child.append(p_location_name);
 
-  //   //  <div class="symbol"> </div>
-  //   div_symbol = document.createElement("div");
-  //   div_symbol.setAttribute("class", "symbol");
-  //   div_child.append(div_symbol);
+//   //  <div class="symbol"> </div>
+//   div_symbol = document.createElement("div");
+//   div_symbol.setAttribute("class", "symbol");
+//   div_child.append(div_symbol);
 
-  //   if (item.sport_avail_1 == true) {
-  //     //  <img src="" class="sportsicon" alt=""/>
-  //     imgicon_card1 = document.createElement("img");
-  //     imgicon_card1.setAttribute("class", "sportsicon");
-  //     imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
-  //     imgicon_card1.setAttribute("alt", "icons");
-  //     div_symbol.append(imgicon_card1);
+//   if (item.sport_avail_1 == true) {
+//     //  <img src="" class="sportsicon" alt=""/>
+//     imgicon_card1 = document.createElement("img");
+//     imgicon_card1.setAttribute("class", "sportsicon");
+//     imgicon_card1.setAttribute("src", ground_list[0]["sportsicon"]["cricketicon"]);
+//     imgicon_card1.setAttribute("alt", "icons");
+//     div_symbol.append(imgicon_card1);
 
-  //   }
+//   }
 
-  //   if (item.sport_avail_2 == true) {
-  //     //  <img src="" class="sportsicon" alt=""/>
-  //     imgicon_card2 = document.createElement("img");
-  //     imgicon_card2.setAttribute("class", "sportsicon");
-  //     imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
-  //     imgicon_card2.setAttribute("alt", "icons");
-  //     div_symbol.append(imgicon_card2);
+//   if (item.sport_avail_2 == true) {
+//     //  <img src="" class="sportsicon" alt=""/>
+//     imgicon_card2 = document.createElement("img");
+//     imgicon_card2.setAttribute("class", "sportsicon");
+//     imgicon_card2.setAttribute("src", ground_list[0]["sportsicon"]["footballicon"]);
+//     imgicon_card2.setAttribute("alt", "icons");
+//     div_symbol.append(imgicon_card2);
 
-  //   }
+//   }
 
-  //   if (item.sport_avail_3 == true) {
-  //     //  <img src="" class="sportsicon" alt=""/>
-  //     imgicon_card3 = document.createElement("img");
-  //     imgicon_card3.setAttribute("class", "sportsicon");
-  //     imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
-  //     // imgicon_card.setAttribute("alt", "icons");
-  //     div_symbol.append(imgicon_card3);
+//   if (item.sport_avail_3 == true) {
+//     //  <img src="" class="sportsicon" alt=""/>
+//     imgicon_card3 = document.createElement("img");
+//     imgicon_card3.setAttribute("class", "sportsicon");
+//     imgicon_card3.setAttribute("src", ground_list[0]["sportsicon"]["tennisicon"]);
+//     // imgicon_card.setAttribute("alt", "icons");
+//     div_symbol.append(imgicon_card3);
 
-  //   }
-  //   //  <div class="ratings"> </div>
-  //   div_ratings = document.createElement("div");
-  //   div_ratings.setAttribute("class", "ratings");
-  //   div_child.append(div_ratings);
+//   }
+//   //  <div class="ratings"> </div>
+//   div_ratings = document.createElement("div");
+//   div_ratings.setAttribute("class", "ratings");
+//   div_child.append(div_ratings);
 
-  //   //  <i class="fa-solid fa-star"> </i>
-  //   i_star = document.createElement("i");
-  //   i_star.setAttribute("class", "fa-solid fa-star");
-  //   // h3_card_title.innerText = names[i];
-  //   div_ratings.append(i_star);
+//   //  <i class="fa-solid fa-star"> </i>
+//   i_star = document.createElement("i");
+//   i_star.setAttribute("class", "fa-solid fa-star");
+//   // h3_card_title.innerText = names[i];
+//   div_ratings.append(i_star);
 
-  //   //  <span class="ratingno"> </span>
-  //   ratings_no = document.createElement("span");
-  //   ratings_no.setAttribute("class", "ratingno");
-  //   ratings_no.innerText = ground_list[0]["ratingsnumber"];
-  //   div_ratings.append(ratings_no);
+//   //  <span class="ratingno"> </span>
+//   ratings_no = document.createElement("span");
+//   ratings_no.setAttribute("class", "ratingno");
+//   ratings_no.innerText = ground_list[0]["ratingsnumber"];
+//   div_ratings.append(ratings_no);
 
-  //   //anchor
-  //   anchor = document.createElement("a");
-  //   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
-  //   anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
-  //   div_child.append(anchor)
+//   //anchor
+//   anchor = document.createElement("a");
+//   // anchor.setAttribute("href", "../../pages/bookinground/ground1.html")
+//   anchor.setAttribute("href", "../../pages/bookinground/ground1.html?name=" + item.groundname)
+//   div_child.append(anchor)
 
-  //   // <button class="book"></button>
-  //   button_book = document.createElement("button");
-  //   button_book.setAttribute("class", "book");
-  //   // button_booknow =document.createTextNode("Book Now")
-  //   // button_book.append(button_booknow)
-  //   button_book.innerText = "Book Now"
-  //   anchor.append(button_book);
+//   // <button class="book"></button>
+//   button_book = document.createElement("button");
+//   button_book.setAttribute("class", "book");
+//   // button_booknow =document.createTextNode("Book Now")
+//   // button_book.append(button_booknow)
+//   button_book.innerText = "Book Now"
+//   anchor.append(button_book);
 
-  //   parentHtmlDiv.append(div_child);
-  // });
-
-
+//   parentHtmlDiv.append(div_child);
+// });
 
 // booking

@@ -19,8 +19,8 @@ const user_password = document.getElementById("password")
 const user_age = document.getElementById("age")
 const user_location = document.getElementById("locationselect")
 const user_sports = document.getElementById("sportss")
-const user_timingsfrom = document.getElementById("timingsfrom")
-const user_timingsto = document.getElementById("timingsto")
+const user_timingsfrom = document.getElementById("startTime")
+const user_timingsto = document.getElementById("endTime")
 const cricket = document.getElementById("sportsavail1")
 const football = document.getElementById("sportsavail2")
 const tennis = document.getElementById("sportsavail3");
@@ -48,6 +48,29 @@ let user_record = JSON.parse(localStorage.getItem("user_details"));
 // let user_sports_choosed=user_record.sport_Choosed;
 let loggedIn = JSON.parse(localStorage.getItem("user_logged_in"));
 
+
+const startTimeValue = null;
+const endTimeValue = null;
+const timePicker = {
+  enableTime: true,
+  noCalendar: true,
+  dateFormat: "h:i K",
+  time_24hr: false,
+  minuteIncrement: 60,
+  //   defaultDate: "12:00 AM",
+  onChange: function (selectedDates, dateStr) {
+    // Store selected start and end times in global variables
+    if (this.input.id === "startTime") {
+      startTime = dateStr;
+    } else if (this.input.id === "endTime") {
+      endTime = dateStr;
+    }
+    // localStorage.setItem("startTime", startTime);
+    // localStorage.setItem("endTime", endTime);
+  },
+};
+const startTimepicker = flatpickr("#startTime", timePicker);
+const endTimepicker = flatpickr("#endTime", timePicker);
 
 
 

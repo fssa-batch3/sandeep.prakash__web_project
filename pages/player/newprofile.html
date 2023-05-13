@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
         integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 </head>
 
@@ -168,12 +169,14 @@
 <br>
                             <p class="labelnametime">Timing Available</p>
 <br>
-                            <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00" disabled>
+<input type="text" id="startTime" required placeholder="12:00">
+                            <!-- <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00" disabled> -->
 <br>
 
                             <p class="timep">To</p>
+                            <input type="text" id="endTime" required placeholder="12:00">
 <br>
-                            <input type="time" id="timingsto" aria-label="timingtoo" value="5:00" disabled>
+                            <!-- <input type="time" id="timingsto" aria-label="timingtoo" value="5:00" disabled> -->
 <br>
 
                             <span class="linetext">Few lines About You</span>
@@ -191,6 +194,7 @@
 
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="../../assets/js/newprofile.js"></script>
 </body>
 

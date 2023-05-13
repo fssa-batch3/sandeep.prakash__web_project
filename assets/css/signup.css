@@ -301,7 +301,21 @@ top: 20px;
 
 
 
-#timingsfrom{
+.nj-timepick {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5000;
+    transition: right 0.7s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+#startTime{
     position: relative;
     top: 60px;
     width: 50%;
@@ -311,7 +325,7 @@ top: 20px;
     border-radius: 5px;
 }
 
-#timingsto{
+#endTime{
     width: 50%;
     height: 35px;
     font-size: 20px;

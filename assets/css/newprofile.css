@@ -319,7 +319,7 @@ form input {
  top: 99px;
 
 }
-#timingsfrom{
+#startTime{
     width: 50%;
     height: 35px;
     font-size: 20px;
@@ -338,7 +338,7 @@ form input {
     top: 90px;
 }
 
-#timingsto{
+#endTime{
     width: 50%;
     height: 35px;
     font-size: 20px;
@@ -409,3 +409,17 @@ font-size: 20px;
     position: relative;
 
 }
+.nj-timepick {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5000;
+    transition: right 0.7s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
