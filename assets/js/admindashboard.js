@@ -293,6 +293,26 @@ e["seller_ground_name"]=groundnamebox.value
 
 
 
+// password
+let eye=document.querySelector(".eyesym i")
+eye.addEventListener("click",()=>{
+    // eye.setAttribute("class","fa-solid fa-eye")
+
+    if(user_password.type=="password"){
+       
+        user_password.type="text"
+     eye.classList.remove("fa-eye-slash");
+     eye.classList.add("fa-eye")
+    }
+    else{
+  
+        user_password.type="password"
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash")
+        
+    }
+    
+})
 
 
 

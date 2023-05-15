@@ -403,7 +403,7 @@ Book Your Grounds From Your Place <br>
         </div>
       </div>
     </div>
-    <a href="./pages/admin/adminlogin.html" aria-label="linkedin ">Join as a seller </a>
+    <a class="adminlogin" href="./pages/admin/adminlogin.html" aria-label="linkedin ">Join as a seller </a>
   </footer>
   <!-- footer -->
 
@@ -441,7 +441,7 @@ Book Your Grounds From Your Place <br>
     e.preventDefault();
   }
 
-  else if( loginUser[0].player_status == false){
+  else if( loginUser[0].player_status === false){
     alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
     e.preventDefault();
   }

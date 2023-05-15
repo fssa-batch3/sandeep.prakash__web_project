@@ -230,9 +230,10 @@ input[type="search"]::placeholder{
     background-color: rgba(241, 251, 255, 255);
     }
     .parent{
-        margin: 20px;
+        margin: 30px;
+        margin-left: 0px;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
        grid-row-gap: 60px;
        
 
@@ -241,7 +242,7 @@ input[type="search"]::placeholder{
     .child{
         /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
         height: 232px;
-        width: 80%;
+        width: 65%;
         color: rgb(255, 255, 255);
         margin-left: 22%;
         border-radius: 10px;

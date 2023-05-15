@@ -104,13 +104,8 @@
 //     inputError.className="boxform error";
 
 // }
-
-
-
-  
-
-let startTimeValue= null;
-let endTimeValue=null;
+const startTimeValue= null;
+const endTimeValue=null;
 const timePicker={
     enableTime: true,
     noCalendar: true,
@@ -139,7 +134,6 @@ const joinplayerForm = document.querySelector(".joinplayercontainer");
 const forms1 = document.querySelector(".forms");
 const body = document.querySelector("body");
 const sportLocation = document.getElementById("locationselect");
-
 checkjoinPlayer.addEventListener("click", (e) => {
   // for uncheck the checbox
   if (checkjoinPlayer.checked == false) {
@@ -182,13 +176,13 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   getUserData();
 });
-
+let user_password;
 function getUserData() {
   const name1 = document.getElementById("name1").value.trim();
   const name2 = document.getElementById("name2").value.trim();
   const email = document.getElementById("email").value.trim();
   const user_phoneno = document.getElementById("user_phoneno").value.trim();
-  const user_password = document.getElementById("password").value.trim();
+  user_password = document.getElementById("password").value.trim();
   //    const name1 = (document.getElementById("name1").value)
 
   const age = document.getElementById("age").value;
@@ -221,7 +215,6 @@ function getUserData() {
   // }
 
   let user_records = new Array();
-
   user_records = JSON.parse(localStorage.getItem("user_details"))
     ? JSON.parse(localStorage.getItem("user_details"))
     : [];
@@ -236,8 +229,8 @@ function getUserData() {
       user_name: name1,
       user_last_name: name2,
       user_email: email,
-      user_phoneno,
-      user_password,
+      user_phoneno:user_phoneno,
+      user_password:user_password,
       player: checkjoinPlayer.checked,
       imagename: "",
       url: "",
@@ -291,3 +284,27 @@ function getUserData() {
 
   //  form.reset();
 }
+
+
+//password
+let eye=document.querySelector(".eyesym i")
+eye.addEventListener("click",()=>{
+
+ let  user_password2 = document.getElementById("password")
+    // eye.setAttribute("class","fa-solid fa-eye")
+
+    if(user_password2.type=="password"){
+       
+        user_password2.type="text"
+     eye.classList.remove("fa-eye-slash");
+     eye.classList.add("fa-eye")
+    }
+    else{
+  
+        user_password2.type="password"
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash")
+        
+    }
+    
+})

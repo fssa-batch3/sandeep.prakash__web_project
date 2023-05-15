@@ -110,6 +110,42 @@ const showimage = [
 // //   }
 // // }))
 
+
+
+let div_child;
+let br_tag;
+let h3_card_title;
+let img_card;
+let p_location_name;
+let div_symbol;
+let imgicon_card1;
+let imgicon_card2;
+let imgicon_card3;
+let div_ratings;
+let i_star;
+let ratings_no;
+let button_book;
+let anchor;
+let childdiv;
+let columndiv1;
+let h4name;
+let h4date;
+let h4timing;
+let h4sports;
+let h4duration;
+let h4players;
+let h4courts;
+let h4price;
+let columndiv2;
+let divbox1;
+let divbox2;
+let div_box4;
+let div_box5;
+let div_box6;
+let div_box7;
+let div_box8;
+let btndecline;
+
 let divBox;
 for (let i = 0; i < acceptedBooking.length; i++) {
   // console.log(divBox);
@@ -297,10 +333,18 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   divbox4.innerText = acceptedBooking[i].booking_sports;
   columndiv2.append(divbox4);
 
+  if(acceptedBooking[i].booking_duration=="Select an Option"){
+    
   divbox5 = document.createElement("div");
   divbox5.setAttribute("class", "box5");
-  divbox5.innerText = acceptedBooking[i].booking_duration;
+  divbox5.innerText = "None";
   columndiv2.append(divbox5);
+  }
+else{
+  divbox5 = document.createElement("div");
+  divbox5.setAttribute("class", "box5");
+  divbox5.innerText = acceptedBooking[i].booking_duration+" Hour";
+  columndiv2.append(divbox5);}
 
   divbox6 = document.createElement("div");
   divbox6.setAttribute("class", "box6");

@@ -20,6 +20,26 @@ filterPlayer = user_record.filter((item) => item.player == true);
 
 // console.log(filterPlayer);
 
+let anchor;
+let div_chatseparate;
+let div_img;
+let div_name;
+let p_name;
+let div_container_sidebar2;
+let div_top;
+let h2_web;
+let div_chat_main;
+let p_mess_noti;
+let div_chat_bottom;
+let form_box;
+let input_mess_box;
+let send_btn;
+let i_send_symbol;
+let text;
+
+
+
+
 for (const messages of allmessagedUser) {
   const { receiver_id } = messages;
   const message = filterPlayer.find((data) => data.user_id == receiver_id);
@@ -269,7 +289,7 @@ for (let i = 0; i < allmess.length; i++) {
   // delete btn
   const delbtn = document.createElement("button");
   delbtn.setAttribute("class", "delbtn");
-  delbtn.innerText = "Delete";
+  delbtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
   if (particularmessage.type == "received") {
     delbtn.style.display = "none";
   }

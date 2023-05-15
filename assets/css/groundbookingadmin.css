@@ -119,17 +119,17 @@ max-height: fit-content;
     grid-template-columns: 2fr 2fr;
     grid-template-rows: 12vh;
     grid-gap: 50px;
-    width: 60%;
-    height: 410px;
-    background-color: rgb(138, 210, 210);
+    width: 65%;
+    height: 480px;
+    background-color: rgba(32,56,120,255);
     border-radius: 5px;
 }
 
-.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9{
     width: 200px;
-    height: 350px;
-    background-color: #5e6af1;
-    color: white;
+    height: 380px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 10px;
 }
@@ -146,25 +146,25 @@ max-height: fit-content;
     height: 20px;
     position: relative;
     left: 50px;
-    top: 220px;
+    top: 290px;
 }
 .column1{
    padding: 10px;
 display: flex;
 flex-direction: column;
 gap: 28px;
-color: #000;
+color: #ffffff;
 }
 .column2{
     width: 190px;
-    height: 352px;
+    height: 392px;
     padding: 10px;
  display: flex;
  flex-direction: column;
- gap: 20px;
+ gap: 24px;
  
- /* position: relative;
- top: 20px; */
+ position: relative;
+ right: 20px;
  }
 
 

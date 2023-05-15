@@ -176,12 +176,211 @@ if (JSON.parse(localStorage.getItem("ground_info"))) {
   );
 }
 
-if (JSON.parse(localStorage.getItem("user_details"))) {
+if (JSON.parse(localStorage.getItem("groundadmin_details"))) {
   // return
 } else {
+  localStorage.setItem(
+    "groundadmin_details",
+    JSON.stringify([
+
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "sandeepdoncsofficial@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        149,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+
+      },
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "sandeepdondacsofficial@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        142,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+ 
+      },
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "sandcsasofficial@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        109,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+
+      },
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "sandy5tdoncsofficial@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        141,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+        
+      },
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "tascsofficial@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        159,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+        user_email
+        : 
+        "sandeepcsofficial@gmail.com"
+      },
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "sandeepdoncs@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        129,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+
+      },
+      {
+        imagename
+        : 
+        "",
+        seller_email
+        : 
+        "sandeeptark@gmail.com",
+        seller_ground_name
+        : 
+        "dnf",
+        seller_id
+        : 
+        59,
+        seller_name
+        : 
+        "sandeep",
+        seller_password
+        : 
+        "@#(*Snsss",
+        seller_phoneno
+        : 
+        "1222222333",
+        url
+        : 
+        "",
+
+      },
+
+    ])
+  )
+
 }
 
-if (JSON.parse(localStorage.getItem("user_logged_in"))) {
-  // return
-} else {
-}
+// if (JSON.parse(localStorage.getItem("user_logged_in"))) {
+//   // return
+// } else {
+// }

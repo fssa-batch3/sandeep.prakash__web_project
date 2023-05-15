@@ -288,7 +288,10 @@ let h3_card_title;
 let img_card;
 let p_location_name;
 let div_symbol;
-let imgicon_card;
+
+let imgicon_card1;
+let imgicon_card2;
+let imgicon_card3;
 let div_ratings;
 let i_star;
 let ratings_no;

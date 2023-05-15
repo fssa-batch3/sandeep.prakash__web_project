@@ -4,39 +4,61 @@
     margin: 0px;
     padding: 0px;
     text-decoration: none;
+    color: #000000;
+    
 }
 
-
+/* body{
+    background-color: rgba(32,56,120,255);
+} */
 .maincontainer{
     display: grid;
     grid-template-columns: 3fr 6fr;
     grid-template-rows: 102vh;
-    grid-gap: 30px;
+ 
    
 }
 
 .side2{
-    background-color: rgb(165, 172, 172);
+   
+    background-color: rgba(32,56,120,255);
     margin-left: 35px;
     border-radius: 20px;
    max-width: fit-content;
+   overflow-y: scroll;
+   overflow-x: hidden;
 }
+
+
+.side2::-webkit-scrollbar {
+    width: 10px; 
+  }
+
+  .side2::-webkit-scrollbar-track {
+    background-color: #f6f6f6; 
+  }
+  .side2::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+  }
+
 .side3chatmain{
-    background-color: rgb(194, 235, 245);
+    background-color: rgb(255, 255, 255);
     border-radius: 60px;
     margin: 0px 0px;
-    border-radius: 0%;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .chatdiv{
+    /* background-color: rgba(32,56,120,255); */
     width: 330px;
     height: 75px;
-    background-color: aqua;
+    background-color: rgba(241, 251, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
     margin: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     display: grid;
     grid-template-columns: 3fr 6fr;
     
@@ -61,13 +83,15 @@
     height: 56px;
     border-radius: 20px;
     position: relative;
-    bottom: 50px;
+    bottom: 55px;
+    left: 15px;
 
 }
 .container {
+    margin-bottom: 20px;
     background-color: rgba(233, 235, 241, 0.82);
-    width: 930px;
-    height: 97vh;
+    width: 1030px;
+    height: 98vh;
     display: flex;
     flex-direction: column;
     /* margin-bottom: 20%; */
@@ -87,7 +111,9 @@
 
 .top {
     color: rgb(0, 0, 0);
-    padding: 1%;
+    padding: 5px;
+    width: 20px;
+    height: 70px;
 }
 
 .main {
@@ -95,7 +121,7 @@
     color: rgb(0, 0, 0);
     background-color: rgba(229, 233, 236, 0.952);
     padding: 20px 10px;
-    height: 490px;
+    height: 530px;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -116,7 +142,7 @@
 
 
 .messagefrom {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
     text-align: start;
     color: black;
 
@@ -138,25 +164,29 @@
     grid-gap: 5px;
 }
 .h2head{
-    background-color: #0A66C2;
-    padding: 10px 30px;
+    background-color: rgba(32,56,120,255);
+    color: #ffffff;
+    padding: 15px 30px;
+    margin-left: 97px;
     border-radius: 10px;
-    width: 855px;
+    width: 810px;
     text-align:center
     /* position: relative;
     left: 50px; */
 }
-
+.fa-trash{
+    color: #050d53;
+}
 
 .messageto {
-    background-color: rgb(126, 126, 126);
+    background-color:#c0c7da;
     text-align: start;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     max-width: fit-content;
    min-height: fit-content;
 
     padding: 7px 20px; 
- margin-left: 66%;
+ margin-left: 56%;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
     overflow: hidden;
@@ -165,23 +195,26 @@
     margin-bottom: 10px;
     /* position: relative;
     bottom:810px; */
+    display: flex;
+    flex-wrap: wrap;
     display: grid;
-grid-template-columns: 3fr 1fr ifr;
-
-grid-gap: 5px;
+    grid-template-columns: 4fr 1fr 0fr;
+    word-break:break-all;
+    line-height: 1.2em;
+    grid-gap: 5px;
 }
 
 
 
 .bottom form {
     display: flex;
-    background-color: rgba(147, 147, 147, 0.952);
+    background-color: rgba(32,56,120,255);
      height: 50px;
      border-radius: 10px;
 }
 
 form input {
-    width: 855px;
+    width: 945px;
     height: 37px;
     border: 1px solid black;
     padding-left: 7px;
@@ -193,8 +226,12 @@ form input {
 
 }
 
+.bx-send{
+    color: #ffffff;
+}
+
 form button {
-    background-color: rgba(147, 147, 147, 0.952);
+    background-color: transparent;
     height: 10px;
     font-size: medium;
     border: none;
@@ -212,8 +249,11 @@ form button {
     left: 20px; */
 }
 .delbtn{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
     /* display: none; */
     position: relative;
-    font-size: 0.4em;
-    /* bottom: 30px; */
+    font-size: 0.9em;
+    left: 0px;
 }

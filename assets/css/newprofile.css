@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
 
 * {
     margin: 0px;
     padding: 0px;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif; */
 }
 
 
@@ -14,21 +17,24 @@
    
 }
 .sidebar1{
-    background-color: rgb(165, 172, 172);
+    background-color: rgba(32,56,120,255);
+  
+  
     position: relative;
     left: 10px;
     border-radius: 20px;
   margin: 12px 10px;
-  height: 120vh;
+  height: 98vh;
   /* position: static; */
 }
 .sidebar2{
-    background-color: rgb(130, 197, 238);
+    background-color: rgba(241, 251, 255, 255);
+   
     position: relative;
-    height: 130vh;
+    height: 98vh;
     right: 5px;
-    border-radius: 50px;
-  margin: 30px 0px;
+    border-radius: 20px;
+  margin: 12px 0px;
 }
 .profileimg{
     width: 130px;
@@ -39,11 +45,13 @@
 .nameperson{
         position: relative;
         right: 10px;
+        color: #fff;
 }
 .name-rankdisplay{
     position: relative;
     left: 180px;
     bottom: 110px;
+    color: #fff;
 }
 .rankdisplay{
     display: flex;
@@ -55,12 +63,14 @@ top: 30px;
     right: 10px;
 }
 #editbutton{
+    border-radius: 6px;
     width: 130px;
-    height: 30px;
+    /* height: 55px; */
     position: relative;
-    left: 80px;
+    left: 30px;
     bottom: 30px;
-    background-color: rgb(68, 223, 68);
+    background: #0fa30c;
+    padding: 5px 10px;
     border: none;
   box-shadow: inset;
     
@@ -70,19 +80,32 @@ top: 30px;
     height: 1px;
     background-color: aliceblue;
     margin-left: 2px;
+    
 }
 .dashboard,.message,.bookinghistory,.analytics{
     font-size: 20px;
-  padding: 32px 20px;
+    padding: 30px 30px;
+  color: #fff;
+ 
+
 }
+
 
 .dashboard span,.message span,.bookinghistory span,.analytics span{
     position: relative;
     left: 20px;
+
+    
 }
 .labelnamea{
     position: relative;
     left: 205px;
+    
+}
+.labelnamegen{
+    position: relative;
+    
+    
 }
 #age{
     position: relative;
@@ -92,37 +115,22 @@ top: 30px;
 #age::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
-.logout{
-    font-size: 15px;
-    padding: 2px 2px;
-    padding-right: 20px;
-    position: relative;
-    top: 43px;
-    width: 110px;
-    height: 30px;
-    position: relative;
-    left: 20px;
-    
-}
-.logout span{
-    position: relative;
-    left: 20px;
 
-}
 .friendslist{
     font-size: 20px;
-    padding: 20px 20px;
+    padding: 30px 30px;
     position: relative;
     top: 20px;
+    color: #fff;
 
 }
 
 .friendsrequest{
     font-size: 20px;
-    padding: 20px 20px;
+    padding: 30px 30px;
     position: relative;
     top: 20px;
-
+    color: #fff;
 }
 .friendslist span,.friendsrequest span{
     position: relative;
@@ -155,7 +163,9 @@ a{
 
 
 
-
+input[disabled] {
+    color: #000000;
+  }
 
 
 
@@ -174,6 +184,7 @@ a{
     right: 120px;
     top: 43px;
     /* bottom: 70px; */
+   
     height: 700px;
     overflow-y: scroll;
 
@@ -181,7 +192,9 @@ a{
 }
 
 
-
+.box2{
+    padding:1px 2px;
+}
 
 .container2::-webkit-scrollbar {
     width: 1em;
@@ -189,11 +202,11 @@ a{
   }
    
   .container2::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(32,56,120,255);
   }
   .container2::-webkit-scrollbar-thumb {
     /* background-color: rgb(255, 255, 255); */
-    outline: 1px solid slategrey;
+    outline: 1px solid rgba(32,56,120,255);
   }
   
 form input {
@@ -212,7 +225,7 @@ form input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
+    color: rgb(255, 255, 255);
 
 }
 
@@ -220,11 +233,13 @@ form input {
     position: relative;
   top: 5px;
     border: 2px solid rgb(180, 176, 176);
-    width: 450px;
-    left: 35%;
-    border-radius: 2%;
+    width: 660px;
+    left: 30%;
+    border-radius: 10px;
     box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
-    height: 1235px;
+    height: 174vh;
+    /* background-color: rgba(241, 251, 255, 255); */
+    background-color: rgba(32,56,120,255);
 
 
 }
@@ -278,6 +293,7 @@ form input {
     font-size: 20px;
     font-weight: 500;
     position: relative;
+    color: #ffffff;
 }
 .labelnametime{
     font-size: 20px;
@@ -288,7 +304,8 @@ form input {
 }
 .labelnamel{
     position: relative;
-    top: 110px;
+    top: 120px;
+    color: #ffffff;
 }
 
 #sportss {
@@ -296,7 +313,7 @@ form input {
     height: 35px;
     position: relative;
     bottom: 20px;
-
+    color: #ffffff;
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
@@ -307,6 +324,7 @@ form input {
     font-size: 20px;
     text-align: center;
     border-radius: 5px;
+    color: #ffffff;
 
 }
 #locationselect{
@@ -317,6 +335,7 @@ form input {
     border-radius: 5px;
     position: relative;
  top: 99px;
+ 
 
 }
 #startTime{
@@ -351,15 +370,17 @@ form input {
 /* button */
 
 .profile2 {
+    border-radius: 6px;
     font-size: medium;
     padding: 9px 38px;
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     cursor: pointer;
     border: none;
     margin-bottom: 5px;
     position: relative;
-    background-color: rgba(12, 175, 23, 0.783);
+    background: #0fa30c;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
     box-shadow: 0 3px 10px rgb(3, 10, 87);
 
 }
@@ -371,12 +392,12 @@ form input {
     font-size: 10px;
     position: relative;
     left: 48px;
-    top: 60px;
+    top: 0px;
 }
 .joinplayer label{
 position: relative;
 right: 80px;
-top: 57px;
+top: 0px;
 font-size: 20px;
 
 
@@ -385,16 +406,18 @@ font-size: 20px;
     position: relative;
     position: relative;
     top: 90px;
+    color: #ffffff;
 }
 #sportsavail2,#sportsavail1,#sportsavail3{
     position: relative;
     right: 110px;
-    top: 33px;
+    top: 16px;
 
 
 }
 .sportname1,.sportname2,.sportname3{
     position: relative;
+bottom: 17px;
 }
 .labelnamea{
    margin-right: 400px;
@@ -407,6 +430,7 @@ font-size: 20px;
 }
 .linetext{
     position: relative;
+    color: #ffffff;
 
 }
 .nj-timepick {
@@ -423,3 +447,202 @@ font-size: 20px;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
   }
+
+
+
+
+
+  /* logout */
+ 
+
+
+/* CSS */
+
+
+
+/* CSS */
+/* .logout {
+    background-color: rgba(32,56,120,255);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  font-size: 15px;
+    padding: 2px 2px;
+    padding-right: 20px;
+    position: relative;
+    top: 73px;
+    width: 110px;
+    height: 30px;
+    position: relative;
+    left: 20px;
+
+
+}
+
+.logout:hover,
+.logout:focus {
+  background-color: #07c;
+}
+
+.logout:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.logout:active {
+  background-color: #0064bd;
+  box-shadow: none;
+} */
+
+/* 
+.logout{
+    font-size: 15px;
+    padding: 2px 2px;
+    padding-right: 20px;
+    position: relative;
+    top: 43px;
+    width: 110px;
+    height: 30px;
+    position: relative;
+    left: 20px;
+    
+} */
+.logout span{
+    position: relative;
+    left: 20px;
+
+}
+
+
+
+
+/* <!-- HTML !-->
+<button class="button-11" role="button">Button 11</button> */
+
+/* CSS */
+.logout {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  font-size: 15px;
+  padding: 9px 2px;
+  padding-right: 20px;
+  position: relative;
+  top: 89px;
+  width: 110px;
+  height: 37px;
+  position: relative;
+  left: 20px;
+}
+
+.logout:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+
+.logout:hover,
+.logout:focus {
+  background-color: rgb(112, 113, 113);
+  color: #fff;
+}
+
+
+
+.message:hover,
+.message:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  margin: 0px 0px;
+  height: 10px;
+  /* width: 260px; */
+  /* height: 0px; */
+}
+
+
+.bookinghistory:hover,
+.bookinghistory:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  margin: 0px 0px;
+  height: 10px;
+
+  /* width: 260px; */
+  /* height: 10px; */
+}
+
+.friendslist:hover,
+.friendslist:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  margin: 0px 3px;
+  height: 10px;
+  /* width: 260px; */
+  /* height: 10px; */
+}
+
+
+
+.friendsrequest:hover,
+.friendsrequest:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  margin: 0px 3px;
+  height: 10px;
+  /* width: 260px; */
+  /* height: 10px; */
+}
+
+ .fa-eye-slash,.fa-eye{
+    position: relative;
+    bottom: 30px;
+    left: 90px;
+    color: black;
+} 
+
+
+/* <i class="fa-regular fa-eye-slash"></i>
+
+<i class="fa-solid fa-eye"></i> */
+
+#gender{
+   
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}

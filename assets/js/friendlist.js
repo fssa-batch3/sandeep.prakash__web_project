@@ -44,6 +44,7 @@ let p_player;
 let anchor;
 let button_visit;
 let div_ratings;
+let button_decline;
 let i_star;
 let span_ratingsno;
 
@@ -164,8 +165,8 @@ declinebtn.forEach((button) => {
     );
 
     if (reqIndex > -1) {
-      if (confirm("Are you sure want to decline the request")) {
-        requestrecords[reqIndex].request_status = "declined";
+      if (confirm("Are you sure want remove your friend from your list")) {
+        requestrecords[reqIndex].request_status = "pending";
 
         localStorage.setItem("request_details", JSON.stringify(requestrecords));
       } else {

@@ -613,14 +613,13 @@ input[type="date"] {
 }
 
 .paycash {
-    width: 16%;
-    height: 47px;
-    background-color: rgba(91, 173, 37, 0.906);
+    /* width: 16%;
+    height: 47px; */
+    background-color: rgb(5, 120, 105);
     font-size: 24px;
     font-weight: bolder;
-color: black;
-    padding: 10px 130px;
-
+color: rgb(255, 255, 255);
+    padding: 20px 90px;
     cursor: pointer;
     border-radius: 10px;
     border: none;
@@ -628,13 +627,26 @@ color: black;
 
 }
 .pay:hover{
-    background-color: rgb(69, 164, 69);
+    background-color:#8a98bb;
 
 }
 .paycash:hover{
-      background-color: rgb(69, 164, 69);  
+    background-color: #41958a;
 }
 
+.cash{
+    color: #00021a;
+}
+.upi{
+    color: #00021a;
+}
+#wrong{
+    color: #00021a;
+    position: relative;
+    left:330px;
+    bottom: 170px;
+    cursor: pointer;
+}
 /* sidebar2 */
 
 /* footer */

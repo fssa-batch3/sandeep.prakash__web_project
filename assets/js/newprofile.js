@@ -35,6 +35,8 @@ const labelage = document.querySelector(".labelnamea");
 const join_as_player = document.getElementById("checkjoinplayer1");
 const join_player_word = document.querySelector(".joinasplayer");
 const joinform = document.getElementById("formbox");
+let agelabel=document.querySelector(".labelnamegen")
+const user_genders=document.getElementById("gender");
 // const joinPlayer=document.querySelector(".pjointext");
 // console.log(joinPlayer+"ok");
 // profile image
@@ -89,7 +91,8 @@ for (let i = 0; i < user_record.length; i++) {
             user_phone.value = user_record[i]["user_phoneno"];
             user_password.value = user_record[i]["user_password"];
 
-
+user_genders.style.display = "none"
+agelabel.style.display = "none"
             user_age.style.display = "none"
             user_location.style.display = "none"
             user_timingsfrom.style.display = "none"
@@ -103,7 +106,7 @@ for (let i = 0; i < user_record.length; i++) {
             labellocation.style.display = "none"
             labeltime.style.display = "none"
             labeltimeto.style.display = "none"
-            formsdiv.style.height = "750px"
+            formsdiv.style.height = "790px"
             labelsports.style.display = "none"
             labelage.style.display = "none";
             textarea.style.display="none";
@@ -137,6 +140,8 @@ for (let i = 0; i < user_record.length; i++) {
                 user_phone.value = user_record[i]["user_phoneno"];
                 user_password.value = user_record[i]["user_password"];
                 user_age.value = user_record[i]["user_age"];
+                user_genders.value=user_record[i]["user_gender"];
+                textarea.value=user_record[i]["aboutplayers"]
                 //  imageShow.setAttribute("class","profileimg")
 
 
@@ -148,6 +153,7 @@ for (let i = 0; i < user_record.length; i++) {
                 cricket.checked = user_record[i]["sports_choosed_cricket"];
                 football.checked = user_record[i]["sports_choosed_football"];
                 tennis.checked = user_record[i]["sports_choosed_tennis"];
+
 
                 // if(user_record[i].sport_Choosed.includes("cricket")){
                 //     cricket.checked=true
@@ -219,7 +225,11 @@ const joinPlayer=document.querySelector(".pjointext");
 
 join_as_player.addEventListener("click", () => {
 
-joinPlayer.style.bottom="820px"
+    user_genders.style.display = "block"
+agelabel.style.display = "block"
+agelabel.style.top="30px";
+user_genders.style.top="30px";
+joinPlayer.style.bottom="890px"
     user_age.style.display = "block"
     user_location.style.display = "block"
     user_timingsfrom.style.display = "block"
@@ -236,15 +246,15 @@ joinPlayer.style.bottom="820px"
     labelsports.style.display = "block"
     labelage.style.display = "block"
     editbutn1.style.top = "142px"
-    labelage.style.top = "50px";
-    formsdiv.style.height = "1410px"
+    labelage.style.top = "90px";
+    formsdiv.style.height = "1590px"
     user_timingsfrom.style.top = "190px";
     user_timingsto.style.top = "90px";
     labeltime.style.top = "180px"
     labeltimeto.style.top = "190px";
     user_location.style.top = "170px";
     labellocation.style.top = "170px";
-    user_age.style.top="50px"
+    user_age.style.top="60px"
     labelage.style.top="60px"
     // joinPlayer.style.display="none";
     sportname1.style.left = "20px"
@@ -256,10 +266,16 @@ joinPlayer.style.bottom="820px"
     textline.style.top="120px";
     cricket.style.top="50px"
     football.style.top="50px"
+    tennis.style.right="150px"
+    cricket.style.right="150px"
+    football.style.right="150px"
     tennis.style.top="50px"
     sportname1.style.top = "20px"
     sportname2.style.top= "20px"
     sportname3.style.top = "20px";
+    sportname1.style.right = "50px"
+    sportname2.style.right= "50px"
+    sportname3.style.right = "50px";
     labelsports.style.top = "30px";
 
 
@@ -273,6 +289,7 @@ joinPlayer.style.bottom="820px"
         football.removeAttribute("disabled");
         tennis.removeAttribute("disabled");
         textarea.removeAttribute("disabled");
+        user_genders.removeAttribute("disabled");
 
     user_age.required = true;
     user_location.setAttribute("required", true);
@@ -281,6 +298,7 @@ joinPlayer.style.bottom="820px"
     sportname1.required = true;
  sportname2.required = true;
  sportname3.required = true;
+ user_genders.required = true;
  
   
 
@@ -335,6 +353,7 @@ editbutn.addEventListener("submit", (e) => {
         football.removeAttribute("disabled");
         tennis.removeAttribute("disabled");
         textarea.removeAttribute("disabled");
+        user_genders.removeAttribute("disabled");
 
     }
 
@@ -353,6 +372,7 @@ editbutn.addEventListener("submit", (e) => {
         football.setAttribute("disabled", "");
         tennis.setAttribute("disabled", "");
         textarea.setAttribute("disabled", "");
+        user_genders.setAttribute("disabled", "");
 
     user_record.find(e => {
 
@@ -374,6 +394,7 @@ editbutn.addEventListener("submit", (e) => {
             e["sports_choosed_football"] = football.checked;
             e["sports_choosed_tennis"] = tennis.checked;
             e["aboutplayers"]=textarea.value
+            e["user_gender"]=user_genders.value
 
             //   if(cricket.checked){
             //    e["sport_Choosed"]=true
@@ -450,6 +471,28 @@ editbutn.addEventListener("submit", (e) => {
 //     }
 // }
 
+
+
+// password
+let eye=document.querySelector(".eyesym i")
+eye.addEventListener("click",()=>{
+    // eye.setAttribute("class","fa-solid fa-eye")
+
+    if(user_password.type=="password"){
+       
+        user_password.type="text"
+     eye.classList.remove("fa-eye-slash");
+     eye.classList.add("fa-eye")
+    }
+    else{
+  
+        user_password.type="password"
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash")
+        
+    }
+    
+})
 //logout
 const logOut = document.querySelector(".logout")
 logOut.addEventListener("click", (e) => {
@@ -560,4 +603,84 @@ for (let i = 0; i < user_record.length; i++) {
 
 
 
+
+// for diabling option
+const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
+// const loginbtn = document.querySelector(".login");
+
+
+// for message 
+const messbtn = document.querySelector(".message");
+// messbtn.addEventListener("click", (e) => {
+
+  if (loginUser[0].player_status == false) {
+    messbtn.style.filter = "blur(3px)";
+ 
+    }
+//   });
+
+messbtn.addEventListener("click", (e) => {
+    // alert("p,")
+    if (loginUser[0].player_status == false) {
+        // messbtn.style.filter = "blur(3px)";
+          alert(
+            "Please join as a player to get the message feature "
+          );
+          e.preventDefault();
+        } else {
+          window.location.href = "../../pages/player/playermessages.html";
+        }
+})
+
+// for friend
+
+const friendlistbtn = document.querySelector(".friendslist");
+
+
+if (loginUser[0].player_status == false) {
+    friendlistbtn.style.filter = "blur(3px)";
+ 
+    }
+
+
+    
+friendlistbtn.addEventListener("click", (e) => {
+    // alert("p,")
+    if (loginUser[0].player_status == false) {
+        // messbtn.style.filter = "blur(3px)";
+          alert(
+            "Please join as a player to get the friends "
+          );
+          e.preventDefault();
+        } else {
+          window.location.href = "../../pages/player/playermessages.html";
+        }
+})
+
+
+// friendreq
+
+const friendreqbtn = document.querySelector(".friendsrequest");
+
+
+
+if (loginUser[0].player_status == false) {
+    friendreqbtn.style.filter = "blur(3px)";
+ 
+    }
+
+    
+    
+friendreqbtn.addEventListener("click", (e) => {
+    // alert("p,")
+    if (loginUser[0].player_status == false) {
+        // messbtn.style.filter = "blur(3px)";
+          alert(
+            "Please join as a player to get the friends "
+          );
+          e.preventDefault();
+        } else {
+          window.location.href = "../../pages/player/playermessages.html";
+        }
+})
 

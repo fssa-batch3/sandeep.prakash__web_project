@@ -90,10 +90,10 @@ ul li a:hover {
 
 .cont1 {
     text-align: center;
-    font-size: xx-large;
+    font-size: 30px;
     font-weight: bolder;
     position: relative;
-    bottom: 250px;
+    bottom: 230px;
     color: white;
 }
 
@@ -116,9 +116,11 @@ ul li a:hover {
 }
 
 .userlogo {
-    width: 35px;
+    width: 45px;
+    height: 45px;
     position: relative;
     left: 25px;
+    top: 10px;
 
 }
 
@@ -175,7 +177,6 @@ ul li a:hover {
     margin: 0px 10px;
     border-radius: 20px;
     height: 85vh;
-    border: 1px solid black;
     padding: 20px 80px;
 
 }
@@ -283,8 +284,8 @@ ul li a:hover {
 /* sidebar2 */
 .container {
     background-color: rgba(233, 235, 241, 0.82);
-    width: 490px;
-    height: 77vh;
+    width: 590px;
+    height: 87vh;
     display: flex;
     flex-direction: column;
     margin-bottom: 20%;
@@ -292,17 +293,19 @@ ul li a:hover {
     border: 1px solid none;
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;
-    top: 30px;
+    top: 0px;
     filter :blur(3px);
-    left: 170px;
+    left: 100px;
     
    
     
 }
-
+.fa-trash{
+    color: #050d53;
+}
 
 .top {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 1%;
 }
 
@@ -310,8 +313,9 @@ ul li a:hover {
     flex: 1;
     color: rgb(0, 0, 0);
     background-color: rgba(229, 233, 236, 0.952);
+    /* background-color: #d0dae3; */
     padding: 20px 10px;
-    height: 490px;
+    height: 590px;
     overflow-y: scroll;
     overflow-x: hidden;
   }
@@ -332,7 +336,7 @@ ul li a:hover {
 
 
 .messagefrom {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(255, 255, 255);
     text-align: start;
     color: black;
     max-width: fit-content;
@@ -346,49 +350,64 @@ ul li a:hover {
     word-wrap: break-word;
     margin-bottom: 10px;
     display: grid;
+    word-break:break-all;
 grid-template-columns: 3fr 1fr;
 
 grid-gap: 5px;
 }
 .h2head{
-    background-color: #0A66C2;
+    background-color: rgba(32,56,120,255);
     padding: 10px 30px;
     border-radius: 10px;
-    width: 420px;
+    width: 520px;
 }
 .messageto {
-    background-color: rgb(126, 126, 126);
+    background-color:#c0c7da;
     text-align: start;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     max-width: fit-content;
    min-height: fit-content;
     padding: 7px 20px;
-    margin-left: 66%;
+    margin-left: 47%;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
     overflow: hidden;
     white-space:normal;
     word-wrap: break-word;
     margin-bottom: 10px;
+/* display: flex; */
+display: flex;
+flex-wrap: wrap;
 display: grid;
-grid-template-columns: 3fr 1fr ifr;
-
+grid-template-columns: 4fr 1fr 0fr;
+word-break:break-all;
+line-height: 1.2em;
 grid-gap: 5px;
+/* hyphens: auto; */
 
 
+
+
+
+}
+
+.messageto{
+    white-space: normal;
+  word-wrap: break-word;
+  margin-bottom: 5px;
 }
 
 
 
 .bottom form {
     display: flex;
-    background-color: rgba(147, 147, 147, 0.952);
+    background-color: rgba(32,56,120,255);
      height: 50px;
      border-radius: 10px;
 }
 
 form input {
-    width: 430px;
+    width: 520px;
     height: 37px;
     border: 1px solid black;
     padding-left: 7px;
@@ -401,7 +420,7 @@ form input {
 }
 
 form button {
-    background-color: rgba(147, 147, 147, 0.952);
+    background-color: transparent;
     height: 10px;
     font-size: medium;
     border: none;
@@ -413,7 +432,9 @@ form button {
     top: 10px;
 }
 
-
+.bx-send{
+    color: #ffffff;
+}
 
 
 .rightarrow {
@@ -468,15 +489,20 @@ form button {
 }
 .timeside{
     font-size: 0.7em;
-    /* position: relative;
-    left: 20px; */
+    position: relative;
+    left: 0px;
 }
 .delbtn{
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
     /* display: none; */
     position: relative;
-    font-size: 0.4em;
-    /* bottom: 30px; */
+    font-size: 0.9em;
+    left: 0px;
 }
+
+
 
 /* footer section */
 footer {
@@ -554,29 +580,48 @@ a {
 
 .profilebox{
     width: 500px;
-    height: 230px;
+    height: 530px;
     background-color:  rgba(32,56,120,255);
     border-radius: 10px;
-    display: flex;
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr;
+     grid-row-gap: 0px;
+
   
 }
 
 .namerow{
     position: relative;
     top: 30px;
+    font-size: 22px;
 
 }
 
 .aboutrow{
     background-color: rgba(241, 251, 255, 255);
-    width: 230px;
-    height: 80px;
+    width: 280px;
+    
+    height: 200px;
+/* margin-right: 990px; */
     position: relative;
-    top: 70px;
+    right: 190px;
+    top: 230px;
     padding: 15px;
     border-radius: 10px;
-    right: 60px;
+    right: 130px;
     color: #00021a;
+    /* word-break: break-all; */
+   
+    /* max-width: fit-content;
+   min-height: fit-content; */
+
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(240, 238, 238, 0.626);
+   
+    white-space:normal;
+    word-wrap: break-word;
+    /* margin-bottom: 10px; */
+
 
 
 }
@@ -591,13 +636,14 @@ a {
     color: rgb(255, 183, 0);
     font-size: 13px;
     position: relative;
+    right:10px ;
     
 
 }
 .ratingsrow{
     position: relative;
-    top: 150px;
-    right: 10px;
+    bottom: 190px;
+    left: 420px;
 }
 
 .norating{
@@ -606,7 +652,7 @@ a {
 }
 
 .sportsknown{
-     width: 200px;
+     width: 220px;
     height: 100px;
     background-color:  rgba(32,56,120,255);
     border-radius: 10px;
@@ -648,20 +694,29 @@ top: 17px;
 
 .scorehead{
     text-align: center;
+    position: relative;
+    top: 10px;
 }
 
 .scoreno{
-    width: 90px;
-    height: 30px;
+    width: 143px;
+    height: 0px;
+    
     background-color: rgba(241, 251, 255, 255);
+    padding: 25px 2px;
     position: relative;
-    left: 50px;
+    left: 30px;
+    padding-bottom: 30px;
     top: 20px;
+    color: #00021a;
+    display: flex;
+    border-radius: 10px;
   
 }
 
 .box3{
-    display: grid;
+    position: relative;
+    right: 90px;
 
 }
 .gamesplaybox{
@@ -1019,7 +1074,7 @@ ul li a:hover {
     box-shadow: 0 3px 10px rgb(0, 0, 0);
     position: relative;
     bottom: 90px;
-    left: 0px;
+    right: 20px;
     margin-bottom: 20px;
 }
 

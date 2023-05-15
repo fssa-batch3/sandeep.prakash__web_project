@@ -39,3 +39,28 @@ function getSellerData() {
 
   localStorage.setItem("groundadmin_details", JSON.stringify(admin_records));
 }
+
+
+
+//password
+let eye=document.querySelector(".eyesym i")
+eye.addEventListener("click",()=>{
+
+ let  user_password2 = document.getElementById("password")
+    // eye.setAttribute("class","fa-solid fa-eye")
+
+    if(user_password2.type=="password"){
+       
+        user_password2.type="text"
+     eye.classList.remove("fa-eye-slash");
+     eye.classList.add("fa-eye")
+    }
+    else{
+  
+        user_password2.type="password"
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash")
+        
+    }
+    
+})

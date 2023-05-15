@@ -23,6 +23,26 @@ console.log(JSON.stringify(filterGroundrequest, null, 2));
 
 let childdiv;
 let columndiv1;
+let h4name;
+let h4date;
+let h4timing;
+let h4sports;
+let h4duration;
+let h4players;
+let h4courts;
+let h4price;
+let columndiv2;
+let divbox1;
+let divbox2;
+let div_box4;
+let div_box5;
+let div_box6;
+let div_box7;
+let div_box8;
+let btndecline;
+
+
+
 for (let i = 0; i < filterGroundrequest.length; i++) {
   console.log(childdiv);
   childdiv = document.createElement("div");
@@ -72,6 +92,11 @@ for (let i = 0; i < filterGroundrequest.length; i++) {
   h4price.innerText = "Price";
   columndiv1.append(h4price);
 
+  h4pay = document.createElement("h4");
+  // h4name.setAttribute("");
+  h4pay.innerText = "Payment";
+  columndiv1.append(h4pay);
+
   columndiv2 = document.createElement("div");
   columndiv2.setAttribute("class", "column2");
   childdiv.append(columndiv2);
@@ -95,10 +120,18 @@ for (let i = 0; i < filterGroundrequest.length; i++) {
   divbox4.innerText = filterGroundrequest[i].booking_sports;
   columndiv2.append(divbox4);
 
+  if(filterGroundrequest[i].booking_duration=="Select an Option"){
+    divbox5 = document.createElement("div");
+    divbox5.setAttribute("class", "box5");
+    divbox5.innerText = `None`;
+    columndiv2.append(divbox5);
+  }
+  else{
   divbox5 = document.createElement("div");
   divbox5.setAttribute("class", "box5");
   divbox5.innerText = `Extra ${filterGroundrequest[i].booking_duration} Hours`;
   columndiv2.append(divbox5);
+  }
 
   divbox6 = document.createElement("div");
   divbox6.setAttribute("class", "box6");
@@ -114,6 +147,12 @@ for (let i = 0; i < filterGroundrequest.length; i++) {
   divbox8.setAttribute("class", "box8");
   divbox8.innerText = filterGroundrequest[i].groundPrice;
   columndiv2.append(divbox8);
+
+
+  divbox9 = document.createElement("div");
+  divbox9.setAttribute("class", "box9");
+  divbox9.innerText = filterGroundrequest[i].ground_payment;
+  columndiv2.append(divbox9);
 
   // btnaccept=document.createElement("button");
   // btnaccept.setAttribute("class","acceptbtn");

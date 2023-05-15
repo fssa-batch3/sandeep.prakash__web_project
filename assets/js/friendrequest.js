@@ -45,6 +45,8 @@ let button_visit;
 let div_ratings;
 let i_star;
 let span_ratingsno;
+let button_decline;
+
 
 playerData(filterPlayer);
 
@@ -129,14 +131,15 @@ function playerData(array = []) {
 
 // accept request
 const acceptbtn = document.querySelectorAll(".accept");
+
 acceptbtn.forEach((button) => {
   button.addEventListener("click", () => {
     const req_userId = button.value;
 
     const reqIndex = requestrecords.findIndex((request) => request.requested_user == req_userId  && request.receiving_user==loginuserid)
-    });
-  });
-  console.log(reqIndex);
+   
+
+  // console.log(reqIndex);
 
   if (reqIndex > -1) {
     if (confirm("Are you sure want to accept the request")) {
@@ -146,8 +149,8 @@ acceptbtn.forEach((button) => {
     } else {
     }
   }
-// });
-// });
+});
+});
 
 // declined
 

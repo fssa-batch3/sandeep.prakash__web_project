@@ -1,13 +1,18 @@
 
 /* fill */
+
+body{
+    overflow-x: hidden;
+    background-color: rgba(32,56,120,255);
+}
 .formcontainer{
    
-    position: fixed;
+    position: relative;
 
     width: 970px;
     top: 50%;
-    left: 52%;
-    transform: translate(-50%,-50%);
+    left: 242px; 
+    /* transform: translate(-50%,-50%); */
     padding: 30px 43px;
     border-radius: 5%;
     background-color: white;
@@ -37,7 +42,9 @@
 textarea{
     resize: none; 
  }
-
+input{
+    width: 200px;
+}
 .box1{
     /* display: flex; */
     position: relative;
@@ -48,13 +55,22 @@ top: 70px;
   
 }
 #grolname{
+    width: 350px;
+    height: 50px;
     position: relative;
     left: 250px;
-top: 50px;
+top: 90px;
    
 
 }
+
+#grimg1,#grimg2,#grimg3{
+    width: 350px;
+    height: 50px;
+}
 #groname{
+    width: 350px;
+    height: 50px;
     position: relative;
     bottom: 10px;
     left: 260px;
@@ -68,13 +84,15 @@ left: 230px;
 .labelnamep{
     position: relative;
     left: 220px;
-top: 50px;
+top: 90px;
 
 }
 #grolink{
     position: relative;
     left: 250px;
 top: 60px;
+width: 350px;
+height: 50px;
    
 
 }
@@ -88,6 +106,7 @@ top: 60px;
     /* display: flex; */
     position: relative;
     left: 250px;
+    
   
 
 
@@ -108,6 +127,11 @@ top: 60px;
   
 
 }
+.dis{
+    position: relative;
+    left: 862px;
+    top: 120px;
+}
 #sportsvalue{
     width: 120px;
     height: 30px;
@@ -123,13 +147,35 @@ top: 60px;
     position: relative;
     right: 270px;
     top: 50px;
+   width: 20px;
+   height: 50px;
   
 
 }
+.groundcourt{
+    position: relative;
+    left: 790px;
+    bottom: 130px;
+}
+#sportscourts{
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+.groundprice2{
+    position: relative;
+    left: 390px;
+    bottom: 0px;
+}
+#increaseamount{
+    width: 120px;
+    height: 30px;
+}
 .sname{
     position: relative;
-    right: 245px;
-    top: 42px;
+    right: 225px;
+    top: 30px;
 }
 .labelnames{
     position: relative;
@@ -138,9 +184,9 @@ top: 60px;
 }
 .groundtiming{
     position: relative;
-    left: 507px;
+    left: 707px;
     width: 270px;
-    top: 250px;
+    top: 50px;
     text-align: center;
     /* bottom: 130px; */
   
@@ -149,22 +195,26 @@ top: 60px;
 }
 .groundrules{
     position: relative;
-    left: 390px;
-    bottom: 67px;
+    left: 490px;
+    bottom: 227px;
 
   
 
+}
+#startTime,#endTime{
+    width: 220px;
+    height: 30px;
 }
 /* .groundprice{
   
 
 
 } */
-.values{
+/* .values{
  
   
 
-}
+} */
 #submitbtn{
     position: relative;
     top: 10px;
@@ -187,21 +237,36 @@ top: 60px;
     top: 20px;
  
 }
-/* #amount{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-} */
+#amount{
+    width: 120px;
+    height: 30px;
+}
 
 #amount::-webkit-inner-spin-button{
   -webkit-appearance: none;
 }
 
+#increaseamount::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }
 .labelname{
     position: relative;
-    left: 220px;
+    left: 280px;
+    bottom: 55px;
 }
 #groaddress{
     position: relative;
-    left: 220px;
+    left: 280px;
+    bottom: 50px;
+    width: 350px;
+    height: 50px;
+}
+
+.backbtn{
+    background-color: aliceblue;
+    width: 90px;
+    
+    position: relative;
+    top: 30px;
+    left: 30px;
 }

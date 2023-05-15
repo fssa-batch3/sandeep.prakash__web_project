@@ -113,8 +113,7 @@ const ground_details = [
       courts3: "Court 3",
       courts4: "Court 4",
       courts5: "Court 5",
-
-      courts6: "6",
+      courts6: "Court 6",
     },
     optionvalue: {
       value0: "1",
@@ -850,38 +849,6 @@ function updatetime() {
   }
 }
 
-// let currentdate=new Date;
-// let hours=currentdate.getHours();
-// let minutes=currentdate.getMinutes();
-// let ampmformat=hours>=12?`PM`:`AM`;
-// hours=hours%12;
-// hours=hours?hours:12;
-// let currentform=`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampmformat}`;
-
-// console.log(currentform);
-
-// // let selectime=document.querySelector(".timings");
-// // (selectime);
-
-// let opt=select_timings.options;
-
-// for(let i=0;i<opt.length;i++){
-//   let optvalue=opt[i].value.trim();
-//   // console.log(optvalue);
-//   let starttime=optvalue.split("-")[0]
-//   console.log(starttime);
-//   // console.log(starttime.split(":").map(Number));
-
-//   let[starthour,startmin]=starttime.split(":").map(Number);
-//   // console.log([starthour,startmin]);
-
-//   // if(starthour<currenthours||(starthour===currenthours && startmin<currentmin)){
-//   //   opt[i].style.display="none"
-//   // }
-//   // if(optvalue>=currenttime){
-//   //   opt[i].style.display="none"
-//   // }
-// }
 
 br_tag11 = document.createElement("br");
 div_book2.append(br_tag11);
@@ -896,6 +863,12 @@ select_sports = document.createElement("select");
 select_sports.setAttribute("class", "sportss");
 select_sports.setAttribute("required", "");
 div_book2.append(select_sports);
+
+
+option_sports = document.createElement("option");
+option_sports.innerText = "Select an Option";
+option_sports.setAttribute("value","")
+select_sports.append(option_sports);
 
 // loopit
 if (show2.sport_avail_1 == true) {
@@ -931,6 +904,7 @@ div_book2.append(select_duration);
 
 sel_duration = document.createElement("option");
 sel_duration.innerText = "Select an Option";
+// sel_duration.setAttribute("value","")
 select_duration.append(sel_duration);
 
 // loopit
@@ -962,6 +936,12 @@ select_players.setAttribute("class", "players");
 select_players.setAttribute("required", "");
 div_book2.append(select_players);
 
+option_player = document.createElement("option");
+option_player.innerText = "Select an Option";
+option_player.setAttribute("value","")
+select_players.append(option_player);
+
+
 // loopit
 for (let i = 0; i <= 12; i++) {
   option_players = document.createElement("option");
@@ -982,7 +962,15 @@ div_book2.append(span_sportsSelect);
 
 select_sports = document.createElement("select");
 select_sports.setAttribute("class", "courtss");
+select_sports.setAttribute("required", "");
 div_book2.append(select_sports);
+
+
+
+option_court= document.createElement("option");
+option_court.innerText = "Select an Option";
+option_court.setAttribute("value","")
+select_sports.append(option_court);
 
 // loopit
 for (let i = 1; i <= show2.groundCourt; i++) {
@@ -1041,19 +1029,51 @@ popupdiv = document.createElement("div");
 popupdiv.setAttribute("id", "popupdivmessage");
 
 contentp = document.createElement("p");
-contentp.innerText = "Are Sure you want to book it";
+contentp.innerText = "Please choose the payment method";
 contentp.style.color = "black";
 popupdiv.append(contentp);
 
+inputcash=document.createElement("input")
+inputcash.setAttribute("type", "radio");
+inputcash.setAttribute("name", "pay");
+inputcash.setAttribute("id", "cash");
+inputcash.setAttribute("required", true);
+inputcash.setAttribute("value", "cash");
+popupdiv.append(inputcash);
+
+
+label_dots1 = document.createElement("label");
+label_dots1.setAttribute("class", "cash");
+
+label_dots1.innerText="Cash"
+popupdiv.append(label_dots1);
+
+
+
+inputupi=document.createElement("input")
+inputupi.setAttribute("type", "radio");
+inputupi.setAttribute("id", "upi");
+inputupi.setAttribute("name", "pay");
+inputupi.setAttribute("required", true);
+inputupi.setAttribute("value", "upi");
+popupdiv.append(inputupi);
+
+
+label_dots2 = document.createElement("label");
+label_dots2.setAttribute("class", "upi");
+label_dots2.innerText="Upi"
+popupdiv.append(label_dots2);
+
+
 button_no = document.createElement("p");
-button_no.setAttribute("id", "nobtn");
-button_no.innerText = "No";
+button_no.setAttribute("id", "wrong");
+button_no.innerHTML =`<i class="fa-solid fa-xmark"></i>`;
 popupdiv.append(button_no);
 
 button_yes = document.createElement("button");
 button_yes.setAttribute("id", "yesbtn");
 button_yes.setAttribute("type", "submit");
-button_yes.innerText = "Yes";
+button_yes.innerText = "Book";
 popupdiv.append(button_yes);
 
 document.getElementById("formbook_btn").append(popupdiv);
@@ -1067,7 +1087,7 @@ document.getElementById("formbook_btn").append(popupdiv);
 // });
 popbox = document.getElementById("popupdivmessage");
 yesbtn = document.getElementById("yesbtn");
-nobtn = document.getElementById("nobtn");
+nobtn = document.getElementById("wrong");
 const bookingBtn = document.getElementById("formbook_btn");
 const bookbtn = document.querySelector(".paycash");
 bookbtn.addEventListener("click", (e) => {
@@ -1126,6 +1146,7 @@ function getBookingInfo() {
   const selectplayers = document.querySelector(".players").value;
   const selectedCourts = document.querySelector(".courtss").value;
   const groundPrice = document.querySelector(".pricelast").innerText;
+  const payment=document.querySelector(`input[name="pay"]:checked`)
   // const date=new Date().toLocaleString();
 
   let userBookingInfo = new Array();
@@ -1179,6 +1200,7 @@ function getBookingInfo() {
       booking_status: "accepted",
       groundPrice,
       created_at: new Date().getTime(),
+      ground_payment:payment.value
     });
 
     localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo));
@@ -1194,29 +1216,29 @@ function getBookingInfo() {
 
     // email
 
-    // Email.send({
-    //   Host: "smtp.elasticemail.com",
-    //   Username: "bookandplay@gmail.com",
-    //   Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
-    //   To: userloggedIn[0].user_email,
-    //   From: "sandeep909600@gmail.com",
-    //   Subject: "Your Booking Confirmation code is here",
-    //   Body: `Hi ${userloggedIn[0].user_email} Your ground is booked on this ${selectedTimings} on ${bookDate} Your Confirmation code is here ${code} Please show this on turf entrance to visit`,
-    // }).then((success) => {
-    //   alert(
-    //     "Your ground is Booked Congraulation you will receive a 7 digit code after 5 min show this code when you visit the turf"
-    //   );
-    // });
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "bookandplay@gmail.com",
+      Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To: userloggedIn[0].user_email,
+      From: "sandeep909600@gmail.com",
+      Subject: "Your Booking Confirmation code is here",
+      Body: `Hi ${userloggedIn[0].user_email} Your ground is booked on this ${selectedTimings} on ${bookDate} Your Confirmation code is here ${code} and your order id is${id_generator_booking} Please show the confirmation 7 digit code  on turf entrance to visit`,
+    }).then((success) => {
+      alert(
+        "Your ground is Booked Congraulation.If you choose upi method upi link will be sent via email you can make the method there and  you will receive a 7 digit code after 5 min show this code when you visit the turf"
+      );
+    });
 
-    // Email.send({
-    //   Host: "smtp.elasticemail.com",
-    //   Username: "bookandplay@gmail.com",
-    //   Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
-    //   To: selleremail,
-    //   From: "sandeep909600@gmail.com",
-    //   Subject: "Your Booking Confirmation code is here",
-    //   Body: `Hi ${selleremail} Your ground is booked on this ${selectedTimings} on ${bookDate} The  Confirmation code is here ${code} the visitor will show this on turf entrance to visit`,
-    // });
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "bookandplay@gmail.com",
+      Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To: selleremail,
+      From: "sandeep909600@gmail.com",
+      Subject: "Your Booking Confirmation code is here",
+      Body: `Hi ${selleremail} Your ground is booked on this ${selectedTimings} on ${bookDate} The  Confirmation code is here ${code} and the order id ${id_generator_booking} the visitor will show the code  on turf entrance to visit`,
+    });
   }
 
   // // settimeout

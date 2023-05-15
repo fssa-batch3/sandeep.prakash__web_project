@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New profile
+    <title>My  profile
     </title>
     <link rel="stylesheet" href="../../assets/css/newprofile.css">
+    <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Noto+Serif+Khojki:wght@500&family=Roboto&display=swap"
         rel="stylesheet">
@@ -17,80 +18,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
         integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 </head>
 
 <body>
-         <div class="mainpoage">
+    <div class="mainpoage">
         <div class="sidebar">
             <div class="sidebar1">
                 <div class="profilebox">
                     <div class="profileimgplace">
                         <img class="profileimg" src="https://freeimage.host/i/HkW7U4S" alt="profile">
                         <label for="input-file">
- <i class="bx bxs-plus-circle"></i>
-</label>
+                            <i class="bx bxs-plus-circle"></i>
+                        </label>
                         <input type="file" accept="image/jpeg,image/png,image/jpg" id="input-file">
                     </div>
                     <div class="name-rankdisplay">
                         <p class="nameperson">Samantha</p>
-                        <div class="rankdisplay">
+                        <!-- <div class="rankdisplay">
                             <p class="rank">Rank</p>
                             <p>12200</p>
-                        </div>
+                        </div> -->
 
                     </div>
 
-                    <button id="editbutton">Edit Profile</button>
+                    <button id="editbutton">Edit Your Profile Anytime</button>
                 </div>
                 <div class="hr">
 
                 </div>
                 <div class="box2">
-                    <div class="dashboard">
+                    <!-- <div class="dashboard">
  <i class="bx bxs-grid-alt"></i>
                         <span>Dash Board</span>
-                    </div>
+                    </div> -->
                     <a href="../../pages/player/playermessages.html">
-<div class="message">
-                        <i class="fa-solid fa-message"></i>
-                        <span>Message</span>
-                    </div></a>
+                        <div class="message">
+                            <i class="fa-solid fa-message"></i>
+                            <span>Messages</span>
+                        </div>
+                    </a>
                     <div class="bookinghistory">
                         <i class="bx bx-history"></i>
                         <span>Your Booking</span>
                     </div>
-                
-                    <div class="analytics">
+
+                    <!-- <div class="analytics">
                         <i class="bx bxs-analyse"></i>
                         <span>Analytics</span>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="hr">
 
                 </div>
-              <a href="../../pages/player/friendlist.html">
-  <div class="friendslist">
-                    <i class="bx bxs-group"></i>
-                    <span>Friends List</span>
-                </div></a>
+                <a href="../../pages/player/friendlist.html">
+                    <div class="friendslist">
+                        <i class="bx bxs-group"></i>
+                        <span>Friends List</span>
+                    </div>
+                </a>
 
-              <a href="../../pages/player/friendrequest.html">
- <div class="friendsrequest">
-                    <i class="bx bx-group bx-tada"></i>
-                    <span>Friends Request</span>
-                </div></a>
+                <a href="../../pages/player/friendrequest.html">
+                    <div class="friendsrequest">
+                        <i class="bx bx-group bx-tada"></i>
+                        <span>Friends Request</span>
+                    </div>
+                </a>
 
-              <button class="logout"> 
-                    <i class="bx bx-log-out"></i>
+                <!-- <button class="logout"> 
+                 
+                </button>  -->
+                <button class="logout" c role="button">
+                    <i class="bx bx-log-out">
+                    </i>
                     <span>Log out</span>
-                </button> 
-
+                </button>
+                <!-- <button class="button-15" role="button"></button> -->
             </div>
             <div class="sidebar2">
 
-                <div class="container2" style="display: none;">
+                <div class="container2">
 
                     <div class="forms">
                         <br>
@@ -98,94 +106,107 @@
                         <br>
 
                         <form id="formbox">
-                            <label class="labelname">Name:</label >
-<br>
-                            <input type="name" id="name1" pattern="^[a-zA-Z]{3,20}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." disabled required>
-<br>
+                            <label class="labelname">Name:</label>
+                            <br>
+                            <input type="name" id="name1" pattern="^[a-zA-Z]{3,20}$"
+                                title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                disabled required>
+                            <br>
 
                             <label class="labelname">Email:</label>
-<br>
+                            <br>
                             <input type="email" id="userEmail" aria-label="email" disabled>
-<br>
+                            <br>
                             <label class="labelname">Phone Number:</label>
-<br>
-                            <input type="text" id="phoneno1" aria-label="phone number" pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$" title="Please enter a valid 10-digit phone number" disabled required>
-<br>
+                            <br>
+                            <input type="text" id="phoneno1" aria-label="phone number"
+                                pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+                                title="Please enter a valid 10-digit phone number" disabled required>
+                            <br>
                             <label class="labelname">Password:</label>
-<br>
-                            <input type="password" id="password" aria-label="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters." required disabled>
-<br>
-                        
-                        <div class="joinplayer">
-                            <input type="checkbox" id="checkjoinplayer1">
-<label class="joinasplayer">Join as a player</label>
-                        </div>
-                        <label class="labelnamea">Age :</label>
-<br>
-                        <input type="number" id="age" min="1" max="120" pattern="^(1[8-9]|[2-9][0-9])$" title="The age should contain 1 to 120" disabled>
-<br>
-<br>
-                        <div class="select">
-                            <p class="labelnames">Known Sports:</p>
-<br>
-                            <!-- <select id="sportss"disabled>
-
-                                <option>Cricket</option>
-                                <option>Football</option>
-                                <option>Tennis</option>
-
-                            </select><br> -->
-                           
-                            <div id="sportss">
-
-                                <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket" disabled>
-                                <label class="sportname1">Cricket</label>
-<br>
-                                <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football"disabled>
-                                <label class="sportname2">Football</label>
-<br>
-                                <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis" disabled>
-                                <label class="sportname3">Tennis</label>
-<br>
-                        
+                            <br>
+                            <input type="password" id="password" aria-label="password"
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters."
+                                required disabled>
+                            <span class="eyesym">
+                                <i class="fa-regular fa-eye-slash"></i>
+                            </span>
+                            <br>
+                            <div class="joinplayer">
+                                <input type="checkbox" id="checkjoinplayer1">
+                                <label class="joinasplayer">Join as a player</label>
                             </div>
-<br>
+                            <label class="labelnamea">Age :</label>
+                            <br>
+                            <input type="number" id="age" min="1" max="120" pattern="^(1[8-9]|[2-9][0-9])$"
+                                title="The age should contain 1 to 120" disabled>
+                            <br>
+                            <br>
 
-                            <p class="labelnamel">Location</p>
-<br>
-                            <select id="locationselect" disabled>
 
-                                <option>Chennai</option>
-                                <option>Coimbatore</option>
-                                <option>Salem</option>
-                                <option>Erode</option>
-                                <option>Madurai</option>
-                                <option>Delhi</option>
-                                <option>Bangalore</option>
-                                <option>Pune</option>
-                                <option>Kolkata</option>
+                            <p class="labelnamegen">Gender</p>
+                            <br>
+                            <input type="name" placeholder="Gender " id="gender" aria-label="gender"
+                                pattern="^[a-zA-Z]{3,20}$"
+                                title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                                disabled>
+                            <br>
+                            <div class="select">
+                                <p class="labelnames">Known Sports:</p>
+                                <br>
+                                <div id="sportss">
 
-                            </select>
-<br>
-                            <p class="labelnametime">Timing Available</p>
-<br>
-<input type="text" id="startTime" required placeholder="12:00">
-                            <!-- <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00" disabled> -->
-<br>
+                                    <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket"
+                                        disabled>
+                                    <label class="sportname1">Cricket</label>
+                                    <br>
+                                    <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football"
+                                        disabled>
+                                    <label class="sportname2">Football</label>
+                                    <br>
+                                    <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis"
+                                        disabled>
+                                    <label class="sportname3">Tennis</label>
+                                    <br>
 
-                            <p class="timep">To</p>
-                            <input type="text" id="endTime" required placeholder="12:00">
-<br>
-                            <!-- <input type="time" id="timingsto" aria-label="timingtoo" value="5:00" disabled> -->
-<br>
+                                </div>
+                                <br>
 
-                            <span class="linetext">Few lines About You</span>
-                            <textarea class="textabout" disabled></textarea>
-                        </div>
-                        <br>
-                   
-                        <button class="profile2" type="submit">Edit</button>
-                    </form>
+                                <p class="labelnamel">Location</p>
+                                <br>
+                                <br>
+                                <select id="locationselect" disabled>
+                                    <option>Chennai</option>
+                                    <option>Coimbatore</option>
+                                    <option>Salem</option>
+                                    <option>Erode</option>
+                                    <option>Madurai</option>
+                                    <option>Delhi</option>
+                                    <option>Bangalore</option>
+                                    <option>Pune</option>
+                                    <option>Kolkata</option>
+                                </select>
+                                <br>
+                                <p class="labelnametime">Timing Available</p>
+                                <br>
+                                <input type="text" id="startTime" required placeholder="12:00" disabled>
+                                <!-- <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00" disabled> -->
+                                <br>
+
+                                <p class="timep">To</p>
+                                <input type="text" id="endTime" required placeholder="12:00" disabled>
+                                <br>
+                                <!-- <input type="time" id="timingsto" aria-label="timingtoo" value="5:00" disabled> -->
+                                <br>
+
+                                <span class="linetext">Few lines About You</span>
+                                <textarea class="textabout" disabled></textarea>
+                            </div>
+                            <br>
+
+                            <button class="profile2" type="submit">Edit</button>
+                        </form>
                     </div>
 
                 </div>

@@ -77,6 +77,41 @@ if (MessageofUser == null) {
 
 // JSON
 
+let div_parent1;
+let div_sidebar_1;
+let div_profile_box;
+let player_image;
+let button_connect;
+let p_playerName;
+let p_playerAbout;
+let div_rating_box;
+let i_star;
+let span_no;
+let div_box2;
+let div_sports_known;
+let p_sportsplay_tag;
+let symbolimage1;
+let symbolimage2;
+let symbolimage3;
+let div_gameplayed;
+let p_score_tagName;
+let p_score_no;
+let div_sidebar_2;
+let div_container_sidebar2;
+let div_top;
+let h2_web;
+let div_chat_main;
+let  p_mess_noti;
+let div_chat_bottom;
+let form_box;
+let input_mess_box;
+let send_btn;
+let i_send_symbol;
+let text;
+let div_box3;
+
+
+
 div_parent1 = document.createElement("div");
 div_parent1.setAttribute("class", "bar");
 // console.log(div_parent1);
@@ -111,10 +146,16 @@ p_playerName.setAttribute("class", "namerow");
 p_playerName.innerText = show2.user_name;
 div_profile_box.append(p_playerName);
 
+
+
+div_box3 = document.createElement("div");
+div_box3.setAttribute("class", "box3");
+div_profile_box.append(div_box3);
+
 p_playerAbout = document.createElement("p");
 p_playerAbout.setAttribute("class", "aboutrow");
 p_playerAbout.innerText = show2.aboutplayers;
-div_profile_box.append(p_playerAbout);
+div_box3.append(p_playerAbout);
 
 div_rating_box = document.createElement("div");
 div_rating_box.setAttribute("class", "ratingsrow");
@@ -181,7 +222,7 @@ div_gameplayed.append(p_score_tagName);
 
 p_score_no = document.createElement("p");
 p_score_no.setAttribute("class", "scoreno");
-// p_playerName
+p_score_no.innerText=`${show2.timingsfrom}-${show2.timingsto}`
 div_gameplayed.append(p_score_no);
 
 // div_box3 = document.createElement("div");
@@ -270,7 +311,7 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
     // delete btn
     const delbtn = document.createElement("button");
     delbtn.setAttribute("class", "delbtn");
-    delbtn.innerText = "Delete";
+    delbtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
     if (particularmessage.type == "received") {
       delbtn.style.display = "none";
     }
@@ -363,7 +404,7 @@ document.querySelector("div.main2").append(div_parent1);
 // });
 
 let sidebar2;
-if (loginUserID == show2.user_id) {
+if (loginUserID === show2.user_id) {
   sidebar2 = document.querySelector(".sidebar2");
   sidebar2.style.display = "none";
 } else {
@@ -371,12 +412,16 @@ if (loginUserID == show2.user_id) {
 }
 
 // mouserightclick
-const messto = document.querySelectorAll(".messageto");
-messto.forEach((data) => {
-  data.addEventListener("click", () => {
-    alert("ok");
-  });
-});
+// const messto = document.querySelectorAll(".messageto");
+// messto.forEach((data) => {
+//   data.addEventListener("click", () => {
+//    let del=document.querySelectorAll(".delbtn")
+
+//    del.forEach((deldata)=>{
+//     deldata.style.display="block"
+//    })
+//   });
+// });
 //  request
 
 // request to other user
@@ -401,7 +446,9 @@ connectBtn.forEach((conBtn) => {
   playerId = conBtn.value;
   if (playerId == loginUserID) {
     // alert("this your profile")
-    conBtn.style.display = "none";
+    // conBtn.style.display = "";
+    conBtn.setAttribute("disabled","");
+    conBtn.innerText="Your Profile"
   }
 
   conBtn.addEventListener("click", () => {
@@ -445,7 +492,8 @@ console.log(requestrecords);
 const connectBtn2 = document.querySelector(".connectbtn");
 
 if (requestrecords == null) {
-} else if (
+} 
+else if (
   requestrecords.some(
     (v) => v.requested_user === loginUserID && v.receiving_user === playerId
   )
