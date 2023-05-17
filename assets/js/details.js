@@ -337,6 +337,7 @@ if (startIndexNo > endindexNo) {
 }
 
 const groundtimeOptions = {};
+console.log(groundtimeOptions);
 for (let i = startIndexNo; i <= endindexNo; i++) {
   const indexno = i % 24;
   const timeKey = `timing${indexno}`;
@@ -777,9 +778,15 @@ function updatetime() {
 
   // Get the current time
   const currentdate = new Date();
+  console.log(currentdate);
   const hours = currentdate.getHours();
+  // console.log(hours);
   const minutes = currentdate.getMinutes();
+  // console.log(minutes);
   const current_time = hours * 60 + minutes;
+  console.log(current_time);
+ 
+  // console.log(current_time);
   // let ampmformat=hours>=12?`PM`:`AM`;
   // hours=hours%12;
   // hours=hours?hours:12;
@@ -791,38 +798,50 @@ function updatetime() {
     .toString()
     .padStart(2, "0")}-${currentdate.getDate().toString().padStart(2, "0")}`;
 
-  // console.log(currentform);
+  // console.log(currentdateform);
 
   for (const time in groundtimeOptions) {
     option_timings = document.createElement("option");
     option_timings.innerText = groundtimeOptions[time];
 
     const optionstart = groundtimeOptions[time].split("-")[0].trim();
+    // console.log(optionstart);
     const optionstarsplit = optionstart.split(/:|\s/);
-    console.log(optionstarsplit);
+    // console.log(optionstarsplit);
     const optionstartampm = optionstarsplit[2];
-    console.log(optionstartampm);
+    // console.log(optionstartampm);
     let optionstarthour = parseInt(optionstarsplit[0]);
+    console.log(optionstarthour);
     const optionstartmin = parseInt(optionstarsplit[1]);
+    // console.log( optionstarthour * 60 + optionstartmin);
     if (optionstartampm === "PM" && optionstarthour !== 12) {
       optionstarthour += 12;
     } else if (optionstartampm === "AM" && optionstarthour === 12) {
       optionstarthour = 0;
     }
     const opionstarttiming = optionstarthour * 60 + optionstartmin;
-
+// console.log(opionstarttiming);
     const optionend = groundtimeOptions[time].split("-")[1].trim();
+    console.log(optionend);
     const optionendsplit = optionend.split(/:|\s/);
+    console.log(optionendsplit);
     const optionendampm = optionendsplit[2];
     console.log(optionendampm);
     let optionendhour = parseInt(optionendsplit[0]);
+    console.log(optionendhour);
     const optionendmin = parseInt(optionendsplit[1]);
+    console.log(optionendmin);
     if (optionendampm === "PM" && optionendhour !== 12) {
       optionendhour += 12;
     } else if (optionendampm === "AM" && optionendhour === 12) {
       optionendhour = 0;
     }
-    const opionendtiming = optionendhour * 60 + optionendmin;
+    const opionendtiming = optionendhour * 60 + optionendmin; 
+
+    console.log(opionendtiming);
+
+
+    
 
     if (selecteddate === currentdateform && opionendtiming < current_time) {
       option_timings.setAttribute("disabled", "");

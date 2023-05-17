@@ -227,7 +227,7 @@ join_as_player.addEventListener("click", () => {
 
     user_genders.style.display = "block"
 agelabel.style.display = "block"
-agelabel.style.top="30px";
+agelabel.style.top="42px";
 user_genders.style.top="30px";
 joinPlayer.style.bottom="890px"
     user_age.style.display = "block"
@@ -249,13 +249,13 @@ joinPlayer.style.bottom="890px"
     labelage.style.top = "90px";
     formsdiv.style.height = "1590px"
     user_timingsfrom.style.top = "190px";
-    user_timingsto.style.top = "90px";
+    user_timingsto.style.top = "120px";
     labeltime.style.top = "180px"
     labeltimeto.style.top = "190px";
     user_location.style.top = "170px";
     labellocation.style.top = "170px";
-    user_age.style.top="60px"
-    labelage.style.top="60px"
+    user_age.style.top="70px"
+    labelage.style.top="77px"
     // joinPlayer.style.display="none";
     sportname1.style.left = "20px"
     sportname2.style.left = "20px"
@@ -302,14 +302,14 @@ joinPlayer.style.bottom="890px"
  
   
 
-    for (let i = 0; i < user_record.length; i++) {
+    // for (let i = 0; i < user_record.length; i++) {
 
-        if (loggedIn[0]["user_email"] == user_record[i]["user_email"]) {
-            user_record[i]["player"] = true;
-            loggedIn[0]["player_status"]=true;
-            break
-        }
-    }
+    //     if (loggedIn[0]["user_email"] == user_record[i]["user_email"]) {
+    //         user_record[i]["player"] = true;
+    //         loggedIn[0]["player_status"]=true;
+    //         break
+    //     }
+    // }
 
         localStorage.setItem("user_details", JSON.stringify(user_record));
   localStorage.setItem("user_logged_in",JSON.stringify(loggedIn))

@@ -307,6 +307,7 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
       particularmessage.timestamp
     )} </span>`;
     div_chat_main.append(messageofchat);
+    console.log(messageofchat);
 
     // delete btn
     const delbtn = document.createElement("button");
@@ -441,7 +442,7 @@ console.log(loginUserID);
 //   }
 
 // })
-
+const requestrecords = JSON.parse(localStorage.getItem("request_details"));
 connectBtn.forEach((conBtn) => {
   playerId = conBtn.value;
   if (playerId == loginUserID) {
@@ -468,8 +469,7 @@ connectBtn.forEach((conBtn) => {
       //   v.requested_user === loginUserID && v.receiving_user === playerId
 
       // })) {
-      //   conBtn.innerHTML="Requested"
-      //   console.log("ok");
+      // alert("You can't request multiple timwes")
       // }
 
       // else {
@@ -481,14 +481,38 @@ connectBtn.forEach((conBtn) => {
 
       localStorage.setItem("request_details", JSON.stringify(request_records));
       alert("you requested");
+      conBtn.innerHTML = "Requested"
+      // location.reload()
 
       // }
     }
+
+
+    else{
+      
+
+console.log(requestrecords);
+// const connectBtn2 = document.querySelector(".connectbtn");
+
+if (requestrecords == null) {
+} 
+else if (
+  requestrecords.some(
+    (v) => v.requested_user === loginUserID && v.receiving_user === playerId
+  )
+) {
+  {
+      conBtn.innerText = "Requested";
+    console.log("ok");
+  }
+}
+    }
+    
   });
 });
 
-const requestrecords = JSON.parse(localStorage.getItem("request_details"));
-console.log(requestrecords);
+// const requestrecords = JSON.parse(localStorage.getItem("request_details"));
+// console.log(requestrecords);
 const connectBtn2 = document.querySelector(".connectbtn");
 
 if (requestrecords == null) {
@@ -588,10 +612,24 @@ function sendMessage() {
   const messageto = document.createElement("p");
   messageto.setAttribute("class", "messageto");
 
-  messageto.innerHTML = `${messagebox} -<span class="timeside"> ${timestampconvert(
+  messageto.innerHTML = `${messagebox} <span class="timeside"> ${timestampconvert(
     existingmessage.timestamp
   )}</span>`;
   mainChat.append(messageto);
+
+  console.log(messageto);
+
+  const del_btn = document.createElement("button");
+  del_btn.setAttribute("class", "delbtn");
+  del_btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+
+  del_btn.addEventListener("click", () => {
+    deletemess(messageto);
+    messageto.remove();
+  });
+  messageto.append(del_btn);
+
+
 
   document.getElementById("message").value = "";
   // mess_from=document.createElement("p");
@@ -635,7 +673,7 @@ function deletemess(message) {
   if (existingmessageuser !== -1) {
     const exitingmesss = messageofUser[existingmessageuser].messages.findIndex(
       (messs) =>
-        messs.text === message.text && messs.timestamp === messs.timestamp
+        messs.text === message.text && message.timestamp === messs.timestamp
     );
     if (exitingmesss !== -1) {
       messageofUser[existingmessageuser].messages.splice(exitingmesss, 1);
