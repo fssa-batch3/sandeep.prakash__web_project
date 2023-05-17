@@ -302,14 +302,14 @@ joinPlayer.style.bottom="890px"
  
   
 
-    // for (let i = 0; i < user_record.length; i++) {
+    for (let i = 0; i < user_record.length; i++) {
 
-    //     if (loggedIn[0]["user_email"] == user_record[i]["user_email"]) {
-    //         user_record[i]["player"] = true;
-    //         loggedIn[0]["player_status"]=true;
-    //         break
-    //     }
-    // }
+        if (loggedIn[0]["user_email"] == user_record[i]["user_email"]) {
+            user_record[i]["player"] = true;
+            loggedIn[0]["player_status"]=true;
+            break
+        }
+    }
 
         localStorage.setItem("user_details", JSON.stringify(user_record));
   localStorage.setItem("user_logged_in",JSON.stringify(loggedIn))
