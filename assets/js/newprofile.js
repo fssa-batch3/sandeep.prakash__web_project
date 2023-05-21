@@ -49,6 +49,8 @@ let ok = "../../assets/images/avatorprofile.jpg"
 let user_record = JSON.parse(localStorage.getItem("user_details"));
 // let user_sports_choosed=user_record.sport_Choosed;
 let loggedIn = JSON.parse(localStorage.getItem("user_logged_in"));
+let check=document.querySelectorAll(`input[name="sport"]`)
+
 
 
 const startTimeValue = null;
@@ -154,6 +156,44 @@ agelabel.style.display = "none"
                 football.checked = user_record[i]["sports_choosed_football"];
                 tennis.checked = user_record[i]["sports_choosed_tennis"];
 
+
+                user_age.required = true;
+                user_location.setAttribute("required", true);
+                user_timingsfrom.required = true;
+                user_timingsto.required = true;
+            //     sportname1.required = true;
+            //  sportname2.required = true;
+            //  sportname3.required = true;
+             user_genders.required = true;
+             textarea.required = true;
+
+
+            //  let checkval=false;
+
+            //  for(let i=0;i<check.length;i++){
+            //     if(check[i].checked){
+            //         checkval=true;
+            //         break
+            //     }
+            //  }
+            //  if(!checkval){
+            //     alert("please select atleast one sport");
+                
+               
+            //  }
+            //  let checkval=false;
+
+            //  for(let i=0;i<check.length;i++){
+            //     if(check[i].checked){
+            //         checkval=true;
+            //         break
+            //     }
+            //  }
+            //  if(!checkval){
+            //     alert("please select atleast one sport");
+                
+               
+            //  }
 
                 // if(user_record[i].sport_Choosed.includes("cricket")){
                 //     cricket.checked=true
@@ -299,6 +339,7 @@ joinPlayer.style.bottom="890px"
  sportname2.required = true;
  sportname3.required = true;
  user_genders.required = true;
+ textarea.required = true;
  
   
 
@@ -355,9 +396,19 @@ editbutn.addEventListener("submit", (e) => {
         textarea.removeAttribute("disabled");
         user_genders.removeAttribute("disabled");
 
+
+       
+ 
+
     }
 
+
+   
+
     else if (editbutn1.innerHTML == "Save") {
+
+
+      
         editbutn1.innerHTML = "Edit";
         namebox.setAttribute("disabled", "");
         // user_email.setAttribute("disabled","")
@@ -373,6 +424,9 @@ editbutn.addEventListener("submit", (e) => {
         tennis.setAttribute("disabled", "");
         textarea.setAttribute("disabled", "");
         user_genders.setAttribute("disabled", "");
+
+
+
 
     user_record.find(e => {
 

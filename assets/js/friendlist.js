@@ -24,6 +24,27 @@ filterPlayer = requestrecords.filter(
   (item) =>
     item.receiving_user == loginuserid && item.request_status == "accepted"
 );
+
+if(filterPlayer.length==0){
+  let maincon=document.querySelector(".main2");
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any friend list`
+  maincon.append(ptag)
+
+  document.body.style.overflow="hidden"
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  })
+}
+
+
+else{
 // || item.requested_user== loginuserid
 
 for (const userrequested of filterPlayer) {
@@ -166,11 +187,12 @@ declinebtn.forEach((button) => {
 
     if (reqIndex > -1) {
       if (confirm("Are you sure want remove your friend from your list")) {
-        requestrecords[reqIndex].request_status = "pending";
-
+        // requestrecords[reqIndex].request_status = "pending";
+        requestrecords.splice(reqIndex,1);
         localStorage.setItem("request_details", JSON.stringify(requestrecords));
       } else {
       }
     }
   });
 });
+}

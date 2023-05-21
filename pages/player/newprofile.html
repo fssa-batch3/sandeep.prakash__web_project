@@ -94,6 +94,14 @@
                     </i>
                     <span>Log out</span>
                 </button>
+
+
+                <a href="../../index.html">
+                    <div class="homepage">
+                        <i class="fa-solid fa-house-user"></i>
+                        <span>Go to Home page</span>
+                    </div>
+                </a>
                 <!-- <button class="button-15" role="button"></button> -->
             </div>
             <div class="sidebar2">
@@ -139,8 +147,8 @@
                             </div>
                             <label class="labelnamea">Age :</label>
                             <br>
-                            <input type="number" id="age" min="1" max="120" pattern="^(1[8-9]|[2-9][0-9])$"
-                                title="The age should contain 1 to 120" disabled>
+                            <input type="number" id="age" min="8" max="90" pattern="^(1[8-9]|[2-9][0-9])$"
+                                title="The age should contain 1 to 120" disabled >
                             <br>
                             <br>
 
@@ -150,23 +158,23 @@
                             <input type="name" placeholder="Gender " id="gender" aria-label="gender"
                                 pattern="^[a-zA-Z]{3,20}$"
                                 title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
-                                disabled>
+                                disabled >
                             <br>
                             <div class="select">
                                 <p class="labelnames">Known Sports:</p>
                                 <br>
-                                <div id="sportss">
+                                <div id="sportss" required>
 
-                                    <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket"
+                                    <input type="checkbox" id="sportsavail1" aria-label="sportsavail" name="sport" value="Cricket"
                                         disabled>
                                     <label class="sportname1">Cricket</label>
                                     <br>
-                                    <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football"
-                                        disabled>
+                                    <input type="checkbox" id="sportsavail2" aria-label="sportsavail" name="sport"value="Football"
+                                        disabled >
                                     <label class="sportname2">Football</label>
                                     <br>
-                                    <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis"
-                                        disabled>
+                                    <input type="checkbox" id="sportsavail3" aria-label="sportsavail"name="sport" value="Tennis"
+                                        disabled >
                                     <label class="sportname3">Tennis</label>
                                     <br>
 
@@ -176,7 +184,7 @@
                                 <p class="labelnamel">Location</p>
                                 <br>
                                 <br>
-                                <select id="locationselect" disabled>
+                                <select id="locationselect" disabled >
                                     <option>Chennai</option>
                                     <option>Coimbatore</option>
                                     <option>Salem</option>
@@ -201,7 +209,8 @@
                                 <br>
 
                                 <span class="linetext">Few lines About You</span>
-                                <textarea class="textabout" disabled></textarea>
+                                <textarea class="textabout"   pattern="^[a-zA-Z ]{3,70}$"
+                                title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 50 characters."  disabled ></textarea>
                             </div>
                             <br>
 

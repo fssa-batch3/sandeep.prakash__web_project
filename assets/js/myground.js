@@ -1,3 +1,5 @@
+// const { doc } = require("prettier");
+
 const sellerloggedDta = JSON.parse(localStorage.getItem("seller_logged_in"));
 
 const sellerId = sellerloggedDta[0].seller_Id;
@@ -99,12 +101,58 @@ if (sellerProducts) {
   groundCourts.value = sellerProducts.groundCourt;
 }
 
+
+
+
+//edit
+let editbtn=document.getElementById("editbtn");
+editbtn.addEventListener("click",()=>{
+
+
+  groundName.removeAttribute("disabled");
+  groundPlace.removeAttribute("disabled");
+  groundaddress.removeAttribute("disabled");
+  groundLocationLink.removeAttribute("disabled");
+  groundImage1.removeAttribute("disabled");
+  groundImage2.removeAttribute("disabled");
+  groundImage3.removeAttribute("disabled"); 
+  sportsAvail1.removeAttribute("disabled");
+  sportsAvail2.removeAttribute("disabled");  
+
+    sportsAvail3.removeAttribute("disabled");
+    groundTimingfrom.removeAttribute("disabled");
+    groundTimingTo.removeAttribute("disabled");
+    groundRules.removeAttribute("disabled");
+    groundCity.removeAttribute("disabled");
+    groundPrice.removeAttribute("disabled");
+    groundincreasingPrice.removeAttribute("disabled");
+    groundCourts.removeAttribute("disabled");
+   
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // }))
 
 // // update
 
 const updatebutton = document.getElementById("formbtn");
-updatebutton.addEventListener("submit", () => {
+updatebutton.addEventListener("submit", (e) => {
+  e.preventDefault()
+
   sellerProducts.ground_name = groundName.value;
   sellerProducts.ground_Place = groundPlace.value;
   sellerProducts.ground_locat_link = groundLocationLink.value;
@@ -125,6 +173,52 @@ updatebutton.addEventListener("submit", () => {
   sellerProducts.groundCourt = groundCourts.value;
 
   localStorage.setItem("ground_info", JSON.stringify(groundRecords));
+
+
+
+
+
+  groundName.setAttribute("disabled", "");
+  groundPlace.setAttribute("disabled", "");
+  groundaddress.setAttribute("disabled", "");
+  groundLocationLink.setAttribute("disabled", "");
+  groundImage1.setAttribute("disabled", "");
+  groundImage2.setAttribute("disabled", "");
+  groundImage3.setAttribute("disabled", "");
+  sportsAvail1.setAttribute("disabled", "");
+  sportsAvail2.setAttribute("disabled", ""); 
+
+    sportsAvail3.setAttribute("disabled", "");
+    groundTimingfrom.setAttribute("disabled", "");
+    groundTimingTo.setAttribute("disabled", "");
+    groundRules.setAttribute("disabled", "");
+    groundCity.setAttribute("disabled", "");
+    groundPrice.setAttribute("disabled", "");
+    groundincreasingPrice.setAttribute("disabled", "");
+    groundCourts.setAttribute("disabled", "");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 // function replacer(key, value) {
 //     if (key === "_flatpickr") {

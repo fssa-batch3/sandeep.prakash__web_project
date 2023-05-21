@@ -234,7 +234,12 @@ ul li a:hover {
 
 
 
-
+.connectbtn:disabled {
+border-radius: 3px;
+    background-color: #CCCCCC;
+    color: #000000;
+    /* Add any other desired styles */
+  }
 .profile {
     font-size: medium;
     padding: 9px 20px;
@@ -416,6 +421,7 @@ form input {
     position: relative;
     top: 5px;
     left: 5px;
+
 
 }
 
@@ -653,7 +659,7 @@ a {
 
 .sportsknown{
      width: 220px;
-    height: 100px;
+    height: 120px;
     background-color:  rgba(32,56,120,255);
     border-radius: 10px;
     position: relative;
@@ -678,7 +684,7 @@ right:120px;
     
 .sportsplay{
    text-align: center;
-font-size: 17px;
+nofont-size: 17px;
 position: relative;
 top: 17px;
 }
@@ -699,17 +705,17 @@ top: 17px;
 }
 
 .scoreno{
-    width: 143px;
+    width: 153px;
     height: 0px;
-    
+    text-align: center;
     background-color: rgba(241, 251, 255, 255);
     padding: 25px 2px;
     position: relative;
     left: 30px;
-    padding-bottom: 30px;
-    top: 20px;
+    padding-bottom: 33px;
+    top: 17px;
     color: #00021a;
-    display: flex;
+    /* display: flex; */
     border-radius: 10px;
   
 }
@@ -720,12 +726,13 @@ top: 17px;
 
 }
 .gamesplaybox{
-    width: 200px;
-   height: 100px;
+    width: 220px;
+   height: 120px;
    background-color:  rgba(32,56,120,255);
    border-radius: 10px;
    position: relative;
-top: 20px;    
+top: 20px; 
+right: 20px;   
 }
 
 
@@ -749,14 +756,33 @@ top: 50px;
 
 
 .chatalerttext{
-    color: #00021a;
+    border-radius: 10px;
+    width: 220px;
+    /* background-color: #81b1e1; */
+    background-color: #40507b;
+    
+    word-wrap: break-word;
+  /* word-break: break-word; */
+    color: #ffffff;
     z-index: 999;
     transform: translate(-50%, -50%);
+    padding: 20px 20px;
     position: relative;
-    bottom: 170px;
 
+    bottom: 150px;
+    right: 190px;
+    animation: bounceu 3s infinite;
 
 }
+
+@keyframes bounceu {
+    0%, 100% {
+      top: 0;
+    }
+    50% {
+      top: -170px;
+    }
+  }
 
 
 

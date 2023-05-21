@@ -318,8 +318,10 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
     }
 
     delbtn.addEventListener("click", () => {
+      console.log(particularmessage)
       deletemess(particularmessage);
-      messageofchat.remove();
+     
+      messageofchat.remove(particularmessage);
     });
     messageofchat.append(delbtn);
   }
@@ -369,11 +371,13 @@ input_mess_box.setAttribute("type", "text");
 input_mess_box.setAttribute("placeholder", "Send message");
 input_mess_box.setAttribute("id", "message");
 input_mess_box.setAttribute("required", "");
+input_mess_box.disabled = true;
 form_box.append(input_mess_box);
 
 send_btn = document.createElement("button");
 send_btn.setAttribute("id", "send_button");
 send_btn.setAttribute("type", "submit");
+send_btn.disabled=true;
 form_box.append(send_btn);
 
 i_send_symbol = document.createElement("i");
@@ -382,7 +386,7 @@ send_btn.append(i_send_symbol);
 
 text = document.createElement("p");
 text.textContent =
-  "* You cannot chat with  them please connect with them and make them in your friendlist";
+  `* You cannot chat with them please connect with them and make them in your friendlist`;
 text.setAttribute("class", "chatalerttext");
 div_sidebar_2.append(text);
 
@@ -444,8 +448,9 @@ console.log(loginUserID);
 // })
 const requestrecords = JSON.parse(localStorage.getItem("request_details"));
 connectBtn.forEach((conBtn) => {
-  playerId = conBtn.value;
-  if (playerId == loginUserID) {
+  playerId = Number(conBtn.value);
+  console.log(playerId);
+  if (playerId === loginUserID) {
     // alert("this your profile")
     // conBtn.style.display = "";
     conBtn.setAttribute("disabled","");
@@ -498,12 +503,12 @@ if (requestrecords == null) {
 } 
 else if (
   requestrecords.some(
-    (v) => v.requested_user === loginUserID && v.receiving_user === playerId
+    (v) => v.requested_user === loginUserID && Number(v.receiving_user) === playerId
   )
 ) {
   {
       conBtn.innerText = "Requested";
-    console.log("ok");
+    // console.log("ok");
   }
 }
     }
@@ -519,36 +524,64 @@ if (requestrecords == null) {
 } 
 else if (
   requestrecords.some(
-    (v) => v.requested_user === loginUserID && v.receiving_user === playerId
+    (v) => v.requested_user === loginUserID && Number(v.receiving_user) === playerId
   )
 ) {
   {
     connectBtn2.innerText = "Requested";
-    console.log("ok");
+    // console.log("ok");
   }
 }
+
 // chat blur remove
 if (requestrecords == null) {
-} else if (
-  requestrecords.some(
+console.log("vada");
+} else  {
+
+
+ let reqaccept= requestrecords.some(
     (v) =>
-      v.requested_user === loginUserID &&
-      v.receiving_user === playerId &&
-      v.request_status == "accepted"
-  )
-) {
+     v.requested_user === loginUserID &&
+     Number( v.receiving_user) === playerId &&
+      v.request_status === "accepted"
+ 
+  )  
+
+ let receiveaccept= requestrecords.some(
+    (v) =>
+   v.requested_user ===playerId &&
+   Number( v.receiving_user) === loginUserID &&
+    v.request_status === "accepted"
+)
+
+
+
+  console.log("sandeep");
+
+  if(reqaccept&& receiveaccept){
+    console.log("dssnkd");
+
   connectBtn2.innerText = "Friend";
+  connectBtn2.disabled=true;
   const chatbox = document.querySelector(".container");
   //  let side_bar2=document.querySelector(".sidebar2");
   const textalert = document.querySelector(".chatalerttext");
+  let inputform=document.getElementById("message");
+  let sendButton=document.getElementById("send_button")
   console.log(textalert);
   chatbox.style.filter = "none";
   textalert.style.display = "none";
   chatbox.style.left = "30px";
+  inputform.disabled=false;
+  sendButton.disabled=false;
+
+  }
+
 
   // chatbox.innerText="You cannot chat with before they accept your request"
 
-  console.log("ok");
+  // console.log("ok");
+
 }
 
 // chat feature
@@ -624,8 +657,19 @@ function sendMessage() {
   del_btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
 
   del_btn.addEventListener("click", () => {
-    deletemess(messageto);
-    messageto.remove();
+
+    // let delmess={
+    //   text:messagebox,
+    //   sender: "user",
+    //   timestamp:existingmessage.timestamp,
+    // };
+   
+    deletemess(existingmessage);
+
+    // console.log(delmess);
+
+    // console.log("okok");
+    messageto.remove(existingmessage);
   });
   messageto.append(del_btn);
 

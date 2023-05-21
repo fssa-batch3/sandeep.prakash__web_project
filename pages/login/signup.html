@@ -90,7 +90,7 @@
         <input type="name" placeholder="Your Name " id="name" aria-label="name" ><br>  -->
             <p class="labelnameage">Age :</p>
             <br>
-            <input type="number" placeholder="Age " id="age" aria-label="age" min="1" max="120"
+            <input type="number" placeholder="Age " id="age" aria-label="age" min="8" max="90"
                 pattern="^(1[8-9]|[2-9][0-9])$" title="The age should contain 1 to 120">
             <br>
 
@@ -127,6 +127,7 @@
                 <p class="labelnameloc">Location</p>
                 <br>
                 <select id="locationselect">
+                    <option value="">Select location</option>
                     <option>Chennai</option>
                     <option>Coimbatore</option>
                     <option>Salem</option>
@@ -142,13 +143,13 @@
                 <p class="labelnametime">Timing Available</p>
                 <br>
                 <!-- <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"> -->
-                <input type="text" id="startTime" required placeholder="12:00">
+                <input type="text" id="startTime" placeholder="12:00">
                 <br>
 
                 <p class="toword">To</p>
                 <br>
                 <!-- <input type="time" id="timingsto" aria-label="timingsto" value="6:00"> -->
-                <input type="text" id="endTime" required placeholder="12:00">
+                <input type="text" id="endTime"  placeholder="12:00">
             </div>
             <br>
 

@@ -33,12 +33,39 @@ const groundOwnerProduct = JSON.parse(localStorage.getItem("ground_info"));
 const requestBooking = JSON.parse(localStorage.getItem("bookingInfo"));
 
 const loginuserid = loginUser[0].user_id;
+let acceptedBooking;
 
-const acceptedBooking = requestBooking.filter(
+if(requestBooking==null){
+
+}
+else{
+
+ acceptedBooking = requestBooking.filter(
   (data) =>
     data.booking_status == "accepted" && data.request_user_id == loginuserid
 );
 console.log(acceptedBooking);
+}
+
+if(acceptedBooking==null){
+  let maincon=document.querySelector(".main2");
+  
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any  currrent booking`
+  maincon.append(ptag)
+
+  document.body.style.overflow="hidden"
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  })
+
+}
+else{
 
 for (const booking of acceptedBooking) {
   const { ground_id } = booking;
@@ -265,49 +292,49 @@ for (let i = 0; i < acceptedBooking.length; i++) {
   childdiv.setAttribute("class", "child1");
   divBox.append(childdiv);
 
-  columndiv1 = document.createElement("div");
-  columndiv1.setAttribute("class", "column1");
-  childdiv.append(columndiv1);
+  // columndiv1 = document.createElement("div");
+  // columndiv1.setAttribute("class", "column1");
+  // childdiv.append(columndiv1);
 
-  h4name = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4name.innerText = "User Name";
-  columndiv1.append(h4name);
+  // h4name = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4name.innerText = "User Name";
+  // columndiv1.append(h4name);
 
-  h4date = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4date.innerText = "Date";
-  columndiv1.append(h4date);
+  // h4date = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4date.innerText = "Date";
+  // columndiv1.append(h4date);
 
-  h4timing = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4timing.innerText = "Timing";
-  columndiv1.append(h4timing);
+  // h4timing = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4timing.innerText = "Timing";
+  // columndiv1.append(h4timing);
 
-  h4sports = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4sports.innerText = "Sports";
-  columndiv1.append(h4sports);
+  // h4sports = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4sports.innerText = "Sports";
+  // columndiv1.append(h4sports);
 
-  h4duration = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4duration.innerText = "Duration";
-  columndiv1.append(h4duration);
+  // h4duration = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4duration.innerText = "Duration";
+  // columndiv1.append(h4duration);
 
-  h4players = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4players.innerText = "Players";
-  columndiv1.append(h4players);
+  // h4players = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4players.innerText = "Players";
+  // columndiv1.append(h4players);
 
-  h4courts = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4courts.innerText = "Court";
-  columndiv1.append(h4courts);
+  // h4courts = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4courts.innerText = "Court";
+  // columndiv1.append(h4courts);
 
-  h4price = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4price.innerText = "Price";
-  columndiv1.append(h4price);
+  // h4price = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4price.innerText = "Price";
+  // columndiv1.append(h4price);
 
   columndiv2 = document.createElement("div");
   columndiv2.setAttribute("class", "column2");
@@ -315,50 +342,50 @@ for (let i = 0; i < acceptedBooking.length; i++) {
 
   divbox1 = document.createElement("div");
   divbox1.setAttribute("class", "box1");
-  divbox1.innerText = acceptedBooking[i].userDetail.user_email;
+  divbox1.innerHTML = `<h4>Username</h4>${acceptedBooking[i].userDetail.user_email}`;
   columndiv2.append(divbox1);
 
   divbox2 = document.createElement("div");
   divbox2.setAttribute("class", "box2");
-  divbox2.innerText = acceptedBooking[i].booking_Date;
+  divbox2.innerHTML = `<h4>Date</h4>${acceptedBooking[i].booking_Date}`;
   columndiv2.append(divbox2);
 
   divbox3 = document.createElement("div");
   divbox3.setAttribute("class", "box3");
-  divbox3.innerText = acceptedBooking[i].booking_time;
+  divbox3.innerHTML =` <h4>Timing</h4>${acceptedBooking[i].booking_time}`;
   columndiv2.append(divbox3);
 
   divbox4 = document.createElement("div");
   divbox4.setAttribute("class", "box4");
-  divbox4.innerText = acceptedBooking[i].booking_sports;
+  divbox4.innerHTML = `<h4>Sports</h4>${acceptedBooking[i].booking_sports}`;
   columndiv2.append(divbox4);
 
   if(acceptedBooking[i].booking_duration=="Select an Option"){
     
   divbox5 = document.createElement("div");
   divbox5.setAttribute("class", "box5");
-  divbox5.innerText = "None";
+  divbox5.innerHTML= `<h4>Duration</h4>None`;
   columndiv2.append(divbox5);
   }
 else{
   divbox5 = document.createElement("div");
   divbox5.setAttribute("class", "box5");
-  divbox5.innerText = acceptedBooking[i].booking_duration+" Hour";
+  divbox5.innerHTML =` <h4>Duration</h4>${ acceptedBooking[i].booking_duration+" Hour"}`;
   columndiv2.append(divbox5);}
 
   divbox6 = document.createElement("div");
   divbox6.setAttribute("class", "box6");
-  divbox6.innerText = acceptedBooking[i].selected_players;
+  divbox6.innerHTML = `<h4>Players</h4>${acceptedBooking[i].selected_players}`;
   columndiv2.append(divbox6);
 
   divbox7 = document.createElement("div");
   divbox7.setAttribute("class", "box7");
-  divbox7.innerText = acceptedBooking[i].selectedCourts;
+  divbox7.innerHTML = `<h4>Courts</h4>${acceptedBooking[i].selectedCourts}`;
   columndiv2.append(divbox7);
 
   divbox8 = document.createElement("div");
   divbox8.setAttribute("class", "box8");
-  divbox8.innerText = acceptedBooking[i].groundPrice;
+  divbox8.innerHTML = `<h4>Price</h4>${acceptedBooking[i].groundPrice}`;
   columndiv2.append(divbox8);
 
   // btnaccept = document.createElement("button");
@@ -455,3 +482,4 @@ cancelbtn.forEach((button) => {
 // },  60000)
 // 30 minutes
 // 1800000
+}

@@ -711,6 +711,40 @@ div_book2 = document.createElement("div");
 div_book2.setAttribute("class", "book2");
 div_bookingbox.append(div_book2);
 
+
+
+
+// sportsselect
+span_sportsSelect = document.createElement("span");
+span_sportsSelect.setAttribute("class", "headingbook");
+span_sportsSelect.innerText = "Select Which Courts";
+div_book2.append(span_sportsSelect);
+
+select_sports = document.createElement("select");
+select_sports.setAttribute("class", "courtss");
+select_sports.setAttribute("required", "");
+div_book2.append(select_sports);
+
+
+
+option_court= document.createElement("option");
+option_court.innerText = "Select an Option";
+option_court.setAttribute("value","")
+select_sports.append(option_court);
+
+// loopit
+for (let i = 1; i <= show2.groundCourt; i++) {
+  option_courts = document.createElement("option");
+  option_courts.innerText = ground_details[0].courtsoptions[`courts${i}`];
+  option_courts.value = ground_details[0].courtsoptions[`courts${i}`];
+  select_sports.append(option_courts);
+}
+
+
+br_tagno = document.createElement("br");
+div_book2.append(br_tagno);
+
+
 label_date = document.createElement("label");
 label_date.setAttribute("class", "headingbook");
 label_date.innerText = "Date";
@@ -783,7 +817,7 @@ function updatetime() {
   // console.log(hours);
   const minutes = currentdate.getMinutes();
   // console.log(minutes);
-  const current_time = hours * 60 + minutes;
+  const current_time = hours * 60 + minutes+80;
   console.log(current_time);
  
   // console.log(current_time);
@@ -843,7 +877,8 @@ function updatetime() {
 
     
 
-    if (selecteddate === currentdateform && opionendtiming < current_time) {
+    if (selecteddate === currentdateform && opionendtiming <current_time
+      ) {
       option_timings.setAttribute("disabled", "");
     }
     for (let i = 0; i < bookingInfo1.length; i++) {
@@ -858,9 +893,11 @@ function updatetime() {
               option_timings.setAttribute("disabled", "");
             }
           }
-        } else if (bookingInfo1[i].booking_time == option_timings.innerText) {
+        } else {
+        if (bookingInfo1[i].booking_time == option_timings.innerText) {
           option_timings.setAttribute("disabled", "");
         }
+      }
       }
     }
 
@@ -973,31 +1010,31 @@ div_book2.append(br_tag15);
 br_tag16 = document.createElement("br");
 div_book2.append(br_tag16);
 
-// sportsselect
-span_sportsSelect = document.createElement("span");
-span_sportsSelect.setAttribute("class", "headingbook");
-span_sportsSelect.innerText = "Select Which Courts";
-div_book2.append(span_sportsSelect);
+// // sportsselect
+// span_sportsSelect = document.createElement("span");
+// span_sportsSelect.setAttribute("class", "headingbook");
+// span_sportsSelect.innerText = "Select Which Courts";
+// div_book2.append(span_sportsSelect);
 
-select_sports = document.createElement("select");
-select_sports.setAttribute("class", "courtss");
-select_sports.setAttribute("required", "");
-div_book2.append(select_sports);
+// select_sports = document.createElement("select");
+// select_sports.setAttribute("class", "courtss");
+// select_sports.setAttribute("required", "");
+// div_book2.append(select_sports);
 
 
 
-option_court= document.createElement("option");
-option_court.innerText = "Select an Option";
-option_court.setAttribute("value","")
-select_sports.append(option_court);
+// option_court= document.createElement("option");
+// option_court.innerText = "Select an Option";
+// option_court.setAttribute("value","")
+// select_sports.append(option_court);
 
-// loopit
-for (let i = 1; i <= show2.groundCourt; i++) {
-  option_courts = document.createElement("option");
-  option_courts.innerText = ground_details[0].courtsoptions[`courts${i}`];
-  option_courts.value = ground_details[0].courtsoptions[`courts${i}`];
-  select_sports.append(option_courts);
-}
+// // loopit
+// for (let i = 1; i <= show2.groundCourt; i++) {
+//   option_courts = document.createElement("option");
+//   option_courts.innerText = ground_details[0].courtsoptions[`courts${i}`];
+//   option_courts.value = ground_details[0].courtsoptions[`courts${i}`];
+//   select_sports.append(option_courts);
+// }
 
 br_tag12 = document.createElement("br");
 div_book2.append(br_tag12);

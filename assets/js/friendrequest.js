@@ -24,7 +24,25 @@ filterPlayer = requestrecords.filter(
   (item) =>
     item.receiving_user == loginuserid && item.request_status == "pending"
 );
+if(filterPlayer.length==0){
+  let maincon=document.querySelector(".main2");
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any friend request`
+  maincon.append(ptag)
+  
 
+  document.body.style.overflow="hidden"
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  })
+}
+else{
 for (const userrequested of filterPlayer) {
   const { requested_user } = userrequested;
   const userDetails = user_record.find(
@@ -163,7 +181,7 @@ declinebtn.forEach((button) => {
 
     console.log(reqIndex2);
 
-    if (reqIndex > -1) {
+    if (reqIndex2 > -1) {
       if (confirm("Are you sure want to decline the request")) {
         requestrecords[reqIndex2].request_status = "declined";
 
@@ -173,3 +191,4 @@ declinebtn.forEach((button) => {
     }
   });
 });
+}

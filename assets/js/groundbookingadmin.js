@@ -5,11 +5,42 @@ const sellerloggedDta = JSON.parse(localStorage.getItem("seller_logged_in"));
 const requestBooking = JSON.parse(localStorage.getItem("bookingInfo"));
 const sellerId = sellerloggedDta[0].seller_Id;
 
-const filterGroundrequest = requestBooking.filter(
+
+let filterGroundrequest;
+if(requestBooking==null){
+
+}
+
+else{
+ filterGroundrequest = requestBooking.filter(
   (data) => data.seller_id == sellerId
 );
 
+ 
+
+
 console.log(filterGroundrequest);
+
+if(filterGroundrequest.length==0){
+  let maincon=document.querySelector(".main2");
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any booking`
+  maincon.append(ptag)
+
+  document.body.style.overflow="hidden"
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  })
+}
+
+
+else{
 
 for (const request of filterGroundrequest) {
   const { request_user_id } = request;
@@ -48,110 +79,111 @@ for (let i = 0; i < filterGroundrequest.length; i++) {
   childdiv = document.createElement("div");
   childdiv.setAttribute("class", "child");
 
-  columndiv1 = document.createElement("div");
-  columndiv1.setAttribute("class", "column1");
-  childdiv.append(columndiv1);
+  // columndiv1 = document.createElement("div");
+  // columndiv1.setAttribute("class", "column1");
+  // childdiv.append(columndiv1);
 
-  h4name = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4name.innerText = "User Name";
-  columndiv1.append(h4name);
+  // h4name = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4name.innerText = "User Name";
+  // columndiv1.append(h4name);
 
-  h4date = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4date.innerText = "Date";
-  columndiv1.append(h4date);
+  // h4date = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4date.innerText = "Date";
+  // columndiv1.append(h4date);
 
-  h4timing = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4timing.innerText = "Timing";
-  columndiv1.append(h4timing);
+  // h4timing = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4timing.innerText = "Timing";
+  // columndiv1.append(h4timing);
 
-  h4sports = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4sports.innerText = "Sports";
-  columndiv1.append(h4sports);
+  // h4sports = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4sports.innerText = "Sports";
+  // columndiv1.append(h4sports);
 
-  h4duration = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4duration.innerText = "Duration";
-  columndiv1.append(h4duration);
+  // h4duration = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4duration.innerText = "Duration";
+  // columndiv1.append(h4duration);
 
-  h4players = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4players.innerText = "Players";
-  columndiv1.append(h4players);
+  // h4players = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4players.innerText = "Players";
+  // columndiv1.append(h4players);
 
-  h4courts = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4courts.innerText = "Court";
-  columndiv1.append(h4courts);
+  // h4courts = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4courts.innerText = "Court";
+  // columndiv1.append(h4courts);
 
-  h4price = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4price.innerText = "Price";
-  columndiv1.append(h4price);
+  // h4price = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4price.innerText = "Price";
+  // columndiv1.append(h4price);
 
-  h4pay = document.createElement("h4");
-  // h4name.setAttribute("");
-  h4pay.innerText = "Payment";
-  columndiv1.append(h4pay);
+  // h4pay = document.createElement("h4");
+  // // h4name.setAttribute("");
+  // h4pay.innerText = "Payment";
+  // columndiv1.append(h4pay);
 
   columndiv2 = document.createElement("div");
   columndiv2.setAttribute("class", "column2");
   childdiv.append(columndiv2);
+
   divbox1 = document.createElement("div");
   divbox1.setAttribute("class", "box1");
-  divbox1.innerText = filterGroundrequest[i].userDetail.user_email;
+  divbox1.innerHTML = `<h4>User Name</h4>${filterGroundrequest[i].userDetail.user_email}`;
   columndiv2.append(divbox1);
 
   divbox2 = document.createElement("div");
   divbox2.setAttribute("class", "box2");
-  divbox2.innerText = filterGroundrequest[i].booking_Date;
+  divbox2.innerHTML =`<h4>Date</h4>${ filterGroundrequest[i].booking_Date}`;
   columndiv2.append(divbox2);
 
   divbox3 = document.createElement("div");
   divbox3.setAttribute("class", "box3");
-  divbox3.innerText = filterGroundrequest[i].booking_time;
+  divbox3.innerHTML = ` <h4>Timing</h4>${filterGroundrequest[i].booking_time}`;
   columndiv2.append(divbox3);
 
   divbox4 = document.createElement("div");
   divbox4.setAttribute("class", "box4");
-  divbox4.innerText = filterGroundrequest[i].booking_sports;
+  divbox4.innerHTML = `<h4>Sports</h4>${filterGroundrequest[i].booking_sports}`;
   columndiv2.append(divbox4);
 
   if(filterGroundrequest[i].booking_duration=="Select an Option"){
     divbox5 = document.createElement("div");
     divbox5.setAttribute("class", "box5");
-    divbox5.innerText = `None`;
+    divbox5.innerHTML = `<h4>Duration</h4> None`;
     columndiv2.append(divbox5);
   }
   else{
   divbox5 = document.createElement("div");
   divbox5.setAttribute("class", "box5");
-  divbox5.innerText = `Extra ${filterGroundrequest[i].booking_duration} Hours`;
+  divbox5.innerHTML= `  <h4>Duration</h4> Extra ${filterGroundrequest[i].booking_duration} Hours`;
   columndiv2.append(divbox5);
   }
 
   divbox6 = document.createElement("div");
   divbox6.setAttribute("class", "box6");
-  divbox6.innerText = filterGroundrequest[i].selected_players;
+  divbox6.innerHTML = ` <h4>Players</h4> ${filterGroundrequest[i].selected_players}`;
   columndiv2.append(divbox6);
 
   divbox7 = document.createElement("div");
   divbox7.setAttribute("class", "box7");
-  divbox7.innerText = filterGroundrequest[i].selectedCourts;
+  divbox7.innerHTML = `<h4>Courts</h4>${filterGroundrequest[i].selectedCourts}`;
   columndiv2.append(divbox7);
 
   divbox8 = document.createElement("div");
   divbox8.setAttribute("class", "box8");
-  divbox8.innerText = filterGroundrequest[i].groundPrice;
+  divbox8.innerHTML =`<h4>Price</h4>${ filterGroundrequest[i].groundPrice}`;
   columndiv2.append(divbox8);
 
 
   divbox9 = document.createElement("div");
   divbox9.setAttribute("class", "box9");
-  divbox9.innerText = filterGroundrequest[i].ground_payment;
+  divbox9.innerHTML =`<h4>Payment</h4>${ filterGroundrequest[i].ground_payment}`;
   columndiv2.append(divbox9);
 
   // btnaccept=document.createElement("button");
@@ -184,7 +216,8 @@ for (let i = 0; i < filterGroundrequest.length; i++) {
 
   document.querySelector(".parent").append(childdiv);
 }
-
+}
+}
 // const acceptbtn= document.querySelectorAll(".acceptbtn")
 
 // acceptbtn.forEach((button)=>{

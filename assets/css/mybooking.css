@@ -116,7 +116,7 @@ ul li a:hover {
 .box{
     background-color: rgba(32,56,120,255);
     width: 670px;
-    height: 500px;
+    height: 550px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row-gap: 70px;
@@ -259,7 +259,7 @@ bottom: 10px;
     grid-template-rows: 12vh;
     grid-gap: 30px;
     width:160%;
-    height: 480px;
+    height: 520px;
     background-color: rgba(32,56,120,255);
     position: relative;
     left: 70px;
@@ -267,15 +267,18 @@ bottom: 10px;
     padding: 10px 10px;
 }
 
+
 .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8{
     width: 210px;
     height: 330px;
-    padding: 10px;
+    padding:3px;
     /* background-color: #5e6af1; */
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     text-align: center;
     border-radius: 10px;
+    position: relative;
+    left: 170px;
 }
 #acceptbtn{
     width: 70px;
@@ -297,12 +300,13 @@ bottom: 10px;
    /* padding: 10px; */
 display: flex;
 flex-direction: column;
-gap: 45px;
+gap: 49px;
 position: relative;
 left: 20px;
 color: #ffffff;
 
 }
+
 .column2{
     width: 20px;
     height: 334px;
@@ -318,11 +322,51 @@ color: #ffffff;
 
 
 
+ .h5tag{
+    position: relative;
+    width: 250px;
+    top: 290px;
+color: #000000;
+bottom: 900px;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 120px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+   
+}
 
 
 
 
-
+.btnok{
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    color: #3D3D3D;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  border: 2px solid black;
+    font-size: 15px;
+    padding: 9px 2px;
+    padding-right: 20px;
+    position: relative;
+    top: 59px;
+    width: 110px;
+    height: 37px;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+}
 
 
 

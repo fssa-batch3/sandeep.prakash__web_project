@@ -155,16 +155,17 @@ checkjoinPlayer.addEventListener("click", (e) => {
     // const sportChoose = (document.getElementById("sportss"))
     // const sportLocation = (document.getElementById("locationselect"))
 
-    const timingsfrom = document.getElementById("startTime");
+    const timingsfrom0 = document.getElementById("startTime");
 
-    const timingsto = document.getElementById("endTime");
+    const timingsto0 = document.getElementById("endTime");
 
     age.required = true;
     gender.required = true;
     // sportChoose.required = true;
     sportLocation.required = true;
-    timingsfrom.required = true;
-    timingsto.required = true;
+    timingsfrom0.required = true;
+    timingsto0.required = true;
+
   }
 });
 

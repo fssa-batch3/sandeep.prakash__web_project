@@ -35,10 +35,10 @@ function getData() {
     // localStorage.setItem("user_name",name1)
 
     window.location.href = "./accountcreated.html";
-    alert("login success");
+    alert("Login success");
 
     localStorage.setItem("user_logged_in", JSON.stringify(userlogData));
   } else {
-    alert("login failure");
+    alert("The email address or password you entered is incorrect");
   }
 }

@@ -13,8 +13,8 @@
 } */
 .maincontainer{
     display: grid;
-    grid-template-columns: 3fr 6fr;
-    grid-template-rows: 102vh;
+    grid-template-columns: 3fr 5fr;
+    grid-template-rows: 99vh;
  
    
 }
@@ -22,7 +22,7 @@
 .side2{
    
     background-color: rgba(32,56,120,255);
-    margin-left: 35px;
+    margin-left: 25px;
     border-radius: 20px;
    max-width: fit-content;
    overflow-y: scroll;
@@ -61,6 +61,7 @@
     border-radius: 10px;
     display: grid;
     grid-template-columns: 3fr 6fr;
+  
     
 }
 .peopleimage{
@@ -88,7 +89,7 @@
 
 }
 .container {
-    margin-bottom: 20px;
+  
     background-color: rgba(233, 235, 241, 0.82);
     width: 1030px;
     height: 98vh;
@@ -211,6 +212,7 @@
     background-color: rgba(32,56,120,255);
      height: 50px;
      border-radius: 10px;
+     width: 1025px;
 }
 
 form input {
@@ -256,4 +258,68 @@ form button {
     position: relative;
     font-size: 0.9em;
     left: 0px;
+}
+
+.h5tag{
+    position: relative;
+    bottom: 510px;
+
+    /* top: 50%; */
+    left: 130%;
+    transform: translate(-50%,-50%);
+    padding: 170px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.propage{
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+  
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    color: #3D3D3D;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  
+    font-size: 15px;
+       
+    position: relative;
+    top: 9px;
+    width: 60px;
+    height: 17px;
+    position: relative;
+    left: 20px;
+}
+
+.propage span{
+    position: relative;
+    left: 20px;
+    color: #000000;
+
+}
+
+
+.propage:hover,
+.propage:focus
+{
+    background-color: rgba(241, 251, 255, 255);
+      color: #000000;
+
+
+}
+
+.logoletter{
+    color: #f6f6f6;
+    margin: 20px 16px;
+    position: relative;
+    left: 90px;
+
 }

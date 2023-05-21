@@ -6,13 +6,71 @@ const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 const loginuserid = loginUser[0].user_id;
 
 const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
-const allmessagedUser = messageofUser.filter(
-  (data) => data.sender_id == loginuserid || data.receiver_id == loginUser
-);
+let allmessagedUser;
+if(messageofUser==null){
+ let maincon=document.querySelector(".maincontainer");
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friedn to chat in your profile`
+  maincon.append(ptag)
+  
+  maincon.style.filter = "blur(0px)";
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  })
 
+}
+else{
+
+  console.log("ok");
+ allmessagedUser = messageofUser.filter(
+  (data) => data.sender_id == loginuserid 
+  //  || data.receiver_id===loginuserid
+);
 console.log(allmessagedUser);
 
+// let allmessagedUser;
+let receivedmess;
+
+
+//  allmessagedUser = messageofUser.filter(
+//   (data) => data.receiver_id===loginuserid
+ 
+// );
+
+// console.log(allmessagedUser);
+
+if(allmessagedUser.length==0){
+  let maincon=document.querySelector(".maincontainer");
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friedn to chat in your profile`
+  maincon.append(ptag)
+  
+  maincon.style.filter = "blur(0px)";
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="../../pages/player/newprofile.html"
+  })
+
+}
+else{
 //
+console.log("Pl");
+//  allmessagedUser = messageofUser.filter(
+//   (data) => data.sender_id == loginuserid 
+//   //  || data.receiver_id===loginuserid
+// );
+console.log(allmessagedUser);
 const user_record = JSON.parse(localStorage.getItem("user_details"));
 
 let filterPlayer = [];
@@ -42,10 +100,20 @@ let text;
 
 for (const messages of allmessagedUser) {
   const { receiver_id } = messages;
-  const message = filterPlayer.find((data) => data.user_id == receiver_id);
-  messages.data = message;
-}
+  const { sender_id } = messages;
+  const message = filterPlayer.find((data) => data.user_id == receiver_id
+  );
 
+
+  
+  messages.data = message;
+  // const message2 = filterPlayer.find((data) => data.user_id == sender_id
+  // );
+
+  // messages.data2 = message2;
+  
+}
+console.log(allmessagedUser);
 for (let i = 0; i < allmessagedUser.length; i++) {
   anchor = document.createElement("a");
   anchor.setAttribute("href", `?user_id=${allmessagedUser[i].data.user_id}`);
@@ -80,7 +148,11 @@ for (let i = 0; i < allmessagedUser.length; i++) {
   p_name.innerText = allmessagedUser[i].data.user_name;
   p_name.setAttribute("class", "playername");
   div_name.append(p_name);
+
+
+
 }
+
 
 // url search
 
@@ -92,6 +164,8 @@ const searchuser_id = urlParameter.get("user_id");
 // console.log(searchuser_id);
 
 const chat_cont = document.querySelector(".container");
+
+
 
 let messagesshown;
 // allmessagedUser.find((e)=>{
@@ -114,7 +188,7 @@ allmessagedUser.find((e) => {
   return (messagesshown = 0);
 });
 
-const receivedmess = messageofUser.find(
+receivedmess = messageofUser.find(
   (mess) => mess.receiver_id == loginuserid && mess.sender_id == searchuser_id
 );
 messagesshown.user_receivedmess = receivedmess;
@@ -164,15 +238,25 @@ console.log(messagesshown);
 
 // )
 
-const anchordiv = document.querySelectorAll(".anchor_div");
-anchordiv.forEach((data) => {
-  data.addEventListener("click", () => {
-    //    alert("ok")
-    // chat_cont.style.display="block"
-  });
-});
+// const anchordiv = document.querySelectorAll(".anchor_div");
+// anchordiv.forEach((data) => {
+//   data.addEventListener("click", (e) => {
+//     // e.preventDefault()
+  
+
+//       //  alert("ok")
+//     // chat_cont.style.display="none"
+//   });
+// });
 
 // chatting
+
+if(messagesshown.data==null){
+
+}
+else{
+  console.log("ok");
+  // console.log(messagesshown);
 
 div_container_sidebar2 = document.createElement("div");
 div_container_sidebar2.setAttribute("class", "container");
@@ -327,14 +411,16 @@ i_send_symbol = document.createElement("i");
 i_send_symbol.setAttribute("class", "bx bx-send");
 send_btn.append(i_send_symbol);
 
+
 // chat feature
-const sendBtn = document.getElementById("send_button");
+// const sendBtn = document.getElementById("send_button");
 const formbtn = document.getElementById("sendbtn");
 formbtn.addEventListener("submit", (e) => {
   e.preventDefault();
   sendMessage();
-  // location.reload();
+
 });
+}
 
 let messagebox;
 
@@ -374,7 +460,7 @@ function sendMessage() {
   }
 
   localStorage.setItem("user_Messages", JSON.stringify(usersMessage));
-  location.reload();
+  // location.reload();
 
   // let div_chat_main = document.querySelector(".main");
   //   let p_mess_from = document.createElement("p");
@@ -388,10 +474,32 @@ function sendMessage() {
   const messageto = document.createElement("p");
   messageto.setAttribute("class", "messageto");
 
-  messageto.innerHTML = `${messagebox} -<span class="timeside"> ${timestampconvert(
+  messageto.innerHTML = `${messagebox} <span class="timeside"> ${timestampconvert(
     existingmessage.timestamp
   )}</span>`;
   mainChat.append(messageto);
+
+  
+  const del_btn = document.createElement("button");
+  del_btn.setAttribute("class", "delbtn");
+  del_btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+
+  del_btn.addEventListener("click", () => {
+
+    // let delmess={
+    //   text:messagebox,
+    //   sender: "user",
+    //   timestamp:existingmessage.timestamp,
+    // };
+   
+    deletemess(existingmessage);
+
+    // console.log(delmess);
+
+    // console.log("okok");
+    messageto.remove(existingmessage);
+  });
+  messageto.append(del_btn);
 
   document.getElementById("message").value = "";
   // mess_from=document.createElement("p");
@@ -443,3 +551,10 @@ function deletemess(message) {
     }
   }
 }
+
+}
+
+
+}
+
+
