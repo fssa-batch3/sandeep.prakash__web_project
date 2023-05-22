@@ -22,21 +22,7 @@ const requestrecords = JSON.parse(localStorage.getItem("request_details"));
 let filterPlayer = [];
 
 if(requestrecords==null){
-  let maincon=document.querySelector(".main2");
-  let ptag=document.createElement("h4")
-  ptag.setAttribute("class","h5tag");
-  ptag.innerHTML=`Hi You dont have any friend list`
-  maincon.append(ptag)
 
-  document.body.style.overflow="hidden"
-  
-  let btn=document.createElement("button")
-  btn.setAttribute("class","btnok");
-  btn.innerText="OK"
-  ptag.append(btn)
-  btn.addEventListener("click",()=>{
-    window.location.href="../../pages/player/newprofile.html"
-  })
 }
 else{
   filterPlayer = requestrecords.filter(
