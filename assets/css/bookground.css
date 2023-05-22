@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif; */
 
 }
 
@@ -10,8 +10,9 @@ header {
     height: 12vh;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
     font-family: 'Noto Serif Khojki', serif;
+    background-color: rgba(32,56,120,255);
 }
 .checkbtn{
     font-size: 22px;
@@ -33,7 +34,7 @@ ul {
 
 ul li {
     list-style-type: none;
-    padding: 2%;
+    padding:2%;
 
 }
 
@@ -52,6 +53,7 @@ ul li a:hover {
     font-size: medium;
     padding: 2px 17px;
     height: 102%;
+    position: relative;
     width: 100%;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
@@ -82,11 +84,12 @@ ul li a:hover {
     overflow: hidden;
     height: 16vh;
     border: 20px solid;
-    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+    /* border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60; */
     position: sticky;
     top: 0%;
     z-index: 2;
     background-color: white;
+border-color: rgba(32,56,120,255);
 }
 
 .content1 {
@@ -208,13 +211,13 @@ input[type="search"]::placeholder {
 /* main2 groundlist1 */
 
 .main2 {
-
+    /* background-color: rgba(241, 251, 255, 255); */
     /* height: 310vh; */
     /* overflow: hidden; */
     color: white;
     border: 20px solid;
-    border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60;
-
+    /* border-image: repeating-linear-gradient(30deg, #000000, #01000c, #15034a 20px) 60; */
+    border-color: rgba(32,56,120,255);
 }
 
 .parent {
@@ -226,33 +229,47 @@ input[type="search"]::placeholder {
 }
 
 .child {
-
-    width: 75%;
-    height: 420px;
-    border-radius: 4%;
-    box-shadow: 0 3px 10px rgb(3, 10, 87);
+padding-bottom: 10px;
+    width: 70%;
+    height: 450px;
+    border-radius: 6px;
+    /* box-shadow: 0 3px 10px rgb(3, 10, 87); */
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     margin-left: 13%;
-    /* display: flex; */
-    /* flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     cursor: pointer;
     background-color: white;
     color: black;
+    border: 0px solid transparent;
+    box-sizing: border-box;
+
 
 }
-
+.noresult{
+    font-size: 110px;
+    color: #000000;
+    display: inline-block;
+    flex: 1;
+}
 .child:hover {
    
-    border: 3px solid rgb(2, 3, 14);
+    border: 0.1px solid rgba(2, 3, 14, 0.45);
         
 }
 /* groundimage */
 .groimg {
-    width: 90%;
-    border: 2px solid transparent;
-    border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
-    color: rgb(12, 10, 10);
-    margin-left: 15px;
+    width: 250px;
+    height: 220px;
+    /* margin-top: 3px; */
+    /* border: 2px solid transparent; */
+    border-radius: 6px;
+    /* border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60; */
+    /* color: rgb(12, 10, 10); */
+    /* margin-left: 13px; */
  
 }
 /* groundname */
@@ -261,16 +278,17 @@ input[type="search"]::placeholder {
     color: rgb(6, 4, 4);
     font-size: 23px;
     font-weight: bolder;
-    text-align: center;
+    /* text-align: center; */
 
 }
 /* locationname */
 
 .locationn {
     color: rgb(0, 0, 0);
-    font-size: 23px;
+    font-size: 20px;
     font-weight: bolder;
     text-align: center;
+    /* margin-top: 5px; */
 }
 /* sportsicon */
 .sportsicon {
@@ -283,47 +301,47 @@ input[type="search"]::placeholder {
     /* flex-direction: column; */
     flex-direction: row;
     /* justify-content: flex-start; */
-    position: relative;
+    /* position: relative;
     left: 3%;
-    top: 5%;
-    align-content: space-around;
-    align-items: flex-end;
+    top: 5%; */
+    /* align-content: space-around;
+    align-items: flex-end; */
 
 }
 
 .ratings {
     display: flex;
     justify-content: space-around;
-    position: relative;
+    /* border: 1px solid black; */
+    /* position: relative;
     left: 15%;
-    bottom: 5px;
+    bottom: 5px; */
 
 }
+
 /* book button */
 .book {
     font-size: medium;
     padding: 5px 15px;
-    height: 8%;
-    width: 47%;
+    height: 40px;
+    width: 200px;
     background-color: rgb(5, 120, 105);
     color: white;
     font-weight: bold;
     cursor: pointer;
     border: none;
-    position: relative;
+    /* position: relative;
     left: 26%;
-    top:2%;
+    top:2%; */
    
-    border-radius: 10%;
+    border-radius:6px;
 
 }
 
 .fa-star {
     color: rgb(255, 183, 0);
     font-size: 17px;
-    position: relative;
-    left: 150px;
-
+    padding-right: 10px;
 }
 
 .ratingno {
@@ -340,8 +358,8 @@ footer {
 
     height: 30vh;
 
-    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-
+    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
+    background-color:  rgba(32,56,120,255);
     background-size: cover;
     color: white;
 

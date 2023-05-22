@@ -9,12 +9,12 @@ body{
 
 /* header */
 header {
-    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
     height: 15vh;
     background-position: center;
     background-size: cover;
     font-family: 'Noto Serif Khojki', serif;
-
+    background-color: rgba(32,56,120,255);
 }
 
 ul {
@@ -355,6 +355,7 @@ form button {
 .noti{
     position: relative;
     top: 10px;
+    font-size: larger;
 }
 
 
@@ -369,8 +370,8 @@ form button {
 /* footer section */
 footer {
     height: 30vh;
-    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
-
+    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%); */
+    background-color: rgba(32,56,120,255);
     background-size: cover;
     color: white;
 

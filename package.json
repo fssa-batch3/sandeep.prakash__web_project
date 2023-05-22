@@ -4,7 +4,9 @@
   "description": "[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=fssa-batch3_sandeep.prakash__web_project&metric=bugs)](https://sonarcloud.io/summary/new_code?id=fssa-batch3_sandeep.prakash__web_project)\r  100 project\r About my project: 4 lines about your project\r To help people to find grounds and connect to player.\r  It help to If you are new to some place you cant find ground and friends to play \r  In my website you can book your ground from your home and connect with players.\r Problem statement: Google Drive link(https://docs.google.com/document/d/18aAV5Ef3yPXUkzdbHZK-H9tf9KAuVi0ZLhSZone1M6Q/edit?usp=sharing)\r Market Research: Google Drive link(https://docs.google.com/document/d/11vh1bqQm5panRBV-MRlC9okc15jt6nhJO8hIUx2JLMo/edit?usp=sharing)\r User flow: Google Drive link(https://drive.google.com/file/d/152ejdWxX0GEu6wRjsrmVxrBmCv24CScc/view?usp=sharing)\r Wireframe: Google Drive link(https://drive.google.com/file/d/12gku_ec54PN5gMPqHr8yZH4_dgFEp1dS/view?usp=sharing)\r Live Server Link:https://sandeepsan97.github.io/Book-and-play/",
   "main": "main.js",
   "scripts": {
-    "div": "http-server ./"
+    "div": "http-server ./",
+    "lint": "npx eslint ."
+
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,29 @@
   "homepage": "https://github.com/fssa-batch3/sandeep.prakash__web_project#readme",
   "dependencies": {
     "http-server": "^14.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@html-eslint/eslint-plugin": "^0.18.0",
+    "@html-eslint/parser": "^0.18.0",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-code-complexity": "^1.1.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "prettier-config-standard": "^5.0.0"
   }
 }
