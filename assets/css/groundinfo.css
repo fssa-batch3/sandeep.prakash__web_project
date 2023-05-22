@@ -611,6 +611,10 @@ input[type="date"] {
 
 
 }
+#cash{
+    position: relative;
+    left: 30px;
+}
 
 .paycash {
     /* width: 16%;
@@ -636,9 +640,18 @@ color: rgb(255, 255, 255);
 
 .cash{
     color: #00021a;
+    position: relative;
+    left: 30px;
+
 }
 .upi{
     color: #00021a;
+    position: relative;
+    left: 50px;
+}
+#upi{
+    position: relative;
+    left: 50px;
 }
 #wrong{
     color: #00021a;
