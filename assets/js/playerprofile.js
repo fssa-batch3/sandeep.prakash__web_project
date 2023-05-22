@@ -719,7 +719,7 @@ function timestampconvert(timestamp) {
     .toString()
     .padStart(2, "0")}`;
 
-    return `${format_date}${formattime} ${ampmformat}`
+    return `${format_date} ${formattime} ${ampmformat}`
 }
 
 // delete messages

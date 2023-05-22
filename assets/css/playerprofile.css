@@ -499,6 +499,7 @@ form button {
     font-size: 0.7em;
     position: relative;
     left: 0px;
+    white-space: nowrap;
 }
 .delbtn{
     border: none;

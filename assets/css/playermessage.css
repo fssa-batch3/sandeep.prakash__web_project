@@ -294,6 +294,7 @@ form button {
     font-size: 0.7em;
     /* position: relative;
     left: 20px; */
+    white-space: nowrap;
 }
 .delbtn{
     border: none;

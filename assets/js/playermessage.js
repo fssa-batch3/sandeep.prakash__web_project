@@ -15,7 +15,8 @@ if(messageofUser==null){
   maincon.append(ptag)
   
   document.body.style.overflow="hidden"
-  
+  let bookplay=document.querySelector(".logoletter")
+  bookplay.style.display="none"
   let btn=document.createElement("button")
   btn.setAttribute("class","btnok");
   btn.innerText="OK"
