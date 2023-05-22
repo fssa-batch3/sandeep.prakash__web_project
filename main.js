@@ -316,9 +316,7 @@ if (JSON.parse(localStorage.getItem("groundadmin_details"))) {
         url
         : 
         "",
-        user_email
-        : 
-        "sandeepcsofficial@gmail.com"
+    
       },
       {
         imagename
@@ -384,3 +382,7 @@ if (JSON.parse(localStorage.getItem("groundadmin_details"))) {
 //   // return
 // } else {
 // }
+
+
+
+

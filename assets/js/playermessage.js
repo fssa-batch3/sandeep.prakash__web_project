@@ -57,7 +57,9 @@ if(allmessagedUser.length==0){
   let btn=document.createElement("button")
   btn.setAttribute("class","btnok");
   btn.innerText="OK"
-  ptag.append(btn)
+  ptag.append(btn);
+  let bookplay=document.querySelector(".logoletter")
+  bookplay.style.display="none"
   btn.addEventListener("click",()=>{
     window.location.href="../../pages/player/newprofile.html"
   })
@@ -519,17 +521,29 @@ function sendMessage() {
 //   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 // }
 
+
 function timestampconvert(timestamp) {
   const date = new Date(timestamp);
+  let day=date.getDate();
+  let month =date.getMonth()+1;
+  let year=date.getFullYear();
   let hours = date.getHours();
   const minutes = date.getMinutes();
   const ampmformat = hours >= 12 ? `PM` : `AM`;
   hours %= 12;
   hours = hours || 12;
-  return `${hours.toString().padStart(2, "0")}:${minutes
+  const format_date=`${day.toString().padStart(2, "0")}/${month
     .toString()
-    .padStart(2, "0")} ${ampmformat}`;
+    .padStart(2, "0")}/${year.toString()
+      .padStart(4, "0")}`;
+
+ const formattime= `${hours.toString().padStart(2, "0")}:${minutes
+    .toString()
+    .padStart(2, "0")}`;
+
+    return `${format_date} ${formattime}${ampmformat}`
 }
+
 
 // delete messages
 

@@ -279,11 +279,29 @@ declinebtn.forEach((button) => {
         console.log(requestBooking[bookingindex]);
         console.log(requestBooking);
         localStorage.setItem("bookingInfo", JSON.stringify(requestBooking));
+
+
+        
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "bookandplay@gmail.com",
+          Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+          To: requestBooking[bookingindex].request_user_email,
+          From: "sandeep909600@gmail.com",
+          Subject: "Your Booking Confirmation code is here",
+          Body: `Hi  Your ground is booked on this ${ requestBooking[bookingindex].booking_time
+          } on ${requestBooking[bookingindex].booking_Date
+          } is cancelled by the   seller the order id is${requestBooking[bookingindex].ordered_id
+          } `,
+        }).then((success) => {
+          alert(
+            "Your ground Booking is cancelled"
+          );
+        });
+
       } else {
       }
-    } else {
-      alert(`${orderedId} not found`);
-    }
+    } 
     //  let filterRequest=JSON.parse(localStorage.getItem("bookingInfo"))
   });
 });

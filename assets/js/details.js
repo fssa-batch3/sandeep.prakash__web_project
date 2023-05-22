@@ -1256,7 +1256,9 @@ function getBookingInfo() {
       booking_status: "accepted",
       groundPrice,
       created_at: new Date().getTime(),
-      ground_payment:payment.value
+      ground_payment:payment.value,
+      seller_email:selleremail,
+      request_user_email:userloggedIn[0].user_email
     });
 
     localStorage.setItem("bookingInfo", JSON.stringify(userBookingInfo));
@@ -1282,7 +1284,7 @@ function getBookingInfo() {
       Body: `Hi ${userloggedIn[0].user_email} Your ground is booked on this ${selectedTimings} on ${bookDate} Your Confirmation code is here ${code} and your order id is${id_generator_booking} Please show the confirmation 7 digit code  on turf entrance to visit`,
     }).then((success) => {
       alert(
-        "Your ground is Booked Congraulation.If you choose upi method upi link will be sent via email you can make the method there and  you will receive a 7 digit code after 5 min show this code when you visit the turf"
+        "Your ground is Booked Congraulation.If you choose upi method upi link will be sent via email you can make the method there and  you will receive a 7 digit code after 5 min show this code when you visit the turf .if you want to cancel the booking cancel within 20 minutes"
       );
     });
 
@@ -1293,7 +1295,7 @@ function getBookingInfo() {
       To: selleremail,
       From: "sandeep909600@gmail.com",
       Subject: "Your Booking Confirmation code is here",
-      Body: `Hi ${selleremail} Your ground is booked on this ${selectedTimings} on ${bookDate} The  Confirmation code is here ${code} and the order id ${id_generator_booking} the visitor will show the code  on turf entrance to visit`,
+      Body: `Hi ${selleremail} Your ground is booked on this ${selectedTimings} on ${bookDate} The  Confirmation code is here ${code} and the order id ${id_generator_booking} the visitor will show the code  on turf entrance to visit.if you want to cancel the booking cancel within 20 minutes`,
     });
   }
 

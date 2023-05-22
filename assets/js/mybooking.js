@@ -32,6 +32,8 @@ const user_record = JSON.parse(localStorage.getItem("user_details"));
 const groundOwnerProduct = JSON.parse(localStorage.getItem("ground_info"));
 const requestBooking = JSON.parse(localStorage.getItem("bookingInfo"));
 
+// const sellerdata = JSON.parse(localStorage.getItem("groundadmin_details"));
+
 const loginuserid = loginUser[0].user_id;
 let acceptedBooking;
 
@@ -47,7 +49,7 @@ else{
 console.log(acceptedBooking);
 }
 
-if(acceptedBooking==null){
+if(acceptedBooking==null || acceptedBooking.length==0){
   let maincon=document.querySelector(".main2");
   
   let ptag=document.createElement("h4")
@@ -79,6 +81,15 @@ for (const booking of acceptedBooking) {
     (users) => request_user_id === users.user_id
   );
   booking.userDetail = userDetails;
+
+
+  // const { seller_id
+  // } = booking;
+  // const sellerDetails = sellerdata.find(
+  //   (users) => seller_id === users.seller_id
+
+  // );
+  // booking.sellerDetail = sellerDetails;
 }
 
 console.log(JSON.stringify(acceptedBooking, null, 2));
@@ -447,6 +458,24 @@ cancelbtn.forEach((button) => {
         console.log(requestBooking[bookingindex]);
         console.log(requestBooking);
         localStorage.setItem("bookingInfo", JSON.stringify(requestBooking));
+
+
+        Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "bookandplay@gmail.com",
+      Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To: requestBooking[bookingindex].seller_email,
+      From: "sandeep909600@gmail.com",
+      Subject: "Your Booking Confirmation code is here",
+      Body: `Hi  Your ground is booked on this ${ requestBooking[bookingindex].booking_time
+      } on ${requestBooking[bookingindex].booking_Date
+      } is cancelled by the   user the order id is${requestBooking[bookingindex].ordered_id
+      } `,
+    }).then((success) => {
+      alert(
+        "Your ground Booking is cancelled"
+      );
+    });
       } else {
         //
       }

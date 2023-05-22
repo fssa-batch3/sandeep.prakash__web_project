@@ -194,12 +194,12 @@ const containerprofile = document.querySelector("div.container2");
 
 
 
-editbtn.addEventListener("click", () => {
+// editbtn.addEventListener("click", () => {
 
-    containerprofile.style.display = "block"
+//     containerprofile.style.display = "block"
 
 
-})
+// })
 const namebox = document.getElementById("name1")
 const groundnamebox = document.getElementById("name2")
 const user_email = document.getElementById("userEmail")

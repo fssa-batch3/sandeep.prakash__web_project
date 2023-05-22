@@ -213,6 +213,8 @@ agelabel.style.display = "none"
 
 
 
+
+
         }
     }
 }
@@ -269,7 +271,7 @@ join_as_player.addEventListener("click", () => {
 agelabel.style.display = "block"
 agelabel.style.top="42px";
 user_genders.style.top="30px";
-joinPlayer.style.bottom="890px"
+joinPlayer.style.bottom="950px"
     user_age.style.display = "block"
     user_location.style.display = "block"
     user_timingsfrom.style.display = "block"
@@ -287,7 +289,7 @@ joinPlayer.style.bottom="890px"
     labelage.style.display = "block"
     editbutn1.style.top = "142px"
     labelage.style.top = "90px";
-    formsdiv.style.height = "1590px"
+    formsdiv.style.height = "1660px"
     user_timingsfrom.style.top = "190px";
     user_timingsto.style.top = "120px";
     labeltime.style.top = "180px"
