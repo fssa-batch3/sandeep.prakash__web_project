@@ -14,7 +14,7 @@ if(messageofUser==null){
   ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friedn to chat in your profile`
   maincon.append(ptag)
   
-  maincon.style.filter = "blur(0px)";
+  document.body.style.overflow="hidden"
   
   let btn=document.createElement("button")
   btn.setAttribute("class","btnok");
@@ -46,14 +46,13 @@ let receivedmess;
 // console.log(allmessagedUser);
 
 if(allmessagedUser.length==0){
+  console.log("okda");
   let maincon=document.querySelector(".maincontainer");
   let ptag=document.createElement("h4")
   ptag.setAttribute("class","h5tag");
-  ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friedn to chat in your profile`
+  ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friend to chat in your profile`
   maincon.append(ptag)
-  
-  maincon.style.filter = "blur(0px)";
-  
+  document.body.style.overflow="hidden"
   let btn=document.createElement("button")
   btn.setAttribute("class","btnok");
   btn.innerText="OK"
