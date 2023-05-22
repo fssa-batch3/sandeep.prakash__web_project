@@ -53,6 +53,8 @@ const MessageofUser = JSON.parse(localStorage.getItem("user_Messages"));
 const playerIdmessage = show2.user_id;
 const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 const loginUserID = loginUser[0].user_id;
+// for usersendedmessage
+
 
 if (MessageofUser == null) {
 } else {
@@ -64,6 +66,8 @@ if (MessageofUser == null) {
   show2.user_messages = messageUser;
   console.log(show2);
 }
+// for userreceivedmessage
+
 
 if (MessageofUser == null) {
 } else {
@@ -261,7 +265,7 @@ div_chat_main.setAttribute("class", "main");
 div_container_sidebar2.append(div_chat_main);
 
 if (show2.received_messages == undefined && show2.user_messages == undefined) {
-  // Display a notification that the conversation hasn't started yet
+  // Display a notification that the conversation is not started
   p_mess_noti = document.createElement("p");
   p_mess_noti.setAttribute("class", "noti");
   p_mess_noti.innerText =
@@ -446,6 +450,8 @@ console.log(loginUserID);
 //   }
 
 // })
+
+// for giving reqest to other players
 const requestrecords = JSON.parse(localStorage.getItem("request_details"));
 connectBtn.forEach((conBtn) => {
   playerId = Number(conBtn.value);
@@ -533,7 +539,7 @@ else if (
   }
 }
 
-// chat blur remove
+// chat blur remove if the request was accepted mutually
 if (requestrecords == null) {
 console.log("vada");
 } else  {
@@ -693,6 +699,7 @@ function sendMessage() {
 //   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampm}`;
 // }
 
+//timebased
 function timestampconvert(timestamp) {
   const date = new Date(timestamp);
   let day=date.getDate();

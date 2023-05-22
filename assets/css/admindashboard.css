@@ -103,11 +103,15 @@ top: 30px;
 .labelnamea{
     position: relative;
     left: 205px;
+    color: #000000;
 }
 #age{
     /* position: relative;
     left:0px; */
 
+}
+.labelname,p{
+    color: #000000;
 }
 .logout{
     font-size: 15px;
@@ -277,7 +281,7 @@ form input {
 }
 
 
-.labelname ,.labelnamel,.labelnametime,.labelnamea,.labelnames{
+.labelnamel,.labelnametime,.labelnamea,.labelnames{
     /* font-size: 10px; */
     font-weight: 500;
     color: black;
@@ -421,8 +425,8 @@ font-size: 20px;
 } */
 
 .labelname{
-    color: white;
-    font-size: larger;
+    color: rgb(0, 0, 0);
+    font-size: large;
 }
 textarea{
    resize: none; 

@@ -6,7 +6,9 @@
     /* overflow: hidden; */
 }
 
-
+body{
+    overflow-x: hidden;
+}
 
 header {
     /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */

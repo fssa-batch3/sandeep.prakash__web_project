@@ -104,6 +104,7 @@
 //     inputError.className="boxform error";
 
 // }
+// time am and pm
 const startTimeValue= null;
 const endTimeValue=null;
 const timePicker={
@@ -128,7 +129,7 @@ const timePicker={
 const startTimepicker = flatpickr("#startTime", timePicker);
 const endTimepicker = flatpickr("#endTime", timePicker);
 
-
+// join as a player
 const checkjoinPlayer = document.getElementById("checkjoinplayer");
 const joinplayerForm = document.querySelector(".joinplayercontainer");
 const forms1 = document.querySelector(".forms");

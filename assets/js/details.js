@@ -1,6 +1,6 @@
 const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 const loginbtn = document.querySelector(".login");
-
+   // for changing login into my account
 if (loginUser == null) {
 } else if (loginUser !== false) {
   loginbtn.style.display = "none";
@@ -16,7 +16,7 @@ if (loginUser == null) {
 } else {
   loginbtn.style.display = "block";
 }
-
+// checking the user is player
 const findplayersbtn = document.querySelector(".findplayers");
 findplayersbtn.addEventListener("click", (e) => {
   if (!loginUser) {
@@ -198,54 +198,7 @@ const ground_details = [
   },
 ];
 
-// const url=window.location.search;
-// console.log(url)
-// const urlParameter= new URLSearchParams(url);
-// console.log(urlParameter)
-// const groundSearch=urlParameter.get("name");
-// console.log(groundSearch);
 
-// let show;
-// ground_details.find(function(e){
-//     if(e["groundname"] == groundSearch){
-//         return show= e;
-
-//     }
-//     else{
-//         return show = 0;
-//     }
-// })
-
-// let div_parent1;
-// let div_sidebar_1;
-// let div_box1;
-// let h2_groundName;
-// let p_placeName;
-// let div_containerSlider;
-// let inputcheckbox1;
-// let inputcheckbox2;
-// let inputcheckbox3;
-// let div_labeldot;
-// let label_dots1;
-// let label_dots2;
-// let label_dots3;
-// let div_box2;
-// let div_imagecontainer;
-// let ground_image1;
-// let ground_image2;
-// let ground_image3;
-
-// // let br_tag;
-// // let h3_card_title;
-// // let img_card;
-// // let p_location_name ;
-// // let div_symbol;
-// // let imgicon_card ;
-// // let div_ratings ;
-// // let i_star;
-// // let ratings_no;
-// // let button_book;
-// // let anchor;
 
 // crud
 const groundOwnerProduct_details = JSON.parse(
@@ -801,6 +754,8 @@ console.log(select_sports);
 // let chosedate=document.getElementById("date");
 inputdate.addEventListener("input", updatetime);
 // select_sports.addEventListener("input",updatetime)
+
+// update time and disabling finished timing
 function updatetime() {
   const selecteddate = inputdate.value;
   const selected_court = select_sports.value;
@@ -1193,6 +1148,7 @@ const sellerEmail = sellerdata.find(
 );
 show2.sellerdetail = sellerEmail;
 const selleremail = show2.sellerdetail.seller_email;
+// booking data
 
 function getBookingInfo() {
   const bookDate = document.getElementById("date").value;

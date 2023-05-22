@@ -51,7 +51,7 @@ let user_record = JSON.parse(localStorage.getItem("user_details"));
 let loggedIn = JSON.parse(localStorage.getItem("user_logged_in"));
 let check=document.querySelectorAll(`input[name="sport"]`)
 
-
+// time am and pm
 
 const startTimeValue = null;
 const endTimeValue = null;
@@ -85,6 +85,8 @@ for (let i = 0; i < user_record.length; i++) {
 
 
     if (loggedIn[0]["user_email"] == user_record[i]["user_email"]) {
+
+        // if a user is not  a player
 
         if (user_record[i]["player"] == false) {
             fsidename.innerText = user_record[i]["user_name"];
@@ -130,6 +132,8 @@ agelabel.style.display = "none"
         }
         
         else {
+
+              // if a user is   a player
 
             //  p_jointext.style.display="none";
             join_as_player.style.display = "none"
@@ -265,6 +269,8 @@ const joinPlayer=document.querySelector(".pjointext");
 
 //     }
 
+
+  // if a user want  to join as  a player
 join_as_player.addEventListener("click", () => {
 
     user_genders.style.display = "block"
@@ -365,7 +371,7 @@ joinPlayer.style.bottom="950px"
 
 
 
-// // edit
+// // updating the profile
 const editbutn = document.getElementById("formbox");
 
 // const editbutn1 = document.querySelector(".profile2");

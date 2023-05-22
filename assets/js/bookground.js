@@ -1,6 +1,6 @@
 const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 const loginbtn = document.querySelector(".login");
-
+  // for changing login into my account
 if (loginUser == null) {
 } else if (loginUser !== false) {
     loginbtn.style.display = "none";
@@ -17,6 +17,8 @@ if (loginUser == null) {
     loginbtn.style.display = "block";
 
  }
+
+ // checking the user is player
 
 const findplayersbtn = document.querySelector(".findplayers");
 findplayersbtn.addEventListener("click", (e) => {
@@ -808,7 +810,9 @@ function groundData(array = []) {
 //   filterProduct("all");
 // }
 
-// filter data
+
+
+// filter ground
 
 const selectOption = document.querySelector(".locationselect");
 
@@ -992,6 +996,7 @@ selectOption.addEventListener("change", (e) => {
 //   }
 // });
 
+// search ground
 
 const searchbox = document.getElementById("search2");
 searchbox.addEventListener("keydown", (e) => {

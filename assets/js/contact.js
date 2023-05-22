@@ -1,7 +1,7 @@
 const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
 console.log(loginUser);
 const loginbtn = document.querySelector(".login");
-
+   // for changing login into my account
 if (loginUser == null) {
 } else if (loginUser !== false) {
   loginbtn.style.display = "none";
@@ -18,7 +18,7 @@ if (loginUser == null) {
 } else {
   loginbtn.style.display = "block";
 }
-
+// checking the user is player
 const findplayersbtn = document.querySelector(".findplayers");
 findplayersbtn.addEventListener("click", (e) => {
   if (!loginUser) {
